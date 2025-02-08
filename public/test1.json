@@ -1,0 +1,1294 @@
+[
+
+    {
+        id: 1,
+        text: "Choose the word that is most nearly opposite in meaning to 'BENEVOLENT':",
+        options: ["Malevolent", "Beneficent", "Munificent", "Magnanimous", "Benign"],
+        correctAnswer: "Malevolent"
+    },
+    {
+        id: 2,
+        text: "FISH : SCHOOL :: WOLF : ?",
+        options: ["Pack", "Herd", "Flock", "Swarm", "Pride"],
+        correctAnswer: "Pack"
+    },
+    {
+        id: 3,
+        text: "Which word does not belong with the others?",
+        options: ["Trombone", "Flute", "Clarinet", "Oboe", "Violin"],
+        correctAnswer: "Violin"
+    },
+    // Math and Logic Questions
+    {
+        id: 4,
+        text: "If a columnist writes 19 articles per month, how many articles does she write in a year?",
+        options: ["190", "209", "228", "247", "266"],
+        correctAnswer: "228"
+    },
+    {
+        id: 5,
+        text: "What is the next number in the sequence: 2, 6, 12, 20, 30, ?",
+        options: ["36", "40", "42", "48", "50"],
+        correctAnswer: "42"
+    },
+    {
+        id: 6,
+        text: "If 5 cats can catch 5 mice in 5 minutes, how long will it take 1 cat to catch 1 mouse?",
+        options: ["1 minute", "5 minutes", "25 minutes", "125 minutes", "Not enough information"],
+        correctAnswer: "5 minutes"
+    },
+    // Spatial Reasoning Questions (with images)
+    {
+        id: 7,
+        text: "Which shape would complete the pattern?",
+        image: "/storage/img/spatial_pattern.png",
+        options: ["Square", "Triangle", "Circle", "Pentagon", "Hexagon"],
+        correctAnswer: "Triangle"
+    },
+    {
+        id: 8,
+        text: "If a cube is painted red on all sides and then cut into 27 smaller cubes of equal size, how many of the smaller cubes will have paint on exactly two sides?",
+        image: "/storage/img/painted_cube.png",
+        options: ["4", "8", "12", "16", "24"],
+        correctAnswer: "12"
+    },
+    {
+        id: 9,
+        text: "Which of the following rotated shapes is identical to the original?",
+        image: "/storage/img/rotated_shapes.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "C"
+    },
+    {
+        id: 10,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official1/1.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "B"
+    },
+    {
+        id: 11,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official1/2.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "D"
+    },
+    {
+        id: 12,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official1/3.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "D"
+    },
+    {
+        id: 13,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official1/4.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "B"
+    },
+    {
+        id: 14,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/official1/5.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "D"
+    },
+    {
+        id: 15,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/official1/6.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "D"
+    },
+    {
+        id: 16,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/official1/7.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "A"
+    },
+    {
+        id: 17,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/official1/8.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "A"
+    },
+    {
+        id: 18,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official1/9.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "D"
+    },
+    {
+        id: 19,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official1/10.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "E"
+    },
+    {
+        id: 20,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official1/11.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "E"
+    },
+    {
+        id: 21,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official2/1.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "E"
+    },
+    {
+        id: 22,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official2/2.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "B"
+    },
+    {
+        id: 23,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official2/3.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "D"
+    },
+    {
+        id: 24,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official2/4.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "C"
+    },
+    {
+        id: 25,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/official2/5.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "C"
+    },
+    {
+        id: 26,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/official2/6.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "D"
+    },
+    {
+        id: 27,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/official2/7.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "D"
+    },
+    {
+        id: 28,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/official2/8.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "C"
+    },
+    {
+        id: 29,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official2/9.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "C"
+    },
+    {
+        id: 30,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official2/10.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "E"
+    },
+    {
+        id: 31,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/official2/11.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "E"
+    },
+    {
+        id: 32,
+        text: "By what percentage did the median age increase between 1970 and 2000?",
+        image: "/storage/img/official2/12.png",
+        options: ["7%", "10%", "20%", "25%", "30%"],
+        correctAnswer: "25%"
+    },
+    {
+        id: 33,
+        text: "By what percentage did the costs increase between 1975 and 1995?",
+        image: "/storage/img/official2/13.png",
+        options: ["25%", "75%", "150%", "200%", "250%"],
+        correctAnswer: "250%"
+    },
+    {
+        id: 34,
+        text: "The chart below shows the sales of the three most popular smoothies at Phoebe's Smoothies. Which smoothie experienced the greatest increase in sales from one year to the next?",
+        image: "/storage/img/official2/14.png",
+        options: ["Strawberry in Year 2 vs Year 1", "Strawberry in Year 3 vs Year 2", "Mango in Year 3 vs Year 2", "Banana in Year 2 vs Year 1", "Banana in Year 3 vs Year 2"],
+        correctAnswer: "Banana in Year 3 vs Year 2"
+    },
+    {
+        id: 35,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/test3/1.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "E"
+    },
+    {
+        id: 36,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/test3/2.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "D"
+    },
+    {
+        id: 37,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/test3/3.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "E"
+    },
+    {
+        id: 38,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/test3/4.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "A"
+    },
+    {
+        id: 39,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/test5/0.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "B"
+    },
+    {
+        id: 39,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/test5/1.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "D"
+    },
+    {
+        id: 40,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/test5/2.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "C"
+    },
+    {
+        id: 41,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/test5/3.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "B"
+    },
+    {
+        id: 42,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/test5/4.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "B"
+    },
+    {
+        id: 43,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/test5/5.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "E"
+    },
+    {
+        id: 44,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/test5/6.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "A"
+    },
+    {
+        id: 45,
+        text: "Which of the following does not belong?",
+        image: "/storage/img/test5/7.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "C"
+    },
+    {
+        id: 46,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/test5/8.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "C"
+    },
+    {
+        id: 47,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/test5/9.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "C"
+    },
+    {
+        id: 48,
+        text: "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        image: "/storage/img/test5/10.png",
+        options: ["A", "B", "C", "D", "E"],
+        correctAnswer: "B"
+    },
+    {
+        id: 49,
+        text: "By what percentage did the price increase between 2010 and 2015?",
+        image: "/storage/img/test5/11.png",
+        options: ["10%", "12.5%", "15%", "17.5%", "20%"],
+        correctAnswer: "12.5"
+    },
+    {
+        id: 50,
+        text: "It costs six tickets to go on an amusement park ride. How many tickets will a group of 15 children need in order for the whole group to go on the ride?",
+        options: ["30", "45", "60", "90", "120"],
+        correctAnswer: "90"
+    },
+    {
+        id: 51,
+        text: "Which of the following is the smallest value?",
+        options: ["0.146", "2.0102", "0.45", "1.09", "2.001"],
+        correctAnswer: "0.146"
+    },
+    {
+        id: 52,
+        text: "In one month, a farmer produces 300 pounds of corn. In the following month he produces 35% more. How many pounds of corn does he produce in the second month?",
+        options: ["335", "350", "375", "390", "405"],
+        correctAnswer: "405"
+    },
+    {
+        id: 53,
+        text: "TREE is to SEED as...",
+        options: ["BABY is to ADULT", "BUTTERFLY is to CATERPILLAR", "SCRIPT is to MOVIE", "STUDENT is to TEACHER", "BRANCH is to FOREST"],
+        correctAnswer: "BUTTERFLY is to CATERPILLAR"
+    },
+    {
+        id: 54,
+        text: "DINNER is to MEAL as ...",
+        options: ["FIRE is to ICE", "EAT is to DRINK", "WINTER is to SEASON", "DRAMA is to COMEDY", "DOOR is to WALL"],
+        correctAnswer: "WINTER is to SEASON"
+    },
+    {
+        id: 55,
+        text: "ILLEGIBLE is to READ as ...",
+        options: ["INCORRIGIBLE is to BEHOLD", "INCOMPREHENSIBLE is to UNDERSTAND", "INDEFENSIBLE is to ATTEMPT", "INDEFATIGABLE is to ROUSE", "INDELIBLE is to DEFEND"],
+        correctAnswer: "INCOMPREHENSIBLE is to UNDERSTAND"
+    },
+    {
+        id: 56,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The dedication and ______ exhibited by the athlete as she came back from a serious injury was an inspiration to her teammates.",
+        options: ["independence", "determination", "insubordination", "elation", "perfection"],
+        correctAnswer: "Determination"
+    },
+    {
+        id: 57,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The supervisor provided a suggestion box, but his employees were ______ from submitting complaints by the fear that their input would not remain anonymous.",
+        options: ["forbidden", "impeded", "exhausted", "heartened", "perplexed"],
+        correctAnswer: "Impeded"
+    },
+    {
+        id: 58,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Although the pop star's young fans ______ their love for his songs, not many seemed to have given much thought to the ______ of his lyrics, which were often dark and depressing.",
+        options: ["declared .. blandness", "denied .. subtext", "decried .. overstated", "eschewed .. undertones", "professed .. implications"],
+        correctAnswer: "professed .. implications"
+    },
+    {
+        id: 59,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The company needed to find a way to quantify and ____ the productivity of its employees in order to decide who deserved raises that year.",
+        options: ["correspond", "stabilize", "mitigate", "counteract", "measure"],
+        correctAnswer: "measure"
+    },
+    {
+        id: 60,
+        text: "In a class of forty students, one fifth of the students also play on the school's football team. If four more students from the class join the football team, what percentage of students in the class will be on the football team?",
+        options: ["25%", "30%", "33%", "35%", "40%"],
+        correctAnswer: "30%"
+    },
+    {
+        id: 61,
+        text: "12 is 40% of what number?",
+        options: ["20", "24", "25", "30", "32"],
+        correctAnswer: "30"
+    },
+    {
+        id: 62,
+        text: "What would be the next group of letters in the following series?  bd...eg...hj...km...?",
+        options: ["no", "kn", "mo", "np", "oq"],
+        correctAnswer: "np"
+    },
+    {
+        id: 63,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  Mia has watched 7 movies this year, which is 2 more than Ivan has watched.  Ivan has watched more movies than Taylor this year.  Taylor has watched fewer than 5 movies this year.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "True"
+    },
+    {
+        id: 64,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  Brad is friends with Justin.  Justin is friends with Pat.  Brad is not friends with Pat.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "Uncertain"
+    },
+    {
+        id: 65,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  Nobody who works at the downtown office was promoted within the last year.  Ana works at the downtown office.  Ana was promoted seven months ago.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "False"
+    },
+    {
+        id: 66,
+        text: "How many of the five items in the left hand column are exactly the same as the corresponding entry in the right hand column?  Left column:  Williams Manufacturing  Donaldson Realty  Bullock Engineering  Granger Industries  Richardson Architecture  Right column:  Williams Manufacturing  Donaldson Realty  Bullock Engineering  Grainger Industries  Richardson Architecture",
+        options: ["1", "2", "3", "4", "5"],
+        correctAnswer: "4"
+    },
+    {
+        id: 67,
+        text: "How many of the five items in the left hand column are exactly the same as the corresponding entry in the right hand column?  Left column:  Barnes, Roland G.  Daniels, Crystal M.  Davis, Keith W.  Freitas, Marc J.  Garfield, Beth S.  Right column:  Barnes, Roland G.  Daniels, Crystal N.  Davies, Keith W.  Freitas, Marc J.  Garfield, Beth S.",
+        options: ["1", "2", "3", "4", "5"],
+        correctAnswer: "3"
+    },
+    {
+        id: 68,
+        text: "How many of the five items in the left hand column are exactly the same as the corresponding entry in the right hand column?  Left column:  2040 Sierra Blvd.  584 San Anselmo Way #4D  81719 Tallahassee Rd.  3782 Scorpio Canyon St.  1143 Redwood Pwky.  Right column:  2040 Sierra Blvd.  584 San Anselmo Way #40  81719 Tallahassee Rd.  3782 Scorpio Canyon St.  143 Redwood Pwky.",
+        options: ["1", "2", "3", "4", "5"],
+        correctAnswer: "3"
+    },
+    {
+        id: 69,
+        text: "What would be the next number in the following series?  3 ... 7 ... 10 ... 17 ... 27 ...?",
+        options: ["30", "34", "37", "40", "44"],
+        correctAnswer: "44"
+    },
+    {
+        id: 70,
+        text: "A cashier uses an average of 3.5 twenty dollar bills every hour in order to make change for customers. If this cashier works 180 hours per month, how many twenty dollar bills will he need each month?",
+        options: ["450", "540", "585", "630", "675"],
+        correctAnswer: "630"
+    },
+    {
+        id: 71,
+        text: "A safety specialist can complete an inspection in 0.5 hours. Her less experienced colleague takes 2.0 hours to complete an inspection. If both individuals start working at the same time, and each spends 70 hours completing inspections over the course of a month, how many total inspections will they have completed?",
+        options: ["165", "170", "175", "180", "185"],
+        correctAnswer: "175"
+    },
+    {
+        id: 72,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Taking issue with media reports, the president ______ that she had no plans to step down and ______ claims that her office was guilty of corruption.",
+        options: ["averred ... detailed", "affirmed ... dismissed", "alleged ... derided", "admitted ... disputed", "claimed ... buttressed"],
+        correctAnswer: "affirmed .. dismissed"
+    },
+    {
+        id: 73,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Undeterred by her family's ______ about her artistic ______, Sheila decided to quit her job and enroll in art school.",
+        options: ["hesitations ... opinions", "affinities ... leanings", "conversations ... tastes", "misgivings ... aspirations", "concerns ... integrity"],
+        correctAnswer: "misgivings .. aspirations"
+    },
+    {
+        id: 74,
+        text: "The table below displays the sales figures for a group of realtors over a 2-year period. What was the approximate average sales price for the houses sold by Mrs. Boggs in Year 1?  [Table content]  Realtor | Houses Sold Year 1 | Total Sales Year 1 | Houses Sold Year 2 | Total Sales Year 2  Boggs   | 5                  | $1,550,000         | 7                  | $2,450,000  Jenkins | 3                 | $1,350,000         | 4                  | $1,800,000  Miller  | 4                  | $1,375,000         | 6                  | $1,750,000  Wilson  | 2                  | $825,000           | 5                  | $1,850,000  Wright  | 7                  | $2,050,000         | 5                  | $1,505,000",
+        options: ["$250,000", "$310,000", "$333,333", "$350,000", "$450,000"],
+        correctAnswer: "310,000"
+    },
+    {
+        id: 75,
+        text: "A group of four numbers has an average (arithmetic mean) of 18. The first three numbers are 12, 24, and 16. What is the other number?",
+        options: ["16", "18", "20", "22", "24"],
+        correctAnswer: "20"
+    },
+    {
+        id: 76,
+        text: "At the halfway point of a telethon, a charity has only raised one quarter of its target amount. If its total amount raised doubles each of the next two hours, what percentage of its target amount will it have raised?",
+        options: ["75%", "80%", "87.5%", "93%", "100%"],
+        correctAnswer: "100%"
+    },
+    {
+        id: 77,
+        text: "It is estimated that 10% of all U.S. citizens have never traveled outside of the state in which they were born. If this is true, and two U.S. citizens were to be selected at random, what are the chances that NEITHER person has traveled outside of their own birth state?",
+        options: ["0.1%", "0.5%", "1.0%", "5.0%", "10.0%"],
+        correctAnswer: "1.0%"
+    },
+    {
+        id: 78,
+        text: "Choose the word that is most nearly OPPOSITE to the word in capital letters.  CONFORM",
+        options: ["adjust", "deviate", "realign", "anticipate", "devolve"],
+        correctAnswer: "deviate"
+    },
+    {
+        id: 79,
+        text: "Choose the word that is most nearly OPPOSITE to the word in capital letters.  LATENT",
+        options: ["Underdeveloped", "Sluggish", "Detrimental", "Deterred", "Exposed"],
+        correctAnswer: "exposed"
+    },
+    {
+        id: 80,
+        text: "LAMBASTE is to EXTOL as ...",
+        options: ["GALVANIZE is to CATALYZE", "MANDATE is to DECREE", "INFILTRATE is to SNEAK", "SKIM is to SCOUR", "DISPLACE is to RELOCATE"],
+        correctAnswer: "GALVANIZE is to CATALYZE"
+    },
+    {
+        id: 81,
+        text: "LAMBASTE is to EXTOL as ...",
+        options: ["GALVANIZE is to CATALYZE", "MANDATE is to DECREE", "INFILTRATE is to SNEAK", "SKIM is to SCOUR", "DISPLACE is to RELOCATE"],
+        correctAnswer: "GALVANIZE is to CATALYZE"
+    },
+    {
+        id: 82,
+        text: "OBSEQUIOUS is to DEFERENCE as ...",
+        options: ["PLANNED is to CHANCE", "OBLIVIOUS is to COGNIZANCE", "OBVIOUS is to ENIGMA", "DESTITUTE is to POVERTY", "DREARY is to MIRTH"],
+        correctAnswer: "OBLIVIOUS is to COGNIZANCE"
+    },
+    {
+        id: 83,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The homeowner, well aware of the building regulations in his hometown, was not surprised that he would have to make some _____ to his original design to renovate his home.",
+        options: ["austere ... measures", "obscure ... divisions", "stringent ... modifications", "lenient ... revisions", "limited ... magnifications"],
+        correctAnswer: "stringent ... modifications"
+    },
+    {
+        id: 84,
+        text: "A bartender's monthly pay consists of $2,400 base salary plus 10% in tips on average for all drinks sold. If the bartender's total pay for the month was $4,250, how much money did she generate in drink sales during this time?",
+        options: ["$16,650", "$17,500", "$18,500", "$24,000", "$42,500"],
+        correctAnswer: "$18,500"
+    },
+    {
+        id: 85,
+        text: "A long distance race begins with 12 runners from Team A and 12 runners from Team B. 3 runners from Team A and 6 runners from Team B do not finish the race. What percentage of the runners who finish the race are from team A?",
+        options: ["50%", "60%", "63%", "66%", "75%"],
+        correctAnswer: "60%"
+    },
+    {
+        id: 86,
+        text: "Cynthia is one-fourth the age of her father and 25% younger than her cousin. If Cynthia's cousin is 16 years old, how old is Cynthia's father?",
+        options: ["36", "44", "48", "56", "64"],
+        correctAnswer: "48"
+    },
+    {
+        id: 87,
+        text: "After selecting 180 of its employees to form a new division, a company discovers that engineers outnumber analysts by a 3:1 ratio in the division. Only analysts and engineers work in the new division. How many more analysts must the company add to the division if it wants to have a 1:1 ratio of engineers to analysts at the new division?",
+        options: ["45", "60", "75", "90", "135"],
+        correctAnswer: "90"
+    },
+    {
+        id: 88,
+        text: "Suppose that in an election voter preference is sharply divided along gender lines. 40% of women will vote for Candidate A, the rest will vote for Candidate B; 70% of men will vote for Candidate A, the rest for Candidate B. Which of the following represents the lowest percentage of voters that must be women on election day, in order that Candidate B wins the election?",
+        options: ["56%", "61%", "65%", "67%", "70%"],
+        correctAnswer: "67%"
+    },
+    {
+        id: 89,
+        text: "If a stock clerk receives six shipments per week, how many shipments does she receive over the course of 16 weeks?",
+        options: ["80", "84", "88", "92", "96"],
+        correctAnswer: "96"
+    },
+    {
+        id: 90,
+        text: "Which of the following is the largest value?",
+        options: ["0.815", "0.581", "0.851", "0.518", "0.185"],
+        correctAnswer: "0.851"
+    },
+    {
+        id: 91,
+        text: "A hat store sells 900 hats in its first year. If the number of hats it sells in the next year is 50% higher, how many hats will it sell in its second year?",
+        options: ["1200", "1350", "1380", "1400", "1440"],
+        correctAnswer: "1350"
+    },
+    {
+        id: 92,
+        text: "SALMON is to FISH as ...",
+        options: ["EXPERIMENT is to CHEMISTRY", "OXYGEN is to ELEMENT", "TRAIN is to BUS", "ANIMAL is to REPTILE", "MOTION is to SWIM"],
+        correctAnswer: "OXYGEN is to ELEMENT"
+    },
+    {
+        id: 93,
+        text: "PAPER is to THIN as ...",
+        options: ["FLEA is to TINY", "BINDER is to ORGANIZE", "PRINTER is to COPY", "RABBIT is to WISHFUL", "SPOON is to SULKY"],
+        correctAnswer: "FLEA is to TINY"
+    },
+    {
+        id: 94,
+        text: "PROFICIENT is to PRACTICE as ...",
+        options: ["STRONG is to EXERCISE", "EXPERT is to PREFERENCE", "IGNORANT is to DISPUTE", "CONCEDE is to PERMIT", "INFORMED is to GENEROSITY"],
+        correctAnswer: "STRONG is to EXERCISE"
+    },
+    {
+        id: 95,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The pace at which the professor lectured frustrated some students, who wished he wouldn't spend so much time explaining basic concepts.",
+        options: ["elevated", "accelerated", "temperate", "swift", "deliberate"],
+        correctAnswer: "temperate"
+    },
+    {
+        id: 96,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        options: ["reenactment", "critique", "declaration", "rebuttal", "preview"],
+        correctAnswer: "critique"
+    },
+    {
+        id: 97,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  When someone uses their cell phone in a movie theater, others might find this to be _____",
+        options: ["lawful", "commendable", "endurable", "justified", "impertinent"],
+        correctAnswer: "impertinent"
+    },
+    {
+        id: 98,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The new phone model is being panned by critics due to the changes made to its design; while the old model offered ample storage, this model _____ storage in lieu of camera quality.",
+        options: ["derided", "preserved", "extended", "sacrificed", "postponed"],
+        correctAnswer: "sacrificed"
+    },
+    {
+        id: 99,
+        text: "In a class of forty students, one fifth of the students also play on the school's football team. If four more students from the class join the football team, what percentage of students in the class will be on the football team?",
+        options: ["25%", "30%", "33%", "35%", "40%"],
+        correctAnswer: "30%"
+    },
+    {
+        id: 100,
+        text: "12 is 40% of what number?",
+        options: ["20", "24", "25", "30", "32"],
+        correctAnswer: "30"
+    },
+    {
+        id: 101,
+        text: "What would be the next group of letters in the following series?  akje... ajif ... aihg.... ahgh?",
+        options: ["agff", "agfi", "aggi", "aifh", "aifi"],
+        correctAnswer: "AGFI"
+    },
+    {
+        id: 102,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  Jared received the highest grade in the class.  Wes received the lowest grade in the class.  Donna received a lower grade than Jared.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "True"
+    },
+    {
+        id: 103,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  Robin works at the same office as Charles.  Charles works at a different office than Alex.  Alex works at a different office than Robin.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "True"
+    } // ... gemini said it's false
+    ,
+    {
+        id: 104,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  David sold fewer subscriptions than Sara.  David sold more subscriptions than Sam.  Sam sold more subscriptions than Sara.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "False"
+    },
+    {
+        id: 105,
+        text: "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Mendelson Industries\n* Hernandez Pharmaceuticals\n* Jenkins Architectural Design\n* Holmes Banking and Loans\n* Wheeler Lawn Services\n\nRight column:\n* Mendelson Industries\n* Hernandez Pharmaceuticals\n* Jenkins Architectural Design\n* Holmes Banking and Loans\n* Wheeler Lawn Services",
+        options: ["1", "2", "3", "4", "5"],
+        correctAnswer: "5"
+    },
+    {
+        id: 106,
+        text: "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Laren Investments\n* Faddish Marketing, Inc.\n* McGregor Production Co.\n* Hastings Market\n* Akron Agency\n\nRight column:\n* Lauren Investments\n* Faddish Marketing Inc.\n* McGregor Production Co\n* Hastings Mart\n* Akron Agency",
+        options: ["1", "2", "3", "4", "5"],
+        correctAnswer: "1"
+    }  // ... gemini said it's 4
+    ,
+    {
+        id: 107,
+        text: "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 114 Maple Dr.\n* 55 Greenfield Ct.\n* 3201 Gardner St.\n* 24 Walker Rd.\n* 8 Whitehurst Ln.\n\nRight column:\n* 114 N. Maple Dr.\n* 55 Greenfield Ct.\n* 3201 Gardner Rd.\n* 24 Walker Rd.\n* 8 Whitehurst Ln.",
+        options: ["1", "2", "3", "4", "5"],
+        correctAnswer: "3"
+    } // ... gemini said it's 4
+    ,
+    {
+        id: 108,
+        text: "What would be the next number in the following series?  2... 4... 7 ... 11 ... 16 ...?",
+        options: ["21", "22", "23", "25", "27"],
+        correctAnswer: "22"
+    },
+    {
+        id: 109,
+        text: "A cashier uses an average of 3.5 twenty dollar bills every hour in order to make change for customers. If this cashier works 180 hours per month, how many twenty dollar bills will he need each month?",
+        options: ["450", "540", "585", "630", "675"],
+        correctAnswer: "630"
+    },
+    {
+        id: 110,
+        text: "A safety specialist can complete an inspection in 0.5 hours. Her less experienced colleague takes 2.0 hours to complete an inspection. If both individuals start working at the same time, and each spends 70 hours completing inspections over the course of a month, how many total inspections will they have completed?",
+        options: ["165", "170", "175", "180", "185"],
+        correctAnswer: "175"
+    },
+    {
+        id: 111,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Upon returning to her home, the anxious woman was relieved to find it to be _____ after fearing that she had left the stove on in the kitchen while she was gone all day.",
+        options: ["unscathed ... erroneously", "razed ... tenaciously", "intact ... accordingly", "obliterated ... perennially", "resplendent ... duly"],
+        correctAnswer: "unscathed ... erroneously"
+    },
+    {
+        id: 112,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Upon entering the _____ home, the police officers were disgusted to see its rundown state.",
+        options: ["stalwart", "derelict", "gracious", "fastidious", "exemplary"],
+        correctAnswer: "derelict"
+    },
+    {
+        id: 113,
+        text: "A group of four numbers has an average (arithmetic mean) of 30. The first three numbers are 32, 26, and 24. What is the other number?",
+        options: ["30", "33", "38", "48", "53"],
+        correctAnswer: "38"
+    },
+    {
+        id: 114,
+        text: "A new car is purchased for $24,000. The value of the car depreciates by 20% in the first year and 15% in the next. What is the value of the car after two years?",
+        options: ["$16,300", "$16,320", "$16,340", "$16,360", "$16,380"],
+        correctAnswer: "$16,320"
+    },
+    {
+        id: 115,
+        text: "A restaurant buys 1500 eggs per week, at $1.50 per dozen. If the cost per dozen eggs rises to $1.80, how much more will the restaurant have to pay for eggs per week?",
+        options: ["$23.25", "$35", "$32.75", "$37.50", "$28.50"],
+        correctAnswer: "$37.50"
+    },
+    {
+        id: 116,
+        text: "Choose the word that is most nearly OPPOSITE to the word in capital letters.  MANIFOLD",
+        options: ["volitional", "plentiful", "diverse", "singular", "unintentional"],
+        correctAnswer: "singular"
+    },
+    {
+        id: 117,
+        text: "Choose the word that is most nearly OPPOSITE to the word in capital letters.  GARNER",
+        options: ["yield", "provide", "seize", "dispel", "assemble"],
+        correctAnswer: "dispel"
+    },
+    {
+        id: 118,
+        text: "SUPPORT is to FRAMEWORK as ...",
+        options: ["NOURISHMENT is to DEPRIVATION", "AMUSEMENT is to HOBBY", "CONSCIOUSNESS is to SLEEP", "COMPETENCY is to EMPLOYMENT", "ORGANIZATION is to FORTITUDE"],
+        correctAnswer: "COMPETENCY is to EMPLOYMENT"
+    },
+    {
+        id: 119,
+        text: "OBTRUSIVE is to INCONSPICUOUS as ...",
+        options: ["IMITATION is to FORGED", "DISCREET is to PROMINENT", "SYNCHRONOUS is to TIMELY", "BLATANT is to PATENT", "DIRE is to TERRIBLE"],
+        correctAnswer: "DISCREET is to PROMINENT"
+    },
+    {
+        id: 120,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Although the store _____ friendly employees toward the entrance, instructing them to welcome customers into the store, discerning minds were able to reason that these employees were really meant to serve as a _____ to shoplifters.",
+        options: ["stationed ... deterrent", "discharged ... temptation", "gratified ... scourge", "insinuated ... gesture", "positioned ... benefit"],
+        correctAnswer: "stationed ... deterrent"
+    },
+    {
+        id: 117,
+        text: "An account manager makes $1,800 per pay cycle, plus 12.5% commission on all customer renewals. If she makes $2,750 during a certain pay cycle, then how much money did she generate in renewals during this time?",
+        options: ["$7,400", "$7,500", "$7,600", "$7,700", "$7,800"],
+        correctAnswer: "$7,600"
+    },
+    {
+        id: 118,
+        text: "A pie eating contest begins with 14 men and 10 women as contestants. By the end of Round One, 2 men and 2 women have dropped out of the contest. What percentage of contestants proceeding to Round Two are women?",
+        options: ["40%", "50%", "60%", "70%", "80%"],
+        correctAnswer: "49%"
+    } // gemini said it's 40%
+    ,
+    {
+        id: 119,
+        text: "A sporting goods store sells mountain bikes from seven different brands, in four different sizes, and in six different colors. How many different combinations of brand, size, and color are possible?",
+        options: ["144", "168", "180", "192", "210"],
+        correctAnswer: "168"
+    },
+    {
+        id: 120,
+        text: "A plumbing company takes an average of three hours to complete a job. If they complete 180 jobs in a month, and earn a total of $29,700 for the month, what was their average rate on an hourly basis for that month?",
+        options: ["$42", "$45", "$46", "$48", "$55"],
+        correctAnswer: "$55"
+    },
+    {
+        id: 121,
+        text: "An hourly worker whose wage is $15 per hour will be paid how much for an eight-hour shift?",
+        options: ["$60", "$90", "$120", "$135", "$150"],
+        correctAnswer: "$120"
+    },
+    {
+        id: 122,
+        text: "Which of the following is the largest value?",
+        options: ["6.342", "0.98", "7.1", "1.83", "0.113"],
+        correctAnswer: "7.1"
+    },
+    {
+        id: 123,
+        text: "A hat store sells 900 hats in its first year. If the number of hats it sells in the next year is 50% higher, how many hats will it sell in its second year?",
+        options: ["1200", "1350", "1380", "1400", "1440"],
+        correctAnswer: "1350"
+    },
+    {
+        id: 124,
+        text: "SHOVEL is to DIG as ...",
+        options: ["PLAY is to WIN", "WEIGHT is to CARRY", "LAUGH is to CRY", "MONEY is to BUY", "FIRE is to COLD"],
+        correctAnswer: "MONEY is to BUY"
+    },
+    {
+        id: 125,
+        text: "DINNER is to MEAL as ...",
+        options: ["FIRE is to ICE", "EAT is to DRINK", "WINTER is to SEASON", "DRAMA is to COMEDY", "DOOR is to WALL"],
+        correctAnswer: "WINTER is to SEASON"
+    },
+    {
+        id: 126,
+        text: "PRISTINE is to SULLIED as ...",
+        options: ["STOIC is to NUMB", "COURTEOUS is to RUDE", "EXCUSABLE is to PARDON", "TOPICAL is to RELEVANCE", "VOLATILE is to ERUPT"],
+        correctAnswer: "COURTEOUS is to RUDE"
+    },
+    {
+        id: 127,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The duckling tried to _____ its mother by following her every step.",
+        options: ["Rival", "Confront", "Personify", "Immerse", "Emulate"],
+        correctAnswer: "Emulate"
+    },
+    {
+        id: 128,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Upset with the company president's _____ refusal to consider their proposals, the angry shareholders finally confronted her at the company's annual meeting.",
+        options: ["alert", "relevant", "terse", "disgusting", "persistent"],
+        correctAnswer: "persistent"
+    },
+    {
+        id: 129,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The baker was initially _____ as to why her cake failed to rise until she realized she had _____ to add baking soda.",
+        options: ["perplexed ... neglected", "astounded ... discriminated", "knowledgeable ... considered", "amazed ... refused", "distraught ... dared"],
+        correctAnswer: "perplexed ... neglected"
+    },
+    {
+        id: 130,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Apparently by convention or modesty, the vacationer decided to sunbathe in the _____ on the crowded beach.",
+        options: ["unmasked", "unconstrained", "discomfited", "disguised", "compelled"],
+        correctAnswer: "unconstrained"
+    },
+    {
+        id: 131,
+        text: "A mattress store has a sale where all mattresses are sold at a discount of 25%. If the regular price of the mattresses is $320, how many mattresses could be bought at the sale price if a shopper spent $1,440?",
+        options: ["3", "4", "5", "6", "7"],
+        correctAnswer: "6"
+    },
+    {
+        id: 132,
+        text: "6 is 15% of what number?",
+        options: ["20", "25", "30", "36", "40"],
+        correctAnswer: "40"
+    },
+    {
+        id: 133,
+        text: "What would be the next group of letters in the following series?  kfvn ... kewm... kdxl ... kcyk?",
+        options: ["kbzj", "kbaj", "kbxl", "kdzj", "kdzl"],
+        correctAnswer: "kbzj"
+    } // gemini said it's kbxl
+    ,
+    {
+        id: 134,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  Claire earns more than Phil.  Phil earns less than Sebastian.  Sebastian earns more than Claire.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "Uncertain"
+    },
+    {
+        id: 135,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  Brad is friends with Justin.  Justin is friends with Pat.  Brad is not friends with Pat.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "Uncertain"
+    },
+    {
+        id: 136,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  David sold fewer subscriptions than Sara.  David sold more subscriptions than Sam.  Sam sold more subscriptions than Sara.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "False"
+    },
+    {
+        id: 137,
+        text: "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Crockett Jewelers\n* Samson Flooring\n* Awad, Fischer & Associates\n* Gonzalez Catering\n* Walsh Design Center\n\nRight column:\n* Crockett Jewelers\n* Sampson Flooring\n* Awad, Fischer & Associates\n* Gonzales Catering\n* Welsh Design Center",
+        options: ["1", "2", "3", "4", "5"],
+        correctAnswer: "2"
+    },
+    {
+        id: 138,
+        text: "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Vogel, Bryan M.\n* Bernal, Emilio A.\n* Tompkins, Ana L.\n* Hutchins, Isaac D.\n* Li, Kenneth O.\n\nRight column:\n* Vogel, Bryan M.\n* Bernal, Emilio A.\n* Tompkins, Ana L.\n* Hutchins, Isaac D.\n* Li, Kenneth O.",
+        options: ["1", "2", "3", "4", "5"],
+        correctAnswer: "4"
+    },
+    {
+        id: 139,
+        text: "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 2040 Sierra Blvd.\n* 584 San Anselmo Way #4D\n* 81719 Tallahassee Rd.\n* 3782 Scorpio Canyon St.\n* 1143 Redwood Pwky.\n\nRight column:\n* 2040 Sierra Blvd.\n* 584 San Anselmo Way #40\n* 81719 Tallahassee Rd.\n* 3782 Scorpio Canyon St.\n* 143 Redwood Pwky.",
+        options: ["1", "2", "3", "4", "5"],
+        correctAnswer: "3"
+    },
+    {
+        id: 140,
+        text: "What would be the next number in the following series?  2... 13 ... 15... 28 ... 43 ...?",
+        options: ["58", "65", "71", "79", "86"],
+        correctAnswer: "71"
+    },
+    {
+        id: 141,
+        text: "If it takes a baker 6 hours to create a wedding cake, how many cakes will she be able to complete in 150 hours?",
+        options: ["20", "21", "22", "24", "25"],
+        correctAnswer: "25"
+    },
+    {
+        id: 142,
+        text: "A technician can complete an installation in 1.5 hours. Her less experienced colleague takes 2.5 hours to complete an installation. If both individuals start working at the same time, and each works 60 hours over the course of ten days, how many total installations will they have completed?",
+        options: ["56", "60", "64", "66", "72"],
+        correctAnswer: "64"
+    },
+    {
+        id: 143,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Because of concerns over student safety, the college sought to _____ certain activities that had once been considered to be _____ traditions surrounding orientation week.",
+        options: ["enhance ... cherished", "eliminate ... harmful", "advance ... joyous", "curtail ... innocuous", "eradicate ... curious"],
+        correctAnswer: "curtail ... innocuous"
+    },
+    {
+        id: 144,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The old book was full of _____ text, making it a very _____ read.",
+        options: ["Inscrutable ... grueling", "Minuscule ... facile", "Hyperbolic ... stale", "Authoritative ... inert", "Dogmatic ... languid"],
+        correctAnswer: "Inscrutable ... grueling"
+    },
+    {
+        id: 145,
+        text: "The table below displays the sales figures for a group of realtors over a 2-year period. What was the approximate average sales price for the houses sold by Mrs. Boggs in Year 1?\n\n| Realtor | Houses Sold Year 1 | Total Sales Year 1 | Houses Sold Year 2 | Total Sales Year 2 |\n|---|---|---|---|---||\n| Boggs | 5 | $1,550,000 | 7 | $2,450,000 |\n| Jenkins | 3 | $1,350,000 | 4 | $1,800,000 |\n| Miller | 4 | $1,375,000 | 6 | $1,750,000 |\n| Wilson | 2 | $825,000 | 5 | $1,850,000 |\n| Wright | 7 | $2,050,000 | 5 | $1,505,000 |",
+        options: ["$250,000", "$310,000", "$333,333", "$350,000", "$450,000"],
+        correctAnswer: "$310,000"
+    },
+    {
+        id: 146,
+        text: "A group of four numbers has an average (arithmetic mean) of 17. The first three numbers are 9, 32, and 19. What is the other number?",
+        options: ["8", "12", "13", "15", "17"],
+        correctAnswer: "8"
+    },
+    {
+        id: 147,
+        text: "A new car is purchased for $24,000. The value of the car depreciates by 20% in the first year and 15% in the next. What is the value of the car after two years?",
+        options: ["$16,300", "$16,320", "$16,340", "$16,360", "$16,380"],
+        correctAnswer: "$16,320"
+    },
+    {
+        id: 148,
+        text: "An estimated 5% of all people have hazel eyes. If two people are selected at random from around the world, what are the chances that BOTH of these people have hazel eyes?",
+        options: ["0.25%", "1.00%", "2.50%", "10.00%", "25.00%"],
+        correctAnswer: "0.25%"
+    },
+    {
+        id: 149,
+        text: "Choose the word that is most nearly OPPOSITE to the word in capital letters.  OSTENTATIOUS",
+        options: ["omnipotent", "refined", "modest", "undignified", "gorgeous"],
+        correctAnswer: "modest"
+    },
+    {
+        id: 150,
+        text: "Choose the word that is most nearly OPPOSITE to the word in capital letters.  GARNER",
+        options: ["yield", "provide", "seize", "dispel", "assemble"],
+        correctAnswer: "dispel"
+    },
+    {
+        id: 151,
+        text: "CASTIGATE is to PUNISHMENT as...",
+        options: ["APPROVE is to CITATION", "DEVOTE is to ANIMOSITY", "ADVISE is to MENTORSHIP", "REPORT is to VENGEANCE", "CLARIFY is to ENDOWMENT"],
+        correctAnswer: "ADVISE is to MENTORSHIP"
+    },
+    {
+        id: 152,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Flustered by the accusation, the employee _____ denied any responsibility for the _____ found in the company's new product line.",
+        options: ["angrily ... advantages", "justly ... abundance", "vehemently ... defects", "sufficiently ... stigmas", "respectfully ... shortages"],
+        correctAnswer: "vehemently ... defects"
+    },
+    {
+        id: 153,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Believing himself to be _____ because of youthful _____ while in college, the popular businessman decided not to run for political office.",
+        options: ["compromised ... accomplishments", "vulnerable ... indiscretions", "disadvantaged ... experiences", "qualified ... studies", "inviolate ... misadventures"],
+        correctAnswer: "vulnerable ... indiscretions"
+    },
+    {
+        id: 154,
+        text: "A basketball team knows that it can sell all 1,000 seats in its arena for a price of $15, but determines that if it sells tickets for $20 then it will only sell 90% of the seats. By what percentage will the team increase its revenue if it decides to sell tickets for the higher price?",
+        options: ["10%", "12%", "15%", "18%", "20%"],
+        correctAnswer: "20%"
+    },
+    {
+        id: 155,
+        text: "A manufacturing company has two assembly lines, one with old equipment and one with new. The old assembly line generates products at a rate of 48 per hour, the new one at 60 per hour. If both assembly lines are operating at the same time, how long will it take them to create a total of 180 products?",
+        options: ['1 hour and 20 minutes', '1 hour and 24 minutes', '1 hour and 30 minutes', '1 hour and 36 minutes', '1 hour and 40 minutes'],
+        correctAnswer: '1 hour and 40 minutes'
+    },
+    {
+        id: 156,
+        text: "The average (arithmetic mean) of 4 numbers is greater than 11 but less than 16. Which of the following could NOT be the sum of these four numbers?",
+        options: ["45", "57", "66", "48", "63"],
+        correctAnswer: "66"
+    },
+    {
+        id: 157,
+        text: "A store selling t-shirts featuring the Grand Canyon carries t-shirts in two different colors, with three different designs, and each shirt is available in four different sizes. How many different combinations of color, design, and size are possible?",
+        options: ["9", "12", "16", "24", "35"],
+        correctAnswer: "24"
+    },
+    {
+        id: 158,
+        text: "A restaurant menu offers 3 different salads, 5 different main courses, and 4 different desserts. If a diner is going to have one salad, one main course, and one dessert, how many different possible combinations are available?",
+        options: ["12", "24", "30", "48", "60"],
+        correctAnswer: "60"
+    },
+    {
+        id: 159,
+        text: "It costs six tickets to go on an amusement park ride. How many tickets will a group of 15 children need in order for the whole group to go on the ride?",
+        options: ["30", "45", "60", "90", "120"],
+        correctAnswer: "90"
+    },
+    {
+        id: 160,
+        text: "Which of the following is the smallest value?",
+        options: ["0.709", "1.079", "0.097", "1.097", "0.907"],
+        correctAnswer: "0.097"
+    },
+    {
+        id: 161,
+        text: "A leasing agent leases 15 apartments in the month of September. If the agent leases 40% more apartments in the next month, how many does she lease in October?",
+        options: ["19", "21", "23", "25", "27"],
+        correctAnswer: "21"
+    },
+    {
+        id: 162,
+        text: "NECKLACE is to JEWELRY as ...",
+        options: ["YARD is to LAWN", "AIRPLANE is to HELICOPTER", "DOG is to PET", "CLOCK is to WATCH", "SAFE is to VALUABLES"],
+        correctAnswer: "DOG is to PET"
+    },
+    {
+        id: 163,
+        text: "OCCUPIED is to VACANT as...",
+        options: ["BEAUTIFUL is to SIGHT", "BLISSFUL is to HAPPINESS", "CONSERVED is to RETAINED", "HONORABLE is to SHAMEFUL", "MYOPIC is to SHORTSIGHTED"],
+        correctAnswer: "CONSERVED is to RETAINED"
+    } // all these are from test4, so most answers are probably wrong
+    ,
+    {
+        id: 164,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Praised by many for her _____, the professor was known for her engaging lectures on topics as diverse as chemistry, the civil war, and the history of religion.",
+        options: ["candor", "versatility", "sentiment", "friendliness", "brevity"],
+        correctAnswer: "versatility"
+    },
+    {
+        id: 165,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        options: ["reenactment", "critique", "unique", "declaration", "rebuttal", "preview"],
+        correctAnswer: "critique"
+    },
+    {
+        id: 166,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Usually a _____ supporter of his team, the fan was uncharacteristically _____ about attending the opening game because the forecast called for heavy rain.",
+        options: ["fervent ... ambivalent", "committed ... enthusiastic", "tepid ... reluctant", "rabid ... silent", "forthright ... quiet"],
+        correctAnswer: "fervent ... ambivalent"
+    },
+    {
+        id: 167,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  One of her daughter's unique _____ was that she always clapped her hands when she laughed.",
+        options: ["peculiarities", "treats", "discourses", "demeanors", "personas"],
+        correctAnswer: "peculiarities"
+    },
+    {
+        id: 168,
+        text: "A mattress store has a sale where all mattresses are sold at a discount of 25%. If the regular price of the mattresses is $320, how many mattresses could be bought at the sale price if a shopper spent $1,440?",
+        options: ["3", "4", "5", "6", "7"],
+        correctAnswer: "6"
+    },
+    {
+        id: 169,
+        text: "12 is 40% of what number?",
+        options: ["20", "24", "29", "30", "32"],
+        correctAnswer: "30"
+    },
+    {
+        id: 170,
+        text: "What would be the next group of letters in the following series?  kfvn ... kewm... kdxl ... kcyk?",
+        options: ["kbzg", "kbzg", "kbxt", "kbzd", "kbzl"],
+        correctAnswer: "kbxl"
+    },
+    {
+        id: 171,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  Mia has watched 7 movies this year, which is 2 more than Ivan has watched.  Ivan has watched more movies than Taylor this year.  Taylor has watched fewer than 5 movies this year.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "True"
+    },
+    {
+        id: 172,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  Andy knows Bob.  Bob knows Claire.  Andy knows Claire.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "Uncertain"
+    },
+    {
+        id: 173,
+        text: "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided?  Tim is younger than Joe.  Brenda is older than Joe.  Tim is older than Brenda.",
+        options: ["True", "False", "Uncertain"],
+        correctAnswer: "False"
+    },
+    {
+        id: 174,
+        text: "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Ferreira Financial\n* Center City Rental Co.\n* Greenwood Construction\n* Moonrise Valley Bakery\n* West Lake Auto Mall\n\nRight column:\n* Ferreira Financial\n* Center City Rentals\n* Greenwood Construction\n* Moonrise Valley Bakery\n* Westlake Auto Mall",
+        options: ["1", "2", "3", "4", "5"],
+        correctAnswer: "4"
+    },
+    {
+        id: 175,
+        text: "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Rinaldi, Harold C.\n* Wong, Cindy Z.\n* Travis-Ramsay, Craig R.\n* Collins, Courtney J.\n* Márquez, Katrina P.\n\nRight column:\n* Rinaldi, Harold C. L.\n* Wang, Cindy Z.\n* Travis Ramsay, Craig R.\n* Collins, Courtney J.\n* Márquez, Katrina P.",
+        options: ['1', '2', '3', '4', '5'],
+        correctAnswer: '3'
+    },
+    {
+        id: 176,
+        text: "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 12 Valley Dr. #4\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.\n\nRight column:\n* 12 Valley Dr.\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.",
+        options: ['1', '2', '3', '4', '5'],
+        correctAnswer: '4'
+    },
+    {
+        id: 177,
+        text: "What would be the next number in the following series?  3 ... 7 ... 10 ... 17 ... 27 ...?",
+        options: ["30", "34", "37", "40", "44"],
+        correctAnswer: "37"
+    },
+    {
+        id: 178,
+        text: "A cashier uses an average of 3.5 twenty dollar bills every hour in order to make change for customers. If this cashier works 180 hours per month, how many twenty dollar bills will he need each month?",
+        options: ["450", "540", "585", "630", "675"],
+        correctAnswer: "630"
+    },
+    {
+        id: 179,
+        text: "A customer service representative handles 7.5 calls per hour, while his coworker handles 8 calls per hour. If both representatives start working at the same time and each spends 60 hours handling calls over a two-week period, how many calls have they handled in total?",
+        options: ["900", "915", "930", "945", "960"],
+        correctAnswer: "960"
+    },
+    {
+        id: 180,
+        text: "Because of the company's decision to roll out the new marketing strategy slowly, it was difficult to _____ its effectiveness, and the _____ of the new approach were not clear until almost a year later, when sales began to suffer.",
+        options: ["gauge ... metrics", "conceptualize ... results", "monitor ... virtues", "determine ... advantages", "measure ... limitations"],
+        correctAnswer: "measure ... limitations"
+    },
+    {
+        id: 181,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Aware that his conduct had been _____ and intent on limiting the fallout from the scandal, the politician decided to resign and leave public office.",
+        options: ["reprehensible", "irreproachable", "defensible", "petulant", "fortuitous"],
+        correctAnswer: "reprehensible"
+    },
+    {
+        id: 182,
+        text: "A group of five numbers has an average (arithmetic mean) of 20. The first four numbers are 12, 16, 17, and 23. What is the fifth number?",
+        options: ["24", "27", "29", "30", "32"],
+        correctAnswer: "24"
+    },
+    {
+        id: 183,
+        text: "A home is purchased for $600,000. The owners have the home reappraised every five years. Its value appreciates 10% in the first five years and another 10% in the next five years. What is the value of the home after ten years?",
+        options: ["$726,000", "$792,000", "$825,000", "$900,000"],
+        correctAnswer: "$792,000"
+    },
+    {
+        id: 184,
+        text: "A car manufacturer issues a recall for a new car model, finding that 30% of the cars at random have a serious mechanical defect. If a single household owns two of these cars, what are the chances that NEITHER car has the defect?",
+        options: ["14%", "19%", "30%", "49%", "70%"],
+        correctAnswer: "49%"
+    },
+    {
+        id: 185,
+        text: "Choose the word that is most nearly OPPOSITE to the word in capital letters.  ERSATZ",
+        options: ["exorbitant", "artificial", "reconditioned", "genuine", "exaggerated"],
+        correctAnswer: "genuine"
+    },
+    {
+        id: 186,
+        text: "Choose the word that is most nearly OPPOSITE to the word in capital letters.  DYNAMIC",
+        options: ["forceful", "frenetic", "mortal", "stagnant", "invincible"],
+        correctAnswer: "stagnant"
+    },
+    {
+        id: 187,
+        text: "CANTANKEROUS is to AFFABLE as...",
+        options: ["LIVELY is to SPIRITED", "SOMBER is to GLUM", "EAGER is to ALOOF", "STATELY is to PROPER", "GAUCHE is to AWKWARD"],
+        correctAnswer: "SOMBER is to GLUM"
+    },
+    {
+        id: 188,
+        text: "RECKLESS is to CAUTION as...",
+        options: ["DELIBERATE is to THOUGHT", "SILLY is to INTENT", "MEAN is to COMPASSION", "ALERT is to SLEEP", "ANGRY is to PRUDENCE"],
+        correctAnswer: "DELIBERATE is to THOUGHT"
+    },
+    {
+        id: 189,
+        text: "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence.  Despite her firm _____ about the merits of her approach, the mayor agreed to meet with her opponents in the hope that she could _____ them by making a few concessions.",
+        options: ["theories ... modify", "misgivings ... placate", "beliefs ... betray", "convictions ... appease", "announcements ... embarrass"],
+        correctAnswer: "convictions ... appease"
+    },
+    {
+        id: 190,
+        text: "The average (arithmetic mean) of 4 numbers is greater than 8.5 and less than 12.5. Which of the following could NOT be the sum of these four numbers?",
+        options: ["44", "42", "31", "36", "49"],
+        correctAnswer: "31"
+    },
+    {
+        id: 191,
+        text: "A pie eating contest begins with 14 men and 10 women as contestants. By the end of Round One, 2 men and 2 women have dropped out of the contest. What percentage of contestants proceeding to Round Two are women?",
+        options: ["40%", "50%", "60%", "70%", "80%"],
+        correctAnswer: "40%"
+    },
+    {
+        id: 192,
+        text: "An arena has 15,000 seats. The best seats are in the blue sections of the arena. There are 12 blue sections and each contains between 200 and 250 seats. Which of the following could be the percentage of seats in the arena that are in the blue sections?",
+        options: ["19%", "23%", "25%", "27%", "31%"],
+        correctAnswer: "23%"
+    },
+    {
+        id: 193,
+        text: "An office supply store sells pencils from five different brands, each with five different colors, and in three different sizes. How many different combinations of brand, color, and size are possible?",
+        options: ["25", "50", "75", "100", "125"],
+        correctAnswer: "75"
+    },
+    {
+        id: 194,
+        text: "A restaurant menu offers 3 different salads, 5 different main courses, and 4 different desserts. If a diner is going to have one salad, one main course, and one dessert, how many different possible combinations are available?",
+        options: ["12", "24", "30", "48", "60"],
+        correctAnswer: "60"
+    },
+    {
+        id: 195,
+        text: "The table below displays the most recent sales for Mr. Garcia's real estate business. What was the average square footage for the five houses?\n\n| House | Square Feet | Bedrooms | Bathrooms | Price |\n|---|---|---|---|---||\n| 1 | 1,600 | 3 | 2 | $320,000.00 |\n| 2 | 1,300 | 3 | 1.75 | $390,000.00 |\n| 3 | 1,700 | 4 | 2.5 | $595,000.00 |\n| 4 | 1,750 | 4 | 2 | $700,000.00 |\n| 5 | 2,000 | 3 | 3 | $600,000.00 |",
+        options: ["1,670 square feet", "1,690 square feet", "1,710 square feet", "1,730 square feet", "1,750 square feet"],
+        correctAnswer: "1,690 square feet"
+    }
+    //from here starts the test6
+    ,
+    {
+        id: 196,
+        text: "If a store sells 120 pencils per day, how many pencils does it sell in 2 weeks?",
+        options: ["1,680", "1,780", "1,880", "1,980", "2,080"],
+        correctAnswer: "1,680"
+    },
+    {
+        id: 197,
+        text: "Which of the following is the smallest value?",
+        options: ["0.146", "2.862", "0.45", "1.09", "2.001"],
+        correctAnswer: "0.146"
+    },
+    {
+        id: 198,
+        text: "A hardware store sells 215 ladders in the month of August. If it sells 40% more ladders in the next month, how many ladders does it sell in September?",
+        options: ["305", "306", "311", "317"],
+        correctAnswer: "301"
+    },
+    {
+        id: 199,
+        text: "SHOVEL is to DIG as...",
+        options: ["PLAY is to WIN", "WEIGHT is to CARRY", "LAUGH is to CRY", "MONEY is to BUY", "FIRE is to COLD"],
+        correctAnswer: "MONEY is to BUY"
+    },
+    {
+        id: 200,
+        text: "CAR is to VEHICLE as...",
+        options: ["BLEACH is to WASH", "BUS is to TRAIN", "ELEPHANT is to ANIMAL", "DESK is to OFFICE", "JUMP is to WALK"],
+        correctAnswer: "ELEPHANT is to ANIMAL"
+    },
+    {
+        id: 201,
+        text: "OCCUPIED is to VACANT as...",
+        options: ["BEAUTIFUL is to SIGHT", "BLISSFUL is to HAPPINESS", "CONSERVED is to RETAINED", "HONORABLE is to SHAMEFUL", "MYOPIC is to SHORTSIGHTED"],
+
+        correctAnswer: "HONORABLE is to SHAMEFUL"
+    }
+]

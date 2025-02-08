@@ -1,0 +1,649 @@
+[
+    {
+        "id": 1,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace14.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
+    },
+    {
+        "id": 2,
+        "text": "SHOVEL is to DIG as...",
+        "options": [
+            "PLAY is to WIN",
+            "WEIGHT is to CARRY",
+            "LAUGH is to CRY",
+            "MONEY is to BUY",
+            "FIRE is to COLD"
+        ],
+        "correctAnswer": "MONEY is to BUY",
+        "explanation": "A shovel is a tool used for digging, just as money is a tool used for buying. This is the most logical relationship among the given options."
+    },
+    {
+        "id": 3,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? All programmers know Java. Sarah knows Java. Sarah is a programmer.",
+        "options": [
+            "True",
+            "False",
+            "Uncertain"
+        ],
+        "correctAnswer": "Uncertain",
+        "explanation": "While we know all programmers know Java and Sarah knows Java, we can't conclude that everyone who knows Java is a programmer. Sarah might know Java without being a programmer."
+    },
+    {
+        "id": 4,
+        "text": "A car depreciates in value by 12% each year. If a car is worth $25,000 now, what will its value be after 3 years?",
+        "options": [
+            "$16,500",
+            "$17,000",
+            "$17,500",
+            "$18,000",
+            "$18,500"
+        ],
+        "correctAnswer": "17000",
+        "explanation": "After one year: $25,000 * 0.88 = $22,000. After two years: $22,000 * 0.88 = $19,360. After three years: $19,360 * 0.88 = $17,036.80, rounded to $17,000."
+    },
+    {
+        "id": 5,
+        "text": "ILLEGIBLE is to READ as ...",
+        "options": [
+            "INCORRIGIBLE is to BEHOLD",
+            "INCOMPREHENSIBLE is to UNDERSTAND",
+            "INDEFENSIBLE is to ATTEMPT",
+            "INDEFATIGABLE is to ROUSE",
+            "INDELIBLE is to DEFEND"
+        ],
+        "correctAnswer": "INCOMPREHENSIBLE is to UNDERSTAND",
+        "explanation": "Something illegible cannot be read, just as something incomprehensible cannot be understood. Both pairs represent an inability to perform an action due to a quality of the object."
+    },
+    {
+        "id": 6,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. TRANSPARENT",
+        "options": [
+            "Clear",
+            "Translucent",
+            "Opaque",
+            "Pellucid",
+            "Limpid"
+        ],
+        "correctAnswer": "Opaque",
+        "explanation": "'Transparent' means allowing light to pass through so that objects behind can be distinctly seen. 'Opaque' means not allowing light to pass through, which is the opposite of transparent."
+    },
+    {
+        "id": 7,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/test3/2.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Analyze each option to find the one that differs from the others. Look for shared characteristics or patterns among most options and determine which one doesn't follow this common theme."
+    },
+    {
+        "id": 8,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official1/8.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Study all the options to identify the one that doesn't fit with the others. Look for common features or rules that most options follow, then find the one that breaks this pattern or has a unique attribute."
+    },
+    {
+        "id": 9,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/test5/6.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Study all the options to identify the one that doesn't fit with the others. Look for common features or rules that most options follow, then find the one that breaks this pattern or has a unique attribute."
+    },
+    {
+        "id": 10,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/test5/7.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
+    },
+    {
+        "id": 11,
+        "text": "An estimated 5% of all people have hazel eyes. If two people are selected at random from around the world, what are the chances that BOTH of these people have hazel eyes?",
+        "options": [
+            "0.25%",
+            "1.00%",
+            "2.50%",
+            "10.00%",
+            "25.00%"
+        ],
+        "correctAnswer": "0.25%",
+        "explanation": "The probability of one person having hazel eyes is 5% or 0.05. For both to have hazel eyes: 0.05 * 0.05 = 0.0025 or 0.25%."
+    },
+    {
+        "id": 12,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Because of concerns over student safety, the college sought to _____ certain activities that had once been considered to be _____ traditions surrounding orientation week.",
+        "options": [
+            "enhance ... cherished",
+            "eliminate ... harmful",
+            "advance ... joyous",
+            "curtail ... innocuous",
+            "eradicate ... curious"
+        ],
+        "correctAnswer": "curtail ... innocuous",
+        "explanation": "'Curtail' means to reduce or restrict, which fits the context of addressing safety concerns. 'Innocuous' means harmless, which contrasts with the newfound safety concerns about these traditions."
+    },
+    {
+        "id": 13,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official1/7.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Analyze each option to find the one that differs from the others. Look for shared characteristics or patterns among most options and determine which one doesn't follow this common theme."
+    },
+    {
+        "id": 14,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "To find the correct answer, rotate the image."
+    },
+    {
+        "id": 15,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/4.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically continues this pattern."
+    },
+    {
+        "id": 16,
+        "text": "RECKLESS is to CAUTION as...",
+        "options": [
+            "DELIBERATE is to THOUGHT",
+            "SILLY is to INTENT",
+            "MEAN is to COMPASSION",
+            "ALERT is to SLEEP",
+            "ANGRY is to PRUDENCE"
+        ],
+        "correctAnswer": "MEAN is to COMPASSION",
+        "explanation": "'Reckless' is the opposite of 'caution'. Similarly, 'mean' is the opposite of 'compassion'. The other pairs are either synonyms or not clearly related."
+    },
+    {
+        "id": 17,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/test3/4.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
+    },
+    {
+        "id": 18,
+        "text": "If a car travels at an average speed of 60 miles per hour, how long will it take to travel 270 miles?",
+        "options": [
+            "3 hours",
+            "4 hours",
+            "4.5 hours",
+            "5 hours",
+            "5.5 hours"
+        ],
+        "correctAnswer": "4.5 hours",
+        "explanation": "Time = Distance / Speed. In this case, 270 miles / 60 miles per hour = 4.5 hours."
+    },
+    {
+        "id": 19,
+        "text": "What would be the next number in the following series? 2... 13 ... 15... 28 ... 43 ...?",
+        "options": [
+            "58",
+            "65",
+            "71",
+            "79",
+            "86"
+        ],
+        "correctAnswer": "71",
+        "explanation": "The pattern is: +11, +2, +13, +15. Following this increasing pattern, the next increase should be +28. So, 43 + 28 = 71."
+    },
+    {
+        "id": 20,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/test5/0.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Analyze the given sequence of images to discern the pattern. Pay attention to how elements transform or relate to each other across the sequence. Choose the option that best continues this logical progression."
+    },
+    {
+        "id": 21,
+        "text": "An office supply store sells pencils from five different brands, each with five different colors, and in three different sizes. How many different combinations of brand, color, and size are possible?",
+        "options": [
+            "25",
+            "50",
+            "75",
+            "100",
+            "125"
+        ],
+        "correctAnswer": "75",
+        "explanation": "This is a multiplication principle problem. 5 brands * 5 colors * 3 sizes = 75 combinations."
+    },
+    {
+        "id": 22,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite the team's ______ performance in the first half, they managed to stage a ______ comeback and win the game.",
+        "options": [
+            "stellar ... gradual",
+            "lackluster ... remarkable",
+            "consistent ... mediocre",
+            "impressive ... dismal",
+            "erratic ... predictable"
+        ],
+        "correctAnswer": "lackluster ... remarkable",
+        "explanation": "'Lackluster' suggests a poor or unimpressive performance in the first half, while 'remarkable' describes an impressive comeback, fitting the contrast in the sentence."
+    },
+    {
+        "id": 23,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/11.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "E",
+        "explanation": "Carefully examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically extends this pattern."
+    },
+    {
+        "id": 24,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The scientist's ______ approach to the experiment ensured that all variables were carefully controlled and measured.",
+        "options": [
+            "haphazard",
+            "methodical",
+            "spontaneous",
+            "intuitive",
+            "arbitrary"
+        ],
+        "correctAnswer": "methodical",
+        "explanation": "In the context of a scientific experiment with careful control and measurement, 'methodical' best describes the systematic approach taken."
+    },
+    {
+        "id": 25,
+        "text": "By what percentage did the median age increase between 1970 and 2000?",
+        "image": "/storage/img/official2/12.png",
+        "options": [
+            "7%",
+            "10%",
+            "20%",
+            "25%",
+            "30%"
+        ],
+        "correctAnswer": "25%",
+        "explanation": "To solve this problem, locate the median age values for 1970 and 2000 in the image. Calculate the percentage increase between these two values. The correct answer is the option that matches this calculated percentage."
+    },
+    {
+        "id": 26,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. BENIGN",
+        "options": [
+            "Harmless",
+            "Malignant",
+            "Favorable",
+            "Gentle",
+            "Beneficial"
+        ],
+        "correctAnswer": "Malignant",
+        "explanation": "'Benign' means gentle and kind; not harmful or malicious. 'Malignant' means evil in nature or effect; malicious, which is the opposite of benign."
+    },
+    {
+        "id": 27,
+        "text": "A factory produces 720 units in 6 days. At this rate, how many units will it produce in 15 days?",
+        "options": [
+            "1500",
+            "1650",
+            "1800",
+            "1950",
+            "2100"
+        ],
+        "correctAnswer": "1800",
+        "explanation": "The factory produces 720/6 = 120 units per day. In 15 days, it will produce 120 * 15 = 1800 units."
+    },
+    {
+        "id": 28,
+        "text": "If a recipe requires 2 1/4 cups of sugar to make 18 servings, how many cups of sugar are needed to make 30 servings?",
+        "options": [
+            "3 cups",
+            "3 1/2 cups",
+            "3 3/4 cups",
+            "4 cups",
+            "4 1/4 cups"
+        ],
+        "correctAnswer": "3 3/4 cups",
+        "explanation": "If 2 1/4 cups make 18 servings, then for 30 servings we need: (2 1/4 * 30) / 18 = 67.5 / 18 = 3.75 cups or 3 3/4 cups of sugar."
+    },
+    {
+        "id": 29,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/test5/1.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Study the progression of changes in the given sequence of images. Identify any consistent rules or transformations applied to the elements. The correct answer will be the option that follows these rules and best completes the pattern."
+    },
+    {
+        "id": 30,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The politician's ______ remarks about the economy ______ his opponents, who claimed he was out of touch with reality.",
+        "options": [
+            "candid ... placated",
+            "inflammatory ... angered",
+            "benign ... irritated",
+            "diplomatic ... provoked",
+            "ambiguous ... pleased"
+        ],
+        "correctAnswer": "inflammatory ... angered",
+        "explanation": "'Inflammatory' means provocative or incendiary, which fits with remarks that would anger opponents. 'Angered' directly describes the opponents' reaction to such remarks."
+    },
+    {
+        "id": 31,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Aware that his conduct had been _____ and intent on limiting the fallout from the scandal, the politician decided to resign and leave public office.",
+        "options": [
+            "reprehensible",
+            "irreproachable",
+            "defensible",
+            "petulant",
+            "fortuitous"
+        ],
+        "correctAnswer": "reprehensible",
+        "explanation": "'Reprehensible' means deserving censure or condemnation, which fits the context of a scandal that leads to resignation. The other options don't fit the negative context implied by the sentence."
+    },
+    {
+        "id": 32,
+        "text": "A group of five numbers has an average (arithmetic mean) of 20. The first four numbers are 12, 16, 17, and 23. What is the fifth number?",
+        "options": [
+            "24",
+            "27",
+            "29",
+            "30",
+            "32"
+        ],
+        "correctAnswer": "32",
+        "explanation": "The sum of all five numbers must be 20 * 5 = 100. The sum of the first four numbers is 12 + 16 + 17 + 23 = 68. Therefore, the fifth number must be 100 - 68 = 32."
+    },
+    {
+        "id": 33,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? Brad is friends with Justin. Justin is friends with Pat. Brad is not friends with Pat.",
+        "options": [
+            "True",
+            "False",
+            "Uncertain"
+        ],
+        "correctAnswer": "Uncertain",
+        "explanation": "The fact that Brad and Justin are friends, and Justin and Pat are friends, doesn't necessarily mean Brad and Pat are or are not friends. There's not enough information to determine their relationship."
+    },
+    {
+        "id": 34,
+        "text": "A car travels 240 miles in 4 hours. If it maintains the same speed, how long will it take to travel 360 miles?",
+        "options": [
+            "5 hours",
+            "6 hours",
+            "7 hours",
+            "8 hours",
+            "9 hours"
+        ],
+        "correctAnswer": "6 hours",
+        "explanation": "The car's speed is 240 miles / 4 hours = 60 miles per hour. To travel 360 miles at this speed: 360 miles / 60 miles per hour = 6 hours."
+    },
+    {
+        "id": 35,
+        "text": "INAUDIBLE is to HEAR as ...",
+        "options": [
+            "INVISIBLE is to SEE",
+            "INTANGIBLE is to TOUCH",
+            "INEDIBLE is to TASTE",
+            "INSCRUTABLE is to UNDERSTAND",
+            "INERT is to MOVE"
+        ],
+        "correctAnswer": "INVISIBLE is to SEE",
+        "explanation": "Something inaudible cannot be heard, just as something invisible cannot be seen. Both pairs represent an inability to perform a sensory action due to a quality of the object."
+    },
+    {
+        "id": 36,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        "options": [
+            "reenactment",
+            "critique",
+            "declaration",
+            "rebuttal",
+            "preview"
+        ],
+        "correctAnswer": "critique",
+        "explanation": "'Critique' best fits here as it can mean a detailed analysis and assessment, which was expected to be harsh but turned out positive."
+    },
+    {
+        "id": 37,
+        "text": "If a train travels at an average speed of 80 km/h for 2.5 hours, then increases its speed to 100 km/h for the next 1.5 hours, what is the total distance traveled?",
+        "options": [
+            "320 km",
+            "340 km",
+            "350 km",
+            "360 km",
+            "380 km"
+        ],
+        "correctAnswer": "350 km",
+        "explanation": "First leg: 80 km/h * 2.5 h = 200 km. Second leg: 100 km/h * 1.5 h = 150 km. Total: 200 km + 150 km = 350 km."
+    },
+    {
+        "id": 38,
+        "text": "What would be the next number in the following series? 3 ... 8 ... 15 ... 24 ... 35 ...?",
+        "options": [
+            "42",
+            "46",
+            "48",
+            "50",
+            "52"
+        ],
+        "correctAnswer": "48",
+        "explanation": "The differences between consecutive numbers are increasing by 2 each time: 5, 7, 9, 11. The next difference should be 13. So, 35 + 13 = 48."
+    },
+    {
+        "id": 39,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/3.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Study the progression of changes in the given sequence of images. Look for consistent rules or transformations applied to the elements. Choose the option that follows these rules and best completes the pattern."
+    },
+    {
+        "id": 40,
+        "text": "A mattress store has a sale where all mattresses are sold at a discount of 25%. If the regular price of the mattresses is $320, how many mattresses could be bought at the sale price if a shopper spent $1,440?",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "correctAnswer": "6",
+        "explanation": "Sale price: $320 - 25% = $240. Number of mattresses: $1,440 / $240 = 6."
+    },
+    {
+        "id": 41,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/test5/4.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Compare all the options to find the one that stands out. Look for a common theme or pattern among most of the images and identify which one breaks this pattern or has a unique characteristic."
+    },
+    {
+        "id": 42,
+        "text": "What would be the next number in the following series? 4... 9... 16 ... 25 ... 36 ...?",
+        "options": [
+            "45",
+            "47",
+            "49",
+            "51",
+            "64"
+        ],
+        "correctAnswer": "49",
+        "explanation": "The pattern is the sequence of perfect squares: 2^2, 3^2, 4^2, 5^2, 6^2. The next in the sequence is 7^2 = 49."
+    },
+    {
+        "id": 43,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The scientist's groundbreaking research ______ long-held beliefs about the nature of the universe, leading to a ______ in the field of astrophysics.",
+        "options": [
+            "confirmed ... stagnation",
+            "challenged ... paradigm shift",
+            "supported ... controversy",
+            "ignored ... revolution",
+            "misinterpreted ... consensus"
+        ],
+        "correctAnswer": "challenged ... paradigm shift",
+        "explanation": "'Challenged' fits with the idea of groundbreaking research that goes against existing beliefs, and 'paradigm shift' describes a fundamental change in approach or underlying assumptions in a field of study."
+    },
+    {
+        "id": 44,
+        "text": "INDELIBLE is to ERASE as ...",
+        "options": [
+            "ILLEGIBLE is to READ",
+            "INAUDIBLE is to HEAR",
+            "INVINCIBLE is to DEFEAT",
+            "INEVITABLE is to PREVENT",
+            "INEDIBLE is to EAT"
+        ],
+        "correctAnswer": "INVINCIBLE is to DEFEAT",
+        "explanation": "Something indelible cannot be erased, just as something invincible cannot be defeated. Both pairs represent an impossibility to perform an action due to a quality of the object."
+    },
+    {
+        "id": 45,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? All athletes in this gym are fit. Some fit people are vegetarians. Some athletes in this gym are vegetarians.",
+        "options": [
+            "True",
+            "False",
+            "Uncertain"
+        ],
+        "correctAnswer": "Uncertain",
+        "explanation": "While we know all athletes in the gym are fit and some fit people are vegetarians, we don't have enough information to determine if the athletes in this specific gym are among those fit vegetarians."
+    },
+    {
+        "id": 46,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/test5/5.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "E",
+        "explanation": "Analyze each option to find the one that differs from the others. Look for shared characteristics or patterns among most options and determine which one doesn't follow this common theme."
+    },
+    {
+        "id": 47,
+        "text": "DINNER is to MEAL as ...",
+        "options": [
+            "FIRE is to ICE",
+            "EAT is to DRINK",
+            "WINTER is to SEASON",
+            "DRAMA is to COMEDY",
+            "DOOR is to WALL"
+        ],
+        "correctAnswer": "WINTER is to SEASON",
+        "explanation": "Dinner is a specific type of meal, just as winter is a specific type of season. This analogy represents a part-to-whole relationship."
+    },
+    {
+        "id": 48,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? Brad is friends with Justin. Justin is friends with Pat. Brad is not friends with Pat.",
+        "options": [
+            "True",
+            "False",
+            "Uncertain"
+        ],
+        "correctAnswer": "Uncertain",
+        "explanation": "The fact that Brad and Justin are friends, and Justin and Pat are friends, doesn't necessarily mean Brad and Pat are friends or not friends. There's not enough information to determine their relationship."
+    },
+    {
+        "id": 49,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/test5/9.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Study the progression of changes in the given sequence of images. Identify any consistent rules or transformations applied to the elements. The correct answer will be the option that follows these rules and best completes the pattern."
+    },
+    {
+        "id": 50,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. TANGIBLE",
+        "options": [
+            "Concrete",
+            "Palpable",
+            "Abstract",
+            "Substantial",
+            "Material"
+        ],
+        "correctAnswer": "Abstract",
+        "explanation": "'Tangible' means perceptible by touch; clear and definite; real. 'Abstract' means existing in thought or as an idea but not having a physical or concrete existence, which is the opposite of tangible."
+    }
+]

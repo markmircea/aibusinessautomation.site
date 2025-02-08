@@ -1,0 +1,1432 @@
+[
+
+      {
+        "id": 1,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The politician's _____ statements during the debate left many voters feeling _____ about his true stance on the issues.",
+        "options": ["candid ... informed", "ambiguous ... uncertain", "forthright ... doubtful", "eloquent ... impressed", "verbose ... overwhelmed"],
+        "correctAnswer": "ambiguous ... uncertain",
+        "explanation": "'Ambiguous' means open to more than one interpretation, which would lead voters to feel 'uncertain' about the politician's true stance."
+      },
+      {
+        "id": 3,
+        "text": "PHILHARMONIC is to ORCHESTRA as ...",
+        "options": ["SCULPTURE is to ART", "CALCULUS is to MATHEMATICS", "ASTRONOMY is to SCIENCE", "BIOGRAPHY is to LITERATURE", "DEMOCRACY is to GOVERNMENT"],
+        "correctAnswer": "BIOGRAPHY is to LITERATURE",
+        "explanation": "A philharmonic is a type of orchestra, just as a biography is a type of literature. Both represent a specific subcategory within a broader field."
+      },
+      {
+        "id": 14,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The diplomat's ______ approach to negotiations helped to ______ the long-standing conflict between the two nations.",
+        "options": ["aggressive ... escalate", "conciliatory ... resolve", "indifferent ... prolong", "confrontational ... settle", "evasive ... perpetuate"],
+        "correctAnswer": "conciliatory ... resolve",
+        "explanation": "'Conciliatory' means intended to placate or reconcile, which fits with an approach that would help resolve a conflict. 'Resolve' directly relates to ending the conflict."
+      },
+      {
+        "id": 15,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. GARNER",
+        "options": ["yield", "provide", "seize", "dispel", "assemble"],
+        "correctAnswer": "dispel",
+        "explanation": "'Garner' means to gather or collect. 'Dispel' means to drive away or cause to vanish, which is the opposite of gathering."
+      },
+      {
+        "id": 16,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Although the store _____ friendly employees toward the entrance, instructing them to welcome customers into the store, discerning minds were able to reason that these employees were really meant to serve as a _____ to shoplifters.",
+        "options": ["stationed ... deterrent", "discharged ... temptation", "gratified ... scourge", "insinuated ... gesture", "positioned ... benefit"],
+        "correctAnswer": "stationed ... deterrent",
+        "explanation": "'Stationed' fits the context of placing employees at the entrance. 'Deterrent' makes sense as the hidden purpose of these employees, to discourage shoplifting."
+      },
+      {
+        "id": 18,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Believing himself to be _____ because of youthful _____ while in college, the popular businessman decided not to run for political office.",
+        "options": ["compromised ... accomplishments", "vulnerable ... indiscretions", "disadvantaged ... experiences", "qualified ... studies", "inviolate ... misadventures"],
+        "correctAnswer": "vulnerable ... indiscretions",
+        "explanation": "The context suggests that the businessman feels at risk ('vulnerable') due to past mistakes ('indiscretions') from his college days, which could be used against him in a political campaign."
+      },
+      {
+        "id": 24,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        "options": ["reenactment", "critique", "unique", "declaration", "rebuttal", "preview"],
+        "correctAnswer": "critique",
+        "explanation": "A 'critique' is an evaluation or review, which fits the context of the sentence. The other options don't fit as well with the idea of an expected harsh assessment of the politician."
+      },
+      {
+        "id": 27,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. DYNAMIC",
+        "options": ["forceful", "frenetic", "mortal", "stagnant", "invincible"],
+        "correctAnswer": "stagnant",
+        "explanation": "'Dynamic' means characterized by constant change, activity, or progress. The opposite of this is 'stagnant', meaning showing little or no activity, movement, or change."
+      },
+      {
+        "id": 28,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The dedication and ______ exhibited by the athlete as she came back from a serious injury was an inspiration to her teammates.",
+        "options": ["independence", "determination", "insubordination", "elation", "perfection"],
+        "correctAnswer": "determination",
+        "explanation": "In the context of an athlete coming back from injury, 'determination' best fits with 'dedication' to describe the inspiring qualities shown."
+      },
+      {
+        "id": 31,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Praised by many for her _____, the professor was known for her engaging lectures on topics as diverse as chemistry, the civil war, and the history of religion.",
+        "options": ["candor", "versatility", "sentiment", "friendliness", "brevity"],
+        "correctAnswer": "versatility",
+        "explanation": "The professor's ability to lecture on diverse topics suggests 'versatility', which means having many different skills or qualities."
+      },
+      {
+        "id": 32,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Although the pop star's young fans ______ their love for his songs, not many seemed to have given much thought to the ______ of his lyrics, which were often dark and depressing.",
+        "options": ["declared .. blandness", "denied .. subtext", "decried .. overstated", "eschewed .. undertones", "professed .. implications"],
+        "correctAnswer": "professed .. implications",
+        "explanation": "'Professed' means to declare or claim, often publicly, which fits the fans expressing their love. 'Implications' refers to the suggested meaning or significance, which aligns with the idea of dark and depressing lyrics that aren't immediately apparent."
+      },
+      {
+        "id": 33,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite the team's ______ performance in the first half, they managed to stage a ______ comeback and win the game.",
+        "options": ["stellar ... gradual", "lackluster ... remarkable", "consistent ... mediocre", "impressive ... dismal", "erratic ... predictable"],
+        "correctAnswer": "lackluster ... remarkable",
+        "explanation": "'Lackluster' suggests a poor or unimpressive performance in the first half, while 'remarkable' describes an impressive comeback, fitting the contrast in the sentence."
+      },
+      {
+        "id": 34,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Upset with the company president's _____ refusal to consider their proposals, the angry shareholders finally confronted her at the company's annual meeting.",
+        "options": ["alert", "relevant", "terse", "disgusting", "persistent"],
+        "correctAnswer": "persistent",
+        "explanation": "'Persistent' means continuing firmly despite opposition, which best describes the president's repeated refusal that upset the shareholders."
+      },
+      {
+        "id": 47,
+        "text": "RECKLESS is to CAUTION as...",
+        "options": ["DELIBERATE is to THOUGHT", "SILLY is to INTENT", "MEAN is to COMPASSION", "ALERT is to SLEEP", "ANGRY is to PRUDENCE"],
+        "correctAnswer": "MEAN is to COMPASSION",
+        "explanation": "'Reckless' is the opposite of 'caution'. Similarly, 'mean' is the opposite of 'compassion'. The other pairs are either synonyms or not clearly related."
+      },
+      {
+        "id": 49,
+        "text": "SHOVEL is to DIG as ...",
+        "options": ["PLAY is to WIN", "WEIGHT is to CARRY", "LAUGH is to CRY", "MONEY is to BUY", "FIRE is to COLD"],
+        "correctAnswer": "MONEY is to BUY",
+        "explanation": "A shovel is a tool used to dig, just as money is a tool used to buy. Both pairs represent a means to an end."
+      },
+      {
+        "id": 50,
+        "text": "MARATHON is to RACE as ...",
+        "options": ["NOVEL is to BOOK", "PAINT is to ARTIST", "PIANO is to ORCHESTRA", "TREE is to FOREST", "ATOM is to MOLECULE"],
+        "correctAnswer": "NOVEL is to BOOK",
+        "explanation": "A marathon is a specific type of race, just as a novel is a specific type of book. This analogy represents a specific-to-general relationship."
+      },
+      {
+        "id": 5,
+        "text": "NOVEL is to BOOK as ...",
+        "options": [
+            "PAINTING is to BRUSH",
+            "CHAPTER is to PAGE",
+            "SONG is to ALBUM",
+            "ACTOR is to MOVIE",
+            "RECIPE is to INGREDIENT"
+        ],
+        "correctAnswer": "SONG is to ALBUM",
+        "explanation": "A novel is a specific type of book, just as a song is a specific part of an album. Both pairs represent a part-to-whole relationship."
+    },
+    {
+        "id": 7,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. One of her daughter's unique _____ was that she always clapped her hands when she laughed.",
+        "options": [
+            "peculiarities",
+            "treats",
+            "discourses",
+            "demeanors",
+            "personas"
+        ],
+        "correctAnswer": "peculiarities",
+        "explanation": "'Peculiarities' means distinctive or characteristic features, often unusual ones. This best describes the daughter's unique habit of clapping when laughing."
+    },
+    {
+        "id": 8,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite his _____ demeanor, the lawyer's arguments were _____ and ultimately won the case.",
+        "options": [
+            "aggressive ... feeble",
+            "timid ... forceful",
+            "eloquent ... ineffective",
+            "boisterous ... subdued",
+            "unassuming ... compelling"
+        ],
+        "correctAnswer": "unassuming ... compelling",
+        "explanation": "'Unassuming' contrasts with the effectiveness of the arguments, while 'compelling' explains why the lawyer won the case despite his modest demeanor."
+    },
+    {
+        "id": 9,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. DILIGENT",
+        "options": [
+            "assiduous",
+            "industrious",
+            "meticulous",
+            "lazy",
+            "thorough"
+        ],
+        "correctAnswer": "lazy",
+        "explanation": "'Diligent' means showing persistent and hardworking effort. 'Lazy' means unwilling to work or use energy, which is the opposite of diligent."
+    },
+    {
+        "id": 12,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. ALTRUISTIC",
+        "options": [
+            "Generous",
+            "Selfish",
+            "Charitable",
+            "Benevolent",
+            "Philanthropic"
+        ],
+        "correctAnswer": "Selfish",
+        "explanation": "'Altruistic' means showing selfless concern for the well-being of others. 'Selfish' means concerned primarily with one's own interests, which is the opposite of altruistic."
+    },
+    {
+        "id": 15,
+        "text": "OCCUPIED is to VACANT as...",
+        "options": [
+            "BEAUTIFUL is to SIGHT",
+            "BLISSFUL is to HAPPINESS",
+            "CONSERVED is to RETAINED",
+            "HONORABLE is to SHAMEFUL",
+            "MYOPIC is to SHORTSIGHTED"
+        ],
+        "correctAnswer": "HONORABLE is to SHAMEFUL",
+        "explanation": "OCCUPIED and VACANT are opposites. Among the options, HONORABLE and SHAMEFUL are also opposites, making this the best analogy."
+    },
+    {
+        "id": 19,
+        "text": "LAMBASTE is to EXTOL as ...",
+        "options": [
+            "GALVANIZE is to CATALYZE",
+            "MANDATE is to DECREE",
+            "INFILTRATE is to SNEAK",
+            "SKIM is to SCOUR",
+            "DISPLACE is to RELOCATE"
+        ],
+        "correctAnswer": "SKIM is to SCOUR",
+        "explanation": "'Lambaste' means to criticize harshly, while 'extol' means to praise enthusiastically. Similarly, 'skim' means to read or consider superficially, while 'scour' means to examine thoroughly."
+    },
+    {
+        "id": 24,
+        "text": "OBSEQUIOUS is to DEFERENCE as ...",
+        "options": [
+            "PLANNED is to CHANCE",
+            "OBLIVIOUS is to COGNIZANCE",
+            "OBVIOUS is to ENIGMA",
+            "DESTITUTE is to POVERTY",
+            "DREARY is to MIRTH"
+        ],
+        "correctAnswer": "OBLIVIOUS is to COGNIZANCE",
+        "explanation": "'Obsequious' means showing excessive deference, while 'deference' is respect and submission. Similarly, 'oblivious' means unaware, while 'cognizance' means awareness or knowledge."
+    },
+    {
+        "id": 27,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The politician's _____ statements during the debate left many voters feeling _____ about his true stance on the issues.",
+        "options": [
+            "candid ... informed",
+            "ambiguous ... uncertain",
+            "forthright ... doubtful",
+            "eloquent ... impressed",
+            "verbose ... overwhelmed"
+        ],
+        "correctAnswer": "ambiguous ... uncertain",
+        "explanation": "'Ambiguous' means open to more than one interpretation, which would lead voters to feel 'uncertain' about the politician's true stance."
+    },
+    {
+        "id": 28,
+        "text": "PLAYWRIGHT is to DRAMA as ...",
+        "options": [
+            "AUTHOR is to NOVEL",
+            "PAINTER is to CANVAS",
+            "SCULPTOR is to CLAY",
+            "DIRECTOR is to FILM",
+            "COMPOSER is to ORCHESTRA"
+        ],
+        "correctAnswer": "AUTHOR is to NOVEL",
+        "explanation": "A playwright creates drama, just as an author creates a novel. Both represent the creator of a specific form of literature."
+    },
+    {
+        "id": 32,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Undeterred by her family's ______ about her artistic ______, Sheila decided to quit her job and enroll in art school.",
+        "options": [
+            "hesitations ... opinions",
+            "affinities ... leanings",
+            "conversations ... tastes",
+            "misgivings ... aspirations",
+            "concerns ... integrity"
+        ],
+        "correctAnswer": "misgivings .. aspirations",
+        "explanation": "'Misgivings' means doubts or apprehension, which fits the family's negative reaction. 'Aspirations' means ambitions or goals, which aligns with Sheila's desire to pursue art."
+    },
+    {
+        "id": 35,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Praised by many for her _____, the professor was known for her engaging lectures on topics as diverse as chemistry, the civil war, and the history of religion.",
+        "options": [
+            "candor",
+            "versatility",
+            "sentiment",
+            "friendliness",
+            "brevity"
+        ],
+        "correctAnswer": "versatility",
+        "explanation": "The professor's ability to lecture on diverse topics suggests 'versatility', which means having many different skills or qualities."
+    },
+    {
+        "id": 43,
+        "text": "CANVAS is to PAINTER as ...",
+        "options": [
+            "COURT is to JUDGE",
+            "STAGE is to ACTOR",
+            "CLASSROOM is to STUDENT",
+            "KITCHEN is to CHEF",
+            "FIELD is to FARMER"
+        ],
+        "correctAnswer": "STAGE is to ACTOR",
+        "explanation": "A canvas is the primary workspace for a painter, just as a stage is the primary workspace for an actor. Both pairs represent the main area where the professional performs their craft."
+    },
+    {
+        "id": 44,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Flustered by the accusation, the employee _____ denied any responsibility for the _____ found in the company's new product line.",
+        "options": [
+            "angrily ... advantages",
+            "justly ... abundance",
+            "vehemently ... defects",
+            "sufficiently ... stigmas",
+            "respectfully ... shortages"
+        ],
+        "correctAnswer": "vehemently ... defects",
+        "explanation": "The employee's flustered state suggests a strong denial, which is best captured by 'vehemently'. The accusation likely relates to problems in the product line, which are best described as 'defects'."
+    },
+    {
+        "id": 47,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Aware that his conduct had been _____ and intent on limiting the fallout from the scandal, the politician decided to resign and leave public office.",
+        "options": [
+            "reprehensible",
+            "irreproachable",
+            "defensible",
+            "petulant",
+            "fortuitous"
+        ],
+        "correctAnswer": "reprehensible",
+        "explanation": "'Reprehensible' means deserving censure or condemnation, which fits the context of a scandal that leads to resignation. The other options don't fit the negative context implied by the sentence."
+    },
+    {
+        "id": 1,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The politician's _____ statements during the debate left many voters feeling _____ about his true stance on the issues.",
+        "options": ["candid ... informed", "ambiguous ... uncertain", "forthright ... doubtful", "eloquent ... impressed", "verbose ... overwhelmed"],
+        "correctAnswer": "ambiguous ... uncertain",
+        "explanation": "'Ambiguous' means open to more than one interpretation, which would lead voters to feel 'uncertain' about the politician's true stance."
+      },
+      {
+        "id": 3,
+        "text": "PHILHARMONIC is to ORCHESTRA as ...",
+        "options": ["SCULPTURE is to ART", "CALCULUS is to MATHEMATICS", "ASTRONOMY is to SCIENCE", "BIOGRAPHY is to LITERATURE", "DEMOCRACY is to GOVERNMENT"],
+        "correctAnswer": "BIOGRAPHY is to LITERATURE",
+        "explanation": "A philharmonic is a type of orchestra, just as a biography is a type of literature. Both represent a specific subcategory within a broader field."
+      },
+      {
+        "id": 14,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The diplomat's ______ approach to negotiations helped to ______ the long-standing conflict between the two nations.",
+        "options": ["aggressive ... escalate", "conciliatory ... resolve", "indifferent ... prolong", "confrontational ... settle", "evasive ... perpetuate"],
+        "correctAnswer": "conciliatory ... resolve",
+        "explanation": "'Conciliatory' means intended to placate or reconcile, which fits with an approach that would help resolve a conflict. 'Resolve' directly relates to ending the conflict."
+      },
+      {
+        "id": 15,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. GARNER",
+        "options": ["yield", "provide", "seize", "dispel", "assemble"],
+        "correctAnswer": "dispel",
+        "explanation": "'Garner' means to gather or collect. 'Dispel' means to drive away or cause to vanish, which is the opposite of gathering."
+      },
+      {
+        "id": 16,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Although the store _____ friendly employees toward the entrance, instructing them to welcome customers into the store, discerning minds were able to reason that these employees were really meant to serve as a _____ to shoplifters.",
+        "options": ["stationed ... deterrent", "discharged ... temptation", "gratified ... scourge", "insinuated ... gesture", "positioned ... benefit"],
+        "correctAnswer": "stationed ... deterrent",
+        "explanation": "'Stationed' fits the context of placing employees at the entrance. 'Deterrent' makes sense as the hidden purpose of these employees, to discourage shoplifting."
+      },
+      {
+        "id": 18,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Believing himself to be _____ because of youthful _____ while in college, the popular businessman decided not to run for political office.",
+        "options": ["compromised ... accomplishments", "vulnerable ... indiscretions", "disadvantaged ... experiences", "qualified ... studies", "inviolate ... misadventures"],
+        "correctAnswer": "vulnerable ... indiscretions",
+        "explanation": "The context suggests that the businessman feels at risk ('vulnerable') due to past mistakes ('indiscretions') from his college days, which could be used against him in a political campaign."
+      },
+      {
+        "id": 24,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        "options": ["reenactment", "critique", "unique", "declaration", "rebuttal", "preview"],
+        "correctAnswer": "critique",
+        "explanation": "A 'critique' is an evaluation or review, which fits the context of the sentence. The other options don't fit as well with the idea of an expected harsh assessment of the politician."
+      },
+      {
+        "id": 27,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. DYNAMIC",
+        "options": ["forceful", "frenetic", "mortal", "stagnant", "invincible"],
+        "correctAnswer": "stagnant",
+        "explanation": "'Dynamic' means characterized by constant change, activity, or progress. The opposite of this is 'stagnant', meaning showing little or no activity, movement, or change."
+      },
+      {
+        "id": 28,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The dedication and ______ exhibited by the athlete as she came back from a serious injury was an inspiration to her teammates.",
+        "options": ["independence", "determination", "insubordination", "elation", "perfection"],
+        "correctAnswer": "determination",
+        "explanation": "In the context of an athlete coming back from injury, 'determination' best fits with 'dedication' to describe the inspiring qualities shown."
+      },
+      {
+        "id": 31,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Praised by many for her _____, the professor was known for her engaging lectures on topics as diverse as chemistry, the civil war, and the history of religion.",
+        "options": ["candor", "versatility", "sentiment", "friendliness", "brevity"],
+        "correctAnswer": "versatility",
+        "explanation": "The professor's ability to lecture on diverse topics suggests 'versatility', which means having many different skills or qualities."
+      },
+      {
+        "id": 32,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Although the pop star's young fans ______ their love for his songs, not many seemed to have given much thought to the ______ of his lyrics, which were often dark and depressing.",
+        "options": ["declared .. blandness", "denied .. subtext", "decried .. overstated", "eschewed .. undertones", "professed .. implications"],
+        "correctAnswer": "professed .. implications",
+        "explanation": "'Professed' means to declare or claim, often publicly, which fits the fans expressing their love. 'Implications' refers to the suggested meaning or significance, which aligns with the idea of dark and depressing lyrics that aren't immediately apparent."
+      },
+      {
+        "id": 33,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite the team's ______ performance in the first half, they managed to stage a ______ comeback and win the game.",
+        "options": ["stellar ... gradual", "lackluster ... remarkable", "consistent ... mediocre", "impressive ... dismal", "erratic ... predictable"],
+        "correctAnswer": "lackluster ... remarkable",
+        "explanation": "'Lackluster' suggests a poor or unimpressive performance in the first half, while 'remarkable' describes an impressive comeback, fitting the contrast in the sentence."
+      },
+      {
+        "id": 34,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Upset with the company president's _____ refusal to consider their proposals, the angry shareholders finally confronted her at the company's annual meeting.",
+        "options": ["alert", "relevant", "terse", "disgusting", "persistent"],
+        "correctAnswer": "persistent",
+        "explanation": "'Persistent' means continuing firmly despite opposition, which best describes the president's repeated refusal that upset the shareholders."
+      },
+      {
+        "id": 47,
+        "text": "RECKLESS is to CAUTION as...",
+        "options": ["DELIBERATE is to THOUGHT", "SILLY is to INTENT", "MEAN is to COMPASSION", "ALERT is to SLEEP", "ANGRY is to PRUDENCE"],
+        "correctAnswer": "MEAN is to COMPASSION",
+        "explanation": "'Reckless' is the opposite of 'caution'. Similarly, 'mean' is the opposite of 'compassion'. The other pairs are either synonyms or not clearly related."
+      },
+      {
+        "id": 49,
+        "text": "SHOVEL is to DIG as ...",
+        "options": ["PLAY is to WIN", "WEIGHT is to CARRY", "LAUGH is to CRY", "MONEY is to BUY", "FIRE is to COLD"],
+        "correctAnswer": "MONEY is to BUY",
+        "explanation": "A shovel is a tool used to dig, just as money is a tool used to buy. Both pairs represent a means to an end."
+      },
+      {
+        "id": 50,
+        "text": "MARATHON is to RACE as ...",
+        "options": ["NOVEL is to BOOK", "PAINT is to ARTIST", "PIANO is to ORCHESTRA", "TREE is to FOREST", "ATOM is to MOLECULE"],
+        "correctAnswer": "NOVEL is to BOOK",
+        "explanation": "A marathon is a specific type of race, just as a novel is a specific type of book. This analogy represents a specific-to-general relationship."
+      },
+      {
+        "id": 2,
+        "text": "SHOVEL is to DIG as...",
+        "options": [
+            "PLAY is to WIN",
+            "WEIGHT is to CARRY",
+            "LAUGH is to CRY",
+            "MONEY is to BUY",
+            "FIRE is to COLD"
+        ],
+        "correctAnswer": "MONEY is to BUY",
+        "explanation": "A shovel is a tool used for digging, just as money is a tool used for buying. This is the most logical relationship among the given options."
+    },
+    {
+        "id": 5,
+        "text": "ILLEGIBLE is to READ as ...",
+        "options": [
+            "INCORRIGIBLE is to BEHOLD",
+            "INCOMPREHENSIBLE is to UNDERSTAND",
+            "INDEFENSIBLE is to ATTEMPT",
+            "INDEFATIGABLE is to ROUSE",
+            "INDELIBLE is to DEFEND"
+        ],
+        "correctAnswer": "INCOMPREHENSIBLE is to UNDERSTAND",
+        "explanation": "Something illegible cannot be read, just as something incomprehensible cannot be understood. Both pairs represent an inability to perform an action due to a quality of the object."
+    },
+    {
+        "id": 6,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. TRANSPARENT",
+        "options": [
+            "Clear",
+            "Translucent",
+            "Opaque",
+            "Pellucid",
+            "Limpid"
+        ],
+        "correctAnswer": "Opaque",
+        "explanation": "'Transparent' means allowing light to pass through so that objects behind can be distinctly seen. 'Opaque' means not allowing light to pass through, which is the opposite of transparent."
+    },
+    {
+        "id": 12,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Because of concerns over student safety, the college sought to _____ certain activities that had once been considered to be _____ traditions surrounding orientation week.",
+        "options": [
+            "enhance ... cherished",
+            "eliminate ... harmful",
+            "advance ... joyous",
+            "curtail ... innocuous",
+            "eradicate ... curious"
+        ],
+        "correctAnswer": "curtail ... innocuous",
+        "explanation": "'Curtail' means to reduce or restrict, which fits the context of addressing safety concerns. 'Innocuous' means harmless, which contrasts with the newfound safety concerns about these traditions."
+    },
+    {
+        "id": 16,
+        "text": "RECKLESS is to CAUTION as...",
+        "options": [
+            "DELIBERATE is to THOUGHT",
+            "SILLY is to INTENT",
+            "MEAN is to COMPASSION",
+            "ALERT is to SLEEP",
+            "ANGRY is to PRUDENCE"
+        ],
+        "correctAnswer": "MEAN is to COMPASSION",
+        "explanation": "'Reckless' is the opposite of 'caution'. Similarly, 'mean' is the opposite of 'compassion'. The other pairs are either synonyms or not clearly related."
+    },
+    {
+        "id": 22,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite the team's ______ performance in the first half, they managed to stage a ______ comeback and win the game.",
+        "options": [
+            "stellar ... gradual",
+            "lackluster ... remarkable",
+            "consistent ... mediocre",
+            "impressive ... dismal",
+            "erratic ... predictable"
+        ],
+        "correctAnswer": "lackluster ... remarkable",
+        "explanation": "'Lackluster' suggests a poor or unimpressive performance in the first half, while 'remarkable' describes an impressive comeback, fitting the contrast in the sentence."
+    },
+    {
+        "id": 24,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The scientist's ______ approach to the experiment ensured that all variables were carefully controlled and measured.",
+        "options": [
+            "haphazard",
+            "methodical",
+            "spontaneous",
+            "intuitive",
+            "arbitrary"
+        ],
+        "correctAnswer": "methodical",
+        "explanation": "In the context of a scientific experiment with careful control and measurement, 'methodical' best describes the systematic approach taken."
+    },
+    {
+        "id": 26,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. BENIGN",
+        "options": [
+            "Harmless",
+            "Malignant",
+            "Favorable",
+            "Gentle",
+            "Beneficial"
+        ],
+        "correctAnswer": "Malignant",
+        "explanation": "'Benign' means gentle and kind; not harmful or malicious. 'Malignant' means evil in nature or effect; malicious, which is the opposite of benign."
+    },
+    {
+        "id": 30,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The politician's ______ remarks about the economy ______ his opponents, who claimed he was out of touch with reality.",
+        "options": [
+            "candid ... placated",
+            "inflammatory ... angered",
+            "benign ... irritated",
+            "diplomatic ... provoked",
+            "ambiguous ... pleased"
+        ],
+        "correctAnswer": "inflammatory ... angered",
+        "explanation": "'Inflammatory' means provocative or incendiary, which fits with remarks that would anger opponents. 'Angered' directly describes the opponents' reaction to such remarks."
+    },
+    {
+        "id": 31,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Aware that his conduct had been _____ and intent on limiting the fallout from the scandal, the politician decided to resign and leave public office.",
+        "options": [
+            "reprehensible",
+            "irreproachable",
+            "defensible",
+            "petulant",
+            "fortuitous"
+        ],
+        "correctAnswer": "reprehensible",
+        "explanation": "'Reprehensible' means deserving censure or condemnation, which fits the context of a scandal that leads to resignation. The other options don't fit the negative context implied by the sentence."
+    },
+    {
+        "id": 35,
+        "text": "INAUDIBLE is to HEAR as ...",
+        "options": [
+            "INVISIBLE is to SEE",
+            "INTANGIBLE is to TOUCH",
+            "INEDIBLE is to TASTE",
+            "INSCRUTABLE is to UNDERSTAND",
+            "INERT is to MOVE"
+        ],
+        "correctAnswer": "INVISIBLE is to SEE",
+        "explanation": "Something inaudible cannot be heard, just as something invisible cannot be seen. Both pairs represent an inability to perform a sensory action due to a quality of the object."
+    },
+    {
+        "id": 36,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        "options": [
+            "reenactment",
+            "critique",
+            "declaration",
+            "rebuttal",
+            "preview"
+        ],
+        "correctAnswer": "critique",
+        "explanation": "'Critique' best fits here as it can mean a detailed analysis and assessment, which was expected to be harsh but turned out positive."
+    },
+    {
+        "id": 43,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The scientist's groundbreaking research ______ long-held beliefs about the nature of the universe, leading to a ______ in the field of astrophysics.",
+        "options": [
+            "confirmed ... stagnation",
+            "challenged ... paradigm shift",
+            "supported ... controversy",
+            "ignored ... revolution",
+            "misinterpreted ... consensus"
+        ],
+        "correctAnswer": "challenged ... paradigm shift",
+        "explanation": "'Challenged' fits with the idea of groundbreaking research that goes against existing beliefs, and 'paradigm shift' describes a fundamental change in approach or underlying assumptions in a field of study."
+    },
+    {
+        "id": 44,
+        "text": "INDELIBLE is to ERASE as ...",
+        "options": [
+            "ILLEGIBLE is to READ",
+            "INAUDIBLE is to HEAR",
+            "INVINCIBLE is to DEFEAT",
+            "INEVITABLE is to PREVENT",
+            "INEDIBLE is to EAT"
+        ],
+        "correctAnswer": "INVINCIBLE is to DEFEAT",
+        "explanation": "Something indelible cannot be erased, just as something invincible cannot be defeated. Both pairs represent an impossibility to perform an action due to a quality of the object."
+    },
+    {
+        "id": 47,
+        "text": "DINNER is to MEAL as ...",
+        "options": [
+            "FIRE is to ICE",
+            "EAT is to DRINK",
+            "WINTER is to SEASON",
+            "DRAMA is to COMEDY",
+            "DOOR is to WALL"
+        ],
+        "correctAnswer": "WINTER is to SEASON",
+        "explanation": "Dinner is a specific type of meal, just as winter is a specific type of season. This analogy represents a part-to-whole relationship."
+    },
+    {
+        "id": 50,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. TANGIBLE",
+        "options": [
+            "Concrete",
+            "Palpable",
+            "Abstract",
+            "Substantial",
+            "Material"
+        ],
+        "correctAnswer": "Abstract",
+        "explanation": "'Tangible' means perceptible by touch; clear and definite; real. 'Abstract' means existing in thought or as an idea but not having a physical or concrete existence, which is the opposite of tangible."
+    },
+    {
+        "id": 8,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The homeowner, well aware of the building regulations in his hometown, was not surprised that he would have to make some _____ to his original design to renovate his home.",
+        "options": [
+            "austere ... measures",
+            "obscure ... divisions",
+            "stringent ... modifications",
+            "lenient ... revisions",
+            "limited ... magnifications"
+        ],
+        "correctAnswer": "stringent ... modifications",
+        "explanation": "'Stringent modifications' best fits the context of building regulations requiring changes to the original design. 'Stringent' implies strict rules, and 'modifications' refers to the changes needed."
+    },
+    {
+        "id": 10,
+        "text": "DEMOCRACY is to GOVERNMENT as ...",
+        "options": [
+            "CAPITALISM is to ECONOMY",
+            "JUSTICE is to COURT",
+            "EDUCATION is to SCHOOL",
+            "RELIGION is to CHURCH",
+            "HEALTH is to HOSPITAL"
+        ],
+        "correctAnswer": "CAPITALISM is to ECONOMY",
+        "explanation": "Democracy is a system of government, just as capitalism is a system of economy. Both pairs represent a system-to-domain relationship."
+    },
+    {
+        "id": 11,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. One of her daughter's unique _____ was that she always clapped her hands when she laughed.",
+        "options": [
+            "peculiarities",
+            "treats",
+            "discourses",
+            "demeanors",
+            "personas"
+        ],
+        "correctAnswer": "peculiarities",
+        "explanation": "'Peculiarities' means distinctive or characteristic features, often unusual ones. This best describes the daughter's unique habit of clapping when laughing."
+    },
+    {
+        "id": 13,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. MANIFOLD",
+        "options": [
+            "volitional",
+            "plentiful",
+            "diverse",
+            "singular",
+            "unintentional"
+        ],
+        "correctAnswer": "singular",
+        "explanation": "'Manifold' means many and various. 'Singular' means single or unique, which is the opposite of manifold."
+    },
+    {
+        "id": 15,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. DYNAMIC",
+        "options": [
+            "forceful",
+            "frenetic",
+            "mortal",
+            "stagnant",
+            "invincible"
+        ],
+        "correctAnswer": "stagnant",
+        "explanation": "'Dynamic' means characterized by constant change, activity, or progress. The opposite of this is 'stagnant', meaning showing little or no activity, movement, or change."
+    },
+    {
+        "id": 16,
+        "text": "GRAVITY is to PHYSICS as...",
+        "options": [
+            "EVOLUTION is to BIOLOGY",
+            "ALGEBRA is to MATHEMATICS",
+            "DEMOCRACY is to POLITICS",
+            "PLATE TECTONICS is to GEOLOGY",
+            "PHOTOSYNTHESIS is to BOTANY"
+        ],
+        "correctAnswer": "EVOLUTION is to BIOLOGY",
+        "explanation": "Gravity is a fundamental concept in physics, just as evolution is a fundamental concept in biology. Both represent core theories in their respective scientific fields."
+    },
+    {
+        "id": 19,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. PROLIFIC",
+        "options": [
+            "Abundant",
+            "Fertile",
+            "Unproductive",
+            "Copious",
+            "Plentiful"
+        ],
+        "correctAnswer": "Unproductive",
+        "explanation": "'Prolific' means producing much fruit or foliage or many offspring; very productive. 'Unproductive' means not producing or unable to produce, which is the opposite of prolific."
+    },
+    {
+        "id": 21,
+        "text": "DINNER is to MEAL as ...",
+        "options": [
+            "FIRE is to ICE",
+            "EAT is to DRINK",
+            "WINTER is to SEASON",
+            "DRAMA is to COMEDY",
+            "DOOR is to WALL"
+        ],
+        "correctAnswer": "WINTER is to SEASON",
+        "explanation": "Dinner is a specific type of meal, just as winter is a specific type of season. This analogy represents a part-to-whole relationship."
+    },
+    {
+        "id": 22,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The historian's ______ account of the ancient civilization provided a vivid and detailed picture of daily life in that era.",
+        "options": [
+            "vague",
+            "biased",
+            "comprehensive",
+            "superficial",
+            "ambiguous"
+        ],
+        "correctAnswer": "comprehensive",
+        "explanation": "In the context of providing a vivid and detailed picture, 'comprehensive' best describes an account that covers all aspects thoroughly."
+    },
+    {
+        "id": 24,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The scientist's _____ approach to the experiment yielded unexpected results, leading to a _____ in the field of quantum physics.",
+        "options": [
+            "conventional ... setback",
+            "innovative ... breakthrough",
+            "haphazard ... consensus",
+            "rigorous ... stalemate",
+            "ambivalent ... revolution"
+        ],
+        "correctAnswer": "innovative ... breakthrough",
+        "explanation": "'Innovative' fits with unexpected results, and 'breakthrough' aligns with significant progress in the field of quantum physics."
+    },
+    {
+        "id": 25,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The duckling tried to _____ its mother by following her every step.",
+        "options": [
+            "Rival",
+            "Confront",
+            "Personify",
+            "Immerse",
+            "Emulate"
+        ],
+        "correctAnswer": "Emulate",
+        "explanation": "'Emulate' means to imitate or copy, which best fits the context of a duckling following and copying its mother's actions."
+    },
+    {
+        "id": 26,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. TRANSPARENT",
+        "options": [
+            "Clear",
+            "Translucent",
+            "Opaque",
+            "Pellucid",
+            "Limpid"
+        ],
+        "correctAnswer": "Opaque",
+        "explanation": "'Transparent' means allowing light to pass through so that objects behind can be distinctly seen. 'Opaque' means not allowing light to pass through, which is the opposite of transparent."
+    },
+    {
+        "id": 30,
+        "text": "INDELIBLE is to ERASE as ...",
+        "options": [
+            "ILLEGIBLE is to READ",
+            "INAUDIBLE is to HEAR",
+            "INVINCIBLE is to DEFEAT",
+            "INEVITABLE is to PREVENT",
+            "INEDIBLE is to EAT"
+        ],
+        "correctAnswer": "INVINCIBLE is to DEFEAT",
+        "explanation": "Something indelible cannot be erased, just as something invincible cannot be defeated. Both pairs represent an impossibility to perform an action due to a quality of the object."
+    },
+    {
+        "id": 36,
+        "text": "LAMBASTE is to EXTOL as ...",
+        "options": [
+            "GALVANIZE is to CATALYZE",
+            "MANDATE is to DECREE",
+            "INFILTRATE is to SNEAK",
+            "SKIM is to SCOUR",
+            "DISPLACE is to RELOCATE"
+        ],
+        "correctAnswer": "SKIM is to SCOUR",
+        "explanation": "'Lambaste' means to criticize harshly, while 'extol' means to praise enthusiastically. Similarly, 'skim' means to read or consider superficially, while 'scour' means to examine thoroughly."
+    },
+    {
+        "id": 40,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Taking issue with media reports, the president ______ that she had no plans to step down and ______ claims that her office was guilty of corruption.",
+        "options": [
+            "averred ... detailed",
+            "affirmed ... dismissed",
+            "alleged ... derided",
+            "admitted ... disputed",
+            "claimed ... buttressed"
+        ],
+        "correctAnswer": "affirmed .. dismissed",
+        "explanation": "'Affirmed' means to state positively, which fits with the president asserting she won't step down. 'Dismissed' means to reject or refuse to accept, which aligns with rejecting corruption claims."
+    },
+    {
+        "id": 44,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. BENIGN",
+        "options": [
+            "Harmless",
+            "Malignant",
+            "Favorable",
+            "Gentle",
+            "Beneficial"
+        ],
+        "correctAnswer": "Malignant",
+        "explanation": "'Benign' means gentle and kind; not harmful or malicious. 'Malignant' means evil in nature or effect; malicious, which is the opposite of benign."
+    },
+    {
+        "id": 5,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite her firm _____ about the merits of her approach, the mayor agreed to meet with her opponents in the hope that she could _____ them by making a few concessions.",
+        "options": ["theories ... modify", "misgivings ... placate", "beliefs ... betray", "convictions ... appease", "announcements ... embarrass"],
+        "correctAnswer": "convictions ... appease",
+        "explanation": "'Convictions' fits with the idea of firm beliefs about the merits of her approach. 'Appease' means to pacify or placate, which fits with the idea of making concessions to satisfy opponents."
+    },
+    {
+        "id": 7,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. ERSATZ",
+        "options": ["exorbitant", "artificial", "reconditioned", "genuine", "exaggerated"],
+        "correctAnswer": "genuine",
+        "explanation": "'Ersatz' means artificial or inferior substitute. The opposite of this is 'genuine', meaning authentic or real."
+    },
+    {
+        "id": 8,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Believing himself to be _____ because of youthful _____ while in college, the popular businessman decided not to run for political office.",
+        "options": ["compromised ... accomplishments", "vulnerable ... indiscretions", "disadvantaged ... experiences", "qualified ... studies", "inviolate ... misadventures"],
+        "correctAnswer": "vulnerable ... indiscretions",
+        "explanation": "The context suggests that the businessman feels at risk ('vulnerable') due to past mistakes ('indiscretions') from his college days, which could be used against him in a political campaign."
+    },
+    {
+        "id": 13,
+        "text": "GUITAR is to INSTRUMENT as...",
+        "options": ["PAINT is to ARTIST", "HAMMER is to TOOL", "BOOK is to LIBRARY", "CHEF is to RESTAURANT", "TIRE is to CAR"],
+        "correctAnswer": "HAMMER is to TOOL",
+        "explanation": "A guitar is a specific type of instrument, just as a hammer is a specific type of tool. Both relationships represent a specific-to-general category."
+    },
+    {
+        "id": 14,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        "options": ["reenactment", "critique", "declaration", "rebuttal", "preview"],
+        "correctAnswer": "critique",
+        "explanation": "'Critique' best fits here as it can mean a detailed analysis and assessment, which was expected to be harsh but turned out positive."
+    },
+    {
+        "id": 15,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The dedication and ______ exhibited by the athlete as she came back from a serious injury was an inspiration to her teammates.",
+        "options": ["independence", "determination", "insubordination", "elation", "perfection"],
+        "correctAnswer": "determination",
+        "explanation": "In the context of an athlete coming back from injury, 'determination' best fits with 'dedication' to describe the inspiring qualities shown."
+    },
+    {
+        "id": 17,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The pace at which the professor lectured frustrated some students, who wished he wouldn't spend so much time explaining basic concepts.",
+        "options": ["elevated", "accelerated", "temperate", "swift", "deliberate"],
+        "correctAnswer": "deliberate",
+        "explanation": "'Deliberate' best fits the context as it suggests a slow, careful pace, which aligns with the professor spending a lot of time on basic concepts."
+    },
+    {
+        "id": 21,
+        "text": "LAMBASTE is to EXTOL as ...",
+        "options": ["GALVANIZE is to CATALYZE", "MANDATE is to DECREE", "INFILTRATE is to SNEAK", "SKIM is to SCOUR", "DISPLACE is to RELOCATE"],
+        "correctAnswer": "SKIM is to SCOUR",
+        "explanation": "'Lambaste' means to criticize harshly, while 'extol' means to praise enthusiastically. Similarly, 'skim' means to read or consider superficially, while 'scour' means to examine thoroughly."
+    },
+    {
+        "id": 23,
+        "text": "HYPOTHESIS is to THEORY as ...",
+        "options": ["QUESTION is to ANSWER", "DRAFT is to FINAL", "ACORN is to OAK", "LARVA is to BUTTERFLY", "BLUEPRINT is to BUILDING"],
+        "correctAnswer": "DRAFT is to FINAL",
+        "explanation": "A hypothesis is an initial explanation that can develop into a theory, just as a draft is an initial version that can be developed into a final version. This analogy represents a progression from an initial to a more developed state."
+    },
+    {
+        "id": 32,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. VERBOSE",
+        "options": ["Loquacious", "Talkative", "Concise", "Eloquent", "Bombastic"],
+        "correctAnswer": "Concise",
+        "explanation": "'Verbose' means using more words than necessary. 'Concise' means expressing much in few words, which is the opposite of verbose."
+    },
+    {
+        "id": 34,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. PROLIFIC",
+        "options": ["Abundant", "Fertile", "Unproductive", "Copious", "Plentiful"],
+        "correctAnswer": "Unproductive",
+        "explanation": "'Prolific' means producing much fruit or foliage or many offspring; very productive. 'Unproductive' means not producing or unable to produce, which is the opposite of prolific."
+    },
+    {
+        "id": 36,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The homeowner, well aware of the building regulations in his hometown, was not surprised that he would have to make some _____ to his original design to renovate his home.",
+        "options": ["austere ... measures", "obscure ... divisions", "stringent ... modifications", "lenient ... revisions", "limited ... magnifications"],
+        "correctAnswer": "stringent ... modifications",
+        "explanation": "'Stringent modifications' best fits the context of building regulations requiring changes to the original design. 'Stringent' implies strict rules, and 'modifications' refers to the changes needed."
+    },
+    {
+        "id": 37,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The scientist's _____ approach to the experiment yielded unexpected results, leading to a _____ in the field of quantum physics.",
+        "options": ["conventional ... setback", "innovative ... breakthrough", "haphazard ... consensus", "rigorous ... stalemate", "ambivalent ... revolution"],
+        "correctAnswer": "innovative ... breakthrough",
+        "explanation": "'Innovative' fits with unexpected results, and 'breakthrough' aligns with significant progress in the field of quantum physics."
+    },
+    {
+        "id": 2,
+        "text": "SONNET is to POETRY as ...",
+        "options": [
+            "NOVEL is to PROSE",
+            "PAINT is to CANVAS",
+            "DIRECTOR is to FILM",
+            "SYMPHONY is to ORCHESTRA",
+            "SCULPTURE is to CLAY"
+        ],
+        "correctAnswer": "NOVEL is to PROSE",
+        "explanation": "A sonnet is a specific form of poetry, just as a novel is a specific form of prose. This analogy represents a specific-to-general relationship within literary forms."
+    },
+    {
+        "id": 3,
+        "text": "CANVAS is to PAINTER as ...",
+        "options": [
+            "COURT is to JUDGE",
+            "STAGE is to ACTOR",
+            "KEYBOARD is to TYPIST",
+            "RECIPE is to CHEF",
+            "CLASSROOM is to TEACHER"
+        ],
+        "correctAnswer": "KEYBOARD is to TYPIST",
+        "explanation": "A canvas is the primary tool or medium for a painter, just as a keyboard is the primary tool for a typist. Both pairs represent a tool-to-user relationship."
+    },
+    {
+        "id": 5,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The scientist's groundbreaking research ______ long-held beliefs about the nature of the universe, leading to a ______ in the field of astrophysics.",
+        "options": [
+            "confirmed ... stagnation",
+            "challenged ... paradigm shift",
+            "supported ... controversy",
+            "ignored ... revolution",
+            "misinterpreted ... consensus"
+        ],
+        "correctAnswer": "challenged ... paradigm shift",
+        "explanation": "'Challenged' fits with the idea of groundbreaking research that goes against existing beliefs, and 'paradigm shift' describes a fundamental change in approach or underlying assumptions in a field of study."
+    },
+    {
+        "id": 7,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. OPAQUE",
+        "options": [
+            "cloudy",
+            "transparent",
+            "solid",
+            "dense",
+            "obscure"
+        ],
+        "correctAnswer": "transparent",
+        "explanation": "'Opaque' means not able to be seen through, impenetrable to light. 'Transparent' means allowing light to pass through so that objects behind can be distinctly seen, which is the opposite of opaque."
+    },
+    {
+        "id": 12,
+        "text": "PLAYWRIGHT is to DRAMA as ...",
+        "options": [
+            "AUTHOR is to NOVEL",
+            "PAINTER is to CANVAS",
+            "SCULPTOR is to CLAY",
+            "DIRECTOR is to FILM",
+            "COMPOSER is to ORCHESTRA"
+        ],
+        "correctAnswer": "AUTHOR is to NOVEL",
+        "explanation": "A playwright creates drama, just as an author creates a novel. Both represent the creator of a specific form of literature."
+    },
+    {
+        "id": 17,
+        "text": "OCCUPIED is to VACANT as...",
+        "options": [
+            "BEAUTIFUL is to SIGHT",
+            "BLISSFUL is to HAPPINESS",
+            "CONSERVED is to RETAINED",
+            "HONORABLE is to SHAMEFUL",
+            "MYOPIC is to SHORTSIGHTED"
+        ],
+        "correctAnswer": "HONORABLE is to SHAMEFUL",
+        "explanation": "OCCUPIED and VACANT are opposites. Among the options, HONORABLE and SHAMEFUL are also opposites, making this the best analogy."
+    },
+    {
+        "id": 21,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. DYNAMIC",
+        "options": [
+            "forceful",
+            "frenetic",
+            "mortal",
+            "stagnant",
+            "invincible"
+        ],
+        "correctAnswer": "stagnant",
+        "explanation": "'Dynamic' means characterized by constant change, activity, or progress. The opposite of this is 'stagnant', meaning showing little or no activity, movement, or change."
+    },
+    {
+        "id": 23,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Upset with the company president's _____ refusal to consider their proposals, the angry shareholders finally confronted her at the company's annual meeting.",
+        "options": [
+            "alert",
+            "relevant",
+            "terse",
+            "disgusting",
+            "persistent"
+        ],
+        "correctAnswer": "persistent",
+        "explanation": "'Persistent' means continuing firmly despite opposition, which best describes the president's repeated refusal that upset the shareholders."
+    },
+    {
+        "id": 25,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. OSTENTATIOUS",
+        "options": [
+            "omnipotent",
+            "refined",
+            "modest",
+            "undignified",
+            "gorgeous"
+        ],
+        "correctAnswer": "modest",
+        "explanation": "'Ostentatious' means showy or pretentious. 'Modest' means unassuming or moderate, which is the opposite of ostentatious."
+    },
+    {
+        "id": 29,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The historian's ______ account of the ancient civilization provided a vivid and detailed picture of daily life in that era.",
+        "options": [
+            "vague",
+            "biased",
+            "comprehensive",
+            "superficial",
+            "ambiguous"
+        ],
+        "correctAnswer": "comprehensive",
+        "explanation": "In the context of providing a vivid and detailed picture, 'comprehensive' best describes an account that covers all aspects thoroughly."
+    },
+    {
+        "id": 33,
+        "text": "SUPPORT is to FRAMEWORK as ...",
+        "options": [
+            "NOURISHMENT is to DEPRIVATION",
+            "AMUSEMENT is to HOBBY",
+            "CONSCIOUSNESS is to SLEEP",
+            "COMPETENCY is to EMPLOYMENT",
+            "ORGANIZATION is to FORTITUDE"
+        ],
+        "correctAnswer": "COMPETENCY is to EMPLOYMENT",
+        "explanation": "Support is a crucial element of a framework, just as competency is a crucial element of employment. Both pairs represent a necessary component for the whole."
+    },
+    {
+        "id": 35,
+        "text": "INAUDIBLE is to HEAR as ...",
+        "options": [
+            "INVISIBLE is to SEE",
+            "INTANGIBLE is to TOUCH",
+            "INEDIBLE is to TASTE",
+            "INSCRUTABLE is to UNDERSTAND",
+            "INERT is to MOVE"
+        ],
+        "correctAnswer": "INVISIBLE is to SEE",
+        "explanation": "Something inaudible cannot be heard, just as something invisible cannot be seen. Both pairs represent an inability to perform a sensory action due to a quality of the object."
+    },
+    {
+        "id": 39,
+        "text": "DEMOCRACY is to AUTOCRACY as ...",
+        "options": [
+            "FREEDOM is to OPPRESSION",
+            "EQUALITY is to DISCRIMINATION",
+            "JUSTICE is to INJUSTICE",
+            "PEACE is to WAR",
+            "PROSPERITY is to POVERTY"
+        ],
+        "correctAnswer": "FREEDOM is to OPPRESSION",
+        "explanation": "Democracy is a system that promotes freedom, while autocracy often leads to oppression. Both pairs represent contrasting political systems and their typical outcomes."
+    },
+    {
+        "id": 41,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The old book was full of _____ text, making it a very _____ read.",
+        "options": [
+            "Inscrutable ... grueling",
+            "Minuscule ... facile",
+            "Hyperbolic ... stale",
+            "Authoritative ... inert",
+            "Dogmatic ... languid"
+        ],
+        "correctAnswer": "Inscrutable ... grueling",
+        "explanation": "'Inscrutable' means impossible to understand or interpret, which would make a text difficult to read. 'Grueling' means extremely tiring and demanding, which fits with the difficulty of reading inscrutable text."
+    },
+    {
+        "id": 45,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite the team's ______ efforts to improve their performance, they continued to struggle in the championship series.",
+        "options": [
+            "lackadaisical",
+            "half-hearted",
+            "zealous",
+            "indifferent",
+            "apathetic"
+        ],
+        "correctAnswer": "zealous",
+        "explanation": "'Zealous' means showing great energy or enthusiasm, which best describes strong efforts to improve performance despite continued struggles."
+    },
+    {
+        "id": 48,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The company's decision to ______ its workforce during the economic downturn was met with ______ from both employees and labor unions.",
+        "options": [
+            "expand ... approval",
+            "reduce ... resistance",
+            "train ... enthusiasm",
+            "relocate ... indifference",
+            "promote ... skepticism"
+        ],
+        "correctAnswer": "reduce ... resistance",
+        "explanation": "'Reduce' fits with the context of an economic downturn, and 'resistance' matches the expected reaction from employees and unions to workforce reduction."
+    },
+    {
+        "id": 50,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The pace at which the professor lectured frustrated some students, who wished he wouldn't spend so much time explaining basic concepts.",
+        "options": [
+            "elevated",
+            "accelerated",
+            "temperate",
+            "swift",
+            "deliberate"
+        ],
+        "correctAnswer": "deliberate",
+        "explanation": "'Deliberate' best fits the context as it suggests a slow, careful pace, which aligns with the professor spending a lot of time on basic concepts."
+    },
+    {
+        "id": 2,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. GARNER",
+        "options": ["yield", "provide", "seize", "dispel", "assemble"],
+        "correctAnswer": "dispel",
+        "explanation": "'Garner' means to gather or collect. 'Dispel' means to drive away or cause to vanish, which is the opposite of gathering."
+    },
+    {
+        "id": 4,
+        "text": "INDELIBLE is to ERASE as ...",
+        "options": ["ILLEGIBLE is to READ", "INAUDIBLE is to HEAR", "INVINCIBLE is to DEFEAT", "INEVITABLE is to PREVENT", "INEDIBLE is to EAT"],
+        "correctAnswer": "INVINCIBLE is to DEFEAT",
+        "explanation": "Something indelible cannot be erased, just as something invincible cannot be defeated. Both pairs represent an impossibility to perform an action due to a quality of the object."
+    },
+    {
+        "id": 6,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. BENIGN",
+        "options": ["Harmless", "Malignant", "Favorable", "Gentle", "Beneficial"],
+        "correctAnswer": "Malignant",
+        "explanation": "'Benign' means gentle and kind; not harmful or malicious. 'Malignant' means evil in nature or effect; malicious, which is the opposite of benign."
+    },
+    {
+        "id": 11,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The baker was initially _____ as to why her cake failed to rise until she realized she had _____ to add baking soda.",
+        "options": ["perplexed ... neglected", "astounded ... discriminated", "knowledgeable ... considered", "amazed ... refused", "distraught ... dared"],
+        "correctAnswer": "perplexed ... neglected",
+        "explanation": "'Perplexed' means confused or puzzled, which fits the baker's initial state. 'Neglected' means failed to do something, which describes forgetting to add baking soda."
+    },
+    {
+        "id": 13,
+        "text": "NECKLACE is to JEWELRY as ...",
+        "options": ["YARD is to LAWN", "AIRPLANE is to HELICOPTER", "DOG is to PET", "CLOCK is to WATCH", "SAFE is to VALUABLES"],
+        "correctAnswer": "DOG is to PET",
+        "explanation": "A necklace is a specific type of jewelry, just as a dog is a specific type of pet. This is the best analogy among the given options."
+    },
+    {
+        "id": 19,
+        "text": "LENS is to CAMERA as ...",
+        "options": ["WHEEL is to CAR", "SCREEN is to COMPUTER", "STRINGS is to GUITAR", "PAGE is to BOOK", "BRUSH is to PAINT"],
+        "correctAnswer": "STRINGS is to GUITAR",
+        "explanation": "A lens is an essential component that enables a camera to function, just as strings are essential for a guitar to produce sound. Both pairs represent a crucial part-to-whole relationship."
+    },
+    {
+        "id": 22,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. TRANSPARENT",
+        "options": ["Clear", "Translucent", "Opaque", "Pellucid", "Limpid"],
+        "correctAnswer": "Opaque",
+        "explanation": "'Transparent' means allowing light to pass through so that objects behind can be distinctly seen. 'Opaque' means not allowing light to pass through, which is the opposite of transparent."
+    },
+    {
+        "id": 23,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. MANIFOLD",
+        "options": ["volitional", "plentiful", "diverse", "singular", "unintentional"],
+        "correctAnswer": "singular",
+        "explanation": "'Manifold' means many and various. 'Singular' means single or unique, which is the opposite of manifold."
+    },
+    {
+        "id": 26,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Although the pop star's young fans ______ their love for his songs, not many seemed to have given much thought to the ______ of his lyrics, which were often dark and depressing.",
+        "options": ["declared .. blandness", "denied .. subtext", "decried .. overstated", "eschewed .. undertones", "professed .. implications"],
+        "correctAnswer": "professed .. implications",
+        "explanation": "'Professed' means to declare or claim, often publicly, which fits the fans expressing their love. 'Implications' refers to the suggested meaning or significance, which aligns with the idea of dark and depressing lyrics that aren't immediately apparent."
+    },
+    {
+        "id": 28,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite the company's ______ financial situation, the CEO remained ______ about its future prospects.",
+        "options": ["robust ... pessimistic", "precarious ... optimistic", "stable ... concerned", "thriving ... anxious", "declining ... indifferent"],
+        "correctAnswer": "precarious ... optimistic",
+        "explanation": "'Precarious' suggests an unstable or dangerous financial situation, while 'optimistic' shows a positive outlook despite the challenges, which fits the contrasting ideas in the sentence."
+    },
+    {
+        "id": 30,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Believing himself to be _____ because of youthful _____ while in college, the popular businessman decided not to run for political office.",
+        "options": ["compromised ... accomplishments", "vulnerable ... indiscretions", "disadvantaged ... experiences", "qualified ... studies", "inviolate ... misadventures"],
+        "correctAnswer": "vulnerable ... indiscretions",
+        "explanation": "The context suggests that the businessman feels at risk ('vulnerable') due to past mistakes ('indiscretions') from his college days, which could be used against him in a political campaign."
+    },
+    {
+        "id": 32,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The dedication and ______ exhibited by the athlete as she came back from a serious injury was an inspiration to her teammates.",
+        "options": ["independence", "determination", "insubordination", "elation", "perfection"],
+        "correctAnswer": "determination",
+        "explanation": "In the context of an athlete coming back from injury, 'determination' best fits with 'dedication' to describe the inspiring qualities shown."
+    },
+    {
+        "id": 37,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The politician's ______ remarks about the economy ______ his opponents, who claimed he was out of touch with reality.",
+        "options": ["candid ... placated", "inflammatory ... angered", "benign ... irritated", "diplomatic ... provoked", "ambiguous ... pleased"],
+        "correctAnswer": "inflammatory ... angered",
+        "explanation": "'Inflammatory' means provocative or incendiary, which fits with remarks that would anger opponents. 'Angered' directly describes the opponents' reaction to such remarks."
+    },
+    {
+        "id": 39,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        "options": ["reenactment", "critique", "declaration", "rebuttal", "preview"],
+        "correctAnswer": "critique",
+        "explanation": "'Critique' best fits here as it can mean a detailed analysis and assessment, which was expected to be harsh but turned out positive."
+    },
+    {
+        "id": 44,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. BENEVOLENT",
+        "options": ["kind", "generous", "malevolent", "charitable", "benign"],
+        "correctAnswer": "malevolent",
+        "explanation": "'Benevolent' means kind and generous. 'Malevolent' means having or showing a wish to do evil to others, which is the opposite of benevolent."
+    },
+    {
+        "id": 49,
+        "text": "RECKLESS is to CAUTION as...",
+        "options": ["DELIBERATE is to THOUGHT", "SILLY is to INTENT", "MEAN is to COMPASSION", "ALERT is to SLEEP", "ANGRY is to PRUDENCE"],
+        "correctAnswer": "MEAN is to COMPASSION",
+        "explanation": "'Reckless' is the opposite of 'caution'. Similarly, 'mean' is the opposite of 'compassion'. The other pairs are either synonyms or not clearly related."
+    },
+    {
+        "id": 2,
+        "text": "TELESCOPE is to ASTRONOMER as ...",
+        "options": [
+            "STETHOSCOPE is to DOCTOR",
+            "CAMERA is to PHOTOGRAPHER",
+            "PAINTBRUSH is to ARTIST",
+            "CALCULATOR is to ACCOUNTANT",
+            "MICROPHONE is to SINGER"
+        ],
+        "correctAnswer": "STETHOSCOPE is to DOCTOR",
+        "explanation": "A telescope is a crucial instrument for an astronomer, just as a stethoscope is a crucial instrument for a doctor. Both pairs represent an essential tool-to-profession relationship."
+    },
+    {
+        "id": 14,
+        "text": "TRANSPARENT is to OPAQUE as ...",
+        "options": [
+            "LIGHT is to DARK",
+            "SOLID is to LIQUID",
+            "SMOOTH is to ROUGH",
+            "FAST is to SLOW",
+            "HOT is to COLD"
+        ],
+        "correctAnswer": "LIGHT is to DARK",
+        "explanation": "Transparent and opaque are opposites in terms of allowing light to pass through, just as light and dark are opposites in terms of the presence of light. Both pairs represent contrasting states related to light."
+    },
+    {
+        "id": 16,
+        "text": "PLAYWRIGHT is to DRAMA as ...",
+        "options": [
+            "AUTHOR is to NOVEL",
+            "PAINTER is to CANVAS",
+            "SCULPTOR is to CLAY",
+            "DIRECTOR is to FILM",
+            "COMPOSER is to ORCHESTRA"
+        ],
+        "correctAnswer": "AUTHOR is to NOVEL",
+        "explanation": "A playwright creates drama, just as an author creates a novel. Both represent the creator of a specific form of literature."
+    },
+    {
+        "id": 18,
+        "text": "CASTIGATE is to PUNISHMENT as...",
+        "options": [
+            "APPROVE is to CITATION",
+            "DEVOTE is to ANIMOSITY",
+            "ADVISE is to MENTORSHIP",
+            "REPORT is to VENGEANCE",
+            "CLARIFY is to ENDOWMENT"
+        ],
+        "correctAnswer": "ADVISE is to MENTORSHIP",
+        "explanation": "CASTIGATE (to criticize severely) is related to PUNISHMENT as a form of verbal punishment. Similarly, ADVISE is related to MENTORSHIP as a key aspect of guiding or mentoring someone."
+    },
+    {
+        "id": 19,
+        "text": "OBSEQUIOUS is to DEFERENCE as ...",
+        "options": [
+            "PLANNED is to CHANCE",
+            "OBLIVIOUS is to COGNIZANCE",
+            "OBVIOUS is to ENIGMA",
+            "DESTITUTE is to POVERTY",
+            "DREARY is to MIRTH"
+        ],
+        "correctAnswer": "OBLIVIOUS is to COGNIZANCE",
+        "explanation": "'Obsequious' means showing excessive deference, while 'deference' is respect and submission. Similarly, 'oblivious' means unaware, while 'cognizance' means awareness or knowledge."
+    },
+    {
+        "id": 21,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        "options": [
+            "reenactment",
+            "critique",
+            "declaration",
+            "rebuttal",
+            "preview"
+        ],
+        "correctAnswer": "critique",
+        "explanation": "'Critique' best fits here as it can mean a detailed analysis and assessment, which was expected to be harsh but turned out positive."
+    },
+    {
+        "id": 24,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The duckling tried to _____ its mother by following her every step.",
+        "options": [
+            "Rival",
+            "Confront",
+            "Personify",
+            "Immerse",
+            "Emulate"
+        ],
+        "correctAnswer": "Emulate",
+        "explanation": "'Emulate' means to imitate or copy, which best fits the context of a duckling following and copying its mother's actions."
+    },
+    {
+        "id": 29,
+        "text": "DEMOCRACY is to GOVERNMENT as...",
+        "options": [
+            "CAPITALISM is to ECONOMY",
+            "FREEDOM is to LIBERTY",
+            "JUSTICE is to COURT",
+            "EDUCATION is to SCHOOL",
+            "HEALTH is to HOSPITAL"
+        ],
+        "correctAnswer": "CAPITALISM is to ECONOMY",
+        "explanation": "Democracy is a system of government, just as capitalism is a system of economy. Both represent specific systems within broader concepts."
+    },
+    {
+        "id": 33,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Usually a _____ supporter of his team, the fan was uncharacteristically _____ about attending the opening game because the forecast called for heavy rain.",
+        "options": [
+            "fervent ... ambivalent",
+            "committed ... enthusiastic",
+            "tepid ... reluctant",
+            "rabid ... silent",
+            "forthright ... quiet"
+        ],
+        "correctAnswer": "fervent ... ambivalent",
+        "explanation": "'Fervent' means having or showing great enthusiasm, which describes the fan's usual support. 'Ambivalent' means having mixed feelings, which fits the fan's unusual hesitation about attending due to rain."
+    },
+    {
+        "id": 38,
+        "text": "PHILHARMONIC is to ORCHESTRA as ...",
+        "options": [
+            "SCULPTURE is to ART",
+            "CALCULUS is to MATHEMATICS",
+            "ASTRONOMY is to SCIENCE",
+            "BIOGRAPHY is to LITERATURE",
+            "DEMOCRACY is to GOVERNMENT"
+        ],
+        "correctAnswer": "BIOGRAPHY is to LITERATURE",
+        "explanation": "A philharmonic is a type of orchestra, just as a biography is a type of literature. Both represent a specific subcategory within a broader field."
+    },
+    {
+        "id": 42,
+        "text": "LENS is to CAMERA as ...",
+        "options": [
+            "WHEEL is to CAR",
+            "SCREEN is to COMPUTER",
+            "STRINGS is to GUITAR",
+            "PAGE is to BOOK",
+            "BRUSH is to PAINT"
+        ],
+        "correctAnswer": "STRINGS is to GUITAR",
+        "explanation": "A lens is an essential component that enables a camera to function, just as strings are essential for a guitar to produce sound. Both pairs represent a crucial part-to-whole relationship."
+    },
+    {
+        "id": 43,
+        "text": "OMNIVORE is to HERBIVORE as ...",
+        "options": [
+            "PREDATOR is to PREY",
+            "NOCTURNAL is to DIURNAL",
+            "TERRESTRIAL is to AQUATIC",
+            "VERTEBRATE is to INVERTEBRATE",
+            "CARNIVORE is to VEGETARIAN"
+        ],
+        "correctAnswer": "CARNIVORE is to VEGETARIAN",
+        "explanation": "An omnivore eats both plants and animals, while a herbivore eats only plants. Similarly, a carnivore eats meat, while a vegetarian eats only plants. Both pairs represent contrasting dietary habits."
+    },
+    {
+        "id": 48,
+        "text": "CAR is to VEHICLE as...",
+        "options": [
+            "BLEACH is to WASH",
+            "BUS is to TRAIN",
+            "ELEPHANT is to ANIMAL",
+            "DESK is to OFFICE",
+            "JUMP is to WALK"
+        ],
+        "correctAnswer": "ELEPHANT is to ANIMAL",
+        "explanation": "A car is a specific type of vehicle, just as an elephant is a specific type of animal. This is the best analogy among the given options."
+    }
+
+    ]

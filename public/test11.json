@@ -1,0 +1,646 @@
+[
+    {
+        "id": 1,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The politician's _____ statements during the debate left many voters feeling _____ about his true stance on the issues.",
+        "options": [
+            "candid ... informed",
+            "ambiguous ... uncertain",
+            "forthright ... doubtful",
+            "eloquent ... impressed",
+            "verbose ... overwhelmed"
+        ],
+        "correctAnswer": "ambiguous ... uncertain",
+        "explanation": "'Ambiguous' means open to more than one interpretation, which would lead voters to feel 'uncertain' about the politician's true stance."
+    },
+    {
+        "id": 2,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official1/5.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
+    },
+    {
+        "id": 3,
+        "text": "PHILHARMONIC is to ORCHESTRA as ...",
+        "options": [
+            "SCULPTURE is to ART",
+            "CALCULUS is to MATHEMATICS",
+            "ASTRONOMY is to SCIENCE",
+            "BIOGRAPHY is to LITERATURE",
+            "DEMOCRACY is to GOVERNMENT"
+        ],
+        "correctAnswer": "BIOGRAPHY is to LITERATURE",
+        "explanation": "A philharmonic is a type of orchestra, just as a biography is a type of literature. Both represent a specific subcategory within a broader field."
+    },
+    {
+        "id": 4,
+        "text": "A car depreciates in value by 15% each year. If a car is worth $20,000 now, what will its value be after 2 years?",
+        "options": [
+            "$14,000",
+            "$14,450",
+            "$15,300",
+            "$16,150",
+            "$17,000"
+        ],
+        "correctAnswer": "14,450",
+        "explanation": "After one year: $20,000 * 0.85 = $17,000. After two years: $17,000 * 0.85 = $14,450."
+    },
+    {
+        "id": 5,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/test5/7.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
+    },
+    {
+        "id": 6,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? All programmers know Java. Sarah knows Java. Sarah is a programmer.",
+        "options": [
+            "True",
+            "False",
+            "Uncertain"
+        ],
+        "correctAnswer": "Uncertain",
+        "explanation": "While we know all programmers know Java and Sarah knows Java, we can't conclude that everyone who knows Java is a programmer. Sarah might know Java without being a programmer."
+    },
+    {
+        "id": 7,
+        "text": "A hardware store sells 215 ladders in the month of August. If it sells 40% more ladders in the next month, how many ladders does it sell in September?",
+        "options": [
+            "305",
+            "306",
+            "311",
+            "317",
+            "301"
+        ],
+        "correctAnswer": "301",
+        "explanation": "40% of 215 is 86. So in September, they sell 215 + 86 = 301 ladders."
+    },
+    {
+        "id": 8,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace18.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
+    },
+    {
+        "id": 9,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace10.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "A",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
+    },
+    {
+        "id": 10,
+        "text": "By what percentage did the price increase between 2010 and 2015?",
+        "image": "/storage/img/test5/11.png",
+        "options": [
+            "10%",
+            "12.5%",
+            "15%",
+            "17.5%",
+            "20%"
+        ],
+        "correctAnswer": "12.5%",
+        "explanation": "Locate the price values for 2010 and 2015 in the image. Calculate the percentage increase between these two values. The correct answer is the option that matches this calculated percentage."
+    },
+    {
+        "id": 11,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/3.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Study the progression of changes in the given sequence of images. Look for consistent rules or transformations applied to the elements. Choose the option that follows these rules and best completes the pattern."
+    },
+    {
+        "id": 12,
+        "text": "What would be the next group of letters in the following series? kfvn ... kewm... kdxl ... kcyk?",
+        "options": [
+            "kbzj",
+            "kbaj",
+            "kbxl",
+            "kdzj",
+            "kdzl"
+        ],
+        "correctAnswer": "kbzj",
+        "explanation": "The pattern is: first letter stays 'k', second letter decreases alphabetically (f, e, d, c, b), third letter follows the pattern (v, w, x, y, z), fourth letter follows the pattern (n, m, l, k, j)."
+    },
+    {
+        "id": 13,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official1/6.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Compare all the options to find the one that stands out. Look for a common theme or pattern among most of the images and identify which one breaks this pattern or has a unique characteristic."
+    },
+    {
+        "id": 14,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The diplomat's ______ approach to negotiations helped to ______ the long-standing conflict between the two nations.",
+        "options": [
+            "aggressive ... escalate",
+            "conciliatory ... resolve",
+            "indifferent ... prolong",
+            "confrontational ... settle",
+            "evasive ... perpetuate"
+        ],
+        "correctAnswer": "conciliatory ... resolve",
+        "explanation": "'Conciliatory' means intended to placate or reconcile, which fits with an approach that would help resolve a conflict. 'Resolve' directly relates to ending the conflict."
+    },
+    {
+        "id": 15,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. GARNER",
+        "options": [
+            "yield",
+            "provide",
+            "seize",
+            "dispel",
+            "assemble"
+        ],
+        "correctAnswer": "dispel",
+        "explanation": "'Garner' means to gather or collect. 'Dispel' means to drive away or cause to vanish, which is the opposite of gathering."
+    },
+    {
+        "id": 16,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Although the store _____ friendly employees toward the entrance, instructing them to welcome customers into the store, discerning minds were able to reason that these employees were really meant to serve as a _____ to shoplifters.",
+        "options": [
+            "stationed ... deterrent",
+            "discharged ... temptation",
+            "gratified ... scourge",
+            "insinuated ... gesture",
+            "positioned ... benefit"
+        ],
+        "correctAnswer": "stationed ... deterrent",
+        "explanation": "'Stationed' fits the context of placing employees at the entrance. 'Deterrent' makes sense as the hidden purpose of these employees, to discourage shoplifting."
+    },
+    {
+        "id": 17,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace19.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "A",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
+    },
+    {
+        "id": 18,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Believing himself to be _____ because of youthful _____ while in college, the popular businessman decided not to run for political office.",
+        "options": [
+            "compromised ... accomplishments",
+            "vulnerable ... indiscretions",
+            "disadvantaged ... experiences",
+            "qualified ... studies",
+            "inviolate ... misadventures"
+        ],
+        "correctAnswer": "vulnerable ... indiscretions",
+        "explanation": "The context suggests that the businessman feels at risk ('vulnerable') due to past mistakes ('indiscretions') from his college days, which could be used against him in a political campaign."
+    },
+    {
+        "id": 19,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/test5/5.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "E",
+        "explanation": "Analyze each option to find the one that differs from the others. Look for shared characteristics or patterns among most options and determine which one doesn't follow this common theme."
+    },
+    {
+        "id": 20,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official2/8.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
+    },
+    {
+        "id": 21,
+        "text": "A store sells shirts for $25 each. If they offer a 'buy 2, get 1 free' deal, what is the effective price per shirt when buying 3?",
+        "options": [
+            "$16.67",
+            "$18.33",
+            "$20.00",
+            "$21.67",
+            "$23.33"
+        ],
+        "correctAnswer": "16.67",
+        "explanation": "When buying 3 shirts, you pay for 2 at $25 each, totaling $50. Dividing $50 by 3 shirts gives an effective price of $16.67 per shirt."
+    },
+    {
+        "id": 22,
+        "text": "What would be the next group of letters in the following series? akje... ajif ... aihg.... ahgh?",
+        "options": [
+            "agff",
+            "agfi",
+            "aggi",
+            "aifh",
+            "aifi"
+        ],
+        "correctAnswer": "agfi",
+        "explanation": "The pattern is: the first letter remains 'a', the second letter decreases alphabetically (k, j, i, h, g), the third letter alternates between consonants and vowels (k, j, h, g, f), and the last letter follows the pattern (e, f, g, h, i)."
+    },
+    {
+        "id": 23,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong11.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
+    },
+    {
+        "id": 24,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        "options": [
+            "reenactment",
+            "critique",
+            "unique",
+            "declaration",
+            "rebuttal",
+            "preview"
+        ],
+        "correctAnswer": "critique",
+        "explanation": "A 'critique' is an evaluation or review, which fits the context of the sentence. The other options don't fit as well with the idea of an expected harsh assessment of the politician."
+    },
+    {
+        "id": 25,
+        "text": "What would be the next number in the following series? 1... 3... 7 ... 15 ... 31 ...?",
+        "options": [
+            "63",
+            "64",
+            "65",
+            "67",
+            "71"
+        ],
+        "correctAnswer": "63",
+        "explanation": "The pattern is: each number is doubling and adding 1. So, 31 * 2 + 1 = 63."
+    },
+    {
+        "id": 26,
+        "text": "What would be the next number in the following series? 2 ... 6 ... 12 ... 20 ... 30 ...?",
+        "options": [
+            "36",
+            "40",
+            "42",
+            "44",
+            "48"
+        ],
+        "correctAnswer": "42",
+        "explanation": "The pattern is +4, +6, +8, +10. Following this increasing pattern, the next increase should be +12. So, 30 + 12 = 42."
+    },
+    {
+        "id": 27,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. DYNAMIC",
+        "options": [
+            "forceful",
+            "frenetic",
+            "mortal",
+            "stagnant",
+            "invincible"
+        ],
+        "correctAnswer": "stagnant",
+        "explanation": "'Dynamic' means characterized by constant change, activity, or progress. The opposite of this is 'stagnant', meaning showing little or no activity, movement, or change."
+    },
+    {
+        "id": 28,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The dedication and ______ exhibited by the athlete as she came back from a serious injury was an inspiration to her teammates.",
+        "options": [
+            "independence",
+            "determination",
+            "insubordination",
+            "elation",
+            "perfection"
+        ],
+        "correctAnswer": "determination",
+        "explanation": "In the context of an athlete coming back from injury, 'determination' best fits with 'dedication' to describe the inspiring qualities shown."
+    },
+    {
+        "id": 29,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/4.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Analyze the sequence of images to identify the underlying pattern. Pay attention to how elements change or relate to each other across the sequence. The correct answer will be the option that logically extends this pattern."
+    },
+    {
+        "id": 30,
+        "text": "A sporting goods store sells mountain bikes from seven different brands, in four different sizes, and in six different colors. How many different combinations of brand, size, and color are possible?",
+        "options": [
+            "144",
+            "168",
+            "180",
+            "192",
+            "210"
+        ],
+        "correctAnswer": "168",
+        "explanation": "This is a multiplication principle problem. Total combinations = 7 brands * 4 sizes * 6 colors = 168."
+    },
+    {
+        "id": 31,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Praised by many for her _____, the professor was known for her engaging lectures on topics as diverse as chemistry, the civil war, and the history of religion.",
+        "options": [
+            "candor",
+            "versatility",
+            "sentiment",
+            "friendliness",
+            "brevity"
+        ],
+        "correctAnswer": "versatility",
+        "explanation": "The professor's ability to lecture on diverse topics suggests 'versatility', which means having many different skills or qualities."
+    },
+    {
+        "id": 32,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Although the pop star's young fans ______ their love for his songs, not many seemed to have given much thought to the ______ of his lyrics, which were often dark and depressing.",
+        "options": [
+            "declared .. blandness",
+            "denied .. subtext",
+            "decried .. overstated",
+            "eschewed .. undertones",
+            "professed .. implications"
+        ],
+        "correctAnswer": "professed .. implications",
+        "explanation": "'Professed' means to declare or claim, often publicly, which fits the fans expressing their love. 'Implications' refers to the suggested meaning or significance, which aligns with the idea of dark and depressing lyrics that aren't immediately apparent."
+    },
+    {
+        "id": 33,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite the team's ______ performance in the first half, they managed to stage a ______ comeback and win the game.",
+        "options": [
+            "stellar ... gradual",
+            "lackluster ... remarkable",
+            "consistent ... mediocre",
+            "impressive ... dismal",
+            "erratic ... predictable"
+        ],
+        "correctAnswer": "lackluster ... remarkable",
+        "explanation": "'Lackluster' suggests a poor or unimpressive performance in the first half, while 'remarkable' describes an impressive comeback, fitting the contrast in the sentence."
+    },
+    {
+        "id": 34,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Upset with the company president's _____ refusal to consider their proposals, the angry shareholders finally confronted her at the company's annual meeting.",
+        "options": [
+            "alert",
+            "relevant",
+            "terse",
+            "disgusting",
+            "persistent"
+        ],
+        "correctAnswer": "persistent",
+        "explanation": "'Persistent' means continuing firmly despite opposition, which best describes the president's repeated refusal that upset the shareholders."
+    },
+    {
+        "id": 35,
+        "text": "What would be the next number in the following series? 3 ... 7 ... 10 ... 17 ... 27 ...?",
+        "options": [
+            "30",
+            "34",
+            "37",
+            "40",
+            "44"
+        ],
+        "correctAnswer": "44",
+        "explanation": "The pattern is +4, +3, +7, +10. Following this increasing pattern, the next increase should be +17. So, 27 + 17 = 44."
+    },
+    {
+        "id": 36,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official1/8.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Study all the options to identify the one that doesn't fit with the others. Look for common features or rules that most options follow, then find the one that breaks this pattern or has a unique attribute."
+    },
+    {
+        "id": 37,
+        "text": "A factory produces 1200 units per day. If they increase production by 20% and work for 5 days, how many units will they produce?",
+        "options": [
+            "6000",
+            "7000",
+            "7200",
+            "7500",
+            "8000"
+        ],
+        "correctAnswer": "7200",
+        "explanation": "Increased production per day: 1200 * 1.20 = 1440 units. For 5 days: 1440 * 5 = 7200 units."
+    },
+    {
+        "id": 38,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/1.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "B",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
+    },
+    {
+        "id": 39,
+        "text": "What would be the next number in the following series? 2... 13 ... 15... 28 ... 43 ...?",
+        "options": [
+            "58",
+            "65",
+            "71",
+            "79",
+            "86"
+        ],
+        "correctAnswer": "71",
+        "explanation": "The pattern is: +11, +2, +13, +15. Following this increasing pattern, the next increase should be +28. So, 43 + 28 = 71."
+    },
+    {
+        "id": 40,
+        "text": "An account manager makes $1,800 per pay cycle, plus 12.5% commission on all customer renewals. If she makes $2,750 during a certain pay cycle, then how much money did she generate in renewals during this time?",
+        "options": [
+            "$7,400",
+            "$7,500",
+            "$7,600",
+            "$7,700",
+            "$7,800"
+        ],
+        "correctAnswer": "$7,600",
+        "explanation": "Commission = Total pay - Base salary = $2,750 - $1,800 = $950. Since commission is 12.5% of renewals, renewals = $950 / 0.125 = $7,600."
+    },
+    {
+        "id": 41,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official2/7.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "D",
+        "explanation": "Study all the options to identify the one that doesn't fit with the others. Look for common features or rules that most options follow, then find the one that breaks this pattern or has a unique attribute."
+    },
+    {
+        "id": 42,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/test5/10.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Carefully examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically extends this pattern."
+    },
+    {
+        "id": 43,
+        "text": "A store offers a 25% discount on all items, plus an additional 10% off for members. If a member buys an item originally priced at $120, what is the final price?",
+        "options": [
+            "$75",
+            "$80",
+            "$81",
+            "$85",
+            "$90"
+        ],
+        "correctAnswer": "81",
+        "explanation": "After 25% discount: $120 * 0.75 = $90. After additional 10% off: $90 * 0.9 = $81."
+    },
+    {
+        "id": 44,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/2.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Analyze the given sequence of images to discern the pattern. Pay attention to how elements transform or relate to each other across the sequence. Choose the option that best continues this logical progression."
+    },
+    {
+        "id": 45,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/test5/6.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Study all the options to identify the one that doesn't fit with the others. Look for common features or rules that most options follow, then find the one that breaks this pattern or has a unique attribute."
+    },
+    {
+        "id": 46,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/11.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+        ],
+        "correctAnswer": "E",
+        "explanation": "Carefully examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically extends this pattern."
+    },
+    {
+        "id": 47,
+        "text": "RECKLESS is to CAUTION as...",
+        "options": [
+            "DELIBERATE is to THOUGHT",
+            "SILLY is to INTENT",
+            "MEAN is to COMPASSION",
+            "ALERT is to SLEEP",
+            "ANGRY is to PRUDENCE"
+        ],
+        "correctAnswer": "MEAN is to COMPASSION",
+        "explanation": "'Reckless' is the opposite of 'caution'. Similarly, 'mean' is the opposite of 'compassion'. The other pairs are either synonyms or not clearly related."
+    },
+    {
+        "id": 48,
+        "text": "A rectangular field is 50 meters long and 30 meters wide. If the length is increased by 20% and the width is decreased by 10%, what is the new area of the field?",
+        "options": [
+            "1350 sq m",
+            "1425 sq m",
+            "1500 sq m",
+            "1575 sq m",
+            "1620 sq m"
+        ],
+        "correctAnswer": "1620 sq m",
+        "explanation": "New length: 50 * 1.2 = 60m. New width: 30 * 0.9 = 27m. New area: 60 * 27 = 1620 sq m."
+    },
+    {
+        "id": 49,
+        "text": "SHOVEL is to DIG as ...",
+        "options": [
+            "PLAY is to WIN",
+            "WEIGHT is to CARRY",
+            "LAUGH is to CRY",
+            "MONEY is to BUY",
+            "FIRE is to COLD"
+        ],
+        "correctAnswer": "MONEY is to BUY",
+        "explanation": "A shovel is a tool used to dig, just as money is a tool used to buy. Both pairs represent a means to an end."
+    },
+    {
+        "id": 50,
+        "text": "MARATHON is to RACE as ...",
+        "options": [
+            "NOVEL is to BOOK",
+            "PAINT is to ARTIST",
+            "PIANO is to ORCHESTRA",
+            "TREE is to FOREST",
+            "ATOM is to MOLECULE"
+        ],
+        "correctAnswer": "NOVEL is to BOOK",
+        "explanation": "A marathon is a specific type of race, just as a novel is a specific type of book. This analogy represents a specific-to-general relationship."
+    }
+]
