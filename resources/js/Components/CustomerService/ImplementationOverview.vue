@@ -35,7 +35,7 @@ const features = [
 
 <template>
     <section class="mt-16">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">Example Implementation: AWS Knowledge Base Integration</h2>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">Use Case Example: AI Support With AWS Knowledge Base Integration</h2>
         
         <div class="bg-white dark:bg-gray-800 shadow-sm rounded-xl overflow-hidden mb-8 transform hover:shadow-lg transition-all duration-300">
             <div class="p-6">

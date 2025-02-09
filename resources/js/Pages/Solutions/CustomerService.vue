@@ -17,9 +17,10 @@ const solutionData = {
 <template>
     <SolutionLayout v-bind="solutionData">
         <div class="space-y-12">
-            <Hero />
             <CoreCapabilities />
             <ImplementationOverview />
+            <Hero />
+
             <TechnicalIntegration />
             <PerformanceMetrics />
 
