@@ -1,12 +1,47 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
+import { ref, onMounted } from 'vue';
 
-defineProps({
+const props = defineProps({
     title: String,
     description: String,
     focus: String,
     keyPoint: String,
+    sections: {
+        type: Array,
+        default: () => []
+    }
+});
+
+const activeSection = ref('');
+
+const updateActiveSection = () => {
+    const sections = document.querySelectorAll('[data-section]');
+    const scrollPosition = window.scrollY + 100;
+
+    for (const section of sections) {
+        if (section.offsetTop <= scrollPosition && 
+            section.offsetTop + section.offsetHeight > scrollPosition) {
+            activeSection.value = section.getAttribute('data-section');
+            break;
+        }
+    }
+};
+
+const scrollToSection = (sectionId) => {
+    const element = document.querySelector(`[data-section="${sectionId}"]`);
+    if (element) {
+        window.scrollTo({
+            top: element.offsetTop - 80,
+            behavior: 'smooth'
+        });
+    }
+};
+
+onMounted(() => {
+    window.addEventListener('scroll', updateActiveSection);
+    updateActiveSection();
 });
 </script>
 
@@ -35,13 +70,47 @@ defineProps({
                     </div>
                 </div>
 
-                <!-- Content Section -->
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                    <div class="p-6">
-                        <slot></slot>
+                <!-- Main Content with Navigation -->
+                <div class="relative flex gap-8">
+                    <!-- Navigation Sidebar -->
+                    <div v-if="sections.length" class="hidden lg:block w-64 sticky top-8 h-fit">
+                        <nav class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">On this page</h3>
+                            <ul class="space-y-2">
+                                <li v-for="section in sections" :key="section.id">
+                                    <button 
+                                        @click="scrollToSection(section.id)"
+                                        class="w-full text-left px-3 py-2 rounded-md text-sm transition-colors duration-200"
+                                        :class="{
+                                            'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 font-medium': 
+                                                activeSection === section.id,
+                                            'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700/50': 
+                                                activeSection !== section.id
+                                        }">
+                                        {{ section.title }}
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Content Section -->
+                    <div class="flex-1">
+                        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
+                            <div class="p-6">
+                                <slot></slot>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </AppLayout>
 </template>
+
+<style scoped>
+.sticky {
+    position: sticky;
+    top: 2rem;
+}
+</style>

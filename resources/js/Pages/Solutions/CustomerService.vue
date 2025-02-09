@@ -5,24 +5,50 @@ import CoreCapabilities from '@/Components/CustomerService/CoreCapabilities.vue'
 import ImplementationOverview from '@/Components/CustomerService/ImplementationOverview.vue';
 import TechnicalIntegration from '@/Components/CustomerService/TechnicalIntegration.vue';
 import PerformanceMetrics from '@/Components/CustomerService/PerformanceMetrics.vue';
+import AITools from '@/Components/CustomerService/AITools.vue';
 
 const solutionData = {
     title: 'AI-Powered Customer Service Automation',
     description: 'Transform your customer support with AIBrainL.ink, delivering instant, personalized service through intelligent automation that understands, learns, and evolves with your business.',
     focus: 'Seamlessly integrate AI with your knowledge base to provide 24/7 support, reduce response times, and maintain consistent service quality across all channels.',
     keyPoint: 'Achieve 70% reduction in support costs while improving customer satisfaction through intelligent automation that handles routine inquiries and empowers agents to focus on complex issues.',
+    sections: [
+        { id: 'overview', title: 'Overview' },
+        { id: 'capabilities', title: 'Core Capabilities' },
+        { id: 'implementation', title: 'Implementation Example' },
+        { id: 'technical', title: 'Technical Details' },
+        { id: 'metrics', title: 'Performance Metrics' },
+        { id: 'ai-tools', title: 'Available AI Tools' }
+    ]
 };
 </script>
 
 <template>
     <SolutionLayout v-bind="solutionData">
         <div class="space-y-12">
-            <CoreCapabilities />
-            <ImplementationOverview />
-            <Hero />
+            <div data-section="overview">
+                <Hero />
+            </div>
 
-            <TechnicalIntegration />
-            <PerformanceMetrics />
+            <div data-section="capabilities">
+                <CoreCapabilities />
+            </div>
+
+            <div data-section="implementation">
+                <ImplementationOverview />
+            </div>
+
+            <div data-section="technical">
+                <TechnicalIntegration />
+            </div>
+
+            <div data-section="metrics">
+                <PerformanceMetrics />
+            </div>
+
+            <div data-section="ai-tools">
+                <AITools />
+            </div>
 
             <!-- Call to Action -->
             <div class="mt-16 text-center">
