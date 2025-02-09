@@ -53,27 +53,10 @@ onMounted(() => {
         </Head>
 
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <!-- Hero Section -->
-                <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-xl p-8 mb-8 text-white">
-                    <h1 class="text-3xl font-bold mb-4">{{ title }}</h1>
-                    <p class="text-xl text-blue-100">{{ description }}</p>
-                    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-white/10 rounded-lg p-4">
-                            <h3 class="font-semibold text-lg mb-2">Focus Areas</h3>
-                            <p>{{ focus }}</p>
-                        </div>
-                        <div class="bg-white/10 rounded-lg p-4">
-                            <h3 class="font-semibold text-lg mb-2">Key Benefits</h3>
-                            <p>{{ keyPoint }}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Main Content with Navigation -->
-                <div class="relative flex gap-8">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex gap-8">
                     <!-- Navigation Sidebar -->
-                    <div v-if="sections.length" class="hidden lg:block w-64 sticky top-8 h-fit">
+                    <div v-if="sections.length" class="hidden lg:block w-64 sticky" style="height: fit-content; top: 2rem;">
                         <nav class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">On this page</h3>
                             <ul class="space-y-2">
@@ -94,8 +77,25 @@ onMounted(() => {
                         </nav>
                     </div>
 
-                    <!-- Content Section -->
+                    <!-- Main Content -->
                     <div class="flex-1">
+                        <!-- Hero Section -->
+                        <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-xl p-8 mb-8 text-white">
+                            <h1 class="text-3xl font-bold mb-4">{{ title }}</h1>
+                            <p class="text-xl text-blue-100">{{ description }}</p>
+                            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-white/10 rounded-lg p-4">
+                                    <h3 class="font-semibold text-lg mb-2">Focus Areas</h3>
+                                    <p>{{ focus }}</p>
+                                </div>
+                                <div class="bg-white/10 rounded-lg p-4">
+                                    <h3 class="font-semibold text-lg mb-2">Key Benefits</h3>
+                                    <p>{{ keyPoint }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content Section -->
                         <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                             <div class="p-6">
                                 <slot></slot>
@@ -107,10 +107,3 @@ onMounted(() => {
         </div>
     </AppLayout>
 </template>
-
-<style scoped>
-.sticky {
-    position: sticky;
-    top: 2rem;
-}
-</style>

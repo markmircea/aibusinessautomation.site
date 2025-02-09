@@ -14,9 +14,24 @@ const tools = [
                 uses: ['Context-aware responses', 'Multi-turn conversations', 'Complex problem solving']
             },
             {
-                name: 'Multilingual Support',
-                description: 'Language models supporting 200+ languages for global customer service',
-                uses: ['Cross-language communication', 'Translation services', 'Cultural context awareness']
+                name: 'Gemini',
+                description: "Google's advanced language model for comprehensive customer support",
+                uses: ['Multilingual support', 'Visual query handling', 'Complex reasoning']
+            },
+            {
+                name: 'Mistral AI',
+                description: 'High-performance language models for efficient customer interactions',
+                uses: ['Fast response generation', 'Efficient processing', 'Accurate answers']
+            },
+            {
+                name: 'Cohere',
+                description: 'Enterprise-grade language AI for business applications',
+                uses: ['Content classification', 'Semantic search', 'Customer intent analysis']
+            },
+            {
+                name: 'LangChain',
+                description: 'Framework for building sophisticated AI applications',
+                uses: ['Custom workflow creation', 'Tool integration', 'Complex interaction handling']
             }
         ]
     },
@@ -30,13 +45,28 @@ const tools = [
             },
             {
                 name: 'Vector Search',
-                description: 'Advanced search capabilities using Pinecone/Weaviate for accurate information retrieval',
+                description: 'Advanced search using Pinecone/Weaviate/Qdrant for accurate information retrieval',
                 uses: ['Similar case finding', 'Knowledge base search', 'Relevant document retrieval']
             },
             {
                 name: 'Document AI',
                 description: 'Intelligent document processing for support documentation',
                 uses: ['Document analysis', 'Information extraction', 'Content organization']
+            },
+            {
+                name: 'Elasticsearch',
+                description: 'Intelligent search and analytics engine with ML capabilities',
+                uses: ['Full-text search', 'Analytics', 'Real-time insights']
+            },
+            {
+                name: 'Needle',
+                description: 'Production-ready RAG for document search and retrieval',
+                uses: ['Knowledge retrieval', 'Context management', 'Source tracking']
+            },
+            {
+                name: 'MemoryMesh',
+                description: 'Knowledge graph server for enhanced context management',
+                uses: ['Conversation history', 'Knowledge relationships', 'Context preservation']
             }
         ]
     },
@@ -54,9 +84,24 @@ const tools = [
                 uses: ['Customer data management', 'Case history', 'Support analytics']
             },
             {
-                name: 'Omnichannel Support',
-                description: 'Multi-platform support integration',
-                uses: ['Email support', 'Chat integration', 'Social media support']
+                name: 'HubSpot',
+                description: 'AI-powered marketing automation and customer engagement',
+                uses: ['Customer segmentation', 'Automated workflows', 'Engagement tracking']
+            },
+            {
+                name: 'Slack AI',
+                description: 'Intelligent message routing and automated responses',
+                uses: ['Team collaboration', 'Automated notifications', 'Customer chat integration']
+            },
+            {
+                name: 'Microsoft Teams',
+                description: 'AI-powered meeting transcription and collaboration',
+                uses: ['Customer meetings', 'Support coordination', 'Team communication']
+            },
+            {
+                name: 'Notion AI',
+                description: 'Smart workspace organization and knowledge management',
+                uses: ['Support documentation', 'Team knowledge base', 'Process documentation']
             }
         ]
     },
@@ -69,14 +114,74 @@ const tools = [
                 uses: ['Response time tracking', 'Customer satisfaction monitoring', 'Agent performance analytics']
             },
             {
-                name: 'Sentiment Analysis',
-                description: 'Real-time customer sentiment tracking',
-                uses: ['Emotion detection', 'Satisfaction tracking', 'Priority routing']
+                name: 'Datadog',
+                description: 'Intelligent monitoring and performance management',
+                uses: ['System monitoring', 'Performance tracking', 'Alert management']
             },
             {
-                name: 'Quality Assurance',
-                description: 'Automated response quality monitoring',
-                uses: ['Response accuracy', 'Compliance checking', 'Style consistency']
+                name: 'Grafana',
+                description: 'AI-powered metrics visualization and anomaly detection',
+                uses: ['Real-time dashboards', 'Trend analysis', 'Performance visualization']
+            },
+            {
+                name: 'Axiom',
+                description: 'Advanced log analysis and event data processing',
+                uses: ['Log analysis', 'Event tracking', 'Performance monitoring']
+            },
+            {
+                name: 'Sentry',
+                description: 'Real-time error tracking and monitoring',
+                uses: ['Error detection', 'Performance monitoring', 'Issue resolution']
+            }
+        ]
+    },
+    {
+        category: 'Communication & Channels',
+        tools: [
+            {
+                name: 'Omnichannel Support',
+                description: 'Multi-platform support integration',
+                uses: ['Email support', 'Chat integration', 'Social media support']
+            },
+            {
+                name: 'Discord Integration',
+                description: 'Community management automation and support',
+                uses: ['Community support', 'Automated responses', 'User engagement']
+            },
+            {
+                name: 'Telegram Bot',
+                description: 'Automated messaging and support automation',
+                uses: ['Instant responses', 'Automated updates', 'User notifications']
+            },
+            {
+                name: 'Social Media Integration',
+                description: 'Support across social platforms (X/Twitter, etc.)',
+                uses: ['Social monitoring', 'Response management', 'Engagement tracking']
+            },
+            {
+                name: 'WeCom Bot',
+                description: 'Enterprise messaging and support automation',
+                uses: ['Team notifications', 'Customer communication', 'Automated alerts']
+            }
+        ]
+    },
+    {
+        category: 'Security & Compliance',
+        tools: [
+            {
+                name: 'Auth0',
+                description: 'AI-powered authentication and identity management',
+                uses: ['Secure access', 'Identity verification', 'User management']
+            },
+            {
+                name: 'Cloudflare AI',
+                description: 'Intelligent threat detection and security',
+                uses: ['DDoS protection', 'Bot detection', 'Access control']
+            },
+            {
+                name: 'Descope',
+                description: 'Advanced user management and audit capabilities',
+                uses: ['Access management', 'Audit logging', 'Compliance tracking']
             }
         ]
     }
