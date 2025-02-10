@@ -129,7 +129,7 @@ onMounted(() => {
 
                     <!-- Main Content -->
                     <div class="flex-1 max-w-5xl">
-                        Hero Section
+                        <!-- Hero Section
                         <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-xl p-8 mb-8 text-white">
                             <h1 class="text-3xl font-bold mb-4">{{ title }}</h1>
                             <p class="text-xl text-blue-100">{{ description }}</p>
@@ -143,7 +143,7 @@ onMounted(() => {
                                     <p>{{ keyPoint }}</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Content Section -->
                         <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">

@@ -17,7 +17,11 @@ const props = defineProps({
   },
   integrations: {
     type: Array,
-    default: () => ['Custom APIs', 'Existing Systems', 'Third-party Tools']
+    default: () => []
+  },
+  platforms: {
+    type: Array,
+    default: () => []
   },
   animationDelay: {
     type: String,
@@ -56,20 +60,24 @@ const props = defineProps({
         <p class="mt-1 text-sm">{{ useCase }}</p>
       </div>
       <div class="pt-2 border-t border-gray-200 dark:border-gray-700">
-        <span class="font-semibold text-orange-600 dark:text-orange-400">Implementation:</span>
-        <p class="mt-1 text-sm flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-orange-600 dark:text-orange-400" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-          </svg>
-          {{ timeline }}
-        </p>
-      </div>
-      <div class="pt-2 border-t border-gray-200 dark:border-gray-700">
-        <span class="font-semibold text-indigo-600 dark:text-indigo-400">Integrations:</span>
+        <span class="font-semibold text-indigo-600 dark:text-indigo-400">Key Integrations:</span>
         <div class="mt-1 flex flex-wrap gap-2">
           <span v-for="integration in integrations" :key="integration"
                 class="inline-flex items-center px-2 py-1 text-xs font-medium rounded bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300">
             {{ integration }}
+          </span>
+          <Link :href="route('solutions.ai-integrations')"
+                class="inline-flex items-center px-2 py-1 text-xs font-medium rounded bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800 transition-colors duration-200">
+            + More
+          </Link>
+        </div>
+      </div>
+      <div class="pt-2 border-t border-gray-200 dark:border-gray-700">
+        <span class="font-semibold text-teal-600 dark:text-teal-400">Compatible With:</span>
+        <div class="mt-1 flex flex-wrap gap-2">
+          <span v-for="platform in platforms" :key="platform"
+                class="inline-flex items-center px-2 py-1 text-xs font-medium rounded bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300">
+            {{ platform }}
           </span>
         </div>
       </div>

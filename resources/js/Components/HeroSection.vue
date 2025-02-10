@@ -32,9 +32,23 @@ onMounted(() => {
           Get personalized AI solutions with dedicated project managers and development teams for your unique business needs. We transform any business process into an efficient, automated workflow.
         </p>
 
-        <p class="hero-text mx-auto max-w-2xl text-lg text-blue-200 mb-10">
+        <p class="hero-text mx-auto max-w-2xl text-lg text-blue-200 mb-6">
           Your journey includes a dedicated project manager, custom-built solutions, and continuous support throughout our collaboration.
         </p>
+
+        <div class="hero-text mx-auto max-w-3xl text-center mb-10">
+          <p class="text-lg text-blue-200 mb-4">
+            Seamlessly integrate with your existing tools or let us build custom integrations:
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 text-sm">
+            <span class="px-3 py-1 bg-blue-900/30 rounded-full text-blue-100">AWS</span>
+            <span class="px-3 py-1 bg-blue-900/30 rounded-full text-blue-100">Salesforce</span>
+            <span class="px-3 py-1 bg-blue-900/30 rounded-full text-blue-100">Zendesk</span>
+            <span class="px-3 py-1 bg-blue-900/30 rounded-full text-blue-100">Microsoft Teams</span>
+            <span class="px-3 py-1 bg-blue-900/30 rounded-full text-blue-100">HubSpot</span>
+            <span class="px-3 py-1 bg-green-900/30 rounded-full text-green-100">+ Custom Integrations</span>
+          </div>
+        </div>
 
         <div class="hero-text flex flex-wrap justify-center gap-4">
           <a href="#solutions" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">

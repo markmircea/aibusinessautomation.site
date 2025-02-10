@@ -14,29 +14,53 @@ const solutionData = {
 <template>
   <SolutionLayout v-bind="solutionData">
 
-    <div class="py-12">
+    <div class="py-12 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-8">
-          <h1 class="text-3xl font-bold mb-8">Comprehensive AI Integration Solutions</h1>
-          
-          <p class="text-lg mb-8">
-            Transform your business processes with our extensive suite of AI integrations. We provide enterprise-grade solutions that seamlessly connect with your existing workflows, enabling intelligent automation and enhanced decision-making capabilities across your entire organization.
-          </p>
+        <!-- Hero Section -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-800 dark:to-purple-800 rounded-xl shadow-xl overflow-hidden mb-12">
+          <div class="px-8 py-16 text-center">
+            <h1 class="text-4xl font-bold text-white mb-6">Comprehensive AI Integration Solutions</h1>
+            <p class="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+              Transform your business processes with our extensive suite of AI integrations. We provide enterprise-grade solutions that seamlessly connect with your existing workflows, enabling intelligent automation and enhanced decision-making capabilities.
+            </p>
+          </div>
+        </div>
+
+        <!-- Custom Solutions Banner -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-12 transform hover:scale-[1.02] transition-transform duration-300">
+          <div class="flex items-center justify-between">
+            <div class="space-y-4">
+              <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Custom AI Solutions</h2>
+              <p class="text-lg text-gray-600 dark:text-gray-300">
+                While we offer a comprehensive suite of pre-built integrations, our expertise lies in developing 
+                <span class="text-blue-600 dark:text-blue-400 font-semibold">custom AI solutions</span> tailored to your unique business needs. 
+                Our team of project managers and software developers will work with you to create personalized automation solutions that perfectly align with your workflows.
+              </p>
+            </div>
+            <div class="hidden lg:block">
+              <svg class="w-32 h-32 text-blue-500 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg p-8">
 
 
-          <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="grid md:grid-cols-2 gap-8 mb-12" data-aos="fade-up">
             <!-- Cloud Services -->
-            <div class="border rounded-lg p-6">
-              <h3 class="text-xl font-semibold mb-4 text-blue-600">
+            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800">
+              <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400 flex items-center">
                 <i class="fas fa-cloud mr-2"></i>Cloud Services
               </h3>
               <div class="space-y-4">
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>AWS Integration Suite</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>S3 Document Processing:</strong> Automatically fetch, analyze, and process documents stored in S3 buckets, including PDFs, images, and text files.</li>
                       <li><strong>Lambda Function Management:</strong> Deploy and manage AI-powered serverless functions for automated workflows.</li>
@@ -48,11 +72,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Azure AI Services</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Azure OpenAI:</strong> Enterprise-grade language models for content generation, analysis, and automation.</li>
                       <li><strong>Cognitive Services:</strong> AI-powered vision, speech, language, and decision-making capabilities.</li>
@@ -63,11 +87,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Google Cloud AI</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Vertex AI:</strong> Unified platform for training and deploying ML models with automated workflows.</li>
                       <li><strong>Document AI:</strong> Intelligent document processing and data extraction.</li>
@@ -80,17 +104,17 @@ const solutionData = {
             </div>
 
             <!-- Data & Analytics -->
-            <div class="border rounded-lg p-6">
-              <h3 class="text-xl font-semibold mb-4 text-blue-600">
+            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800">
+              <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
                 <i class="fas fa-database mr-2"></i>Data & Analytics
               </h3>
               <div class="space-y-4">
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Intelligent Databases</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>PostgreSQL AI:</strong> Advanced querying and schema management with AI assistance.</li>
                       <li><strong>MongoDB Atlas:</strong> Intelligent document storage with automated indexing and querying.</li>
@@ -105,11 +129,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Vector Search Engines</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Pinecone:</strong> Scalable vector similarity search for AI-powered recommendations and search.</li>
                       <li><strong>Qdrant:</strong> High-performance vector similarity engine for nearest neighbor search.</li>
@@ -122,11 +146,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Analytics Platforms</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Snowflake:</strong> AI-powered data warehousing with automated optimization.</li>
                       <li><strong>Elasticsearch:</strong> Intelligent search and analytics engine with ML capabilities.</li>
@@ -143,17 +167,17 @@ const solutionData = {
             </div>
 
             <!-- Business Tools -->
-            <div class="border rounded-lg p-6">
-              <h3 class="text-xl font-semibold mb-4 text-blue-600">
+            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800">
+              <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
                 <i class="fas fa-briefcase mr-2"></i>Business & Productivity
               </h3>
               <div class="space-y-4">
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>CRM & Sales</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Salesforce AI:</strong> Automated lead scoring, predictive analytics, and intelligent workflow automation.</li>
                       <li><strong>HubSpot:</strong> AI-powered marketing automation and customer engagement tools.</li>
@@ -164,11 +188,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Document Management</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>SharePoint AI:</strong> Intelligent document classification and content management.</li>
                       <li><strong>Box Intelligence:</strong> Automated document processing and data extraction.</li>
@@ -183,11 +207,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Project & Team Management</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Jira:</strong> AI-enhanced project tracking, automated issue management, and smart sprint planning.</li>
                       <li><strong>Confluence:</strong> Intelligent knowledge base with smart search and content organization.</li>
@@ -199,11 +223,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Team Communication</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Slack AI:</strong> Intelligent message routing, automated responses, and smart channel management.</li>
                       <li><strong>Microsoft Teams:</strong> AI-powered meeting transcription, task automation, and collaboration insights.</li>
@@ -218,11 +242,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Knowledge Management</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Obsidian:</strong> AI-powered personal knowledge management and note organization.</li>
                       <li><strong>Evernote:</strong> Smart note categorization and intelligent search capabilities.</li>
@@ -239,17 +263,17 @@ const solutionData = {
             </div>
 
             <!-- Development & DevOps -->
-            <div class="border rounded-lg p-6">
-              <h3 class="text-xl font-semibold mb-4 text-blue-600">
+            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800">
+              <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
                 <i class="fas fa-code mr-2"></i>Development & DevOps
               </h3>
               <div class="space-y-4">
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Code Management</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>GitHub Copilot:</strong> AI-powered code suggestions and automated documentation.</li>
                       <li><strong>GitLab AI:</strong> Intelligent code review and security scanning.</li>
@@ -266,11 +290,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Infrastructure Management</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Kubernetes AI:</strong> Intelligent container orchestration and scaling.</li>
                       <li><strong>Terraform:</strong> AI-assisted infrastructure provisioning and management.</li>
@@ -292,11 +316,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Monitoring & Analytics</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Grafana:</strong> AI-powered metrics visualization and anomaly detection.</li>
                       <li><strong>Datadog:</strong> Intelligent monitoring and application performance management.</li>
@@ -309,11 +333,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Development Tools</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>JetBrains AI:</strong> Intelligent code assistance across all JetBrains IDEs.</li>
                       <li><strong>E2B:</strong> Secure cloud development environments for AI agents.</li>
@@ -335,11 +359,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Search & Research</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Kagi Search:</strong> AI-optimized search engine for business research.</li>
                       <li><strong>Brave Search:</strong> Privacy-focused web search with AI capabilities.</li>
@@ -358,17 +382,17 @@ const solutionData = {
             </div>
 
             <!-- AI & ML Tools -->
-            <div class="border rounded-lg p-6">
-              <h3 class="text-xl font-semibold mb-4 text-blue-600">
+            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800">
+              <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
                 <i class="fas fa-brain mr-2"></i>Advanced AI Capabilities
               </h3>
               <div class="space-y-4">
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Language & Text Processing</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>OpenAI Integration:</strong> Advanced language models for content generation and analysis.</li>
                       <li><strong>Claude AI:</strong> Sophisticated text processing and reasoning capabilities.</li>
@@ -390,11 +414,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Computer Vision</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Azure Vision:</strong> Advanced image analysis and recognition services.</li>
                       <li><strong>Google Vision AI:</strong> Comprehensive image understanding and labeling.</li>
@@ -416,11 +440,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Specialized AI Solutions</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Document AI:</strong> Intelligent document processing and data extraction.</li>
                       <li><strong>Speech AI:</strong> Advanced speech recognition and synthesis.</li>
@@ -444,17 +468,17 @@ const solutionData = {
             </div>
 
             <!-- Security & Compliance -->
-            <div class="border rounded-lg p-6">
-              <h3 class="text-xl font-semibold mb-4 text-blue-600">
+            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800">
+              <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
                 <i class="fas fa-shield-alt mr-2"></i>Security & Compliance
               </h3>
               <div class="space-y-4">
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Security Tools</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>Cloudflare AI:</strong> Intelligent threat detection and mitigation.</li>
                       <li><strong>Auth0:</strong> AI-powered authentication and identity management.</li>
@@ -473,11 +497,11 @@ const solutionData = {
                 </Disclosure>
 
                 <Disclosure v-slot="{ open }">
-                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium hover:bg-gray-100 focus:outline-none">
+                  <DisclosureButton class="flex w-full justify-between rounded-lg bg-gray-50 dark:bg-gray-700 px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none">
                     <span>Compliance Automation</span>
-                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500"/>
+                    <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-blue-500 dark:text-blue-400"/>
                   </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600">
+                  <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-600 dark:text-gray-300">
                     <ul class="space-y-2">
                       <li><strong>GDPR Compliance:</strong> Automated data protection and privacy management.</li>
                       <li><strong>HIPAA Tools:</strong> Healthcare compliance automation and monitoring.</li>
@@ -498,36 +522,40 @@ const solutionData = {
             </div>
           </div>
 
-          <div class="bg-gray-50 p-6 rounded-lg mb-8">
-            <h3 class="text-2xl font-semibold mb-6">Focus Areas & Benefits</h3>
+          <div class="bg-gray-50 dark:bg-gray-700/50 p-8 rounded-xl mb-12 transform hover:scale-[1.01] transition-transform duration-300">
+            <h3 class="text-2xl font-semibold mb-6 dark:text-gray-300">Focus Areas & Benefits</h3>
             <div class="grid md:grid-cols-5 gap-6">
               <div>
-                <h4 class="font-semibold mb-2 text-blue-700">Customer Service</h4>
-                <p>24/7 automated support with intelligent response systems</p>
+                <h4 class="font-semibold mb-2 text-blue-600 dark:text-blue-400">Customer Service</h4>
+                <p class="text-gray-600 dark:text-gray-300">24/7 automated support with intelligent response systems</p>
               </div>
               <div>
-                <h4 class="font-semibold mb-2 text-blue-700">Document Processing</h4>
-                <p>Automated data extraction and intelligent routing</p>
+                <h4 class="font-semibold mb-2 text-blue-600 dark:text-blue-400">Document Processing</h4>
+                <p class="text-gray-600 dark:text-gray-300">Automated data extraction and intelligent routing</p>
               </div>
               <div>
-                <h4 class="font-semibold mb-2 text-blue-700">Sales Automation</h4>
-                <p>AI-driven lead scoring and pipeline optimization</p>
+                <h4 class="font-semibold mb-2 text-blue-600 dark:text-blue-400">Sales Automation</h4>
+                <p class="text-gray-600 dark:text-gray-300">AI-driven lead scoring and pipeline optimization</p>
               </div>
               <div>
-                <h4 class="font-semibold mb-2 text-blue-700">Data Analytics</h4>
-                <p>Real-time insights and predictive business intelligence</p>
+                <h4 class="font-semibold mb-2 text-blue-600 dark:text-blue-400">Data Analytics</h4>
+                <p class="text-gray-600 dark:text-gray-300">Real-time insights and predictive business intelligence</p>
               </div>
               <div>
-                <h4 class="font-semibold mb-2 text-blue-700">Content Creation</h4>
-                <p>Automated generation and optimization at scale</p>
+                <h4 class="font-semibold mb-2 text-blue-600 dark:text-blue-400">Content Creation</h4>
+                <p class="text-gray-600 dark:text-gray-300">Automated generation and optimization at scale</p>
               </div>
             </div>
           </div>
 
-          <div class="text-center">
-            <p class="text-lg mb-4">Ready to transform your business processes with AI?</p>
-            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Schedule a Consultation
+          <!-- Call to Action -->
+          <div class="text-center bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-800 dark:to-purple-800 rounded-xl p-12 transform hover:scale-[1.02] transition-transform duration-300">
+            <h3 class="text-2xl font-bold text-white mb-6">Ready to Transform Your Business with AI?</h3>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can create a custom AI solution tailored to your unique business needs.
+            </p>
+            <button class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
+              Schedule a Free Consultation
             </button>
           </div>
         </div>
@@ -536,3 +564,8 @@ const solutionData = {
   </SolutionLayout>
 </template>
 
+<style>
+strong {
+  @apply text-blue-500 dark:text-blue-400;
+}
+</style>

@@ -9,9 +9,10 @@ const solutions = [
     icon: '📄',
     routeName: 'solutions.document-processing',
     delay: '0s',
-    useCase: 'Automated invoice processing with data extraction, validation, and ERP integration',
+    useCase: 'Intelligent document processing system using Azure Document AI and SharePoint integration for automated extraction, classification, and routing of all business documents. Includes smart OCR, automated validation, and direct integration with multiple enterprise systems.',
     timeline: '2-3 weeks',
-    integrations: ['OCR Systems', 'ERP Software', 'Document Management Systems']
+    integrations: ['Azure Document', 'SharePoint AI', 'Box Intelligence'],
+    platforms: ['OCR Systems', 'ERP Software', 'Document Management']
   },
   {
     title: 'Customer Service',
@@ -20,9 +21,10 @@ const solutions = [
     icon: '💬',
     routeName: 'solutions.customer-service',
     delay: '0.1s',
-    useCase: 'AI-powered chatbot handling customer inquiries with seamless human handoff',
+    useCase: 'Advanced customer support automation using OpenAI/Claude for natural language understanding, multi-channel support via Zendesk AI, and intelligent routing with automated response generation and contextual knowledge base integration.',
     timeline: '3-4 weeks',
-    integrations: ['CRM Systems', 'Chat Platforms', 'Knowledge Bases']
+    integrations: ['Microsoft Teams', 'Zendesk AI', 'Omnichannel Support'],
+    platforms: ['CRM Systems', 'Chat Platforms', 'Knowledge Bases']
   },
   {
     title: 'Financial Operations',
@@ -31,9 +33,10 @@ const solutions = [
     icon: '💰',
     routeName: 'solutions.financial-operations',
     delay: '0.2s',
-    useCase: 'Automated expense report processing and approval workflow',
+    useCase: 'Comprehensive financial process automation using AWS Bedrock and Snowflake for real-time expense analytics, automated fraud detection, intelligent cash flow forecasting, and automated reconciliation with machine learning-powered anomaly detection.',
     timeline: '2-4 weeks',
-    integrations: ['Accounting Software', 'Banking APIs', 'Payment Gateways']
+    integrations: ['AWS Bedrock', 'Snowflake', 'Azure Sentinel'],
+    platforms: ['Accounting Software', 'Banking APIs', 'Payment Gateways']
   },
   {
     title: 'HR & Recruitment',
@@ -42,9 +45,10 @@ const solutions = [
     icon: '👥',
     routeName: 'solutions.hr-recruitment',
     delay: '0.3s',
-    useCase: 'AI-driven candidate screening and automated interview scheduling',
+    useCase: 'End-to-end recruitment automation using Azure OpenAI for resume analysis, Hugging Face models for skill assessment, automated video interview analysis, and intelligent onboarding workflow management with Microsoft Teams integration.',
     timeline: '2-3 weeks',
-    integrations: ['ATS Systems', 'Calendar Apps', 'HR Management Software']
+    integrations: ['Azure OpenAI', 'Hugging Face', 'Microsoft Teams'],
+    platforms: ['ATS Systems', 'Calendar Apps', 'HR Management Software']
   },
   {
     title: 'Sales & Marketing',
@@ -53,9 +57,10 @@ const solutions = [
     icon: '📈',
     routeName: 'solutions.sales-marketing',
     delay: '0.4s',
-    useCase: 'Automated lead scoring and personalized email campaign management',
+    useCase: 'Intelligent sales automation using Salesforce AI and HubSpot for predictive lead scoring, personalized content generation, automated multi-channel campaign orchestration, and real-time analytics with ML-powered conversion optimization.',
     timeline: '3-4 weeks',
-    integrations: ['Marketing Platforms', 'CRM Systems', 'Analytics Tools']
+    integrations: ['Salesforce', 'HubSpot', 'Azure Analytics', 'Social Media Integration'],
+    platforms: ['Marketing Platforms', 'CRM Systems', 'Analytics Tools']
   },
   {
     title: 'Supply Chain & Inventory',
@@ -64,9 +69,10 @@ const solutions = [
     icon: '🏭',
     routeName: 'solutions.supply-chain',
     delay: '0.5s',
-    useCase: 'Automated inventory forecasting and supplier order management',
+    useCase: 'Advanced supply chain optimization using AWS and Azure ML services for predictive inventory management, intelligent supplier relationship management, automated demand forecasting, and real-time logistics optimization with Grafana analytics.',
     timeline: '3-5 weeks',
-    integrations: ['ERP Systems', 'Logistics Software', 'Supplier Portals']
+    integrations: ['AWS SageMaker', 'Azure ML', 'Grafana'],
+    platforms: ['ERP Systems', 'Logistics Software', 'Supplier Portals']
   }
 ];
 </script>

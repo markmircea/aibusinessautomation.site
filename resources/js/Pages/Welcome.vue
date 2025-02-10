@@ -2,6 +2,7 @@
 import { Head, Link, usePage } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
 import HeroSection from '@/Components/HeroSection.vue';
+import LogoSlider from '@/Components/LogoSlider.vue';
 import SolutionsSection from '@/Components/SolutionsSection.vue';
 import ContactSection from '@/Components/ContactSection.vue';
 
@@ -22,6 +23,9 @@ defineProps({
             <!-- Main Content -->
             <!-- Hero Section -->
             <HeroSection />
+
+            <!-- Logo Slider -->
+            <LogoSlider />
 
             <!-- Solutions Section -->
             <SolutionsSection />

@@ -7,7 +7,8 @@ const form = useForm({
     email: '',
     company: '',
     message: '',
-    solution: ''
+    solution: '',
+    tech_stack: ''
 });
 
 const solutions = [
@@ -124,15 +125,30 @@ const handleSubmit = () => {
                         </div>
 
                         <div>
+                            <label for="tech_stack" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Current Tech Stack</label>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">
+                                List your current tools and systems that need integration (e.g., Salesforce, SAP, Microsoft 365)
+                            </p>
+                            <textarea
+                                id="tech_stack"
+                                v-model="form.tech_stack"
+                                rows="2"
+                                placeholder="E.g., Salesforce CRM, SAP ERP, Microsoft 365, Custom internal tools..."
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white sm:text-sm"
+                            ></textarea>
+                            <div v-if="form.errors.tech_stack" class="mt-1 text-sm text-red-600">{{ form.errors.tech_stack }}</div>
+                        </div>
+
+                        <div>
                             <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tell us about your needs</label>
                             <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">
-                                Share your current challenges, processes you'd like to automate, or any specific requirements.
+                                Share your current challenges, processes you'd like to automate, and any specific requirements. We'll create custom integrations to fit your needs.
                             </p>
                             <textarea
                                 id="message"
                                 v-model="form.message"
                                 rows="4"
-                                placeholder="E.g., We're looking to automate our invoice processing system and integrate it with our current ERP..."
+                                placeholder="E.g., We're looking to automate our invoice processing system and integrate it with our current ERP. We need custom workflows for approval processes..."
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white sm:text-sm"
                                 required
                             ></textarea>
