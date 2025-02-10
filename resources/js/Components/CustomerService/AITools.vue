@@ -192,11 +192,13 @@ const tools = [
     <section data-section="ai-tools" class="space-y-8">
         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Available AI Tools</h2>
         <p class="text-gray-600 dark:text-gray-300 mb-8">
-            Our platform integrates with industry-leading AI tools to create powerful customer service automation solutions. Here are the key tools available for customer support implementation:
+            Our platform integrates with industry-leading AI tools to create powerful customer service automation solutions. Here are the key tools available for customer support implementation
+             (we are continuously developing additional tools to meet our business partners needs):
         </p>
 
         <div class="space-y-8">
-            <div v-for="category in tools" :key="category.category" 
+            <div v-for="(category, index) in tools" :key="category.category" 
+                 :data-section="`ai-tools-${['language', 'knowledge', 'platforms', 'analytics', 'channels', 'security'][index]}`"
                  class="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">{{ category.category }}</h3>

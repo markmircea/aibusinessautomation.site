@@ -76,10 +76,10 @@ const currentYear = computed(() => new Date().getFullYear());
                                     AI Desktop Automation
                                 </NavLink>
                                 <NavLink :href="route('solutions.ai-integrations')" :active="route().current('solutions.ai-integrations')">
-                                    AI Integrations
+                                    What we offer
                                 </NavLink>
                                 <NavLink href="#benefits" :active="false">
-                                    Benefits
+                                    How it works
                                 </NavLink>
                                 <NavLink href="#contact" :active="false">
                                     Contact

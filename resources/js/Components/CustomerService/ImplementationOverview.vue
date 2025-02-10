@@ -7,7 +7,7 @@ const features = [
     },
     {
         title: 'Amazon Bedrock integration',
-        description: 'Contextual knowledge retrieval',
+        description: 'Contextual knowledge retrieval from ',
         icon: 'M13 10V3L4 14h7v7l9-11h-7z'
     },
     {
@@ -27,40 +27,46 @@ const features = [
     },
     {
         title: 'Enterprise UI components',
-        description: 'Fully customizable interface',
+        description: 'Fully customizable UI with shadcn/ui components to meet your specific business needs',
         icon: 'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z'
     }
 ];
 </script>
 
 <template>
-    <section class="mt-16">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">Use Case Example: AI Support With AWS Knowledge Base Integration</h2>
+    <section data-section="implementation" class="mt-16">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">Use Case #101: AI Customer Support integrated with AWS Knowledge Base</h2>
         
         <div class="bg-white dark:bg-gray-800 shadow-sm rounded-xl overflow-hidden mb-8 transform hover:shadow-lg transition-all duration-300">
             <div class="p-6">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Solution Overview</h3>
                 <p class="text-gray-600 dark:text-gray-300 mb-6">
-                    This example demonstrates how AIBrainL.ink integrates with Amazon Bedrock Knowledge Bases to create an intelligent customer support system. This implementation showcases just one of many possible configurations that can be customized to your needs.
+                    This use case demonstrates how AIBrainL.ink integrates with Amazon Bedrock Knowledge Bases to create an intelligent customer support system. This implementation showcases just one of many possible configurations that can be customized to your needs.
                 </p>
                 
-                <div class="space-y-6">
-                    <h4 class="text-lg font-medium text-gray-900 dark:text-white">Key Features</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div v-for="(feature, index) in features" :key="index" 
-                             class="group bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
-                            <div class="flex items-start">
-                                <svg class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 transform group-hover:scale-110 transition-transform duration-300" 
-                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="feature.icon" />
-                                </svg>
-                                <div>
-                                    <h5 class="font-medium text-gray-900 dark:text-white">{{ feature.title }}</h5>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">{{ feature.description }}</p>
+                <div class="space-y-12">
+                    <!-- Initial Setup -->
+                    <div data-section="implementation-setup">
+                        <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-6">Key Features</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div v-for="feature in features" :key="feature.title" 
+                                 class="group bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
+                                <div class="flex items-start">
+                                    <svg class="h-6 w-6 text-blue-500 mr-3 flex-shrink-0 transform group-hover:scale-110 transition-transform duration-300" 
+                                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="feature.icon" />
+                                    </svg>
+                                    <div>
+                                        <h5 class="font-medium text-gray-900 dark:text-white">{{ feature.title }}</h5>
+                                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">{{ feature.description }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+                
                 </div>
             </div>
         </div>

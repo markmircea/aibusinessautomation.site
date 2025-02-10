@@ -24,15 +24,19 @@ onMounted(() => {
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
       <div class="text-center">
         <h1 class="hero-text text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6">
-          Transform Your Business
-          <span class="block text-blue-400">With Complete AI Automation</span>
+          Transform Your Business with
+          <span class="block text-blue-400">Custom AI Automation</span>
         </h1>
         
-        <p class="hero-text mx-auto max-w-2xl text-xl sm:text-2xl text-blue-100 mb-10">
-          Streamline operations and boost efficiency with our cutting-edge AI solutions. Any business process you can think of, we can automate it - optimizing your workforce, reducing costs, and improving quality and response times.
+        <p class="hero-text mx-auto max-w-2xl text-xl sm:text-2xl text-blue-100 mb-6">
+          Get personalized AI solutions with dedicated project managers and development teams for your unique business needs. We transform any business process into an efficient, automated workflow.
         </p>
 
-        <div class="hero-text flex justify-center gap-4">
+        <p class="hero-text mx-auto max-w-2xl text-lg text-blue-200 mb-10">
+          Your journey includes a dedicated project manager, custom-built solutions, and continuous support throughout our collaboration.
+        </p>
+
+        <div class="hero-text flex flex-wrap justify-center gap-4">
           <a href="#solutions" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
             Explore Solutions
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -42,25 +46,32 @@ onMounted(() => {
           <a href="#contact" class="inline-flex items-center px-6 py-3 border border-blue-400 text-base font-medium rounded-md text-blue-100 hover:bg-blue-800/50 transition-colors duration-200">
             Contact Us
           </a>
+          <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors duration-200">
+            Book a Custom Demo
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+            </svg>
+          </a>
         </div>
 
         <!-- Stats -->
         <div class="hero-text mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
-          <div class="text-center">
+          <div class="text-center transform hover:scale-105 transition-transform duration-300">
+            <div class="text-3xl font-bold text-white">24/7</div>
+            <div class="text-sm text-blue-200">Automated Operations</div>
+          </div>
+          <div class="text-center transform hover:scale-105 transition-transform duration-300">
+            <div class="text-3xl font-bold text-white">100%</div>
+            <div class="text-sm text-blue-200">Custom Solutions</div>
+          </div>
+          <div class="text-center transform hover:scale-105 transition-transform duration-300">
+            <div class="text-3xl font-bold text-white">&lt;2wk</div>
+            <div class="text-sm text-blue-200">Implementation Time</div>
+          </div>
+          <div class="text-center transform hover:scale-105 transition-transform duration-300">
             <div class="text-3xl font-bold text-white">80%</div>
-            <div class="text-sm text-blue-200">Cost Reduction</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl font-bold text-white">90%</div>
-            <div class="text-sm text-blue-200">Financial Operation Speed</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl font-bold text-white">70%</div>
-            <div class="text-sm text-blue-200">Process Automation</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl font-bold text-white">50%</div>
-            <div class="text-sm text-blue-200">Increased Conversion Rate</div>
+            <div class="text-sm text-blue-200">Average Cost Savings</div>
           </div>
         </div>
       </div>

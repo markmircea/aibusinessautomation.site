@@ -13,12 +13,48 @@ const solutionData = {
     focus: 'Seamlessly integrate AI with your knowledge base to provide 24/7 support, reduce response times, and maintain consistent service quality across all channels.',
     keyPoint: 'Achieve 70% reduction in support costs while improving customer satisfaction through intelligent automation that handles routine inquiries and empowers agents to focus on complex issues.',
     sections: [
-        { id: 'overview', title: 'Overview' },
-        { id: 'capabilities', title: 'Core Capabilities' },
-        { id: 'implementation', title: 'Implementation Example' },
-        { id: 'technical', title: 'Technical Details' },
-        { id: 'metrics', title: 'Performance Metrics' },
-        { id: 'ai-tools', title: 'Available AI Tools' }
+        { 
+            id: 'overview', 
+            title: 'Overview' 
+        },
+        { 
+            id: 'capabilities', 
+            title: 'Core Capabilities',
+            subsections: [
+                { id: 'capabilities-automation', title: 'Automation Features' },
+                { id: 'capabilities-integration', title: 'Integration Options' },
+                { id: 'capabilities-learning', title: 'Learning System' }
+            ]
+        },
+        { 
+            id: 'implementation', 
+            title: 'Implementation Example',
+            subsections: [
+                { id: 'implementation-setup', title: 'Initial Setup' },
+                { id: 'implementation-workflow', title: 'Workflow Design' },
+                { id: 'implementation-deployment', title: 'Deployment Steps' }
+            ]
+        },
+        { 
+            id: 'technical', 
+            title: 'Technical Details' 
+        },
+        { 
+            id: 'metrics', 
+            title: 'Performance Metrics' 
+        },
+        { 
+            id: 'ai-tools', 
+            title: 'Available AI Tools',
+            subsections: [
+                { id: 'ai-tools-language', title: 'Language & Communication' },
+                { id: 'ai-tools-knowledge', title: 'Knowledge Integration' },
+                { id: 'ai-tools-platforms', title: 'Service Platforms' },
+                { id: 'ai-tools-analytics', title: 'Analytics & Monitoring' },
+                { id: 'ai-tools-channels', title: 'Communication Channels' },
+                { id: 'ai-tools-security', title: 'Security & Compliance' }
+            ]
+        }
     ]
 };
 </script>
@@ -31,10 +67,16 @@ const solutionData = {
             </div>
 
             <div data-section="capabilities">
+                <div data-section="capabilities-automation"></div>
+                <div data-section="capabilities-integration"></div>
+                <div data-section="capabilities-learning"></div>
                 <CoreCapabilities />
             </div>
 
             <div data-section="implementation">
+                <div data-section="implementation-setup"></div>
+                <div data-section="implementation-workflow"></div>
+                <div data-section="implementation-deployment"></div>
                 <ImplementationOverview />
             </div>
 
@@ -47,6 +89,12 @@ const solutionData = {
             </div>
 
             <div data-section="ai-tools">
+                <div data-section="ai-tools-language"></div>
+                <div data-section="ai-tools-knowledge"></div>
+                <div data-section="ai-tools-platforms"></div>
+                <div data-section="ai-tools-analytics"></div>
+                <div data-section="ai-tools-channels"></div>
+                <div data-section="ai-tools-security"></div>
                 <AITools />
             </div>
 

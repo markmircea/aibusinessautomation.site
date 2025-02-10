@@ -39,11 +39,31 @@ const handleSubmit = () => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                    Get Started with AI Automation
+                    Start Your Custom AI Journey
                 </h2>
-                <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
-                    Transform your business operations today. Contact us for a personalized demo and discover how our AI solutions can drive your success.
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300 mb-4">
+                    Ready to transform your business with personalized AI automation? Schedule a consultation with our experts and get a custom solution tailored to your needs.
                 </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Free Initial Consultation
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Dedicated Project Manager
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Custom Solution Design
+                    </div>
+                </div>
             </div>
 
             <div class="max-w-3xl mx-auto bg-gray-50 dark:bg-gray-700 rounded-lg shadow-xl overflow-hidden">
@@ -104,11 +124,15 @@ const handleSubmit = () => {
                         </div>
 
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tell us about your needs</label>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">
+                                Share your current challenges, processes you'd like to automate, or any specific requirements.
+                            </p>
                             <textarea
                                 id="message"
                                 v-model="form.message"
                                 rows="4"
+                                placeholder="E.g., We're looking to automate our invoice processing system and integrate it with our current ERP..."
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white sm:text-sm"
                                 required
                             ></textarea>
@@ -118,11 +142,11 @@ const handleSubmit = () => {
                         <div class="flex justify-center">
                             <button
                                 type="submit"
-                                class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+                                class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200 w-full sm:w-auto justify-center"
                                 :disabled="form.processing"
                             >
                                 <span v-if="form.processing">Sending...</span>
-                                <span v-else>Send Message</span>
+                                <span v-else>Schedule Free Consultation</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>

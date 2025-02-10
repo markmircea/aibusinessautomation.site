@@ -8,7 +8,10 @@ const solutions = [
     keyPoint: '80% reduction in processing time',
     icon: '📄',
     routeName: 'solutions.document-processing',
-    delay: '0s'
+    delay: '0s',
+    useCase: 'Automated invoice processing with data extraction, validation, and ERP integration',
+    timeline: '2-3 weeks',
+    integrations: ['OCR Systems', 'ERP Software', 'Document Management Systems']
   },
   {
     title: 'Customer Service',
@@ -16,7 +19,10 @@ const solutions = [
     keyPoint: '70% query resolution without human intervention',
     icon: '💬',
     routeName: 'solutions.customer-service',
-    delay: '0.1s'
+    delay: '0.1s',
+    useCase: 'AI-powered chatbot handling customer inquiries with seamless human handoff',
+    timeline: '3-4 weeks',
+    integrations: ['CRM Systems', 'Chat Platforms', 'Knowledge Bases']
   },
   {
     title: 'Financial Operations',
@@ -24,7 +30,10 @@ const solutions = [
     keyPoint: '90% reduction in processing time',
     icon: '💰',
     routeName: 'solutions.financial-operations',
-    delay: '0.2s'
+    delay: '0.2s',
+    useCase: 'Automated expense report processing and approval workflow',
+    timeline: '2-4 weeks',
+    integrations: ['Accounting Software', 'Banking APIs', 'Payment Gateways']
   },
   {
     title: 'HR & Recruitment',
@@ -32,7 +41,10 @@ const solutions = [
     keyPoint: '75% reduction in hiring time',
     icon: '👥',
     routeName: 'solutions.hr-recruitment',
-    delay: '0.3s'
+    delay: '0.3s',
+    useCase: 'AI-driven candidate screening and automated interview scheduling',
+    timeline: '2-3 weeks',
+    integrations: ['ATS Systems', 'Calendar Apps', 'HR Management Software']
   },
   {
     title: 'Sales & Marketing',
@@ -40,7 +52,10 @@ const solutions = [
     keyPoint: '50% increase in conversion rates',
     icon: '📈',
     routeName: 'solutions.sales-marketing',
-    delay: '0.4s'
+    delay: '0.4s',
+    useCase: 'Automated lead scoring and personalized email campaign management',
+    timeline: '3-4 weeks',
+    integrations: ['Marketing Platforms', 'CRM Systems', 'Analytics Tools']
   },
   {
     title: 'Supply Chain & Inventory',
@@ -48,7 +63,10 @@ const solutions = [
     keyPoint: '30% cost reduction',
     icon: '🏭',
     routeName: 'solutions.supply-chain',
-    delay: '0.5s'
+    delay: '0.5s',
+    useCase: 'Automated inventory forecasting and supplier order management',
+    timeline: '3-5 weeks',
+    integrations: ['ERP Systems', 'Logistics Software', 'Supplier Portals']
   }
 ];
 </script>
@@ -58,10 +76,10 @@ const solutions = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          AI-Powered Business Solutions
+          Custom AI Solutions for Every Department
         </h2>
-        <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
-          Discover how our AI automation solutions can transform your business operations and drive growth.
+        <p class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300">
+          Transform your business operations with tailored AI automation solutions. Each department gets a dedicated project manager and development team to build custom solutions that fit your unique needs.
         </p>
       </div>
 
