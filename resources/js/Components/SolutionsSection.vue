@@ -9,7 +9,7 @@ const solutions = [
     icon: '📄',
     routeName: 'solutions.document-processing',
     delay: '0s',
-    useCase: 'Intelligent document processing system using Azure Document AI and SharePoint integration for automated extraction, classification, and routing of all business documents. Includes smart OCR, automated validation, and direct integration with multiple enterprise systems.',
+    useCase: 'Generate SEO-friendly content with images with DeepSeek R1 (or V3), publish it on WordPress, and update a Google Sheets document with the details of the created post.',
     timeline: '2-3 weeks',
     integrations: ['Azure Document', 'SharePoint AI', 'Box Intelligence'],
     platforms: ['OCR Systems', 'ERP Software', 'Document Management']
@@ -33,7 +33,7 @@ const solutions = [
     icon: '💰',
     routeName: 'solutions.financial-operations',
     delay: '0.2s',
-    useCase: 'Comprehensive financial process automation using AWS Bedrock and Snowflake for real-time expense analytics, automated fraud detection, intelligent cash flow forecasting, and automated reconciliation with machine learning-powered anomaly detection.',
+    useCase: 'Physical invoice/recipt processing system using OCR (Optical Character Recognition) and SharePoint integration for automated extraction, classification, and documentation with direct integration to multiple enterprise systems. Comprehensive financial process automation for real-time expense analytics, automated fraud detection, intelligent cash flow forecasting, and automated reconciliation with machine learning-powered anomaly detection.',
     timeline: '2-4 weeks',
     integrations: ['AWS Bedrock', 'Snowflake', 'Azure Sentinel'],
     platforms: ['Accounting Software', 'Banking APIs', 'Payment Gateways']
@@ -45,9 +45,9 @@ const solutions = [
     icon: '👥',
     routeName: 'solutions.hr-recruitment',
     delay: '0.3s',
-    useCase: 'End-to-end recruitment automation using Azure OpenAI for resume analysis, Hugging Face models for skill assessment, automated video interview analysis, and intelligent onboarding workflow management with Microsoft Teams integration.',
+    useCase: 'End-to-end recruitment automation using AI for resume analysis, skill assessment, automated video interview analysis, AI text/voice interviews, qualification classification and reviews. Intelligent onboarding workflow management from A-Z',
     timeline: '2-3 weeks',
-    integrations: ['Azure OpenAI', 'Hugging Face', 'Microsoft Teams'],
+    integrations: ['Azure OpenAI', 'Azure Cognitive Services', 'Microsoft Teams', 'Document AI'],
     platforms: ['ATS Systems', 'Calendar Apps', 'HR Management Software']
   },
   {
