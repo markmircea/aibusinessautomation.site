@@ -11,7 +11,7 @@ import LazyImage from '@/Components/LazyImage.vue';
 import FlashMessage from '@/Components/FlashMessage.vue';
 import DynamicSEO from '@/Components/DynamicSEO.vue';
 import DarkModeToggle from '@/Components/DarkModeToggle.vue';
-import SolutionsDropdown from '@/Components/SolutionsDropdown.vue';
+// import SolutionsDropdown from '@/Components/SolutionsDropdown.vue';
 
 defineProps({
     title: String,
@@ -71,7 +71,9 @@ const currentYear = computed(() => new Date().getFullYear());
                                 <NavLink :href="route('welcome')" :active="route().current('welcome')">
                                     Home
                                 </NavLink>
-                                <SolutionsDropdown />
+                                <NavLink :href="route('solutions.customer-service')" :active="route().current('solutions.customer-service')">
+                                    Use Case
+                                </NavLink>
                                 <NavLink :href="route('solutions.desktop-automation')" :active="route().current('solutions.desktop-automation')">
                                     AI Desktop Automation
                                 </NavLink>
@@ -81,7 +83,7 @@ const currentYear = computed(() => new Date().getFullYear());
                                 <NavLink href="#benefits" :active="false">
                                     How it works
                                 </NavLink>
-                                <NavLink href="#contact" :active="false">
+                                <NavLink href="/#contact" :active="false">
                                     Contact
                                 </NavLink>
                             </div>
@@ -183,28 +185,13 @@ const currentYear = computed(() => new Date().getFullYear());
                 <div :class="{ 'block': showingNavigationDropdown, 'hidden': !showingNavigationDropdown }"
                     class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                        <ResponsiveNavLink :href="route('welcome')" :active="route().current('welcome')">
                             Home
                         </ResponsiveNavLink>
                         <div class="border-t border-gray-200 dark:border-gray-600 my-2"></div>
-                        <div class="px-4 py-2 text-xs text-gray-400">Business Solutions</div>
-                        <ResponsiveNavLink :href="route('solutions.document-processing')" :active="route().current('solutions.document-processing')">
-                            Document Processing
-                        </ResponsiveNavLink>
+                        <div class="px-4 py-2 text-xs text-gray-400">Use Case</div>
                         <ResponsiveNavLink :href="route('solutions.customer-service')" :active="route().current('solutions.customer-service')">
                             Customer Service
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('solutions.financial-operations')" :active="route().current('solutions.financial-operations')">
-                            Financial Operations
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('solutions.hr-recruitment')" :active="route().current('solutions.hr-recruitment')">
-                            HR & Recruitment
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('solutions.sales-marketing')" :active="route().current('solutions.sales-marketing')">
-                            Sales & Marketing
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('solutions.supply-chain')" :active="route().current('solutions.supply-chain')">
-                            Supply Chain
                         </ResponsiveNavLink>
                         <div class="border-t border-gray-200 dark:border-gray-600 my-2"></div>
                         <ResponsiveNavLink :href="route('solutions.desktop-automation')" :active="route().current('solutions.desktop-automation')">
@@ -214,9 +201,9 @@ const currentYear = computed(() => new Date().getFullYear());
                             AI Integrations
                         </ResponsiveNavLink>
                         <ResponsiveNavLink href="#benefits">
-                            Benefits
+                            How it works
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink href="#contact">
+                        <ResponsiveNavLink href="/#contact">
                             Contact
                         </ResponsiveNavLink>
                     </div>

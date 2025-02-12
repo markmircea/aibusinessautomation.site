@@ -1,4 +1,5 @@
 <script setup>
+import { Link } from '@inertiajs/vue3';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 import { ChevronUpIcon } from '@heroicons/vue/24/solid';
 import SolutionLayout from './SolutionLayout.vue';
@@ -554,9 +555,9 @@ const solutionData = {
             <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Let's discuss how we can create a custom AI solution tailored to your unique business needs.
             </p>
-            <button class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
+            <Link href="/#contact" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
               Schedule a Free Consultation
-            </button>
+            </Link>
           </div>
         </div>
       </div>

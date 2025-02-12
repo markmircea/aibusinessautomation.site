@@ -1,4 +1,5 @@
 <script setup>
+import { Link } from '@inertiajs/vue3';
 import SolutionLayout from './SolutionLayout.vue';
 import Hero from '@/Components/CustomerService/Hero.vue';
 import CoreCapabilities from '@/Components/CustomerService/CoreCapabilities.vue';
@@ -81,13 +82,13 @@ const solutionData = {
 
             <!-- Call to Action -->
             <div class="mt-16 text-center">
-                <a href="#contact" 
+                <Link href="/#contact" 
                    class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                     Book a Custom Demo
                     <svg class="ml-3 -mr-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
-                </a>
+                </Link>
             </div>
         </div>
     </SolutionLayout>

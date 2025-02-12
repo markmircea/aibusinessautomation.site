@@ -43,7 +43,7 @@ const capabilities = {
     <section data-section="capabilities">
         <div class="mb-8">
             <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Core Capabilities</h2>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Our AI-powered customer service platform offers comprehensive support automation that can be customized to your specific needs:</p>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Our AI integration platform empowers businesses to transform their operations through intelligent automation. We help organizations cut costs, improve performance, and streamline workflows by seamlessly integrating AI into their existing processes. While customer service automation is one powerful use case, our solutions can be tailored to an infinite number of business scenarios, each customized to your specific needs and objectives.</p>
         </div>
 
         <!-- Automation Features -->

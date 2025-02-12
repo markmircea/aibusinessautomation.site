@@ -108,21 +108,6 @@ const handleSubmit = () => {
                             <div v-if="form.errors.company" class="mt-1 text-sm text-red-600">{{ form.errors.company }}</div>
                         </div>
 
-                        <div>
-                            <label for="solution" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Interested in</label>
-                            <select
-                                id="solution"
-                                v-model="form.solution"
-                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white sm:text-sm"
-                                required
-                            >
-                                <option value="">Select a solution</option>
-                                <option v-for="solution in solutions" :key="solution.value" :value="solution.value">
-                                    {{ solution.label }}
-                                </option>
-                            </select>
-                            <div v-if="form.errors.solution" class="mt-1 text-sm text-red-600">{{ form.errors.solution }}</div>
-                        </div>
 
                         <div>
                             <label for="tech_stack" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Current Tech Stack</label>

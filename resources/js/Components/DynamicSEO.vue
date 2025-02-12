@@ -10,54 +10,48 @@ const baseUrl = computed(() => window.location.origin);
 
 const title = computed(() => {
   switch (currentRoute.value) {
-    case 'dashboard':
-      return 'CCAT Cognitive Aptitude Assessments | CCATtest.com';
-    case 'free.practice.test':
-      return 'Free CCAT Practice Test | CCATtest.com';
-    case 'verbal.test':
-    case 'verbal.test.start':
-      return 'CCAT Verbal Test Practice | CCATtest.com';
-    case 'math.logic.test':
-    case 'math.test.start':
-      return 'CCAT Math and Logic Test Practice | CCATtest.com';
-    case 'spatial.reasoning.test':
-      return 'CCAT Spatial Reasoning Test Practice | CCATtest.com';
-    case 'full.practice.test':
-    case 'full-practice-test-start':
-      return 'Full CCAT Practice Test | CCATtest.com';
-    case 'upgrade.account':
-      return 'Upgrade Your Account | CCATtest.com';
+    case 'Solutions/AIIntegrations':
+      return 'Enterprise AI Integration Hub | AI Business Automation | aibrainl.ink';
+    case 'Solutions/CustomerService':
+      return 'AI-Powered Customer Service Solutions | aibrainl.ink';
+    case 'Solutions/DataAnalytics':
+      return 'Intelligent Data Analytics & Business Intelligence | aibrainl.ink';
+    case 'Solutions/DocumentProcessing':
+      return 'AI Document Processing & Automation | aibrainl.ink';
+    case 'Solutions/SecurityCompliance':
+      return 'AI Security & Compliance Automation | aibrainl.ink';
+    case 'Solutions/DevelopmentDevOps':
+      return 'AI-Enhanced Development & DevOps Solutions | aibrainl.ink';
+    case 'contact':
+      return 'Contact Us | AI Business Automation | aibrainl.ink';
     default:
-      return 'CCATtest.com | CCAT Crossover Aptitude Test Preparation';
+      return 'AI Business Process Automation Solutions | aibrainl.ink';
   }
 });
 
 const description = computed(() => {
   switch (currentRoute.value) {
-    case 'dashboard':
-      return 'Prepare for your CCAT with CCATtest.com\'s comprehensive practice tests. Improve your verbal, math, logic, and spatial reasoning skills for Crossover, Vista Equity, Lambda School, and more.';
-    case 'free.practice.test':
-      return 'Take our FREE CCAT practice test. Experience verbal, math and logic, and spatial reasoning questions similar to the real CCAT.';
-    case 'verbal.test':
-    case 'verbal.test.start':
-      return 'Practice CCAT verbal test questions with CCATtest.com. Improve your word meanings, relationships, and context skills for the Criteria Cognitive Aptitude Test.';
-    case 'math.logic.test':
-    case 'math.test.start':
-      return 'Enhance your CCAT math and logic skills with CCATtest.com\'s practice tests. Prepare for algebra, word problems, and data interpretation questions.';
-    case 'spatial.reasoning.test':
-      return 'Boost your CCAT spatial reasoning abilities with CCATtest.com. Practice object rotation, pattern recognition, and spatial visualization for the test.';
-    case 'full.practice.test':
-    case 'full-practice-test-start':
-      return 'Experience a full CCAT practice test with CCATtest.com. Get comprehensive practice across verbal, math, logic, and spatial reasoning sections.';
-    case 'upgrade.account':
-      return 'Upgrade your CCATtest.com account for full access to all CCAT practice tests and materials. Boost your preparation and increase your chances of success.';
+    case 'Solutions/AIIntegrations':
+      return 'Transform your business processes with our extensive suite of AI integrations. We provide enterprise-grade solutions that seamlessly connect with your existing workflows, enabling intelligent automation and enhanced decision-making capabilities across cloud services, data analytics, business tools, development, and security.';
+    case 'Solutions/CustomerService':
+      return 'Revolutionize your customer service with AI-powered automation. 24/7 intelligent support, automated ticket routing, sentiment analysis, and personalized customer interactions for enhanced satisfaction and efficiency.';
+    case 'Solutions/DataAnalytics':
+      return 'Harness the power of AI for advanced data analytics and business intelligence. Real-time insights, predictive analytics, automated reporting, and intelligent data visualization for informed decision-making.';
+    case 'Solutions/DocumentProcessing':
+      return 'Streamline document processing with AI automation. Intelligent data extraction, classification, routing, and integration with your existing systems for efficient document management.';
+    case 'Solutions/SecurityCompliance':
+      return 'Enhance security and ensure compliance with AI-powered automation. Intelligent threat detection, automated compliance monitoring, and security controls for enterprise-grade protection.';
+    case 'Solutions/DevelopmentDevOps':
+      return 'Accelerate development and DevOps with AI-enhanced tools. Automated code analysis, intelligent testing, and streamlined deployment processes for improved efficiency.';
+    case 'contact':
+      return 'Connect with our AI automation experts. Let\'s discuss how we can transform your business processes with custom AI solutions tailored to your unique needs.';
     default:
-      return 'CCATtest.com offers comprehensive CCAT test preparation materials. Improve your cognitive aptitude and ace your Criteria Cognitive Aptitude Test.';
+      return 'Transform any business process with our enterprise AI automation solutions. Custom-built integrations, intelligent workflows, and enhanced decision-making capabilities for your unique business needs.';
   }
 });
 
 const canonicalUrl = computed(() => currentUrl.value);
-const ogImage = computed(() => `${baseUrl.value}/storage/img/openg.jpeg`);
+const ogImage = computed(() => `${baseUrl.value}/img/main.png`);
 
 //console.log('DynamicSEO Component - Computed Title:', title.value);
 //console.log('DynamicSEO Component - Computed Description:', description.value);
