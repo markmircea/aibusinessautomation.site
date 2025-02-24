@@ -5,11 +5,13 @@ import HeroSection from '@/Components/HeroSection.vue';
 import LogoSlider from '@/Components/LogoSlider.vue';
 import SolutionsSection from '@/Components/SolutionsSection.vue';
 import ContactSection from '@/Components/ContactSection.vue';
+import Eleven from '../Components/Eleven.vue';
 
 defineProps({
     canLogin: Boolean,
     canRegister: Boolean,
 });
+
 </script>
 
 <template>
@@ -41,6 +43,8 @@ defineProps({
                             Experience a personalized approach to AI automation with dedicated support and custom-built solutions tailored to your unique business needs.
                         </p>
                     </div>
+
+                    
 
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                         <div class="p-6 bg-gray-50 dark:bg-gray-700 rounded-lg transform hover:scale-105 transition-transform duration-300">
@@ -135,6 +139,8 @@ defineProps({
             </section>
 
             <ContactSection />
+            <Eleven />
+
 
         </div>
     </AppLayout>

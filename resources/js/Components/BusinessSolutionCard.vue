@@ -85,7 +85,7 @@ const props = defineProps({
 
     <div class="mt-auto">
       <Link 
-        :href="route(routeName)"
+        :href="route('solutions.customer-service')"
         class="inline-flex items-center px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded-md hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors duration-200 w-full justify-center"
       >
         <span class="text-sm font-semibold">Explore Solution</span>

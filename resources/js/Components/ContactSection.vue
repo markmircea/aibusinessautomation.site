@@ -11,14 +11,6 @@ const form = useForm({
     tech_stack: ''
 });
 
-const solutions = [
-    { value: 'document-processing', label: 'Document Processing & Data Entry' },
-    { value: 'customer-service', label: 'Customer Service' },
-    { value: 'financial-operations', label: 'Financial Operations' },
-    { value: 'hr-recruitment', label: 'HR & Recruitment' },
-    { value: 'sales-marketing', label: 'Sales & Marketing' },
-    { value: 'supply-chain', label: 'Supply Chain & Inventory' }
-];
 
 import { usePage } from '@inertiajs/vue3';
 
@@ -78,13 +70,12 @@ const handleSubmit = () => {
                                     id="name"
                                     v-model="form.name"
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white sm:text-sm"
-                                    required
                                 >
                                 <div v-if="form.errors.name" class="mt-1 text-sm text-red-600">{{ form.errors.name }}</div>
                             </div>
 
                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email <span class="text-red-500">*</span></label>
                                 <input
                                     type="email"
                                     id="email"
@@ -103,11 +94,9 @@ const handleSubmit = () => {
                                 id="company"
                                 v-model="form.company"
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white sm:text-sm"
-                                required
                             >
                             <div v-if="form.errors.company" class="mt-1 text-sm text-red-600">{{ form.errors.company }}</div>
                         </div>
-
 
                         <div>
                             <label for="tech_stack" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Current Tech Stack</label>
@@ -125,7 +114,7 @@ const handleSubmit = () => {
                         </div>
 
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tell us about your needs</label>
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tell us about your needs <span class="text-red-500">*</span></label>
                             <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">
                                 Share your current challenges, processes you'd like to automate, and any specific requirements. We'll create custom integrations to fit your needs.
                             </p>
@@ -167,8 +156,8 @@ const handleSubmit = () => {
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-lg font-medium text-gray-900 dark:text-white">Phone</h3>
-                    <p class="mt-2 text-base text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
+                    <h3 class="text-lg font-medium text-gray-900 dark:text-white">Phone (SMS)</h3>
+                    <p class="mt-2 text-base text-gray-600 dark:text-gray-300">+1 (248) 387-9399</p>
                 </div>
 
                 <div class="text-center">
@@ -180,7 +169,7 @@ const handleSubmit = () => {
                         </div>
                     </div>
                     <h3 class="text-lg font-medium text-gray-900 dark:text-white">Email</h3>
-                    <p class="mt-2 text-base text-gray-600 dark:text-gray-300">contact@aibrainl.ink</p>
+                    <p class="mt-2 text-base text-gray-600 dark:text-gray-300">support@aibrainl.ink</p>
                 </div>
 
                 <div class="text-center">
