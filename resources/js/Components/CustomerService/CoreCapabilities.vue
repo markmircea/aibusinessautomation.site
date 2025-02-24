@@ -44,6 +44,18 @@ const capabilities = {
         <div class="mb-8">
             <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Core Capabilities</h2>
             <p class="mt-2 text-gray-600 dark:text-gray-300">Our AI integration platform empowers businesses to transform their operations through intelligent automation. We help organizations cut costs, improve performance, and streamline workflows by seamlessly integrating AI into their existing processes. While customer service automation is one powerful use case, our solutions can be tailored to an infinite number of business scenarios, each customized to your specific needs and objectives.</p>
+            
+            <!-- Video Demo -->
+            <div class="mt-8 relative w-full" style="padding-top: 56.25%;">
+                <iframe
+                    class="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+                    src="https://www.youtube.com/embed/0mm15g-FriI"
+                    title="Core Capabilities Demo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
 
         <!-- Automation Features -->
