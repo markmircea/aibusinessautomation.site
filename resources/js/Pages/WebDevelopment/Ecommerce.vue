@@ -2,6 +2,7 @@
 import { Link } from '@inertiajs/vue3';
 import WebDevelopmentLayout from './WebDevelopmentLayout.vue';
 import WebDevContactSection from '@/Components/WebDevelopment/ContactSection.vue';
+import TetrisAnimation from '@/Components/WebDevelopment/TetrisAnimation.vue';
 
 const serviceData = {
     title: 'E-commerce Platform Development',
@@ -125,7 +126,12 @@ const serviceData = {
         </div>
 
         <!-- Main Content -->
-        <div class="bg-white dark:bg-gray-900 py-16">
+        <div class="bg-white dark:bg-gray-900 py-16 relative">
+            <!-- Tetris Animation - Only visible on desktop -->
+            <div class="hidden lg:block absolute left-0 top-0 bottom-0 w-1/6">
+                <TetrisAnimation />
+            </div>
+            
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Service Overview Section -->
                 <div id="overview" data-section="overview"
