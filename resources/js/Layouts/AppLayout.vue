@@ -75,18 +75,13 @@ const currentYear = computed(() => new Date().getFullYear());
                                 <NavLink :href="route('solutions.customer-service')" :active="route().current('solutions.customer-service')">
                                     Use Case
                                 </NavLink>
-                                <NavLink :href="route('solutions.desktop-automation')" :active="route().current('solutions.desktop-automation')">
-                                    AI Desktop Automation
-                                </NavLink>
+                        
                                 <NavLink :href="route('solutions.ai-integrations')" :active="route().current('solutions.ai-integrations')">
                                     AI & Integrations
                                 </NavLink>
                                 <WebDevelopmentDropdown />
                                 <NavLink href="#benefits" :active="false">
                                     How it works
-                                </NavLink>
-                                <NavLink href="/#contact" :active="false">
-                                    Contact
                                 </NavLink>
                             </div>
                         </div>
@@ -100,9 +95,17 @@ const currentYear = computed(() => new Date().getFullYear());
                                 <NavLink :href="route('register')" :active="route().current('register')">
                                     Sign up
                                 </NavLink>
+                                <NavLink href="/#contact" :active="false" class="get-quote-btn">
+                                    Get A Quote
+                                </NavLink>
                             </template>
 
                             <template v-else>
+                                <!-- Get A Quote button for authenticated users -->
+                                <NavLink href="/#contact" :active="false" class="get-quote-btn mr-3">
+                                    Get A Quote
+                                </NavLink>
+                                
                                 <!-- Settings Dropdown -->
                                 <div class="ms-3 relative">
                                     <Dropdown align="right" width="48">
@@ -196,9 +199,9 @@ const currentYear = computed(() => new Date().getFullYear());
                             Customer Service
                         </ResponsiveNavLink>
                         <div class="border-t border-gray-200 dark:border-gray-600 my-2"></div>
-                        <ResponsiveNavLink :href="route('solutions.desktop-automation')" :active="route().current('solutions.desktop-automation')">
+                        <!-- <ResponsiveNavLink :href="route('solutions.desktop-automation')" :active="route().current('solutions.desktop-automation')">
                             AI Desktop Automation
-                        </ResponsiveNavLink>
+                        </ResponsiveNavLink> -->
                         <ResponsiveNavLink :href="route('solutions.ai-integrations')" :active="route().current('solutions.ai-integrations')">
                             AI Integrations
                         </ResponsiveNavLink>
@@ -219,9 +222,6 @@ const currentYear = computed(() => new Date().getFullYear());
                         <ResponsiveNavLink href="#benefits">
                             How it works
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink href="/#contact">
-                            Contact
-                        </ResponsiveNavLink>
                     </div>
 
                     <!-- Responsive Settings Options -->
@@ -233,9 +233,17 @@ const currentYear = computed(() => new Date().getFullYear());
                             <ResponsiveNavLink :href="route('register')" :active="route().current('register')">
                                 Sign up
                             </ResponsiveNavLink>
+<ResponsiveNavLink href="/#contact" class="get-quote-responsive-btn" :textWhite="true">
+    Get A Quote
+</ResponsiveNavLink>
                         </template>
 
                         <template v-else>
+                            <!-- Get A Quote button for authenticated users in mobile -->
+                            <ResponsiveNavLink href="/#contact" class="get-quote-responsive-btn" :textWhite="true">
+                                Get A Quote
+                            </ResponsiveNavLink>
+                            
                             <div class="flex items-center px-4">
                                 <div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 me-3">
                                     <LazyImage class="h-10 w-10 rounded-full object-cover"
@@ -320,7 +328,19 @@ const currentYear = computed(() => new Date().getFullYear());
 </template>
 
 <style scoped>
+.get-quote-btn {
+    @apply bg-blue-500 dark:bg-blue-600 text-white dark:text-white px-3 py-1 rounded-md font-medium shadow-sm hover:bg-blue-600 dark:hover:bg-blue-700 transition-all duration-200 ease-in-out transform hover:scale-105;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    margin-left: 10px;
+}
 
+.get-quote-responsive-btn {
+    @apply bg-blue-500 dark:bg-blue-600 text-white dark:text-white font-medium hover:bg-blue-600 dark:hover:bg-blue-700 rounded-md shadow-sm;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    width: calc(100% - 1.5rem) !important;
+}
 
 .nav-icon {
     display: inline-flex;

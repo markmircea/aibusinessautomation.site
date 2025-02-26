@@ -34,7 +34,7 @@ const serviceData = {
 
 <template>
     <WebDevelopmentLayout v-bind="serviceData">
-        <div class="space-y-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 space-y-12">
             <!-- Hero Section -->
             <div class="bg-gradient-to-r from-green-500 to-teal-600 rounded-xl shadow-xl p-8 text-white">
                 <h1 class="text-3xl font-bold mb-4">{{ serviceData.title }}</h1>
@@ -52,7 +52,7 @@ const serviceData = {
             </div>
 
             <!-- Service Overview Section -->
-            <div data-section="overview" class="bg-white dark:bg-gray-800 rounded-xl shadow p-8">
+            <div id="overview" data-section="overview" class="bg-white dark:bg-gray-800 rounded-xl shadow p-8">
                 <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Service Overview</h2>
                 <p class="text-gray-600 dark:text-gray-300 mb-4">
                     Our mobile application development services provide end-to-end solutions for businesses looking to engage customers through iOS and Android platforms. We create custom mobile apps that are tailored to your specific business needs, ensuring intuitive user experiences and robust functionality.
@@ -63,7 +63,7 @@ const serviceData = {
             </div>
 
             <!-- Key Features Section -->
-            <div data-section="features" class="bg-white dark:bg-gray-800 rounded-xl shadow p-8">
+            <div id="features" data-section="features" class="bg-white dark:bg-gray-800 rounded-xl shadow p-8">
                 <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Key Features</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-md transition-shadow">
@@ -94,7 +94,7 @@ const serviceData = {
             </div>
 
             <!-- Technologies Section -->
-            <div data-section="technologies" class="bg-white dark:bg-gray-800 rounded-xl shadow p-8">
+            <div id="technologies" data-section="technologies" class="bg-white dark:bg-gray-800 rounded-xl shadow p-8">
                 <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Technologies</h2>
                 <p class="text-gray-600 dark:text-gray-300 mb-6">
                     We leverage the latest technologies and frameworks to build robust mobile applications:
@@ -164,7 +164,7 @@ const serviceData = {
             </div>
 
             <!-- Development Process Section -->
-            <div data-section="process" class="bg-white dark:bg-gray-800 rounded-xl shadow p-8">
+            <div id="process" data-section="process" class="bg-white dark:bg-gray-800 rounded-xl shadow p-8">
                 <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Development Process</h2>
                 <div class="space-y-6">
                     <div class="flex items-start">
@@ -220,7 +220,7 @@ const serviceData = {
             </div>
 
             <!-- Benefits Section -->
-            <div data-section="benefits" class="bg-white dark:bg-gray-800 rounded-xl shadow p-8">
+            <div id="benefits" data-section="benefits" class="bg-white dark:bg-gray-800 rounded-xl shadow p-8">
                 <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Benefits</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="flex">
