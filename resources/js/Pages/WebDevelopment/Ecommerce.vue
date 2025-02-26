@@ -1,6 +1,7 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
 import WebDevelopmentLayout from './WebDevelopmentLayout.vue';
+import WebDevContactSection from '@/Components/WebDevelopment/ContactSection.vue';
 
 const serviceData = {
     title: 'E-commerce Platform Development',
@@ -83,13 +84,13 @@ const serviceData = {
                                     clip-rule="evenodd" />
                             </svg>
                         </a>
-                        <a href="/#contact"
+                        <a href="#contact"
                             class="inline-flex items-center px-6 py-3 border border-blue-400 text-base font-medium rounded-md text-blue-100 hover:bg-blue-800/50 transition-colors duration-200">
                             Contact Us
                         </a>
-                        <a href="/#contact"
+                        <a href="#contact"
                             class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors duration-200">
-                            Request a Demo
+                            Request a Quote
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20"
                                 fill="currentColor">
                                 <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
@@ -327,7 +328,7 @@ const serviceData = {
                 </div>
 
                 <!-- Development Process Section with Timeline -->
-                <div id="process" data-section="process"
+                <div id="benefits" data-section="process"
                     class="content-section bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 mb-16">
                     <div class="text-center mb-10">
                         <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">Development Process</h2>
@@ -417,7 +418,7 @@ const serviceData = {
                 </div>
 
                 <!-- Benefits Section -->
-                <div id="benefits" data-section="benefits"
+                <div id="process" data-section="benefits"
                     class="content-section bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
                     <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Benefits</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -511,19 +512,22 @@ const serviceData = {
                             Get in touch with our team to discuss your e-commerce project and discover how we can help
                             you create a successful online store.
                         </p>
-                        <Link href="/#contact"
+                        <Link :href="route('web-development.ecommerce') + '#contact'" 
                             class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-xl text-white bg-blue-500 hover:bg-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                        Discuss Your E-commerce Project
-                        <svg class="ml-3 -mr-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd" />
-                        </svg>
+                            Discuss Your E-commerce Project
+                            <svg class="ml-3 -mr-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
                         </Link>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Contact Section -->
+        <WebDevContactSection />
     </WebDevelopmentLayout>
 </template>
 

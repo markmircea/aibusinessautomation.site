@@ -70,7 +70,7 @@ const currentYear = computed(() => new Date().getFullYear());
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('welcome')" :active="route().current('welcome')">
-                                    Home
+                                    AI Automation
                                 </NavLink>
                                 <NavLink :href="route('solutions.customer-service')" :active="route().current('solutions.customer-service')">
                                     Use Case
@@ -191,7 +191,7 @@ const currentYear = computed(() => new Date().getFullYear());
                     class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('welcome')" :active="route().current('welcome')">
-                            Home
+                            AI Automation
                         </ResponsiveNavLink>
                         <div class="border-t border-gray-200 dark:border-gray-600 my-2"></div>
                         <div class="px-4 py-2 text-xs text-gray-400">Use Case</div>

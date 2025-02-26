@@ -7,14 +7,9 @@ const form = useForm({
     email: '',
     company: '',
     message: '',
-    solution: '',
+    solution: 'Web Development',
     tech_stack: ''
 });
-
-
-import { usePage } from '@inertiajs/vue3';
-
-const page = usePage();
 
 const handleSubmit = () => {
     form.post(route('contact.submit'), {
@@ -32,10 +27,10 @@ const handleSubmit = () => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                    Start Your Custom AI Journey
+                    Start Your Web Development Project
                 </h2>
                 <p class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300 mb-4">
-                    Ready to transform your business with personalized AI automation? Schedule a consultation with our experts and get a custom solution tailored to your needs.
+                    Ready to transform your business with a professional web presence? Schedule a consultation with our experts and get a custom solution tailored to your needs.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                     <div class="flex items-center">
@@ -99,30 +94,30 @@ const handleSubmit = () => {
                         </div>
 
                         <div>
-                            <label for="tech_stack" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Current Tech Stack</label>
+                            <label for="tech_stack" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Current Website/Tech Stack</label>
                             <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">
-                                List your current tools and systems that need integration (e.g., Salesforce, SAP, Microsoft 365)
+                                If you have an existing website or specific technologies you'd like to use, please list them here
                             </p>
                             <textarea
                                 id="tech_stack"
                                 v-model="form.tech_stack"
                                 rows="2"
-                                placeholder="E.g., Salesforce CRM, SAP ERP, Microsoft 365, Custom internal tools..."
+                                placeholder="E.g., WordPress, Shopify, React, Vue.js, or any specific requirements..."
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white sm:text-sm"
                             ></textarea>
                             <div v-if="form.errors.tech_stack" class="mt-1 text-sm text-red-600">{{ form.errors.tech_stack }}</div>
                         </div>
 
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tell us about your needs <span class="text-red-500">*</span></label>
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tell us about your project <span class="text-red-500">*</span></label>
                             <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">
-                                Share your current challenges, processes you'd like to automate, and any specific requirements. We'll create custom integrations to fit your needs.
+                                Share your project goals, features you need, and any specific requirements. We'll create a custom solution to fit your needs.
                             </p>
                             <textarea
                                 id="message"
                                 v-model="form.message"
                                 rows="4"
-                                placeholder="E.g., We're looking to automate our invoice processing system and integrate it with our current ERP. We need custom workflows for approval processes..."
+                                placeholder="E.g., I need an e-commerce website with product catalog, payment processing, and customer accounts..."
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white sm:text-sm"
                                 required
                             ></textarea>
@@ -136,7 +131,7 @@ const handleSubmit = () => {
                                 :disabled="form.processing"
                             >
                                 <span v-if="form.processing">Sending...</span>
-                                <span v-else>Schedule Free Consultation</span>
+                                <span v-else>Get Your Free Consultation</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
@@ -181,10 +176,9 @@ const handleSubmit = () => {
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-lg font-medium text-gray-900 dark:text-white">Location</h3>
+                    <h3 class="text-lg font-medium text-gray-900 dark:text-white">Locations</h3>
                     <p class="mt-2 text-base text-gray-600 dark:text-gray-300">San Francisco, CA, USA</p>
                     <p class="mt-2 text-base text-gray-600 dark:text-gray-300">Bucharest, RO</p>
-
                 </div>
             </div>
         </div>
