@@ -39,6 +39,25 @@ Route::get('/', function () {
     ]);
 })->name('welcome');
 
+// Web Development routes
+Route::prefix('web-development')->name('web-development.')->group(function () {
+    Route::get('/ecommerce', function () {
+        return Inertia::render('WebDevelopment/Ecommerce');
+    })->name('ecommerce');
+
+    Route::get('/presentation', function () {
+        return Inertia::render('WebDevelopment/Presentation');
+    })->name('presentation');
+
+    Route::get('/mobile', function () {
+        return Inertia::render('WebDevelopment/Mobile');
+    })->name('mobile');
+
+    Route::get('/automation', function () {
+        return Inertia::render('WebDevelopment/Automation');
+    })->name('automation');
+});
+
 // Solution routes
 Route::prefix('solutions')->name('solutions.')->group(function () {
     Route::get('/document-processing', function () {

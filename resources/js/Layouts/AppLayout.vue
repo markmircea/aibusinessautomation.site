@@ -11,6 +11,7 @@ import LazyImage from '@/Components/LazyImage.vue';
 import FlashMessage from '@/Components/FlashMessage.vue';
 import DynamicSEO from '@/Components/DynamicSEO.vue';
 import DarkModeToggle from '@/Components/DarkModeToggle.vue';
+import WebDevelopmentDropdown from '@/Components/WebDevelopmentDropdown.vue';
 // import SolutionsDropdown from '@/Components/SolutionsDropdown.vue';
 
 defineProps({
@@ -80,6 +81,7 @@ const currentYear = computed(() => new Date().getFullYear());
                                 <NavLink :href="route('solutions.ai-integrations')" :active="route().current('solutions.ai-integrations')">
                                     AI & Integrations
                                 </NavLink>
+                                <WebDevelopmentDropdown />
                                 <NavLink href="#benefits" :active="false">
                                     How it works
                                 </NavLink>
@@ -199,6 +201,20 @@ const currentYear = computed(() => new Date().getFullYear());
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('solutions.ai-integrations')" :active="route().current('solutions.ai-integrations')">
                             AI Integrations
+                        </ResponsiveNavLink>
+                        <div class="border-t border-gray-200 dark:border-gray-600 my-2"></div>
+                        <div class="px-4 py-2 text-xs text-gray-400">Web Development</div>
+                        <ResponsiveNavLink :href="route('web-development.ecommerce')" :active="route().current('web-development.ecommerce')">
+                            E-commerce Platforms
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('web-development.presentation')" :active="route().current('web-development.presentation')">
+                            Presentation Sites
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('web-development.mobile')" :active="route().current('web-development.mobile')">
+                            Mobile Applications
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('web-development.automation')" :active="route().current('web-development.automation')">
+                            Web Scraping/Automation
                         </ResponsiveNavLink>
                         <ResponsiveNavLink href="#benefits">
                             How it works
