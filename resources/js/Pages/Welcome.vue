@@ -5,7 +5,7 @@ import HeroSection from '@/Components/HeroSection.vue';
 import LogoSlider from '@/Components/LogoSlider.vue';
 import SolutionsSection from '@/Components/SolutionsSection.vue';
 import ContactSection from '@/Components/ContactSection.vue';
-import Eleven from '../Components/Eleven.vue';
+//import Eleven from '../Components/Eleven.vue';
 
 defineProps({
     canLogin: Boolean,
@@ -139,7 +139,7 @@ defineProps({
             </section>
 
             <ContactSection />
-            <Eleven />
+           <!--  <Eleven />  -->
 
 
         </div>
