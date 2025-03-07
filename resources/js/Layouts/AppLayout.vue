@@ -35,6 +35,11 @@ const logout = () => {
 
 const isAuthenticated = computed(() => usePage().props.auth.user !== null);
 const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscription ?? false);
+const isAdmin = computed(() => {
+    const user = usePage().props.auth.user;
+    // This is a simple check - in a real app, you'd use a more robust method
+    return user && user.email === 'admin@example.com';
+});
 
 const currentYear = computed(() => new Date().getFullYear());
 
@@ -147,10 +152,20 @@ const currentYear = computed(() => new Date().getFullYear());
                                                 API Tokens
                                             </DropdownLink>
 
-                                            <!-- Upgrade Account Button -->
+                                            <!-- Admin Dashboard Link (for admins only) -->
+                                            <DropdownLink v-if="isAdmin" :href="route('admin.dashboard')">
+                                                Admin Dashboard
+                                            </DropdownLink>
+
+                                            <!-- Referrals Link -->
+                                            <DropdownLink :href="route('referrals.index')">
+                                                My Referrals
+                                            </DropdownLink>
+
+                                            <!-- Upgrade Account Button
                                             <DropdownLink v-if="!isSubscribed" :href="route('upgrade.account')">
                                                 Upgrade Account
-                                            </DropdownLink>
+                                            </DropdownLink> -->
 
                                             <div class="border-t border-gray-200 dark:border-gray-600" />
 
@@ -270,6 +285,18 @@ const currentYear = computed(() => new Date().getFullYear());
                                 <ResponsiveNavLink v-if="$page.props.jetstream.hasApiFeatures"
                                     :href="route('api-tokens.index')" :active="route().current('api-tokens.index')">
                                     API Tokens
+                                </ResponsiveNavLink>
+
+                                <!-- Responsive Admin Dashboard Link (for admins only) -->
+                                <ResponsiveNavLink v-if="isAdmin" :href="route('admin.dashboard')"
+                                    :active="route().current('admin.dashboard')">
+                                    Admin Dashboard
+                                </ResponsiveNavLink>
+
+                                <!-- Responsive Referrals Link -->
+                                <ResponsiveNavLink :href="route('referrals.index')"
+                                    :active="route().current('referrals.index')">
+                                    My Referrals
                                 </ResponsiveNavLink>
 
                                 <!-- Responsive Upgrade Account Button -->

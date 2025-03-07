@@ -20,7 +20,8 @@ class Contact extends Model
         'email',
         'company',
         'solution',
-        'message'
+        'message',
+        'referral_code'
     ];
 
     /**

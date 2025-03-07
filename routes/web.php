@@ -94,14 +94,14 @@ Route::prefix('solutions')->name('solutions.')->group(function () {
 });
 
 // Dashboard route for authenticated users
-Route::get('/dashboard', function () {
-    $user = Auth::user();
-    $isSubscribed = $user ? $user->isSubscribed() : false;
+// Route::get('/dashboard', function () {
+//     $user = Auth::user();
+//     $isSubscribed = $user ? $user->isSubscribed() : false;
 
-    return Inertia::render('Dashboard', [
-        'isSubscribed' => $isSubscribed,
-    ]);
-})->name('dashboard')->middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']);
+//     return Inertia::render('Dashboard', [
+//         'isSubscribed' => $isSubscribed,
+//     ]);
+// })->name('dashboard')->middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']);
 
 // Free Practice Test route accessible to all users
 Route::get('/free-practice-test', function () {
@@ -132,7 +132,25 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    // Add any authenticated-only routes here
+    // Referral routes
+    Route::get('/referrals', [App\Http\Controllers\ReferralController::class, 'index'])->name('referrals.index');
+    
+    // Admin routes
+    Route::middleware(['can:admin'])->prefix('admin')->name('admin.')->group(function () {
+        // Admin Dashboard
+        Route::get('/dashboard', function () {
+            return Inertia::render('Admin/Dashboard');
+        })->name('dashboard');
+        
+        // Referrals Management
+        Route::get('/referrals', [App\Http\Controllers\Admin\ReferralController::class, 'index'])->name('referrals.index');
+        Route::get('/referrals/{referral}/edit', [App\Http\Controllers\Admin\ReferralController::class, 'edit'])->name('referrals.edit');
+        Route::put('/referrals/{referral}', [App\Http\Controllers\Admin\ReferralController::class, 'update'])->name('referrals.update');
+        
+        // Contacts Management
+        Route::get('/contacts', [App\Http\Controllers\Admin\ContactController::class, 'index'])->name('contacts.index');
+        Route::get('/contacts/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'show'])->name('contacts.show');
+    });
 });
 
 // Paid user routes group

@@ -8,7 +8,21 @@ const form = useForm({
     company: '',
     message: '',
     solution: '',
-    tech_stack: ''
+    tech_stack: '',
+    referral_code: ''
+});
+
+// Check if there's a referral code in the URL or session
+import { onMounted } from 'vue';
+
+onMounted(() => {
+    // Get referral code from URL if present
+    const urlParams = new URLSearchParams(window.location.search);
+    const refCode = urlParams.get('ref');
+    
+    if (refCode) {
+        form.referral_code = refCode;
+    }
 });
 
 
@@ -62,6 +76,8 @@ const handleSubmit = () => {
             <div class="max-w-3xl mx-auto bg-gray-50 dark:bg-gray-700 rounded-lg shadow-xl overflow-hidden">
                 <div class="p-8">
                     <form @submit.prevent="handleSubmit" class="space-y-6">
+                        <!-- Hidden field for referral code -->
+                        <input type="hidden" v-model="form.referral_code">
                         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>

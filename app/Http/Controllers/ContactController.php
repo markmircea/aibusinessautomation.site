@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Referral;
+use App\Models\User;
 use App\Mail\ContactFormSubmission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -29,9 +31,38 @@ class ContactController extends Controller
             $data['user_id'] = Auth::id();
         }
 
+        // Check if there's a referral code in the session
+        if (session()->has('referral_code')) {
+            $data['referral_code'] = session('referral_code');
+        }
+        
+        // Determine the solution based on the referer URL
+        $referer = $request->headers->get('referer');
+        if (empty($data['solution'])) {
+            if (strpos($referer, 'web-development') !== false) {
+                $data['solution'] = 'Web Development';
+            } else {
+                $data['solution'] = 'AI Automation';
+            }
+        }
+
         try {
             // Save to database
             $contact = Contact::create($data);
+
+            // If there's a referral code, create a referral record
+            if (isset($data['referral_code'])) {
+                $referrerUser = User::where('referral_code', $data['referral_code'])->first();
+                
+                if ($referrerUser) {
+                    // Create a new referral record
+                    Referral::create([
+                        'referrer_id' => $referrerUser->id,
+                        'contact_id' => $contact->id,
+                        'status' => 'pending'
+                    ]);
+                }
+            }
 
             // Send email notification
             Mail::send(new ContactFormSubmission($contact));

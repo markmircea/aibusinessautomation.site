@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -23,6 +23,15 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        // Define admin gate - for now, hardcode admin emails
+        // In a production app, you would use a role/permission system
+        Gate::define('admin', function ($user) {
+            $adminEmails = [
+                'admin@example.com',
+                // Add more admin emails as needed
+            ];
+            
+            return in_array($user->email, $adminEmails);
+        });
     }
 }
