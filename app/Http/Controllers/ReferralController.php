@@ -11,10 +11,17 @@ use Inertia\Inertia;
 class ReferralController extends Controller
 {
     /**
-     * Display the user's referrals.
+     * Display the user's referrals or the public referral page.
      */
     public function index()
     {
+        // Check if the user is authenticated
+        if (!Auth::check()) {
+            // Return the public referral page for non-authenticated users
+            return Inertia::render('Referrals/PublicIndex');
+        }
+        
+        // For authenticated users, show their referrals
         $user = Auth::user();
         
         $referrals = Referral::with('contact')

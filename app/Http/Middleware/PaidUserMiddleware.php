@@ -16,7 +16,7 @@ class PaidUserMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (!$request->user() || !$request->user()->has_paid_subscription) {
-            return redirect()->route('upgrade.account')->with('error', 'You need to upgrade your account to access this feature.');
+            return redirect()->route('register')->with('error', 'You need to register an account to access this feature.');
         }
 
         return $next($request);

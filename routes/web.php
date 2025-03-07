@@ -126,14 +126,15 @@ use App\Http\Controllers\ContactController;
 // Contact form submission
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
+// Referral routes - accessible to all users
+Route::get('/referrals', [App\Http\Controllers\ReferralController::class, 'index'])->name('referrals.index');
+
 // Authenticated routes group
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    // Referral routes
-    Route::get('/referrals', [App\Http\Controllers\ReferralController::class, 'index'])->name('referrals.index');
     
     // Admin routes
     Route::middleware(['can:admin'])->prefix('admin')->name('admin.')->group(function () {

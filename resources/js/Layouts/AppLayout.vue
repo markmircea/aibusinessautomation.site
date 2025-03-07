@@ -299,11 +299,11 @@ const currentYear = computed(() => new Date().getFullYear());
                                     My Referrals
                                 </ResponsiveNavLink>
 
-                                <!-- Responsive Upgrade Account Button -->
+                                <!-- Responsive Upgrade Account Button
                                 <ResponsiveNavLink v-if="!isSubscribed" :href="route('upgrade.account')"
                                     :active="route().current('upgrade.account')">
                                     Upgrade Account
-                                </ResponsiveNavLink>
+                                </ResponsiveNavLink> -->
 
                                 <!-- Authentication -->
                                 <form method="POST" @submit.prevent="logout">
