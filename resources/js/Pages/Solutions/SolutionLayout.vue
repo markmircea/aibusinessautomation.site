@@ -1,13 +1,18 @@
 <script setup>
-import { Head } from '@inertiajs/vue3';
+import { ref, onMounted, onUnmounted } from 'vue';
 import AppLayout from '@/Layouts/AppLayout.vue';
-import { ref, onMounted } from 'vue';
+import PageHero from '@/Components/PageHero.vue';
+import ContactSection from '@/Components/ContactSection.vue';
 
+// No <Head> here on purpose: DynamicSEO is the single source of truth for
+// titles. This layout previously set its own, producing double-suffixed
+// titles carrying the stale "AutomateAI" brand.
 const props = defineProps({
     title: String,
     description: String,
     focus: String,
     keyPoint: String,
+    eyebrow: { type: String, default: 'AI Solutions' },
     sections: {
         type: Array,
         default: () => []
@@ -18,19 +23,16 @@ const activeSection = ref('');
 const expandedSections = ref(new Set());
 
 const updateActiveSection = () => {
-    const sections = document.querySelectorAll('[data-section]');
-    const scrollPosition = window.scrollY + 100;
+    const els = document.querySelectorAll('[data-section]');
+    const scrollPosition = window.scrollY + 120;
 
-    for (const section of sections) {
-        if (section.offsetTop <= scrollPosition && 
+    for (const section of els) {
+        if (section.offsetTop <= scrollPosition &&
             section.offsetTop + section.offsetHeight > scrollPosition) {
             const sectionId = section.getAttribute('data-section');
             activeSection.value = sectionId;
-            
-            // Expand parent section if subsection is active
             if (sectionId.includes('-')) {
-                const parentSection = sectionId.split('-')[0];
-                expandedSections.value.add(parentSection);
+                expandedSections.value.add(sectionId.split('-')[0]);
             }
             break;
         }
@@ -38,122 +40,111 @@ const updateActiveSection = () => {
 };
 
 const scrollToSection = (sectionId) => {
-    const element = document.querySelector(`[data-section="${sectionId}"]`);
-    if (element) {
-        window.scrollTo({
-            top: element.offsetTop - 80,
-            behavior: 'smooth'
-        });
-    }
+    const el = document.querySelector(`[data-section="${sectionId}"]`);
+    if (el) window.scrollTo({ top: el.offsetTop - 90, behavior: 'smooth' });
 };
 
-const toggleSection = (sectionId) => {
-    if (expandedSections.value.has(sectionId)) {
-        expandedSections.value.delete(sectionId);
-    } else {
-        expandedSections.value.add(sectionId);
-    }
+const toggleSection = (id) => {
+    expandedSections.value.has(id) ? expandedSections.value.delete(id) : expandedSections.value.add(id);
 };
 
-const isSectionExpanded = (sectionId) => {
-    return expandedSections.value.has(sectionId);
-};
+const isSectionExpanded = (id) => expandedSections.value.has(id);
 
 onMounted(() => {
-    window.addEventListener('scroll', updateActiveSection);
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
     updateActiveSection();
 });
+
+onUnmounted(() => window.removeEventListener('scroll', updateActiveSection));
 </script>
 
 <template>
     <AppLayout>
-        <Head>
-            <title>{{ title }} - AutomateAI</title>
-            <meta name="description" :content="description" />
-        </Head>
+        <div class="min-h-screen bg-ink">
+            <PageHero
+                :eyebrow="eyebrow"
+                :title="title"
+                :description="description"
+                :primary-cta="{ label: 'Get a Quote', href: '#contact' }"
+                :secondary-cta="{ label: 'See our work', href: '/portfolio' }"
+            />
 
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex gap-8">
-                    <!-- Navigation Sidebar -->
-                    <div v-if="sections.length" class="hidden lg:block w-64 sticky" style="height: fit-content; top: 2rem;">
-                        <nav class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">On this page</h3>
-                            <ul class="space-y-2">
-                                <li v-for="section in sections" :key="section.id" class="relative">
-                                    <div class="flex items-center">
-                                        <button v-if="section.subsections"
-                                                @click="toggleSection(section.id)"
-                                                class="absolute left-0 top-2 w-4 h-4 flex items-center justify-center">
-                                            <svg class="w-3 h-3 transition-transform duration-200"
-                                                 :class="{ 'rotate-90': isSectionExpanded(section.id) }"
-                                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                            </svg>
-                                        </button>
-                                        <button 
-                                            @click="scrollToSection(section.id)"
-                                            class="w-full text-left px-3 py-2 rounded-md text-sm transition-colors duration-200"
-                                            :class="{
-                                                'pl-7': section.subsections,
-                                                'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 font-medium': 
-                                                    activeSection === section.id,
-                                                'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700/50': 
-                                                    activeSection !== section.id
-                                            }">
-                                            {{ section.title }}
-                                        </button>
-                                    </div>
-
-                                    <!-- Subsections -->
-                                    <ul v-if="section.subsections && isSectionExpanded(section.id)"
-                                        class="mt-1 ml-4 pl-3 border-l border-gray-200 dark:border-gray-700 space-y-1">
-                                        <li v-for="subsection in section.subsections" :key="subsection.id">
-                                            <button 
-                                                @click="scrollToSection(subsection.id)"
-                                                class="w-full text-left px-3 py-1.5 rounded-md text-sm transition-colors duration-200"
-                                                :class="{
-                                                    'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 font-medium': 
-                                                        activeSection === subsection.id,
-                                                    'text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700/50': 
-                                                        activeSection !== subsection.id
-                                                }">
-                                                {{ subsection.title }}
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
+            <!-- Focus / key benefit, the two facts every solution page carries -->
+            <section v-if="focus || keyPoint" class="py-16 bg-ink">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-4 sm:grid-cols-2">
+                    <div v-if="focus" class="p-6 rounded-card bg-surface ring-1 ring-inset ring-line">
+                        <h2 class="text-xs font-semibold uppercase tracking-[0.12em] text-content-subtle mb-2">Focus</h2>
+                        <p class="text-content-muted">{{ focus }}</p>
                     </div>
+                    <div v-if="keyPoint" class="p-6 rounded-card bg-surface ring-1 ring-inset ring-line">
+                        <h2 class="text-xs font-semibold uppercase tracking-[0.12em] text-content-subtle mb-2">Key benefit</h2>
+                        <p class="text-accent-400 font-semibold">{{ keyPoint }}</p>
+                    </div>
+                </div>
+            </section>
 
-                    <!-- Main Content -->
-                    <div class="flex-1 max-w-5xl">
-                        <!-- Hero Section
-                        <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-xl p-8 mb-8 text-white">
-                            <h1 class="text-3xl font-bold mb-4">{{ title }}</h1>
-                            <p class="text-xl text-blue-100">{{ description }}</p>
-                            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white/10 rounded-lg p-4">
-                                    <h3 class="font-semibold text-lg mb-2">Focus Areas</h3>
-                                    <p>{{ focus }}</p>
-                                </div>
-                                <div class="bg-white/10 rounded-lg p-4">
-                                    <h3 class="font-semibold text-lg mb-2">Key Benefits</h3>
-                                    <p>{{ keyPoint }}</p>
-                                </div>
-                            </div>
-                        </div> -->
+            <!-- Page body -->
+            <section class="py-16 bg-surface/30 border-y border-line">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex gap-10">
+                        <!-- On-this-page nav, only for pages that declare sections -->
+                        <div v-if="sections.length" class="hidden lg:block w-64 shrink-0 sticky self-start" style="top: 6rem;">
+                            <nav class="rounded-card bg-surface ring-1 ring-inset ring-line p-4">
+                                <h2 class="text-xs font-semibold uppercase tracking-[0.12em] text-content-subtle mb-3">On this page</h2>
+                                <ul class="space-y-1">
+                                    <li v-for="section in sections" :key="section.id" class="relative">
+                                        <div class="flex items-center">
+                                            <button v-if="section.subsections"
+                                                    @click="toggleSection(section.id)"
+                                                    :aria-label="`Toggle ${section.title} subsections`"
+                                                    class="absolute left-0 top-2 w-4 h-4 flex items-center justify-center rounded-control focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400">
+                                                <svg class="w-3 h-3 transition-transform duration-200"
+                                                     :class="{ 'rotate-90': isSectionExpanded(section.id) }"
+                                                     fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </button>
+                                            <button
+                                                @click="scrollToSection(section.id)"
+                                                class="w-full text-left px-3 py-2 rounded-control text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+                                                :class="{
+                                                    'pl-7': section.subsections,
+                                                    'text-accent-400 bg-accent-500/12 font-medium': activeSection === section.id,
+                                                    'text-content-muted hover:text-accent-400 hover:bg-surface-2': activeSection !== section.id
+                                                }">
+                                                {{ section.title }}
+                                            </button>
+                                        </div>
 
-                        <!-- Content Section -->
-                        <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                            <div class="p-6">
-                                <slot></slot>
-                            </div>
+                                        <ul v-if="section.subsections && isSectionExpanded(section.id)"
+                                            class="mt-1 ml-4 pl-3 border-l border-line space-y-1">
+                                            <li v-for="subsection in section.subsections" :key="subsection.id">
+                                                <button
+                                                    @click="scrollToSection(subsection.id)"
+                                                    class="w-full text-left px-3 py-1.5 rounded-control text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+                                                    :class="{
+                                                        'text-accent-400 bg-accent-500/12 font-medium': activeSection === subsection.id,
+                                                        'text-content-subtle hover:text-accent-400 hover:bg-surface-2': activeSection !== subsection.id
+                                                    }">
+                                                    {{ subsection.title }}
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="flex-1 min-w-0">
+                            <slot></slot>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Every solution page now ends with its own contact form, so the
+                 page's "Get a Quote" #contact anchor actually has a target. -->
+            <ContactSection :solution="title" />
         </div>
     </AppLayout>
 </template>

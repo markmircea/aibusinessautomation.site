@@ -16,3 +16,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Playwright MCP writes snapshots/screenshots here
+.playwright-mcp/

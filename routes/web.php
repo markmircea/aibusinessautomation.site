@@ -39,23 +39,36 @@ Route::get('/', function () {
     ]);
 })->name('welcome');
 
+// Legal pages. Previously unroutable: the components existed on disk but had
+// no route and no link, leaving an EU-registered business collecting contact
+// details with no reachable privacy policy.
+Route::get('/privacy-policy', function () {
+    return Inertia::render('PrivacyPolicy');
+})->name('privacy-policy');
+
+Route::get('/terms-of-service', function () {
+    return Inertia::render('TermsOfService');
+})->name('terms-of-service');
+
+// Portfolio page
+Route::get('/portfolio', function () {
+    return Inertia::render('Portfolio');
+})->name('portfolio');
+
 // Web Development routes
 Route::prefix('web-development')->name('web-development.')->group(function () {
-    Route::get('/ecommerce', function () {
-        return Inertia::render('WebDevelopment/Ecommerce');
-    })->name('ecommerce');
+    // Section landing page, reachable by clicking "Web Development" in the nav.
+    Route::get('/', function () {
+        return Inertia::render('WebDevelopment/Index');
+    })->name('index');
 
-    Route::get('/presentation', function () {
-        return Inertia::render('WebDevelopment/Presentation');
-    })->name('presentation');
-
-    Route::get('/mobile', function () {
-        return Inertia::render('WebDevelopment/Mobile');
-    })->name('mobile');
-
-    Route::get('/automation', function () {
-        return Inertia::render('WebDevelopment/Automation');
-    })->name('automation');
+    // All four services render the same component; content comes from
+    // resources/js/data/webDevelopmentServices.js keyed by slug.
+    foreach (['ecommerce', 'presentation', 'mobile', 'automation'] as $slug) {
+        Route::get("/{$slug}", function () use ($slug) {
+            return Inertia::render('WebDevelopment/Service', ['slug' => $slug]);
+        })->name($slug);
+    }
 });
 
 // Solution routes
@@ -103,14 +116,8 @@ Route::prefix('solutions')->name('solutions.')->group(function () {
 //     ]);
 // })->name('dashboard')->middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']);
 
-// Free Practice Test route accessible to all users
-Route::get('/free-practice-test', function () {
-    return Inertia::render('FreePracticeTestStart');
-})->name('free.practice.test');
-
-Route::get('/full-practice-test', function () {
-    return Inertia::render('FullPracticeTest');
-})->name('full.practice.test');
+// Legacy CCAT practice-test routes removed from the public surface.
+// The Vue pages remain on disk pending a follow-up deletion pass.
 
 Route::get('/upgrade-account', [UpgradeAccountController::class, 'show'])->name('upgrade.account');
 Route::post('/upgrade-account', [UpgradeAccountController::class, 'process'])->name('upgrade.account.process');
@@ -164,65 +171,15 @@ Route::middleware([
     Route::post('/api/generate-question', [OpenRouterController::class, 'generateQuestion'])->name('generate.question');
     Route::post('/api/generate-explanation', [OpenRouterController::class, 'generateExplanation'])->name('generate.explanation');
 
-    Route::get('/verbal-test', function () {
-        return Inertia::render('VerbalTest');
-    })->name('verbal.test');
-
-    Route::get('/verbal-test-start', function () {
-        return Inertia::render('VerbalTestStart');
-    })->name('verbal.test.start');
-
-    Route::get('/verbal-test-json-start', function () {
-        return Inertia::render('VerbalJsonStart');
-    })->name('verbal.json.test.start');
-
-    Route::get('/math-logic-test', function () {
-        return Inertia::render('MathLogicTest');
-    })->name('math.logic.test');
-
-    Route::get('/math-test-start', function () {
-        return Inertia::render('MathLogicTestStart');
-    })->name('math.test.start');
-
-    Route::get('/math-test-json-start', function () {
-        return Inertia::render('MathLogicJsonStart');
-    })->name('math.json.test.start');
-
-    Route::get('/spatial-reasoning-test', function () {
-        return Inertia::render('SpatialReasoningTest');
-    })->name('spatial.reasoning.test');
-
-    Route::get('/spatial-test-start', function () {
-        return Inertia::render('SpatialReasoningTestStart');
-    })->name('spatial.test.start');
-
-    Route::get('/spatial-test-json-start', function () {
-        return Inertia::render('SpatialReasoningJsonStart');
-    })->name('spatial.json.start');
-
-    Route::get('/full-practice-test-start', function () {
-        return Inertia::render('FullPracticeTestStart');
-    })->name('full-practice-test-start');
-
-
-
-    // Full Practice Test routes
-    for ($i = 1; $i <= 10; $i++) {
-        Route::get("/full-practice-test-{$i}", function () use ($i) {
-            return Inertia::render('FullTest', ['testNumber' => $i]);
-        })->name("full.practice.test.{$i}");
-
-        Route::get("/full-practice-test-{$i}-start", function () use ($i) {
-            return Inertia::render('FullPracticeTestStart', ['testNumber' => $i]);
-        })->name("full.practice.test.{$i}.start");
-    }
+    // Legacy CCAT test routes (verbal / math / spatial / full-practice 1-10)
+    // removed from the public surface; Vue pages remain on disk.
 
     Route::get('/download-pdf/{filename}', [PdfDownloadController::class, 'download'])->name('download.pdf');
 
 });
 
 Route::fallback(function () {
-    return redirect('/');
+    return Inertia::render('Error', ['status' => 404])->toResponse(request())->setStatusCode(404);
 });
 
 // Route::get('/generate-pdfs', [QuestionPDFController::class, 'generatePDFs'])->name('generate.pdf');

@@ -10,7 +10,7 @@ const classes = computed(() => {
     return {
         'bg-green-500 text-white': type.value === 'success',
         'bg-red-500 text-white': type.value === 'error',
-        'bg-blue-500 text-white': type.value === 'info'
+        'bg-accent-500 text-white': type.value === 'info'
     };
 });
 
@@ -57,11 +57,11 @@ watch(() => page.props.flash, (flash) => {
         <div
             v-if="show"
             :class="classes"
-            class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 p-4 rounded-md shadow-md pointer-events-auto max-w-sm w-full"
+            class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 p-4 rounded-control shadow-md pointer-events-auto max-w-sm w-full"
         >
             <div class="flex items-center">
                 <div class="flex-grow text-center">{{ message }}</div>
-                <button @click="dismiss" class="ml-4 text-white hover:text-gray-200 focus:outline-none">
+                <button @click="dismiss" class="ml-4 text-white hover:text-content focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400">
                     <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>

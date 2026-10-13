@@ -8,7 +8,7 @@ const SHAPES = [
     shape: [
       [1, 1, 1, 1]
     ],
-    color: 'rgba(59, 130, 246, 0.5)' // Blue-500 with low opacity
+    color: 'rgba(91, 108, 255, 0.40)' // brand palette
   },
   // J-piece
   {
@@ -16,7 +16,7 @@ const SHAPES = [
       [1, 0, 0],
       [1, 1, 1]
     ],
-    color: 'rgba(30, 64, 175, 0.5)' // Blue-800 with low opacity
+    color: 'rgba(27, 42, 107, 0.45)' // brand palette
   },
   // L-piece
   {
@@ -24,7 +24,7 @@ const SHAPES = [
       [0, 0, 1],
       [1, 1, 1]
     ],
-    color: 'rgba(96, 165, 250, 0.5)' // Blue-400 with low opacity
+    color: 'rgba(124, 137, 255, 0.35)' // brand palette
   },
   // O-piece
   {
@@ -32,7 +32,7 @@ const SHAPES = [
       [1, 1],
       [1, 1]
     ],
-    color: 'rgba(37, 99, 235, 0.5)' // Blue-600 with low opacity
+    color: 'rgba(47, 75, 196, 0.42)' // brand palette
   },
   // S-piece
   {
@@ -40,7 +40,7 @@ const SHAPES = [
       [0, 1, 1],
       [1, 1, 0]
     ],
-    color: 'rgba(79, 70, 229, 0.5)' // Indigo-600 with low opacity
+    color: 'rgba(70, 88, 232, 0.40)' // brand palette
   },
   // T-piece
   {
@@ -48,7 +48,7 @@ const SHAPES = [
       [0, 1, 0],
       [1, 1, 1]
     ],
-    color: 'rgba(99, 102, 241, 0.5)' // Indigo-500 with low opacity
+    color: 'rgba(91, 108, 255, 0.34)' // brand palette
   },
   // Z-piece
   {
@@ -56,16 +56,16 @@ const SHAPES = [
       [1, 1, 0],
       [0, 1, 1]
     ],
-    color: 'rgba(129, 140, 248, 0.5)' // Indigo-400 with low opacity
+    color: 'rgba(107, 130, 232, 0.32)' // brand palette
   }
 ];
 
 // Block size in pixels
 const BLOCK_SIZE = 20;
 // Maximum number of blocks falling at once
-const MAX_BLOCKS = 6;
+const MAX_BLOCKS = 14;
 // Time between new blocks (in milliseconds)
-const BLOCK_INTERVAL = 15000; // One block every 8 seconds
+const BLOCK_INTERVAL = 1800; // was 15000ms, which left only one block on screen at a time
 
 const blocks = ref([]);
 const animationFrameId = ref(null);
@@ -75,7 +75,7 @@ const containerRef = ref(null);
 const blockTimerId = ref(null);
 
 // Generate a random Tetris block
-const generateBlock = () => {
+const generateBlock = (startY = -50) => {
   if (blocks.value.length >= MAX_BLOCKS) return;
   
   const containerWidth = containerRef.value?.offsetWidth || 200;
@@ -91,7 +91,7 @@ const generateBlock = () => {
     shape: shape.shape,
     color: shape.color,
     x: x,
-    y: -50, // Start just above the visible area
+    y: startY,
     speed: 0.3 + Math.random() * 0.5, // Slower, more consistent speed
     rotation: Math.floor(Math.random() * 4) // Random rotation (0, 1, 2, or 3)
   });
@@ -141,8 +141,12 @@ const rotateMatrix = (matrix) => {
 };
 
 onMounted(() => {
-  // Generate initial block
-  generateBlock();
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Seed a spread of blocks so the hero is populated immediately rather than
+  // waiting for the interval to trickle them in one at a time.
+  const h = containerRef.value?.offsetHeight || 700;
+  for (let i = 0; i < 9; i++) generateBlock(Math.random() * h - 60);
   
   // Start animation
   updateBlocks();

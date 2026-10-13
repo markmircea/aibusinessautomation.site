@@ -190,8 +190,8 @@ const tools = [
 
 <template>
     <section data-section="ai-tools" class="space-y-8">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Available AI Tools</h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-8">
+        <h2 class="text-2xl font-bold text-content mb-6">Available AI Tools</h2>
+        <p class="text-content-muted mb-8">
             Our platform integrates with industry-leading AI tools to create powerful customer service automation solutions. Here are the key tools available for customer support implementation
              (we are continuously developing additional tools to meet our business partners needs):
         </p>
@@ -199,25 +199,25 @@ const tools = [
         <div class="space-y-8">
             <div v-for="(category, index) in tools" :key="category.category" 
                  :data-section="`ai-tools-${['language', 'knowledge', 'platforms', 'analytics', 'channels', 'security'][index]}`"
-                 class="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+                 class="bg-surface rounded-card shadow-sm overflow-hidden">
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">{{ category.category }}</h3>
+                    <h3 class="text-xl font-semibold text-content mb-6">{{ category.category }}</h3>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         <div v-for="tool in category.tools" :key="tool.name"
-                             class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300">
-                            <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-2">{{ tool.name }}</h4>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">{{ tool.description }}</p>
+                             class="bg-surface-2/60 rounded-card p-6 hover:bg-accent-500/12 transition-all duration-300">
+                            <h4 class="text-lg font-medium text-content mb-2">{{ tool.name }}</h4>
+                            <p class="text-content-muted mb-4">{{ tool.description }}</p>
                             <div class="space-y-2">
-                                <p class="text-sm font-medium text-gray-900 dark:text-white">Common Uses:</p>
+                                <p class="text-sm font-medium text-content">Common Uses:</p>
                                 <ul class="space-y-1">
                                     <li v-for="use in tool.uses" :key="use" 
                                         class="flex items-start text-sm">
-                                        <svg class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" 
+                                        <svg class="h-5 w-5 text-accent-400 mr-2 flex-shrink-0" 
                                              fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                                                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
-                                        <span class="text-gray-600 dark:text-gray-300">{{ use }}</span>
+                                        <span class="text-content-muted">{{ use }}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -228,9 +228,3 @@ const tools = [
         </div>
     </section>
 </template>
-
-<style scoped>
-.hover\:bg-blue-50:hover {
-    background-color: rgba(59, 130, 246, 0.05);
-}
-</style>

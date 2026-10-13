@@ -3,60 +3,112 @@ import { computed } from 'vue';
 import { Head, usePage } from '@inertiajs/vue3';
 
 const page = usePage();
-const currentRoute = computed(() => page.props.component);
+// page.component is the Inertia component name ('Solutions/CustomerService').
+// page.props.component is a separately shared ROUTE name ('solutions.customer-service')
+// and never matches the keys below — reading it made every page fall back.
+const currentRoute = computed(() => page.component);
 const currentUrl = computed(() => page.props.url);
-const baseUrl = computed(() => window.location.origin);
+const baseUrl = computed(() => (typeof window !== 'undefined' ? window.location.origin : ''));
 
+// Single source of truth for page titles and descriptions. Pages must NOT set
+// their own <Head><title>, or two Head components race and the winner varies.
+const meta = {
+  'Welcome': {
+    title: 'Software Development Agency | Web, Mobile, APIs & AI | AIBrainL.ink',
+    description: 'We design and ship e-commerce web apps, mobile and desktop apps, APIs, automation pipelines and agentic AI systems — end to end, with a dedicated project manager on every engagement.',
+  },
+  'Portfolio': {
+    title: 'Portfolio — Shipped Projects | AIBrainL.ink',
+    description: 'Selected production work: the Selenix browser-automation platform, an MCP server published on npm, a generative video pipeline, SaaS backends and desktop apps.',
+  },
+  'WebDevelopment/Index': {
+    title: 'Web Development Services | AIBrainL.ink',
+    description: 'E-commerce platforms, marketing sites, mobile apps and scraping/automation pipelines — designed, built and maintained end to end.',
+  },
+  'WebDevelopment/Ecommerce': {
+    title: 'E-commerce Platform Development | AIBrainL.ink',
+    description: 'Custom e-commerce builds on Shopify, WooCommerce, Magento, BigCommerce or Laravel — secure payments, inventory, and integrations with the systems you already run.',
+  },
+  'WebDevelopment/Presentation': {
+    title: 'Presentation & Marketing Site Development | AIBrainL.ink',
+    description: 'Fast, accessible marketing sites built to convert — custom design, CMS integration, and performance budgets that hold up after launch.',
+  },
+  'WebDevelopment/Mobile': {
+    title: 'Mobile Application Development | AIBrainL.ink',
+    description: 'Native and cross-platform mobile apps, from product definition through store release and ongoing support.',
+  },
+  'WebDevelopment/Automation': {
+    title: 'Web Scraping & Automation Development | AIBrainL.ink',
+    description: 'Resilient scraping and browser-automation pipelines with scheduling, monitoring and structured output your systems can consume.',
+  },
+  'Solutions/AIIntegrations': {
+    title: 'Enterprise AI Integration Hub | AIBrainL.ink',
+    description: 'Connect AI to the tools you already run. Cloud services, data platforms, business software, developer tooling and security — integrated into your existing workflows.',
+  },
+  'Solutions/CustomerService': {
+    title: 'AI-Powered Customer Service Automation | AIBrainL.ink',
+    description: '24/7 intelligent support, automated ticket routing, sentiment analysis and personalised customer interactions built on your knowledge base.',
+  },
+  'Solutions/DocumentProcessing': {
+    title: 'AI Document Processing & Automation | AIBrainL.ink',
+    description: 'Intelligent data extraction, classification and routing, integrated with the document systems you already use.',
+  },
+  'Solutions/FinancialOperations': {
+    title: 'Financial Operations Automation | AIBrainL.ink',
+    description: 'AP/AR automation, expense management, reconciliation and reporting with ML-powered anomaly detection.',
+  },
+  'Solutions/HrRecruitment': {
+    title: 'HR & Recruitment Automation | AIBrainL.ink',
+    description: 'Resume analysis, skill assessment, interview automation and onboarding workflow management, wired into your ATS.',
+  },
+  'Solutions/SalesMarketing': {
+    title: 'Sales & Marketing Automation | AIBrainL.ink',
+    description: 'Predictive lead scoring, personalised content generation and multi-channel campaign orchestration with real-time analytics.',
+  },
+  'Solutions/SupplyChain': {
+    title: 'Supply Chain & Inventory Automation | AIBrainL.ink',
+    description: 'Predictive inventory management, supplier relationship management, demand forecasting and logistics optimisation.',
+  },
+  'Solutions/DesktopAutomation': {
+    title: 'AI Desktop Automation | AIBrainL.ink',
+    description: 'Automate desktop workflows across the applications your team already runs, with scheduling and monitoring built in.',
+  },
+  'PrivacyPolicy': {
+    title: 'Privacy Policy | AIBrainL.ink',
+    description: 'How AIBrainL.ink (MarkIT S.R.L.) collects, uses and protects personal information.',
+  },
+  'TermsOfService': {
+    title: 'Terms of Service | AIBrainL.ink',
+    description: 'The terms governing use of AIBrainL.ink services.',
+  },
+  'Error': {
+    title: 'Page not found | AIBrainL.ink',
+    description: 'The page you were looking for does not exist.',
+  },
+};
 
-const title = computed(() => {
-  switch (currentRoute.value) {
-    case 'Solutions/AIIntegrations':
-      return 'Enterprise AI Integration Hub | AI Business Automation | aibrainl.ink';
-    case 'Solutions/CustomerService':
-      return 'AI-Powered Customer Service Solutions | aibrainl.ink';
-    case 'Solutions/DataAnalytics':
-      return 'Intelligent Data Analytics & Business Intelligence | aibrainl.ink';
-    case 'Solutions/DocumentProcessing':
-      return 'AI Document Processing & Automation | aibrainl.ink';
-    case 'Solutions/SecurityCompliance':
-      return 'AI Security & Compliance Automation | aibrainl.ink';
-    case 'Solutions/DevelopmentDevOps':
-      return 'AI-Enhanced Development & DevOps Solutions | aibrainl.ink';
-    case 'contact':
-      return 'Contact Us | AI Business Automation | aibrainl.ink';
-    default:
-      return 'AI Business Process Automation Solutions | aibrainl.ink';
+const fallback = {
+  title: 'Software Development Agency | AIBrainL.ink',
+  description: 'Custom software built end to end — web, mobile, desktop, APIs, automation pipelines and agentic AI systems.',
+};
+
+// The four service pages all render the same component (WebDevelopment/Service),
+// so resolve them by their slug prop instead of the component name.
+const metaKey = computed(() => {
+  if (currentRoute.value === 'WebDevelopment/Service') {
+    const slug = page.props.slug ?? '';
+    return 'WebDevelopment/' + slug.charAt(0).toUpperCase() + slug.slice(1);
   }
+  return currentRoute.value;
 });
 
-const description = computed(() => {
-  switch (currentRoute.value) {
-    case 'Solutions/AIIntegrations':
-      return 'Transform your business processes with our extensive suite of AI integrations. We provide enterprise-grade solutions that seamlessly connect with your existing workflows, enabling intelligent automation and enhanced decision-making capabilities across cloud services, data analytics, business tools, development, and security.';
-    case 'Solutions/CustomerService':
-      return 'Revolutionize your customer service with AI-powered automation. 24/7 intelligent support, automated ticket routing, sentiment analysis, and personalized customer interactions for enhanced satisfaction and efficiency.';
-    case 'Solutions/DataAnalytics':
-      return 'Harness the power of AI for advanced data analytics and business intelligence. Real-time insights, predictive analytics, automated reporting, and intelligent data visualization for informed decision-making.';
-    case 'Solutions/DocumentProcessing':
-      return 'Streamline document processing with AI automation. Intelligent data extraction, classification, routing, and integration with your existing systems for efficient document management.';
-    case 'Solutions/SecurityCompliance':
-      return 'Enhance security and ensure compliance with AI-powered automation. Intelligent threat detection, automated compliance monitoring, and security controls for enterprise-grade protection.';
-    case 'Solutions/DevelopmentDevOps':
-      return 'Accelerate development and DevOps with AI-enhanced tools. Automated code analysis, intelligent testing, and streamlined deployment processes for improved efficiency.';
-    case 'contact':
-      return 'Connect with our AI automation experts. Let\'s discuss how we can transform your business processes with custom AI solutions tailored to your unique needs.';
-    default:
-      return 'Transform any business process with our enterprise AI automation solutions. Custom-built integrations, intelligent workflows, and enhanced decision-making capabilities for your unique business needs.';
-  }
-});
-
+const current = computed(() => meta[metaKey.value] ?? fallback);
+const title = computed(() => current.value.title);
+const description = computed(() => current.value.description);
 const canonicalUrl = computed(() => currentUrl.value);
+// File on disk is main.png (lowercase). It was referenced as main.png while the
+// file was main.PNG, which 404s on case-sensitive production filesystems.
 const ogImage = computed(() => `${baseUrl.value}/img/main.png`);
-
-//console.log('DynamicSEO Component - Computed Title:', title.value);
-//console.log('DynamicSEO Component - Computed Description:', description.value);
-//console.log('DynamicSEO Component - Computed Canonical URL:', canonicalUrl.value);
-//console.log('DynamicSEO Component - Computed OG Image:', ogImage.value);
 </script>
 
 <template>
@@ -67,6 +119,7 @@ const ogImage = computed(() => `${baseUrl.value}/img/main.png`);
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AIBrainL.ink">
     <meta property="og:url" :content="canonicalUrl">
     <meta property="og:title" :content="title">
     <meta property="og:description" :content="description">

@@ -107,19 +107,15 @@ const features = [
 
 const currentMonthYear = ref(new Date().toLocaleString('default', { month: 'long', year: 'numeric' }));
 
-const gtag_report_conversion = (url, transaction_id) => {
+const completePurchaseRedirect = (url, transaction_id) => {
   var callback = function () {
       if (typeof(url) != 'undefined') {
           window.location = url;
       }
   };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-1037877088/a1PlCPHcw94ZEOD-8u4D',
-      'value': 49.99,
-      'currency': 'USD',
-      'transaction_id': transaction_id,
-      'event_callback': callback
-  });
+  // Google Ads conversion tracking removed (CCAT-era account, no active
+    // campaigns). The redirect its event_callback used to fire now runs directly.
+    callback();
   return false;
 };
 
@@ -147,7 +143,7 @@ const initPayPalButton = () => {
                       preserveState: true,
                       preserveScroll: true,
                       onSuccess: (response) => {
-                          gtag_report_conversion(undefined, orderData.id);
+                          completePurchaseRedirect(undefined, orderData.id);
                           if (!page.props.auth.user) {
                               window.location.href = route('register');
                           } else {

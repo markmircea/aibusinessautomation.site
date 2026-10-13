@@ -1,138 +1,132 @@
 <script setup>
-import { Head } from '@inertiajs/vue3';
-import AuthenticationCardLogo from '@/Components/AuthenticationCardLogo.vue';
-import { ref } from 'vue';
+import LegalDocument from '@/Components/LegalDocument.vue';
 
-defineProps({
-    policy: String,
-});
-
-const activeAccordion = ref(null);
-
-const goBack = () => {
-    window.close();
-};
-
-const toggleAccordion = (index) => {
-    activeAccordion.value = activeAccordion.value === index ? null : index;
-};
-
-const faqItems = [
-    {
-        question: "What information do we collect?",
-        answer: `We collect information from you when you register on our site, place an order, subscribe to our newsletter, respond to a survey, fill out a form or click on links in email newsletters.
-
-When ordering or registering on our site, as appropriate, you may be asked to enter your: name, e-mail address, mailing address, phone number or credit card information. You may, however, visit our site anonymously.`
-    },
-    {
-        question: "What do we use your information for?",
-        answer: `Any of the information we collect from you may be used in one of the following ways:
-
-• To personalize your experience
-• To improve our website
-• To improve customer service
-• To process transactions
-• To send periodic emails
-
-Your information, whether public or private, will not be sold, exchanged, transferred, or given to any other company for any reason whatsoever, without your consent, other than for the express purpose of delivering the purchased product or service requested.
-
-The email address you provide for order processing, may be used to send you information and updates pertaining to your order, in addition to receiving occasional company news, updates, related product or service information, etc.
-
-Note: If at any time you would like to unsubscribe from receiving future emails, we include detailed unsubscribe instructions at the bottom of each email.`
-    },
-    {
-        question: "Do we use cookies?",
-        answer: `Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow) that enables the sites or service providers systems to recognize your browser and capture and remember certain information.
-
-We use cookies to help us remember and process the items in your shopping cart, understand and save your preferences for future visits and compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future. We may contract with third-party service providers to assist us in better understanding our site visitors. These service providers are not permitted to use the information collected on our behalf except to help us conduct and improve our business.`
-    },
-    {
-        question: "Do we disclose any information to outside parties?",
-        answer: `We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information.`
-    },
-    {
-        question: "Your consent",
-        answer: `By using our site, you consent to our online privacy policy and the terms and conditions of this site.`
-    },
-    {
-        question: "Do we disclose any information to outside parties?",
-        answer: `We value the importance of data privacy and are committed to empowering our users with control over their personal information. You have the right to request the deletion of any Personal Information that we have collected and retained from you. You may delete your account and once we receive and verify your data deletion request, we will process and delete your Personal Information from our records.
-
-Please note that if you request data deletion, your account will be permanently closed, and your access to current products will be revoked. If you wish to use our services again, you will need to create a new account.
-
-However, if you have previously purchased any products on CCATtest.COM, we can restore your access to those products. To initiate the restoration process, we kindly ask you to provide proof of payment. This can be in the form of an email receipt issued by CCATtest.com or a payment receipt issued by PayPal.
-
-To initiate a data deletion request, please contact our Support Team at support@ccattest.com In your request, please include the following information in the provided form:
-
-• Full name
-• Email address associated with your account
-• A clear and explicit statement expressing your desire for personal data deletion
-• Device Type
-• Language of the website
-• Web browser type
-• Email (in hashed form)
-• Our Support Team will guide you through the process and assist you with any additional information or verification requirements.`
-    },
-
+// DRAFT — reviewed by the owner, not by a lawyer.
+// Content below is written against what the code actually does:
+//  - contact form stores name, email, company, solution, tech_stack, message,
+//    referral_code (+ user_id when logged in) and emails a copy to the team
+//  - referral codes are held in the session by TrackReferralCode middleware
+//  - no analytics or advertising tags: the Google Ads tag (AW-1037877088) was
+//    removed once it was confirmed no campaigns are running. Only bunny.net
+//    fonts load third-party.
+//  - accounts support email/password and Google OAuth sign-in
+// Retention periods use common practice for a small B2B agency: 24 months for
+// enquiries, 30 days after account closure, 90 days for server logs. The
+// accounting figure is statutory, not chosen — confirm the exact split with an
+// accountant, as Romanian law treats document types differently.
+const sections = [
+  {
+    heading: 'Who is responsible for your data',
+    paragraphs: [
+      'This site is operated by MarkIT S.R.L., a company registered in Romania (Fiscal Code 50900467, Trade Register ROONRC.J2024042186003), trading as AIBrainL.ink. We are the data controller for the personal data described here.',
+      'For anything in this policy, including requests about your data, contact support@aibrainl.ink.',
+    ],
+  },
+  {
+    heading: 'What we collect',
+    paragraphs: [
+      'When you submit the contact form we collect the information you enter:',
+    ],
+    list: [
+      'Your name, email address and company name',
+      'The service you enquired about and the page you enquired from',
+      'Any description of your current tech stack you choose to share',
+      'Your message',
+      'A referral code, if you arrived through a referral link',
+    ],
+  },
+  {
+    heading: 'Other data we hold',
+    paragraphs: [
+      'If you create an account, we store your name, email address and a hashed password. If you sign in with Google, we receive your name, email address and profile picture from Google — we never receive your Google password.',
+      'If you become a client, we hold the billing details needed to invoice you. Card details are handled entirely by PayPal or Stripe and never reach our servers.',
+      'Our web server keeps standard access logs (IP address, browser, pages requested) for security and troubleshooting.',
+    ],
+  },
+  {
+    heading: 'Why we use it, and our legal basis',
+    paragraphs: [
+      'We use your data only for the purposes below. Under the GDPR we rely on these legal bases:',
+    ],
+    list: [
+      'To answer your enquiry and prepare a proposal — necessary to take steps at your request before entering a contract',
+      'To deliver a project you have engaged us for, and to invoice it — performance of a contract',
+      'To keep accounting and tax records — legal obligation under Romanian law',
+      'To secure the site and prevent abuse — our legitimate interest',
+    ],
+  },
+  {
+    heading: 'Cookies and tracking',
+    paragraphs: [
+      'We do not display advertising on this site, we do not sell ad space, and we do not run analytics or advertising trackers. No third party profiles you here.',
+      'The only cookies this site sets are strictly necessary ones: a session cookie and the CSRF token that protects forms from being submitted by someone else. Neither tracks you across sites, and the ePrivacy Directive does not require consent for them — which is why you will not see a cookie banner.',
+      'We load fonts from Bunny Fonts, a privacy-focused provider that sets no cookies and does not log IP addresses for tracking.',
+      'If you follow an outbound link from this site, the destination has its own privacy practices, which we do not control.',
+    ],
+  },
+  {
+    heading: 'Who we share it with',
+    paragraphs: [
+      'We do not sell, rent or trade your personal data. We share it only with service providers who help us operate, and only as far as they need:',
+    ],
+    list: [
+      'PayPal and Stripe — payment processing',
+      'Our email provider — delivering contact-form notifications and correspondence',
+      'Our hosting provider — running the site',
+      'Professional advisers and authorities, where the law requires it',
+    ],
+  },
+  {
+    heading: 'International transfers',
+    paragraphs: [
+      'Some providers process data outside the European Economic Area — PayPal and Stripe for payments, and Google if you choose to sign in with a Google account. Where that happens, transfers rely on the European Commission\'s Standard Contractual Clauses or an adequacy decision.',
+      'If you do not sign in with Google and do not pay us, no personal data of yours leaves the EEA through this site.',
+    ],
+  },
+  {
+    heading: 'How long we keep it',
+    paragraphs: [
+      'Contact-form enquiries are kept for 24 months so we can follow up and keep a record of what was discussed, then deleted. Accounting records and invoices are kept for the period Romanian accounting law requires — generally 10 years for accounting registers and financial statements. Account data is kept while your account is open and deleted within 30 days of you closing it. Server access logs are kept for 90 days.',
+      'If you ask us to delete your data and we have no legal reason to keep it, we will.',
+    ],
+  },
+  {
+    heading: 'Your rights',
+    paragraphs: [
+      'Under the GDPR you can ask us to:',
+    ],
+    list: [
+      'Give you a copy of the personal data we hold about you',
+      'Correct anything inaccurate',
+      'Delete your data, where we have no overriding legal reason to keep it',
+      'Restrict or object to how we use it',
+      'Provide it in a portable, machine-readable format',
+      'Withdraw consent at any time, where we relied on consent',
+    ],
+  },
+  {
+    heading: 'How to exercise them, and how to complain',
+    paragraphs: [
+      'Email support@aibrainl.ink. We respond within one month, as the GDPR requires. We may ask you to confirm your identity first.',
+      'If you are not satisfied with our response, you can complain to the Romanian data protection authority, ANSPDCP (Autoritatea Naţională de Supraveghere a Prelucrării Datelor cu Caracter Personal), at dataprotection.ro — or to the supervisory authority in your own EU country.',
+    ],
+  },
+  {
+    heading: 'Security and changes to this policy',
+    paragraphs: [
+      'We protect your data with appropriate technical and organisational measures, including encrypted connections, hashed passwords and restricted access. No system is completely secure, but we take this seriously and will notify you and the authorities of any breach that legally requires it.',
+      'If we change this policy we will update the date at the top of this page. Material changes will be brought to your attention.',
+    ],
+  },
 ];
 </script>
 
 <template>
-
-    <Head title="Privacy Policy" />
-
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-        <div class="pt-6 sm:pt-0">
-            <div class="flex flex-col items-center">
-                <div class="mt-4">
-                    <AuthenticationCardLogo />
-                </div>
-                <h1 class="mt-6 text-3xl font-bold">Privacy Policy</h1>
-            </div>
-
-            <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-3xl">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-md sm:rounded-lg p-6">
-                    <div class="space-y-4">
-                        <div v-for="(item, index) in faqItems" :key="index"
-                            class="border-b border-gray-200 dark:border-gray-700">
-                            <button @click="toggleAccordion(index)"
-                                class="flex justify-between items-center w-full py-4 text-left">
-                                <span class="text-lg font-medium">{{ item.question }}</span>
-                                <svg class="w-5 h-5 transform transition-transform duration-200"
-                                    :class="{ 'rotate-180': activeAccordion === index }" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div v-show="activeAccordion === index" class="pb-4">
-                                <p class="text-gray-600 dark:text-gray-400 whitespace-pre-line">
-                                    {{ item.answer }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <!-- Back Button -->
-                 <div class="mt-6 flex justify-center">
-                    <button
-                        @click="goBack"
-                        class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150"
-                    >
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                        </svg>
-                        Close Tab
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+  <LegalDocument
+    title="Privacy Policy"
+    description="What personal data MarkIT S.R.L. collects through this site, why, and the rights you have over it."
+    last-updated="21 September 2026"
+    intro="We collect as little as we can, use it only for the reasons listed here, and never sell it. This policy explains what we hold, why we are allowed to hold it, and how to get it changed or removed."
+    :sections="sections"
+  />
 </template>
-
-<style scoped>
-.prose {
-    max-width: 100%;
-}
-</style>

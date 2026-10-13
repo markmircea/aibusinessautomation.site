@@ -42,13 +42,13 @@ const capabilities = {
 <template>
     <section data-section="capabilities">
         <div class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Core Capabilities</h2>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Our AI integration platform empowers businesses to transform their operations through intelligent automation. We help organizations cut costs, improve performance, and streamline workflows by seamlessly integrating AI into their existing processes. While customer service automation is one powerful use case, our solutions can be tailored to an infinite number of business scenarios, each customized to your specific needs and objectives.</p>
+            <h2 class="text-2xl font-bold text-content">Core Capabilities</h2>
+            <p class="mt-2 text-content-muted">Our AI integration platform empowers businesses to transform their operations through intelligent automation. We help organizations cut costs, improve performance, and streamline workflows by seamlessly integrating AI into their existing processes. While customer service automation is one powerful use case, our solutions can be tailored to an infinite number of business scenarios, each customized to your specific needs and objectives.</p>
             
             <!-- Video Demo -->
             <div class="mt-8 relative w-full" style="padding-top: 56.25%;">
                 <iframe
-                    class="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+                    class="absolute top-0 left-0 w-full h-full rounded-card shadow-lg"
                     src="https://www.youtube.com/embed/0mm15g-FriI"
                     title="Core Capabilities Demo"
                     frameborder="0"
@@ -60,13 +60,13 @@ const capabilities = {
 
         <!-- Automation Features -->
         <div data-section="capabilities-automation" class="mb-12">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Automation Features</h3>
+            <h3 class="text-xl font-semibold text-content mb-6">Automation Features</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div v-for="capability in capabilities.automation" :key="capability.title" 
-                     class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                     class="group bg-surface rounded-card p-6 shadow-sm hover:shadow-md transition-all duration-300">
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white group-hover:bg-blue-600 transition-colors duration-300">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-control bg-accent-500 text-white group-hover:bg-accent-500 transition-colors duration-300">
                                 <svg class="h-6 w-6 transform group-hover:scale-110 transition-transform duration-300" 
                                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="capability.icon" />
@@ -74,10 +74,10 @@ const capabilities = {
                             </div>
                         </div>
                         <div>
-                            <h4 class="text-lg font-medium text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors duration-300">
+                            <h4 class="text-lg font-medium text-content group-hover:text-accent-400 transition-colors duration-300">
                                 {{ capability.title }}
                             </h4>
-                            <p class="mt-2 text-gray-600 dark:text-gray-300">{{ capability.description }}</p>
+                            <p class="mt-2 text-content-muted">{{ capability.description }}</p>
                         </div>
                     </div>
                 </div>
@@ -86,13 +86,13 @@ const capabilities = {
 
         <!-- Integration Options -->
         <div data-section="capabilities-integration" class="mb-12">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Integration Options</h3>
+            <h3 class="text-xl font-semibold text-content mb-6">Integration Options</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div v-for="capability in capabilities.integration" :key="capability.title" 
-                     class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                     class="group bg-surface rounded-card p-6 shadow-sm hover:shadow-md transition-all duration-300">
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white group-hover:bg-blue-600 transition-colors duration-300">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-control bg-accent-500 text-white group-hover:bg-accent-500 transition-colors duration-300">
                                 <svg class="h-6 w-6 transform group-hover:scale-110 transition-transform duration-300" 
                                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="capability.icon" />
@@ -100,10 +100,10 @@ const capabilities = {
                             </div>
                         </div>
                         <div>
-                            <h4 class="text-lg font-medium text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors duration-300">
+                            <h4 class="text-lg font-medium text-content group-hover:text-accent-400 transition-colors duration-300">
                                 {{ capability.title }}
                             </h4>
-                            <p class="mt-2 text-gray-600 dark:text-gray-300">{{ capability.description }}</p>
+                            <p class="mt-2 text-content-muted">{{ capability.description }}</p>
                         </div>
                     </div>
                 </div>
@@ -112,13 +112,13 @@ const capabilities = {
 
         <!-- Learning System -->
         <div data-section="capabilities-learning" class="mb-12">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Learning System</h3>
+            <h3 class="text-xl font-semibold text-content mb-6">Learning System</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div v-for="capability in capabilities.learning" :key="capability.title" 
-                     class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                     class="group bg-surface rounded-card p-6 shadow-sm hover:shadow-md transition-all duration-300">
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white group-hover:bg-blue-600 transition-colors duration-300">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-control bg-accent-500 text-white group-hover:bg-accent-500 transition-colors duration-300">
                                 <svg class="h-6 w-6 transform group-hover:scale-110 transition-transform duration-300" 
                                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="capability.icon" />
@@ -126,10 +126,10 @@ const capabilities = {
                             </div>
                         </div>
                         <div>
-                            <h4 class="text-lg font-medium text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors duration-300">
+                            <h4 class="text-lg font-medium text-content group-hover:text-accent-400 transition-colors duration-300">
                                 {{ capability.title }}
                             </h4>
-                            <p class="mt-2 text-gray-600 dark:text-gray-300">{{ capability.description }}</p>
+                            <p class="mt-2 text-content-muted">{{ capability.description }}</p>
                         </div>
                     </div>
                 </div>

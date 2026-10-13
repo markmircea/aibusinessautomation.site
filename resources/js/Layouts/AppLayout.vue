@@ -10,7 +10,6 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import LazyImage from '@/Components/LazyImage.vue';
 import FlashMessage from '@/Components/FlashMessage.vue';
 import DynamicSEO from '@/Components/DynamicSEO.vue';
-import DarkModeToggle from '@/Components/DarkModeToggle.vue';
 import WebDevelopmentDropdown from '@/Components/WebDevelopmentDropdown.vue';
 // import SolutionsDropdown from '@/Components/SolutionsDropdown.vue';
 
@@ -47,7 +46,7 @@ const currentYear = computed(() => new Date().getFullYear());
 </script>
 
 <template>
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div class="min-h-screen bg-ink">
         <DynamicSEO />
 
         <Head :title="title" />
@@ -55,8 +54,8 @@ const currentYear = computed(() => new Date().getFullYear());
         <Banner />
         <FlashMessage />
 
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            <nav class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+        <div class="min-h-screen bg-ink">
+            <nav class="sticky top-0 z-40 bg-ink/85 backdrop-blur-md border-b border-line">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
@@ -65,9 +64,9 @@ const currentYear = computed(() => new Date().getFullYear());
                             <div class="shrink-0 flex items-center">
                                 <Link :href="route('welcome')">
                                     <div class="text-2xl font-bold">
-                                        <span class="text-blue-600 dark:text-blue-400">AI</span>
-                                        <span class="text-gray-900 dark:text-white">Brain</span>
-                                        <span class="text-blue-600 dark:text-blue-400">L.ink</span>
+                                        <span class="text-accent-400">AI</span>
+                                        <span class="text-content">Brain</span>
+                                        <span class="text-accent-400">L.ink</span>
                                     </div>
                                 </Link>
                             </div>
@@ -77,15 +76,18 @@ const currentYear = computed(() => new Date().getFullYear());
                                 <NavLink :href="route('welcome')" :active="route().current('welcome')">
                                     AI Automation
                                 </NavLink>
+                                <NavLink :href="route('portfolio')" :active="route().current('portfolio')">
+                                    Portfolio
+                                </NavLink>
                                 <NavLink :href="route('solutions.customer-service')" :active="route().current('solutions.customer-service')">
                                     Use Case
                                 </NavLink>
-                        
+
                                 <NavLink :href="route('solutions.ai-integrations')" :active="route().current('solutions.ai-integrations')">
                                     AI & Integrations
                                 </NavLink>
                                 <WebDevelopmentDropdown />
-                                <NavLink href="#benefits" :active="false">
+                                <NavLink href="/#benefits" :active="false">
                                     How it works
                                 </NavLink>
                             </div>
@@ -94,21 +96,15 @@ const currentYear = computed(() => new Date().getFullYear());
                         <div class="hidden sm:flex sm:items-center sm:ms-6">
                             <!-- Authentication Links -->
                             <template v-if="!isAuthenticated">
-                                <NavLink :href="route('login')" :active="route().current('login')">
-                                    Log in
-                                </NavLink>
-                                <NavLink :href="route('register')" :active="route().current('register')">
-                                    Sign up
-                                </NavLink>
                                 <NavLink href="/#contact" :active="false" class="get-quote-btn">
-                                    Get A Quote
+                                    Get a Quote
                                 </NavLink>
                             </template>
 
                             <template v-else>
-                                <!-- Get A Quote button for authenticated users -->
+                                <!-- Get a Quote button for authenticated users -->
                                 <NavLink href="/#contact" :active="false" class="get-quote-btn mr-3">
-                                    Get A Quote
+                                    Get a Quote
                                 </NavLink>
                                 
                                 <!-- Settings Dropdown -->
@@ -116,15 +112,15 @@ const currentYear = computed(() => new Date().getFullYear());
                                     <Dropdown align="right" width="48">
                                         <template #trigger>
                                             <button v-if="$page.props.jetstream.managesProfilePhotos"
-                                                class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+                                                class="flex text-sm rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ink transition">
                                                 <LazyImage class="h-8 w-8 rounded-full object-cover"
                                                     :src="$page.props.auth.user.profile_photo_url"
                                                     :alt="$page.props.auth.user.name" width="32" height="32" />
                                             </button>
 
-                                            <span v-else class="inline-flex rounded-md">
+                                            <span v-else class="inline-flex rounded-control">
                                                 <button type="button"
-                                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
+                                                    class="inline-flex items-center px-3 py-2 text-sm leading-4 font-medium rounded-control text-content-muted bg-surface ring-1 ring-inset ring-line hover:text-content focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 transition ease-in-out duration-150">
                                                     {{ $page.props.auth.user.name }}
 
                                                     <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +135,7 @@ const currentYear = computed(() => new Date().getFullYear());
 
                                         <template #content>
                                             <!-- Account Management -->
-                                            <div class="block px-4 py-2 text-xs text-gray-400">
+                                            <div class="block px-4 py-2 text-xs text-content-subtle">
                                                 Manage Account
                                             </div>
 
@@ -167,7 +163,7 @@ const currentYear = computed(() => new Date().getFullYear());
                                                 Upgrade Account
                                             </DropdownLink> -->
 
-                                            <div class="border-t border-gray-200 dark:border-gray-600" />
+                                            <div class="border-t border-line" />
 
                                             <!-- Authentication -->
                                             <form @submit.prevent="logout">
@@ -184,7 +180,7 @@ const currentYear = computed(() => new Date().getFullYear());
                         <!-- Hamburger -->
                         <div class="-me-2 flex items-center sm:hidden">
                             <button
-                                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out"
+                                class="inline-flex items-center justify-center p-2 rounded-control text-content-muted hover:text-content hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ink transition duration-150 ease-in-out"
                                 @click="showingNavigationDropdown = !showingNavigationDropdown">
                                 <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                     <path
@@ -208,20 +204,26 @@ const currentYear = computed(() => new Date().getFullYear());
                         <ResponsiveNavLink :href="route('welcome')" :active="route().current('welcome')">
                             AI Automation
                         </ResponsiveNavLink>
-                        <div class="border-t border-gray-200 dark:border-gray-600 my-2"></div>
-                        <div class="px-4 py-2 text-xs text-gray-400">Use Case</div>
+                        <ResponsiveNavLink :href="route('portfolio')" :active="route().current('portfolio')">
+                            Portfolio
+                        </ResponsiveNavLink>
+                        <div class="border-t border-line my-2"></div>
+                        <div class="px-4 py-2 text-xs text-content-subtle">Use Case</div>
                         <ResponsiveNavLink :href="route('solutions.customer-service')" :active="route().current('solutions.customer-service')">
                             Customer Service
                         </ResponsiveNavLink>
-                        <div class="border-t border-gray-200 dark:border-gray-600 my-2"></div>
+                        <div class="border-t border-line my-2"></div>
                         <!-- <ResponsiveNavLink :href="route('solutions.desktop-automation')" :active="route().current('solutions.desktop-automation')">
                             AI Desktop Automation
                         </ResponsiveNavLink> -->
                         <ResponsiveNavLink :href="route('solutions.ai-integrations')" :active="route().current('solutions.ai-integrations')">
                             AI Integrations
                         </ResponsiveNavLink>
-                        <div class="border-t border-gray-200 dark:border-gray-600 my-2"></div>
-                        <div class="px-4 py-2 text-xs text-gray-400">Web Development</div>
+                        <div class="border-t border-line my-2"></div>
+                        <div class="px-4 py-2 text-xs text-content-subtle">Web Development</div>
+                        <ResponsiveNavLink :href="route('web-development.index')" :active="route().current('web-development.index')">
+                            All Web Development
+                        </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('web-development.ecommerce')" :active="route().current('web-development.ecommerce')">
                             E-commerce Platforms
                         </ResponsiveNavLink>
@@ -234,29 +236,23 @@ const currentYear = computed(() => new Date().getFullYear());
                         <ResponsiveNavLink :href="route('web-development.automation')" :active="route().current('web-development.automation')">
                             Web Scraping/Automation
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink href="#benefits">
+                        <ResponsiveNavLink href="/#benefits">
                             How it works
                         </ResponsiveNavLink>
                     </div>
 
                     <!-- Responsive Settings Options -->
-                    <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
+                    <div class="pt-4 pb-1 border-t border-line">
                         <template v-if="!isAuthenticated">
-                            <ResponsiveNavLink :href="route('login')" :active="route().current('login')">
-                                Log in
+                            <ResponsiveNavLink href="/#contact" class="get-quote-responsive-btn" :textWhite="true">
+                                Get a Quote
                             </ResponsiveNavLink>
-                            <ResponsiveNavLink :href="route('register')" :active="route().current('register')">
-                                Sign up
-                            </ResponsiveNavLink>
-<ResponsiveNavLink href="/#contact" class="get-quote-responsive-btn" :textWhite="true">
-    Get A Quote
-</ResponsiveNavLink>
                         </template>
 
                         <template v-else>
-                            <!-- Get A Quote button for authenticated users in mobile -->
+                            <!-- Get a Quote button for authenticated users in mobile -->
                             <ResponsiveNavLink href="/#contact" class="get-quote-responsive-btn" :textWhite="true">
-                                Get A Quote
+                                Get a Quote
                             </ResponsiveNavLink>
                             
                             <div class="flex items-center px-4">
@@ -267,10 +263,10 @@ const currentYear = computed(() => new Date().getFullYear());
                                 </div>
 
                                 <div>
-                                    <div class="font-medium text-base text-gray-800 dark:text-gray-200">
+                                    <div class="font-medium text-base text-content">
                                         {{ $page.props.auth.user.name }}
                                     </div>
-                                    <div class="font-medium text-sm text-gray-500">
+                                    <div class="font-medium text-sm text-content-subtle">
                                         {{ $page.props.auth.user.email }}
                                     </div>
                                 </div>
@@ -318,7 +314,7 @@ const currentYear = computed(() => new Date().getFullYear());
             </nav>
 
             <!-- Page Heading -->
-            <header v-if="$slots.header" class="bg-white dark:bg-gray-800 shadow">
+            <header v-if="$slots.header" class="bg-surface border-b border-line">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <slot name="header" />
                 </div>
@@ -330,8 +326,8 @@ const currentYear = computed(() => new Date().getFullYear());
             </main>
 
            <!-- Footer -->
-  <footer class="bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 py-4">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500 dark:text-gray-400">
+  <footer class="bg-ink border-t border-line py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-content-subtle">
       <div class="flex flex-col items-center mb-4">
         <p class="mb-2">MarkIT S.R.L. -|- Fiscal Code: 50900467 -|- EU Tax ID: ROONRC.J2024042186003         </p>
         <div class="flex justify-center items-center space-x-8">
@@ -340,30 +336,38 @@ const currentYear = computed(() => new Date().getFullYear());
       </div>
       <div>
        
-        <a href="mailto:support@aibrainl.ink" class="hover:text-gray-700 dark:hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:support@aibrainl.ink" class="hover:text-content transition-colors">
           support@aibrainl.ink
-        </a>© {{ currentYear }}
+        </a>
+        <span class="mx-2 text-line">·</span>
+        <Link v-if="!isAuthenticated" :href="route('login')" class="hover:text-content transition-colors">
+          Log in
+        </Link>
+        <span class="mx-2 text-line">·</span>
+        <Link :href="route('privacy-policy')" class="hover:text-content transition-colors">Privacy</Link>
+        <span class="mx-2 text-line">·</span>
+        <Link :href="route('terms-of-service')" class="hover:text-content transition-colors">Terms</Link>
+        <span class="mx-2 text-line">·</span>
+        © {{ currentYear }}
       </div>
     </div>
   </footer>
 
 
-            <!-- Dark Mode Toggle -->
-            <DarkModeToggle />
         </div>
     </div>
 </template>
 
 <style scoped>
 .get-quote-btn {
-    @apply bg-blue-500 dark:bg-blue-600 text-white dark:text-white px-3 py-1 rounded-md font-medium shadow-sm hover:bg-blue-600 dark:hover:bg-blue-700 transition-all duration-200 ease-in-out transform hover:scale-105;
+    @apply bg-accent-500 text-white px-4 py-2 rounded-control font-semibold shadow-e1 hover:bg-accent-600 transition-colors duration-200;
     margin-top: -2px;
     margin-bottom: -2px;
     margin-left: 10px;
 }
 
 .get-quote-responsive-btn {
-    @apply bg-blue-500 dark:bg-blue-600 text-white dark:text-white font-medium hover:bg-blue-600 dark:hover:bg-blue-700 rounded-md shadow-sm;
+    @apply bg-accent-500 text-white font-semibold hover:bg-accent-600 rounded-control shadow-e1;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     width: calc(100% - 1.5rem) !important;

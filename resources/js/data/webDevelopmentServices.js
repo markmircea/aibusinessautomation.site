@@ -1,0 +1,666 @@
+// Content for the four Web Development service pages, lifted verbatim from the
+// original four page components. Pages/WebDevelopment/Service.vue renders one
+// entry; routes/web.php picks the entry by slug.
+export const webDevelopmentServices = {
+  ecommerce: {
+    slug: "ecommerce",
+    routeName: "web-development.ecommerce",
+    icon: "ShoppingCart",
+    eyebrow: "E-commerce Development",
+    title: "E-commerce Platform Development",
+    description: "Custom e-commerce solutions that drive sales, enhance customer experience, and scale with your business needs.",
+    focus: "Building robust, secure, and user-friendly online stores with seamless payment processing and inventory management.",
+    keyPoint: "Increase conversion rates and customer satisfaction with tailored e-commerce platforms designed for your specific business requirements.",
+    heroPills: [
+      "Shopify",
+      "WooCommerce",
+      "Magento",
+      "BigCommerce",
+      "Laravel"
+    ],
+    overview: [
+      "Our e-commerce development services provide end-to-end solutions for businesses looking to establish or enhance their online retail presence. We create custom e-commerce platforms that are tailored to your specific business needs, ensuring a seamless shopping experience for your customers and efficient management tools for your team.",
+      "Whether you're launching a new online store or upgrading an existing one, our team delivers scalable, secure, and feature-rich e-commerce solutions that drive conversions and growth."
+    ],
+    features: [
+      {
+        title: "Responsive Design",
+        body: "Mobile-optimized shopping experiences that look great on any device, ensuring you never lose a sale due to poor usability."
+      },
+      {
+        title: "Secure Payments",
+        body: "Integration with multiple payment gateways and robust security measures to protect customer data and transactions."
+      },
+      {
+        title: "Inventory Management",
+        body: "Automated stock tracking, low-stock alerts, and multi-warehouse support to streamline your inventory operations."
+      },
+      {
+        title: "Customer Accounts",
+        body: "User-friendly account management, order history, wishlist functionality, and personalized shopping experiences."
+      },
+      {
+        title: "Marketing Tools",
+        body: "Built-in SEO optimization, discount systems, email marketing integration, and analytics to drive traffic and sales."
+      },
+      {
+        title: "Admin Dashboard",
+        body: "Comprehensive control panel for managing products, orders, customers, and generating reports on store performance."
+      }
+    ],
+    technologies: [
+      {
+        group: "Platforms",
+        items: [
+          "Shopify",
+          "WooCommerce",
+          "Magento",
+          "BigCommerce",
+          "Custom Solutions"
+        ]
+      },
+      {
+        group: "Frontend",
+        items: [
+          "React.js",
+          "Vue.js",
+          "Next.js",
+          "Tailwind CSS",
+          "Bootstrap"
+        ]
+      },
+      {
+        group: "Backend",
+        items: [
+          "PHP/Laravel",
+          "Node.js",
+          "Python/Django",
+          "Ruby on Rails",
+          "GraphQL"
+        ]
+      },
+      {
+        group: "Payment Gateways",
+        items: [
+          "Stripe",
+          "PayPal",
+          "Square",
+          "Braintree",
+          "Authorize.net"
+        ]
+      },
+      {
+        group: "Integrations",
+        items: [
+          "Shipping APIs",
+          "CRM Systems",
+          "ERP Solutions",
+          "Marketing Tools",
+          "Analytics Platforms"
+        ]
+      },
+      {
+        group: "Hosting & Infrastructure",
+        items: [
+          "AWS",
+          "Google Cloud",
+          "Microsoft Azure",
+          "Cloudflare",
+          "Docker/Kubernetes"
+        ]
+      }
+    ],
+    process: [
+      {
+        title: "Discovery & Planning",
+        body: "Understanding your business goals and requirements"
+      },
+      {
+        title: "UX/UI Design",
+        body: "Creating intuitive, conversion-focused interfaces"
+      },
+      {
+        title: "Development",
+        body: "Building your e-commerce platform with the right technologies"
+      },
+      {
+        title: "Testing & QA",
+        body: "Ensuring flawless functionality across devices"
+      },
+      {
+        title: "Launch & Training",
+        body: "Deploying your store and training your team"
+      },
+      {
+        title: "Ongoing Support",
+        body: "Continuous optimization and technical support"
+      }
+    ],
+    benefits: [
+      {
+        title: "Increased Sales",
+        body: "Optimized user experience and checkout process leads to higher conversion rates and increased average order value."
+      },
+      {
+        title: "Scalability",
+        body: "Our solutions grow with your business, handling increased traffic, products, and orders without performance issues."
+      },
+      {
+        title: "Enhanced Customer Experience",
+        body: "Intuitive navigation, personalized recommendations, and streamlined checkout create a superior shopping experience."
+      },
+      {
+        title: "Operational Efficiency",
+        body: "Automated inventory management, order processing, and customer communications reduce manual work and errors."
+      },
+      {
+        title: "Competitive Advantage",
+        body: "Stand out from competitors with a professional, feature-rich online store that delivers exceptional shopping experiences."
+      }
+    ]
+  },
+  presentation: {
+    slug: "presentation",
+    routeName: "web-development.presentation",
+    icon: "LayoutTemplate",
+    eyebrow: "Presentation Sites",
+    title: "Presentation Website Development",
+    description: "Professional, engaging websites that showcase your brand, products, and services with impact.",
+    focus: "Creating visually stunning, user-friendly websites that effectively communicate your brand message and drive conversions.",
+    keyPoint: "Stand out from the competition with a custom-designed website that reflects your unique brand identity and engages your target audience.",
+    heroPills: [
+      "Vue & Nuxt",
+      "Laravel",
+      "Headless CMS",
+      "Tailwind CSS",
+      "Core Web Vitals"
+    ],
+    overview: [
+      "Our presentation website development services focus on creating compelling online presences that effectively showcase your business, products, and services. We design and develop websites that not only look great but also deliver results by engaging visitors and converting them into customers.",
+      "Whether you need a simple brochure site or a complex corporate website with multiple sections and features, our team delivers custom solutions tailored to your specific business goals and target audience."
+    ],
+    features: [
+      {
+        title: "Custom Design",
+        body: "Unique, brand-aligned designs that stand out from template-based websites and reflect your company's identity."
+      },
+      {
+        title: "Responsive Layout",
+        body: "Mobile-optimized websites that provide an excellent user experience across all devices and screen sizes."
+      },
+      {
+        title: "SEO Optimization",
+        body: "Built-in search engine optimization to improve visibility and drive organic traffic to your website."
+      },
+      {
+        title: "Fast Loading Speed",
+        body: "Performance-optimized code and assets to ensure quick page loading times and better user experience."
+      },
+      {
+        title: "Content Management",
+        body: "User-friendly CMS integration allowing you to easily update content without technical knowledge."
+      },
+      {
+        title: "Contact & Lead Generation",
+        body: "Integrated contact forms, call-to-action elements, and lead capture mechanisms to convert visitors into leads."
+      }
+    ],
+    technologies: [
+      {
+        group: "Frontend",
+        items: [
+          "HTML5/CSS3",
+          "JavaScript/TypeScript",
+          "React.js",
+          "Vue.js",
+          "Next.js"
+        ]
+      },
+      {
+        group: "CSS Frameworks",
+        items: [
+          "Tailwind CSS",
+          "Bootstrap",
+          "SASS/SCSS",
+          "CSS Modules",
+          "Styled Components"
+        ]
+      },
+      {
+        group: "Backend & CMS",
+        items: [
+          "WordPress",
+          "Laravel",
+          "Node.js",
+          "Headless CMS (Strapi, Contentful)",
+          "Static Site Generators"
+        ]
+      },
+      {
+        group: "Performance",
+        items: [
+          "Lazy Loading",
+          "Code Splitting",
+          "Image Optimization",
+          "Caching Strategies",
+          "CDN Integration"
+        ]
+      },
+      {
+        group: "Analytics & Marketing",
+        items: [
+          "Google Analytics",
+          "Google Tag Manager",
+          "Facebook Pixel",
+          "Mailchimp Integration",
+          "HubSpot Integration"
+        ]
+      },
+      {
+        group: "Hosting & Infrastructure",
+        items: [
+          "AWS",
+          "Netlify",
+          "Vercel",
+          "Digital Ocean",
+          "Cloudflare"
+        ]
+      }
+    ],
+    process: [
+      {
+        title: "Discovery & Strategy",
+        body: "We begin by understanding your business, target audience, goals, and requirements to develop a comprehensive website strategy."
+      },
+      {
+        title: "Wireframing & Design",
+        body: "Our designers create wireframes and visual designs that align with your brand identity and provide an optimal user experience."
+      },
+      {
+        title: "Content Planning",
+        body: "We help you plan and organize your content to effectively communicate your message and drive user engagement."
+      },
+      {
+        title: "Development",
+        body: "Our development team builds your website using modern technologies, ensuring it's responsive, fast, and SEO-friendly."
+      },
+      {
+        title: "Testing & Quality Assurance",
+        body: "We thoroughly test your website across devices and browsers to ensure it functions flawlessly and provides a consistent experience."
+      },
+      {
+        title: "Launch & Training",
+        body: "We deploy your website and provide training on how to manage and update content through the CMS."
+      },
+      {
+        title: "Ongoing Support & Optimization",
+        body: "We provide continued support, maintenance, and data-driven optimization to ensure your website remains effective and up-to-date."
+      }
+    ],
+    benefits: [
+      {
+        title: "Professional Brand Image",
+        body: "A well-designed website enhances your credibility and establishes trust with potential customers."
+      },
+      {
+        title: "Increased Visibility",
+        body: "SEO-optimized websites rank higher in search results, driving more organic traffic to your business."
+      },
+      {
+        title: "Better User Experience",
+        body: "Intuitive navigation and responsive design create a positive experience that keeps visitors engaged."
+      },
+      {
+        title: "Lead Generation",
+        body: "Strategic calls-to-action and contact forms convert website visitors into potential customers and sales."
+      },
+      {
+        title: "24/7 Availability",
+        body: "Your website works around the clock, providing information and generating leads even outside business hours."
+      },
+      {
+        title: "Measurable Results",
+        body: "Analytics integration provides valuable insights into visitor behavior, allowing for data-driven improvements."
+      }
+    ]
+  },
+  mobile: {
+    slug: "mobile",
+    routeName: "web-development.mobile",
+    icon: "Smartphone",
+    eyebrow: "Mobile Development",
+    title: "Mobile Application Development",
+    description: "Custom mobile apps that deliver exceptional user experiences across iOS and Android platforms.",
+    focus: "Building intuitive, high-performance mobile applications that solve real business problems and engage users.",
+    keyPoint: "Extend your digital presence with native and cross-platform mobile apps that provide seamless experiences for your customers.",
+    heroPills: [
+      "Swift",
+      "Kotlin",
+      "React Native",
+      "Flutter",
+      "Firebase"
+    ],
+    overview: [
+      "Our mobile application development services provide end-to-end solutions for businesses looking to engage customers through iOS and Android platforms. We create custom mobile apps that are tailored to your specific business needs, ensuring intuitive user experiences and robust functionality.",
+      "Whether you need a consumer-facing app or an enterprise solution for internal use, our team delivers scalable, secure, and feature-rich mobile applications that drive engagement and achieve your business objectives."
+    ],
+    features: [
+      {
+        title: "Native & Cross-Platform",
+        body: "Development options for both native (iOS/Android) and cross-platform solutions based on your specific requirements."
+      },
+      {
+        title: "Intuitive UI/UX",
+        body: "User-centered design that follows platform guidelines while providing a unique and engaging experience."
+      },
+      {
+        title: "Offline Functionality",
+        body: "Capability to work offline with data synchronization when connectivity is restored, ensuring uninterrupted user experience."
+      },
+      {
+        title: "Push Notifications",
+        body: "Engagement-boosting notifications to keep users informed and drive app usage with timely, relevant messages."
+      },
+      {
+        title: "API Integration",
+        body: "Seamless connection with your existing systems, third-party services, and data sources for a unified experience."
+      },
+      {
+        title: "Analytics & Reporting",
+        body: "Built-in analytics to track user behavior, app performance, and key metrics for continuous improvement."
+      }
+    ],
+    technologies: [
+      {
+        group: "Native iOS",
+        items: [
+          "Swift",
+          "Objective-C",
+          "SwiftUI",
+          "UIKit",
+          "Core Data"
+        ]
+      },
+      {
+        group: "Native Android",
+        items: [
+          "Kotlin",
+          "Java",
+          "Jetpack Compose",
+          "Android SDK",
+          "Room Database"
+        ]
+      },
+      {
+        group: "Cross-Platform",
+        items: [
+          "React Native",
+          "Flutter",
+          "Ionic",
+          "Xamarin",
+          "Progressive Web Apps"
+        ]
+      },
+      {
+        group: "Backend & APIs",
+        items: [
+          "Node.js",
+          "Firebase",
+          "GraphQL",
+          "REST APIs",
+          "AWS Amplify"
+        ]
+      },
+      {
+        group: "App Features",
+        items: [
+          "Geolocation",
+          "Push Notifications",
+          "In-App Purchases",
+          "Biometric Authentication",
+          "Offline Storage"
+        ]
+      },
+      {
+        group: "DevOps & Testing",
+        items: [
+          "CI/CD Pipelines",
+          "Automated Testing",
+          "App Store Optimization",
+          "Beta Testing",
+          "Analytics Integration"
+        ]
+      }
+    ],
+    process: [
+      {
+        title: "Discovery & Planning",
+        body: "We begin by understanding your business goals, target audience, and specific requirements to develop a comprehensive mobile app strategy."
+      },
+      {
+        title: "UX/UI Design",
+        body: "Our designers create wireframes and visual designs that align with platform guidelines while providing an intuitive and engaging user experience."
+      },
+      {
+        title: "Architecture Planning",
+        body: "We design the technical architecture, selecting the appropriate technologies and frameworks based on your requirements and long-term goals."
+      },
+      {
+        title: "Development",
+        body: "Our development team builds your mobile application using agile methodologies, with regular sprints and client feedback throughout the process."
+      },
+      {
+        title: "Quality Assurance",
+        body: "We conduct thorough testing across devices, operating systems, and network conditions to ensure your app functions flawlessly in all scenarios."
+      },
+      {
+        title: "Deployment",
+        body: "We handle the submission process to app stores, ensuring compliance with guidelines and optimizing for discoverability and downloads."
+      },
+      {
+        title: "Post-Launch Support",
+        body: "We provide ongoing maintenance, updates, and optimization based on user feedback and analytics to ensure your app remains competitive and effective."
+      }
+    ],
+    benefits: [
+      {
+        title: "Enhanced Customer Engagement",
+        body: "Mobile apps provide direct access to your customers, allowing for personalized experiences and increased engagement."
+      },
+      {
+        title: "Brand Reinforcement",
+        body: "A well-designed mobile app strengthens your brand identity and creates a consistent experience across all customer touchpoints."
+      },
+      {
+        title: "Increased Revenue",
+        body: "Mobile apps can create new revenue streams through in-app purchases, subscriptions, or by driving sales through improved customer experience."
+      },
+      {
+        title: "Valuable Customer Insights",
+        body: "Mobile apps provide rich data on user behavior and preferences, enabling data-driven business decisions and personalized marketing."
+      },
+      {
+        title: "Competitive Advantage",
+        body: "A high-quality mobile app can differentiate your business from competitors and position you as an industry leader."
+      },
+      {
+        title: "Offline Accessibility",
+        body: "Mobile apps can function without internet connectivity, providing uninterrupted service to users regardless of their connection status."
+      }
+    ]
+  },
+  automation: {
+    slug: "automation",
+    routeName: "web-development.automation",
+    icon: "Bot",
+    eyebrow: "Scraping & Automation",
+    title: "Web Scraping & Automation",
+    description: "Custom web scraping solutions and automation tools that streamline processes and extract valuable data.",
+    focus: "Building efficient, reliable systems that automate repetitive tasks and gather actionable insights from web data.",
+    keyPoint: "Save time, reduce errors, and gain competitive intelligence with tailored web scraping and automation solutions.",
+    heroPills: [
+      "Python",
+      "Playwright",
+      "Selenium",
+      "Node.js",
+      "Scheduled jobs"
+    ],
+    overview: [
+      "Our web scraping and automation services provide powerful solutions for businesses looking to extract valuable data from websites and automate repetitive tasks. We develop custom tools that can gather, process, and analyze information from various online sources, helping you make data-driven decisions and streamline operations.",
+      "Whether you need competitive intelligence, price monitoring, content aggregation, or workflow automation, our team delivers reliable, scalable solutions that comply with legal and ethical standards while providing the data and efficiency you need."
+    ],
+    features: [
+      {
+        title: "Custom Data Extraction",
+        body: "Tailored scraping solutions that target specific websites and extract exactly the data you need in your preferred format."
+      },
+      {
+        title: "Scheduled Automation",
+        body: "Automated processes that run on your preferred schedule, ensuring you always have the most up-to-date information."
+      },
+      {
+        title: "Data Processing & Analysis",
+        body: "Advanced data cleaning, transformation, and analysis capabilities to convert raw data into actionable insights."
+      },
+      {
+        title: "API Integration",
+        body: "Seamless connection with your existing systems and third-party services to enhance functionality and data flow."
+      },
+      {
+        title: "Monitoring & Alerts",
+        body: "Real-time monitoring of data changes with customizable alerts for important updates or threshold breaches."
+      },
+      {
+        title: "Scalable Infrastructure",
+        body: "Cloud-based solutions that can scale with your needs, handling everything from small data sets to large-scale operations."
+      }
+    ],
+    technologies: [
+      {
+        group: "Scraping Technologies",
+        items: [
+          "Python (BeautifulSoup, Scrapy)",
+          "Puppeteer",
+          "Selenium",
+          "Cheerio",
+          "Playwright"
+        ]
+      },
+      {
+        group: "Automation Tools",
+        items: [
+          "Node.js",
+          "Python",
+          "Zapier",
+          "Make (Integromat)",
+          "Power Automate"
+        ]
+      },
+      {
+        group: "Data Processing",
+        items: [
+          "Pandas",
+          "NumPy",
+          "SQL",
+          "MongoDB",
+          "Elasticsearch"
+        ]
+      },
+      {
+        group: "APIs & Integration",
+        items: [
+          "RESTful APIs",
+          "GraphQL",
+          "Webhooks",
+          "OAuth",
+          "JSON/XML Processing"
+        ]
+      },
+      {
+        group: "Infrastructure",
+        items: [
+          "AWS",
+          "Google Cloud",
+          "Docker",
+          "Kubernetes",
+          "Serverless Functions"
+        ]
+      },
+      {
+        group: "Monitoring & Scheduling",
+        items: [
+          "Cron Jobs",
+          "Airflow",
+          "Prometheus",
+          "Grafana",
+          "Sentry"
+        ]
+      }
+    ],
+    process: [
+      {
+        title: "Requirements Analysis",
+        body: "We begin by understanding your data needs, target websites, and automation goals to develop a comprehensive strategy."
+      },
+      {
+        title: "Website Analysis",
+        body: "Our team analyzes the target websites' structure, data patterns, and anti-scraping measures to develop an effective extraction approach."
+      },
+      {
+        title: "Solution Design",
+        body: "We design a custom solution architecture, selecting the appropriate technologies and frameworks based on your specific requirements."
+      },
+      {
+        title: "Development",
+        body: "Our development team builds your scraping and automation solution, implementing data extraction, processing, and integration components."
+      },
+      {
+        title: "Testing & Optimization",
+        body: "We thoroughly test the solution for accuracy, reliability, and performance, optimizing for efficiency and resilience against website changes."
+      },
+      {
+        title: "Deployment",
+        body: "We deploy your solution to the appropriate infrastructure, setting up scheduling, monitoring, and alert systems as needed."
+      },
+      {
+        title: "Maintenance & Support",
+        body: "We provide ongoing maintenance and support to ensure your solution continues to function effectively as websites change and your needs evolve."
+      }
+    ],
+    benefits: [
+      {
+        title: "Time & Cost Savings",
+        body: "Automate manual data collection and repetitive tasks, freeing up your team to focus on higher-value activities."
+      },
+      {
+        title: "Competitive Intelligence",
+        body: "Gain valuable insights into competitor pricing, products, and strategies to inform your business decisions."
+      },
+      {
+        title: "Data Accuracy",
+        body: "Eliminate human error in data collection and processing, ensuring consistent, reliable information."
+      },
+      {
+        title: "Scalability",
+        body: "Easily scale your data collection and automation processes as your business grows and needs evolve."
+      },
+      {
+        title: "Real-time Insights",
+        body: "Access up-to-date information and receive alerts about important changes, enabling faster decision-making."
+      },
+      {
+        title: "Process Optimization",
+        body: "Identify inefficiencies and bottlenecks in your workflows through automation and data analysis."
+      }
+    ]
+  },
+};
+
+// Order shown on the /web-development overview page.
+export const serviceOrder = ['ecommerce', 'presentation', 'mobile', 'automation'];
+
+export function getService(slug) {
+  return webDevelopmentServices[slug] ?? null;
+}
+
+export default webDevelopmentServices;
