@@ -20,7 +20,8 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // No login, registration or password pages: the site has no accounts.
+        Fortify::ignoreRoutes();
     }
 
     /**

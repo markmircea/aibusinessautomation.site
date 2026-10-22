@@ -4,14 +4,14 @@ import LegalDocument from '@/Components/LegalDocument.vue';
 // DRAFT — reviewed by the owner, not by a lawyer.
 // Content below is written against what the code actually does:
 //  - contact form stores name, email, company, solution, tech_stack, message,
-//    referral_code (+ user_id when logged in) and emails a copy to the team
+//    referral_code and emails a copy to the team
 //  - referral codes are held in the session by TrackReferralCode middleware
 //  - no analytics or advertising tags: the Google Ads tag (AW-1037877088) was
 //    removed once it was confirmed no campaigns are running. Only bunny.net
 //    fonts load third-party.
-//  - accounts support email/password and Google OAuth sign-in
+//  - there are no user accounts: login, registration and Google OAuth were removed
 // Retention periods use common practice for a small B2B agency: 24 months for
-// enquiries, 30 days after account closure, 90 days for server logs. The
+// enquiries, 90 days for server logs. The
 // accounting figure is statutory, not chosen — confirm the exact split with an
 // accountant, as Romanian law treats document types differently.
 const sections = [
@@ -38,7 +38,6 @@ const sections = [
   {
     heading: 'Other data we hold',
     paragraphs: [
-      'If you create an account, we store your name, email address and a hashed password. If you sign in with Google, we receive your name, email address and profile picture from Google — we never receive your Google password.',
       'If you become a client, we hold the billing details needed to invoice you. Card details are handled entirely by PayPal or Stripe and never reach our servers.',
       'Our web server keeps standard access logs (IP address, browser, pages requested) for security and troubleshooting.',
     ],
@@ -79,14 +78,14 @@ const sections = [
   {
     heading: 'International transfers',
     paragraphs: [
-      'Some providers process data outside the European Economic Area — PayPal and Stripe for payments, and Google if you choose to sign in with a Google account. Where that happens, transfers rely on the European Commission\'s Standard Contractual Clauses or an adequacy decision.',
-      'If you do not sign in with Google and do not pay us, no personal data of yours leaves the EEA through this site.',
+      'Some providers process data outside the European Economic Area — PayPal and Stripe for payments. Where that happens, transfers rely on the European Commission\'s Standard Contractual Clauses or an adequacy decision.',
+      'If you do not pay us, no personal data of yours leaves the EEA through this site.',
     ],
   },
   {
     heading: 'How long we keep it',
     paragraphs: [
-      'Contact-form enquiries are kept for 24 months so we can follow up and keep a record of what was discussed, then deleted. Accounting records and invoices are kept for the period Romanian accounting law requires — generally 10 years for accounting registers and financial statements. Account data is kept while your account is open and deleted within 30 days of you closing it. Server access logs are kept for 90 days.',
+      'Contact-form enquiries are kept for 24 months so we can follow up and keep a record of what was discussed, then deleted. Accounting records and invoices are kept for the period Romanian accounting law requires — generally 10 years for accounting registers and financial statements. Server access logs are kept for 90 days.',
       'If you ask us to delete your data and we have no legal reason to keep it, we will.',
     ],
   },
@@ -114,7 +113,7 @@ const sections = [
   {
     heading: 'Security and changes to this policy',
     paragraphs: [
-      'We protect your data with appropriate technical and organisational measures, including encrypted connections, hashed passwords and restricted access. No system is completely secure, but we take this seriously and will notify you and the authorities of any breach that legally requires it.',
+      'We protect your data with appropriate technical and organisational measures, including encrypted connections and restricted access. No system is completely secure, but we take this seriously and will notify you and the authorities of any breach that legally requires it.',
       'If we change this policy we will update the date at the top of this page. Material changes will be brought to your attention.',
     ],
   },

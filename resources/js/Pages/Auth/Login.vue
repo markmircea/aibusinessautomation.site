@@ -7,7 +7,6 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import GoogleLoginButton from '@/Components/GoogleLoginButton.vue';
 
 defineProps({
     canResetPassword: Boolean,
@@ -111,7 +110,6 @@ const submit = () => {
                     </Link>
                 </div>
             </form>
-            <GoogleLoginButton />
         </AuthenticationCard>
     </div>
 </template>

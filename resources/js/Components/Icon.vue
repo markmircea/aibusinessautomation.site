@@ -5,14 +5,14 @@ import { computed } from 'vue';
 import {
   ArrowRight, Bot, BrainCircuit, Check, Clapperboard, Factory, FileText, Globe,
   LayoutTemplate, MessagesSquare, Monitor, MonitorSmartphone, Plug, Server,
-ShoppingCart, Smartphone, Sparkles, TrendingUp, Users, Wallet, Webhook,
+  ShoppingCart, Smartphone, Sparkles, TrendingUp, Users, Wallet, Webhook,
   Workflow,
 } from 'lucide-vue-next';
 
 const registry = {
   ArrowRight, Bot, BrainCircuit, Check, Clapperboard, Factory, FileText, Globe,
   LayoutTemplate, MessagesSquare, Monitor, MonitorSmartphone, Plug, Server,
-  ReceiptText, ShoppingCart, Smartphone, Sparkles, TrendingUp, Users, Wallet, Webhook,
+  ShoppingCart, Smartphone, Sparkles, TrendingUp, Users, Wallet, Webhook,
   Workflow,
 };
 

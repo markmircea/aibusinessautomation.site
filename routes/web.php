@@ -3,8 +3,6 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\Auth\CustomRegisterController;
-use App\Http\Controllers\Auth\GoogleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +14,6 @@ use App\Http\Controllers\Auth\GoogleController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Google Login Routes
-Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
-Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
-
-// Override the default registration route
-Route::get('/register', [CustomRegisterController::class, 'create'])
-    ->middleware(['guest'])
-    ->name('register');
 
 // Landing page route
 Route::get('/', function () {
@@ -103,33 +92,10 @@ use App\Http\Controllers\ContactController;
 // Contact form submission
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
-// Referral routes - accessible to all users
-Route::get('/referrals', [App\Http\Controllers\ReferralController::class, 'index'])->name('referrals.index');
-
-// Authenticated routes group
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    
-    // Admin routes
-    Route::middleware(['can:admin'])->prefix('admin')->name('admin.')->group(function () {
-        // Admin Dashboard
-        Route::get('/dashboard', function () {
-            return Inertia::render('Admin/Dashboard');
-        })->name('dashboard');
-        
-        // Referrals Management
-        Route::get('/referrals', [App\Http\Controllers\Admin\ReferralController::class, 'index'])->name('referrals.index');
-        Route::get('/referrals/{referral}/edit', [App\Http\Controllers\Admin\ReferralController::class, 'edit'])->name('referrals.edit');
-        Route::put('/referrals/{referral}', [App\Http\Controllers\Admin\ReferralController::class, 'update'])->name('referrals.update');
-        
-        // Contacts Management
-        Route::get('/contacts', [App\Http\Controllers\Admin\ContactController::class, 'index'])->name('contacts.index');
-        Route::get('/contacts/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'show'])->name('contacts.show');
-    });
-});
+// The site is quote/info forms only: there are no user accounts. Fortify and
+// Jetstream routes are switched off in their service providers, and the
+// referral program and admin area (both account-based) are hidden until they
+// come back. Their controllers and pages are kept for that.
 
 Route::fallback(function () {
     return Inertia::render('Error', ['status' => 404])->toResponse(request())->setStatusCode(404);

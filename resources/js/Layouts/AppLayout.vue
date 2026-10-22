@@ -1,10 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue';
-import { Head, Link, router, usePage } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 import ApplicationMark from '@/Components/ApplicationMark.vue';
 import Banner from '@/Components/Banner.vue';
-import Dropdown from '@/Components/Dropdown.vue';
-import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import FlashMessage from '@/Components/FlashMessage.vue';
@@ -16,17 +14,6 @@ defineProps({
 });
 
 const showingNavigationDropdown = ref(false);
-
-const logout = () => {
-    router.post(route('logout'));
-};
-
-const isAuthenticated = computed(() => usePage().props.auth.user !== null);
-const isAdmin = computed(() => {
-    const user = usePage().props.auth.user;
-    // This is a simple check - in a real app, you'd use a more robust method
-    return user && user.email === 'admin@example.com';
-});
 
 const currentYear = computed(() => new Date().getFullYear());
 
@@ -82,69 +69,9 @@ const currentYear = computed(() => new Date().getFullYear());
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ms-6">
-                            <!-- Authentication Links -->
-                            <template v-if="!isAuthenticated">
-                                <NavLink href="/#contact" :active="false" class="get-quote-btn">
-                                    Get a Quote
-                                </NavLink>
-                            </template>
-
-                            <template v-else>
-                                <!-- Get a Quote button for authenticated users -->
-                                <NavLink href="/#contact" :active="false" class="get-quote-btn mr-3">
-                                    Get a Quote
-                                </NavLink>
-                                
-                                <!-- Settings Dropdown -->
-                                <div class="ms-3 relative">
-                                    <Dropdown align="right" width="48">
-                                        <template #trigger>
-                                            <span class="inline-flex rounded-control">
-                                                <button type="button"
-                                                    class="inline-flex items-center px-3 py-2 text-sm leading-4 font-medium rounded-control text-content-muted bg-surface ring-1 ring-inset ring-line hover:text-content focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 transition ease-in-out duration-150">
-                                                    {{ $page.props.auth.user.name }}
-
-                                                    <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                                        stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                                    </svg>
-                                                </button>
-                                            </span>
-                                        </template>
-
-                                        <template #content>
-                                            <!-- Account Management -->
-                                            <div class="block px-4 py-2 text-xs text-content-subtle">
-                                                Manage Account
-                                            </div>
-
-                                            <DropdownLink :href="route('profile.show')">
-                                                Profile
-                                            </DropdownLink>
-
-                                            <DropdownLink v-if="isAdmin" :href="route('admin.dashboard')">
-                                                Admin Dashboard
-                                            </DropdownLink>
-
-                                            <!-- Referrals Link -->
-                                            <DropdownLink :href="route('referrals.index')">
-                                                My Referrals
-                                            </DropdownLink>
-
-                                            <div class="border-t border-line" />
-
-                                            <!-- Authentication -->
-                                            <form @submit.prevent="logout">
-                                                <DropdownLink as="button">
-                                                    Log Out
-                                                </DropdownLink>
-                                            </form>
-                                        </template>
-                                    </Dropdown>
-                                </div>
-                            </template>
+                            <NavLink href="/#contact" :active="false" class="get-quote-btn">
+                                Get a Quote
+                            </NavLink>
                         </div>
 
                         <!-- Hamburger -->
@@ -213,55 +140,9 @@ const currentYear = computed(() => new Date().getFullYear());
 
                     <!-- Responsive Settings Options -->
                     <div class="pt-4 pb-1 border-t border-line">
-                        <template v-if="!isAuthenticated">
-                            <ResponsiveNavLink href="/#contact" class="get-quote-responsive-btn" :textWhite="true">
-                                Get a Quote
-                            </ResponsiveNavLink>
-                        </template>
-
-                        <template v-else>
-                            <!-- Get a Quote button for authenticated users in mobile -->
-                            <ResponsiveNavLink href="/#contact" class="get-quote-responsive-btn" :textWhite="true">
-                                Get a Quote
-                            </ResponsiveNavLink>
-                            
-                            <div class="flex items-center px-4">
-                                <div>
-                                    <div class="font-medium text-base text-content">
-                                        {{ $page.props.auth.user.name }}
-                                    </div>
-                                    <div class="font-medium text-sm text-content-subtle">
-                                        {{ $page.props.auth.user.email }}
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-3 space-y-1">
-                                <ResponsiveNavLink :href="route('profile.show')"
-                                    :active="route().current('profile.show')">
-                                    Profile
-                                </ResponsiveNavLink>
-
-                                <!-- Responsive Admin Dashboard Link (for admins only) -->
-                                <ResponsiveNavLink v-if="isAdmin" :href="route('admin.dashboard')"
-                                    :active="route().current('admin.dashboard')">
-                                    Admin Dashboard
-                                </ResponsiveNavLink>
-
-                                <!-- Responsive Referrals Link -->
-                                <ResponsiveNavLink :href="route('referrals.index')"
-                                    :active="route().current('referrals.index')">
-                                    My Referrals
-                                </ResponsiveNavLink>
-
-                                <!-- Authentication -->
-                                <form method="POST" @submit.prevent="logout">
-                                    <ResponsiveNavLink as="button">
-                                        Log Out
-                                    </ResponsiveNavLink>
-                                </form>
-                            </div>
-                        </template>
+                        <ResponsiveNavLink href="/#contact" class="get-quote-responsive-btn" :textWhite="true">
+                            Get a Quote
+                        </ResponsiveNavLink>
                     </div>
                 </div>
             </nav>
@@ -292,10 +173,6 @@ const currentYear = computed(() => new Date().getFullYear());
         <a href="mailto:support@aibrainl.ink" class="hover:text-content transition-colors">
           support@aibrainl.ink
         </a>
-        <span class="mx-2 text-line">·</span>
-        <Link v-if="!isAuthenticated" :href="route('login')" class="hover:text-content transition-colors">
-          Log in
-        </Link>
         <span class="mx-2 text-line">·</span>
         <Link :href="route('privacy-policy')" class="hover:text-content transition-colors">Privacy</Link>
         <span class="mx-2 text-line">·</span>

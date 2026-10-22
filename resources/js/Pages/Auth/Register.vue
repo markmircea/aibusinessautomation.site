@@ -7,7 +7,6 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import GoogleLoginButton from '@/Components/GoogleLoginButton.vue';
 
 const form = useForm({
     name: '',
@@ -116,6 +115,5 @@ const submit = () => {
                 </PrimaryButton>
             </div>
         </form>
-        <GoogleLoginButton />
     </AuthenticationCard>
 </template>

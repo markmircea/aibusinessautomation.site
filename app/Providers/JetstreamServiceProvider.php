@@ -19,7 +19,8 @@ class JetstreamServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // No profile or account pages: the site has no accounts.
+        Jetstream::ignoreRoutes();
     }
 
     /**
