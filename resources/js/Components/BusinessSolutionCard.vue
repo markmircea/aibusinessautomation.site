@@ -9,7 +9,6 @@ const props = defineProps({
   icon: { type: String, default: 'Sparkles' },
   routeName: String,
   useCase: { type: String, default: '' },
-  timeline: { type: String, default: '2-4 weeks' },
   integrations: { type: Array, default: () => [] },
   platforms: { type: Array, default: () => [] },
   animationDelay: { type: String, default: '0s' },

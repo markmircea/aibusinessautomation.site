@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -26,7 +25,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name', 'email', 'password', 'has_paid_subscription', 'subscription_started_at','google_id',
+        'name', 'email', 'password','google_id',
     ];
 
     /**
@@ -48,8 +47,6 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'has_paid_subscription' => 'boolean',
-        'subscription_started_at' => 'datetime',
     ];
 
     /**
@@ -97,16 +94,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Check if the user has an active paid subscription (lifetime plan).
-     *
-     * @return bool
-     */
-    public function isSubscribed()
-    {
-        return $this->has_paid_subscription;
-    }
-
-    /**
      * Get the referrals created by this user.
      */
     public function referrals()
@@ -138,15 +125,5 @@ class User extends Authenticatable
     public function getReferralLink()
     {
         return url('/?ref=' . $this->referral_code);
-    }
-
-    /**
-     * Get the date when the subscription (lifetime plan) started.
-     *
-     * @return \Illuminate\Support\Carbon|null
-     */
-    public function subscriptionStartDate()
-    {
-        return $this->subscription_started_at;
     }
 }

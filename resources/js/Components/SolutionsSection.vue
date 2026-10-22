@@ -8,9 +8,8 @@ const solutions = [
     keyPoint: '80% reduction in processing time',
     icon: 'FileText',
     routeName: 'solutions.document-processing',
-    delay: '0s',
+    animationDelay: '0s',
     useCase: 'Generate SEO-friendly content with images with DeepSeek R1 (or V3), publish it on WordPress, and update a Google Sheets document with the details of the created post.',
-    timeline: '2-3 weeks',
     integrations: ['Azure Document', 'SharePoint AI', 'Box Intelligence'],
     platforms: ['OCR Systems', 'ERP Software', 'Document Management']
   },
@@ -20,9 +19,8 @@ const solutions = [
     keyPoint: '70% query resolution without human intervention',
     icon: 'MessagesSquare',
     routeName: 'solutions.customer-service',
-    delay: '0.1s',
+    animationDelay: '0.1s',
     useCase: 'Advanced customer support automation using OpenAI/Claude for natural language understanding, multi-channel support via Zendesk AI, and intelligent routing with automated response generation and contextual knowledge base integration.',
-    timeline: '3-4 weeks',
     integrations: ['Microsoft Teams', 'Zendesk AI', 'Omnichannel Support'],
     platforms: ['CRM Systems', 'Chat Platforms', 'Knowledge Bases']
   },
@@ -32,9 +30,8 @@ const solutions = [
     keyPoint: '90% reduction in processing time',
     icon: 'Wallet',
     routeName: 'solutions.financial-operations',
-    delay: '0.2s',
+    animationDelay: '0.2s',
     useCase: 'Physical invoice/receipt processing system using OCR (Optical Character Recognition) and SharePoint integration for automated extraction, classification, and documentation with direct integration to multiple enterprise systems. Comprehensive financial process automation for real-time expense analytics, automated fraud detection, intelligent cash flow forecasting, and automated reconciliation with machine learning-powered anomaly detection.',
-    timeline: '2-4 weeks',
     integrations: ['AWS Bedrock', 'Snowflake', 'Azure Sentinel'],
     platforms: ['Accounting Software', 'Banking APIs', 'Payment Gateways']
   },
@@ -44,9 +41,8 @@ const solutions = [
     keyPoint: '75% reduction in hiring time',
     icon: 'Users',
     routeName: 'solutions.hr-recruitment',
-    delay: '0.3s',
+    animationDelay: '0.3s',
     useCase: 'End-to-end recruitment automation using AI for resume analysis, skill assessment, automated video interview analysis, AI text/voice interviews, qualification classification and reviews. Intelligent onboarding workflow management from A-Z',
-    timeline: '2-3 weeks',
     integrations: ['Azure OpenAI', 'Azure Cognitive Services', 'Microsoft Teams', 'Document AI'],
     platforms: ['ATS Systems', 'Calendar Apps', 'HR Management Software']
   },
@@ -56,9 +52,8 @@ const solutions = [
     keyPoint: '50% increase in conversion rates',
     icon: 'TrendingUp',
     routeName: 'solutions.sales-marketing',
-    delay: '0.4s',
+    animationDelay: '0.4s',
     useCase: 'Intelligent sales automation using Salesforce AI and HubSpot for predictive lead scoring, personalized content generation, automated multi-channel campaign orchestration, and real-time analytics with ML-powered conversion optimization.',
-    timeline: '3-4 weeks',
     integrations: ['Salesforce', 'HubSpot', 'Azure Analytics', 'Social Media Integration'],
     platforms: ['Marketing Platforms', 'CRM Systems', 'Analytics Tools']
   },
@@ -68,9 +63,8 @@ const solutions = [
     keyPoint: '30% cost reduction',
     icon: 'Factory',
     routeName: 'solutions.supply-chain',
-    delay: '0.5s',
+    animationDelay: '0.5s',
     useCase: 'Advanced supply chain optimization using AWS and Azure ML services for predictive inventory management, intelligent supplier relationship management, automated demand forecasting, and real-time logistics optimization with Grafana analytics.',
-    timeline: '3-5 weeks',
     integrations: ['AWS SageMaker', 'Azure ML', 'Grafana'],
     platforms: ['ERP Systems', 'Logistics Software', 'Supplier Portals']
   }
@@ -95,7 +89,6 @@ const solutions = [
           v-for="solution in solutions"
           :key="solution.title"
           v-bind="solution"
-          :animation-delay="solution.delay"
         />
       </div>
 

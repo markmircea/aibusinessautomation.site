@@ -3,14 +3,14 @@ import { computed } from 'vue';
 // Explicit imports keep this tree-shakeable — importing * from lucide-vue-next
 // would pull the entire icon set into the bundle.
 import {
-  ArrowRight, Bot, BrainCircuit, Check, Clapperboard, CreditCard, Factory, FileText, Globe,
+  ArrowRight, Bot, BrainCircuit, Check, Clapperboard, Factory, FileText, Globe,
   LayoutTemplate, MessagesSquare, Monitor, MonitorSmartphone, Plug, Server,
-  ReceiptText, ShoppingCart, Smartphone, Sparkles, TrendingUp, Users, Wallet, Webhook,
+ShoppingCart, Smartphone, Sparkles, TrendingUp, Users, Wallet, Webhook,
   Workflow,
 } from 'lucide-vue-next';
 
 const registry = {
-  ArrowRight, Bot, BrainCircuit, Check, Clapperboard, CreditCard, Factory, FileText, Globe,
+  ArrowRight, Bot, BrainCircuit, Check, Clapperboard, Factory, FileText, Globe,
   LayoutTemplate, MessagesSquare, Monitor, MonitorSmartphone, Plug, Server,
   ReceiptText, ShoppingCart, Smartphone, Sparkles, TrendingUp, Users, Wallet, Webhook,
   Workflow,

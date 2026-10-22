@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-[x-cloak] {
-    display: none;
-}
-
 /* Global, so it applies on every page. Previously lived in a <style scoped>
    block in WebDevelopmentLayout.vue, where it could never match html. */
 html {
@@ -23,9 +19,3 @@ html {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Optional: Add transitions to other elements if needed */
-.transition-colors {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 0.3s;
-}

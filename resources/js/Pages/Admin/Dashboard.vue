@@ -1,11 +1,7 @@
 <script setup>
-import { ref } from 'vue';
 import AppLayout from '@/Layouts/AppLayout.vue';
 import { Head, Link } from '@inertiajs/vue3';
 
-const props = defineProps({
-    stats: Object,
-});
 </script>
 
 <template>

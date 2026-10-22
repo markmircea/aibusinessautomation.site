@@ -1,18 +1,10 @@
 <script setup>
-import { Link } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
 import HeroSection from '@/Components/HeroSection.vue';
 import LogoSlider from '@/Components/LogoSlider.vue';
 import SolutionsSection from '@/Components/SolutionsSection.vue';
 import PortfolioSection from '@/Components/PortfolioSection.vue';
 import ContactSection from '@/Components/ContactSection.vue';
-//import Eleven from '../Components/Eleven.vue';
-
-defineProps({
-    canLogin: Boolean,
-    canRegister: Boolean,
-});
-
 </script>
 
 <template>
@@ -139,7 +131,6 @@ defineProps({
             </section>
 
             <ContactSection />
-           <!--  <Eleven />  -->
 
 
         </div>

@@ -7,33 +7,21 @@ import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
-import LazyImage from '@/Components/LazyImage.vue';
 import FlashMessage from '@/Components/FlashMessage.vue';
 import DynamicSEO from '@/Components/DynamicSEO.vue';
 import WebDevelopmentDropdown from '@/Components/WebDevelopmentDropdown.vue';
-// import SolutionsDropdown from '@/Components/SolutionsDropdown.vue';
 
 defineProps({
     title: String,
 });
 
 const showingNavigationDropdown = ref(false);
-const showingFullPracticeTestSubmenu = ref(false);
-
-const switchToTeam = (team) => {
-    router.put(route('current-team.update'), {
-        team_id: team.id,
-    }, {
-        preserveState: false,
-    });
-};
 
 const logout = () => {
     router.post(route('logout'));
 };
 
 const isAuthenticated = computed(() => usePage().props.auth.user !== null);
-const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscription ?? false);
 const isAdmin = computed(() => {
     const user = usePage().props.auth.user;
     // This is a simple check - in a real app, you'd use a more robust method
@@ -111,14 +99,7 @@ const currentYear = computed(() => new Date().getFullYear());
                                 <div class="ms-3 relative">
                                     <Dropdown align="right" width="48">
                                         <template #trigger>
-                                            <button v-if="$page.props.jetstream.managesProfilePhotos"
-                                                class="flex text-sm rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ink transition">
-                                                <LazyImage class="h-8 w-8 rounded-full object-cover"
-                                                    :src="$page.props.auth.user.profile_photo_url"
-                                                    :alt="$page.props.auth.user.name" width="32" height="32" />
-                                            </button>
-
-                                            <span v-else class="inline-flex rounded-control">
+                                            <span class="inline-flex rounded-control">
                                                 <button type="button"
                                                     class="inline-flex items-center px-3 py-2 text-sm leading-4 font-medium rounded-control text-content-muted bg-surface ring-1 ring-inset ring-line hover:text-content focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 transition ease-in-out duration-150">
                                                     {{ $page.props.auth.user.name }}
@@ -143,12 +124,6 @@ const currentYear = computed(() => new Date().getFullYear());
                                                 Profile
                                             </DropdownLink>
 
-                                            <DropdownLink v-if="$page.props.jetstream.hasApiFeatures"
-                                                :href="route('api-tokens.index')">
-                                                API Tokens
-                                            </DropdownLink>
-
-                                            <!-- Admin Dashboard Link (for admins only) -->
                                             <DropdownLink v-if="isAdmin" :href="route('admin.dashboard')">
                                                 Admin Dashboard
                                             </DropdownLink>
@@ -157,11 +132,6 @@ const currentYear = computed(() => new Date().getFullYear());
                                             <DropdownLink :href="route('referrals.index')">
                                                 My Referrals
                                             </DropdownLink>
-
-                                            <!-- Upgrade Account Button
-                                            <DropdownLink v-if="!isSubscribed" :href="route('upgrade.account')">
-                                                Upgrade Account
-                                            </DropdownLink> -->
 
                                             <div class="border-t border-line" />
 
@@ -256,12 +226,6 @@ const currentYear = computed(() => new Date().getFullYear());
                             </ResponsiveNavLink>
                             
                             <div class="flex items-center px-4">
-                                <div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 me-3">
-                                    <LazyImage class="h-10 w-10 rounded-full object-cover"
-                                        :src="$page.props.auth.user.profile_photo_url" :alt="$page.props.auth.user.name"
-                                        width="40" height="40" />
-                                </div>
-
                                 <div>
                                     <div class="font-medium text-base text-content">
                                         {{ $page.props.auth.user.name }}
@@ -278,11 +242,6 @@ const currentYear = computed(() => new Date().getFullYear());
                                     Profile
                                 </ResponsiveNavLink>
 
-                                <ResponsiveNavLink v-if="$page.props.jetstream.hasApiFeatures"
-                                    :href="route('api-tokens.index')" :active="route().current('api-tokens.index')">
-                                    API Tokens
-                                </ResponsiveNavLink>
-
                                 <!-- Responsive Admin Dashboard Link (for admins only) -->
                                 <ResponsiveNavLink v-if="isAdmin" :href="route('admin.dashboard')"
                                     :active="route().current('admin.dashboard')">
@@ -294,12 +253,6 @@ const currentYear = computed(() => new Date().getFullYear());
                                     :active="route().current('referrals.index')">
                                     My Referrals
                                 </ResponsiveNavLink>
-
-                                <!-- Responsive Upgrade Account Button
-                                <ResponsiveNavLink v-if="!isSubscribed" :href="route('upgrade.account')"
-                                    :active="route().current('upgrade.account')">
-                                    Upgrade Account
-                                </ResponsiveNavLink> -->
 
                                 <!-- Authentication -->
                                 <form method="POST" @submit.prevent="logout">
@@ -371,15 +324,6 @@ const currentYear = computed(() => new Date().getFullYear());
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     width: calc(100% - 1.5rem) !important;
-}
-
-.nav-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
 }
 
 .min-h-screen {

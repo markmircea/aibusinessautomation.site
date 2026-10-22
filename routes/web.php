@@ -3,13 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\OpenRouterController;
-use App\Http\Controllers\UpgradeAccountController;
 use App\Http\Controllers\Auth\CustomRegisterController;
 use App\Http\Controllers\Auth\GoogleController;
-use App\Http\Controllers\PdfDownloadController;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,10 +28,7 @@ Route::get('/register', [CustomRegisterController::class, 'create'])
 
 // Landing page route
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-    ]);
+    return Inertia::render('Welcome');
 })->name('welcome');
 
 // Legal pages. Previously unroutable: the components existed on disk but had
@@ -106,28 +98,6 @@ Route::prefix('solutions')->name('solutions.')->group(function () {
     })->name('ai-integrations');
 });
 
-// Dashboard route for authenticated users
-// Route::get('/dashboard', function () {
-//     $user = Auth::user();
-//     $isSubscribed = $user ? $user->isSubscribed() : false;
-
-//     return Inertia::render('Dashboard', [
-//         'isSubscribed' => $isSubscribed,
-//     ]);
-// })->name('dashboard')->middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']);
-
-// Legacy CCAT practice-test routes removed from the public surface.
-// The Vue pages remain on disk pending a follow-up deletion pass.
-
-Route::get('/upgrade-account', [UpgradeAccountController::class, 'show'])->name('upgrade.account');
-Route::post('/upgrade-account', [UpgradeAccountController::class, 'process'])->name('upgrade.account.process');
-
-// New route for completing registration after payment
-Route::post('/complete-registration', [UpgradeAccountController::class, 'completeRegistration'])->name('complete.registration');
-
-Route::post('/reviews', [ReviewController::class, 'store']);
-Route::get('/api/reviews', [ReviewController::class, 'getReviews']);
-
 use App\Http\Controllers\ContactController;
 
 // Contact form submission
@@ -161,25 +131,6 @@ Route::middleware([
     });
 });
 
-// Paid user routes group
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-    'paid.user',
-])->group(function () {
-    Route::post('/api/generate-question', [OpenRouterController::class, 'generateQuestion'])->name('generate.question');
-    Route::post('/api/generate-explanation', [OpenRouterController::class, 'generateExplanation'])->name('generate.explanation');
-
-    // Legacy CCAT test routes (verbal / math / spatial / full-practice 1-10)
-    // removed from the public surface; Vue pages remain on disk.
-
-    Route::get('/download-pdf/{filename}', [PdfDownloadController::class, 'download'])->name('download.pdf');
-
-});
-
 Route::fallback(function () {
     return Inertia::render('Error', ['status' => 404])->toResponse(request())->setStatusCode(404);
 });
-
-// Route::get('/generate-pdfs', [QuestionPDFController::class, 'generatePDFs'])->name('generate.pdf');

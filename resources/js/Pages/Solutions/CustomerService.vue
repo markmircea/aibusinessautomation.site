@@ -95,10 +95,4 @@ const solutionData = {
 </template>
 
 <style scoped>
-.hover-scale {
-    transition: transform 0.3s ease-in-out;
-}
-.hover-scale:hover {
-    transform: scale(1.02);
-}
 </style>

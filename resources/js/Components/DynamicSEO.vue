@@ -4,8 +4,6 @@ import { Head, usePage } from '@inertiajs/vue3';
 
 const page = usePage();
 // page.component is the Inertia component name ('Solutions/CustomerService').
-// page.props.component is a separately shared ROUTE name ('solutions.customer-service')
-// and never matches the keys below — reading it made every page fall back.
 const currentRoute = computed(() => page.component);
 const currentUrl = computed(() => page.props.url);
 const baseUrl = computed(() => (typeof window !== 'undefined' ? window.location.origin : ''));

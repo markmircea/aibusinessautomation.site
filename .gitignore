@@ -19,3 +19,7 @@ yarn-error.log
 
 # Playwright MCP writes snapshots/screenshots here
 .playwright-mcp/
+
+# Local logs
+laravel.log
+storage/logs/*.log

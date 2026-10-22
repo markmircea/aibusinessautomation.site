@@ -10,8 +10,6 @@ class CustomRegisterController extends Controller
 {
     public function create()
     {
-        return Inertia::render('Auth/Register', [
-            'pendingUpgrade' => session('pending_upgrade', false),
-        ]);
+        return Inertia::render('Auth/Register');
     }
 }
