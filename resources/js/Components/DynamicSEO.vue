@@ -16,8 +16,8 @@ const meta = {
     description: 'We design and ship e-commerce web apps, mobile and desktop apps, APIs, automation pipelines and agentic AI systems — end to end, with a dedicated project manager on every engagement.',
   },
   'Portfolio': {
-    title: 'Portfolio — Shipped Projects | AIBrainL.ink',
-    description: 'Selected production work: the Selenix browser-automation platform, an MCP server published on npm, a generative video pipeline, SaaS backends and desktop apps.',
+    title: 'Case Studies — Portfolio | AIBrainL.ink',
+    description: 'Case studies from our team: web platforms, desktop and mobile apps, games, APIs and agentic AI — with real screenshots and the stack behind each one.',
   },
   'WebDevelopment/Index': {
     title: 'Web Development Services | AIBrainL.ink',
@@ -34,6 +34,10 @@ const meta = {
   'WebDevelopment/Mobile': {
     title: 'Mobile Application Development | AIBrainL.ink',
     description: 'Native and cross-platform mobile apps, from product definition through store release and ongoing support.',
+  },
+  'WebDevelopment/DigitalMarketing': {
+    title: 'Digital Marketing Services | AIBrainL.ink',
+    description: 'SEO, paid search and social, email automation, analytics and conversion optimization — run by the team that builds the site.',
   },
   'WebDevelopment/Automation': {
     title: 'Web Scraping & Automation Development | AIBrainL.ink',
@@ -90,23 +94,25 @@ const fallback = {
   description: 'Custom software built end to end — web, mobile, desktop, APIs, automation pipelines and agentic AI systems.',
 };
 
-// The four service pages all render the same component (WebDevelopment/Service),
+// The service pages all render the same component (WebDevelopment/Service),
 // so resolve them by their slug prop instead of the component name.
 const metaKey = computed(() => {
   if (currentRoute.value === 'WebDevelopment/Service') {
     const slug = page.props.slug ?? '';
-    return 'WebDevelopment/' + slug.charAt(0).toUpperCase() + slug.slice(1);
+    // kebab-case slug -> PascalCase key: 'digital-marketing' -> 'DigitalMarketing'
+    return 'WebDevelopment/' + slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join('');
   }
   return currentRoute.value;
 });
 
-const current = computed(() => meta[metaKey.value] ?? fallback);
+// Pages with server-built SEO (portfolio case studies) pass a `seo` prop; everything else uses the map above.
+const current = computed(() => (page.props.seo?.title ? page.props.seo : (meta[metaKey.value] ?? fallback)));
 const title = computed(() => current.value.title);
 const description = computed(() => current.value.description);
 const canonicalUrl = computed(() => currentUrl.value);
 // File on disk is main.png (lowercase). It was referenced as main.png while the
 // file was main.PNG, which 404s on case-sensitive production filesystems.
-const ogImage = computed(() => `${baseUrl.value}/img/main.png`);
+const ogImage = computed(() => page.props.seo?.image ?? `${baseUrl.value}/img/main.png`);
 </script>
 
 <template>

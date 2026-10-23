@@ -1,127 +1,83 @@
 <script setup>
-import { computed } from 'vue';
+import { Link } from '@inertiajs/vue3';
 import Icon from '@/Components/Icon.vue';
+import { categoryLabel, statusClasses } from '@/data/portfolioMeta';
 
-const props = defineProps({
-  name: String,
-  category: String,
-  tagline: String,
-  description: String,
-  techStack: { type: Array, default: () => [] },
-  features: { type: Array, default: () => [] },
-  status: { type: String, default: '' },
-  icon: { type: String, default: 'Sparkles' },
-  link: { type: String, default: '' },
+// Whole card is one link to the case study — no nested links inside it.
+defineProps({
+  project: { type: Object, required: true },
   animationDelay: { type: String, default: '0s' },
 });
-
-// Deterministic tile gradient: same project always gets the same treatment,
-// but every project on a page looks distinct. All hues stay inside the brand
-// navy -> indigo range, so six cards read as one system rather than a rainbow.
-const palettes = [
-  { from: '#1B2A6B', to: '#5B6CFF' },
-  { from: '#131D4D', to: '#2F4BC4' },
-  { from: '#2F4BC4', to: '#7C89FF' },
-  { from: '#1B2A6B', to: '#4658E8' },
-  { from: '#101736', to: '#6B82E8' },
-  { from: '#233A8F', to: '#8A97FF' },
-];
-
-const tile = computed(() => {
-  let hash = 0;
-  for (const char of props.name ?? '') {
-    hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
-  }
-  const palette = palettes[hash % palettes.length];
-  return { ...palette, angle: 110 + (hash % 5) * 15, id: `g${hash.toString(36)}` };
-});
-
-const statusClasses = {
-  'Production': 'bg-positive/15 text-positive ring-1 ring-inset ring-positive/30',
-  'Production-ready': 'bg-positive/15 text-positive ring-1 ring-inset ring-positive/30',
-  'Beta': 'bg-warning/15 text-warning ring-1 ring-inset ring-warning/30',
-  'In Development': 'bg-accent-400/15 text-accent-400 ring-1 ring-inset ring-accent-400/30',
-};
 </script>
 
 <template>
-  <article
-    class="project-card group flex flex-col rounded-card bg-surface ring-1 ring-inset ring-line overflow-hidden shadow-e2 transition-colors duration-300 hover:ring-accent-500/40 animate-fade-in"
-    :style="{ animationDelay: animationDelay }"
+  <Link
+    :href="route('portfolio.show', project.slug)"
+    class="group flex flex-col rounded-card bg-surface ring-1 ring-inset ring-line overflow-hidden shadow-e2 transition-colors duration-300 hover:ring-accent-500/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 animate-fade-in"
+    :style="{ animationDelay }"
   >
-    <!-- Generated cover tile. Swap for a real screenshot when one exists. -->
-    <div class="relative aspect-[16/9] w-full overflow-hidden border-b border-line">
-      <svg class="absolute inset-0 h-full w-full" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <defs>
-          <linearGradient :id="tile.id" :gradientTransform="`rotate(${tile.angle} 0.5 0.5)`">
-            <stop offset="0%" :stop-color="tile.from" />
-            <stop offset="100%" :stop-color="tile.to" />
-          </linearGradient>
-          <pattern :id="`${tile.id}-dots`" width="16" height="16" patternUnits="userSpaceOnUse">
-            <circle cx="1" cy="1" r="1" fill="#ffffff" fill-opacity="0.16" />
-          </pattern>
-        </defs>
-        <rect width="320" height="180" :fill="`url(#${tile.id})`" />
-        <rect width="320" height="180" :fill="`url(#${tile.id}-dots)`" />
-      </svg>
+    <div class="relative aspect-[16/9] w-full overflow-hidden border-b border-line bg-surface-2">
+      <img
+        v-if="project.cover"
+        :src="`${project.cover.src}-800.webp`"
+        :srcset="`${project.cover.src}-800.webp 800w, ${project.cover.src}.webp ${project.cover.width}w`"
+        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+        :alt="project.cover.alt"
+        :width="project.cover.width"
+        :height="project.cover.height"
+        loading="lazy"
+        decoding="async"
+        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+      >
 
-      <div class="relative flex h-full items-center justify-center">
-        <Icon :name="icon" class="h-12 w-12 text-white/85" :stroke-width="1.5" />
+      <!-- Placeholder tile for case studies without a screenshot yet. -->
+      <div v-else class="absolute inset-0 bg-gradient-to-br from-brand-700 to-accent-600 flex items-center justify-center">
+        <Icon name="Sparkles" class="h-12 w-12 text-white/85" />
       </div>
 
+      <span class="absolute top-3 left-3 rounded-full bg-ink/80 backdrop-blur-sm px-2.5 py-1 text-[11px] font-semibold text-content ring-1 ring-inset ring-line">
+        {{ project.engagement }}
+      </span>
+
       <span
-        v-if="status"
-        class="absolute top-3 right-3 text-[11px] font-semibold px-2 py-1 rounded-full backdrop-blur-sm"
-        :class="statusClasses[status] || statusClasses['In Development']"
+        class="absolute top-3 right-3 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset backdrop-blur-sm"
+        :class="statusClasses[project.status]"
       >
-        {{ status }}
+        {{ project.status }}
       </span>
     </div>
 
     <div class="flex flex-1 flex-col p-6">
+      <!-- Two categories at most, so the label stays on one line; the filters still use them all. -->
       <span class="text-xs font-semibold uppercase tracking-[0.12em] text-accent-400 mb-2">
-        {{ category }}
+        {{ project.categories.slice(0, 2).map(categoryLabel).join(' · ') }}
       </span>
-      <h3 class="text-xl font-bold text-content mb-2">{{ name }}</h3>
-      <p class="text-sm font-medium text-content-muted mb-3">{{ tagline }}</p>
-      <p class="text-sm text-content-subtle mb-5">{{ description }}</p>
 
-      <div v-if="features && features.length" class="mb-5">
-        <span class="text-xs font-semibold uppercase tracking-[0.12em] text-content-subtle">Highlights</span>
-        <ul class="mt-2 space-y-1.5">
-          <li v-for="feature in features" :key="feature" class="text-sm text-content-muted flex items-start">
-            <Icon name="Check" class="h-4 w-4 mt-0.5 mr-2 flex-shrink-0 text-accent-400" />
-            <span>{{ feature }}</span>
-          </li>
-        </ul>
-      </div>
+      <h3 class="text-xl font-bold text-content mb-2">{{ project.name }}</h3>
+      <p class="text-sm text-content-muted mb-5">{{ project.tagline }}</p>
 
-      <div v-if="techStack && techStack.length" class="mt-auto pt-4 border-t border-line">
-        <span class="text-xs font-semibold uppercase tracking-[0.12em] text-content-subtle">Tech Stack</span>
-        <div class="mt-2 flex flex-wrap gap-1.5">
-          <span
-            v-for="tech in techStack"
-            :key="tech"
-            class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-control bg-surface-2 text-content-muted ring-1 ring-inset ring-line"
-          >
-            {{ tech }}
-          </span>
-        </div>
-      </div>
-
-      <div v-if="link" class="mt-5">
-        <a
-          :href="link"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center text-sm font-semibold text-accent-400 hover:text-accent-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-surface rounded-control"
+      <div class="mt-auto flex flex-wrap gap-1.5">
+        <span
+          v-for="tech in project.stack.slice(0, 3)"
+          :key="tech"
+          class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-control bg-surface-2 text-content-muted ring-1 ring-inset ring-line"
         >
-          Visit project
-          <Icon name="ArrowRight" class="h-4 w-4 ml-1" />
-        </a>
+          {{ tech }}
+        </span>
+        <span
+          v-if="project.stack.length > 3"
+          class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-control bg-surface-2 text-content-muted ring-1 ring-inset ring-line"
+        >
+          +{{ project.stack.length - 3 }}
+        </span>
       </div>
+
+      <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-400">
+        Read case study
+        <Icon name="ArrowRight" class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+      </span>
     </div>
-  </article>
+  </Link>
 </template>
 
 <style scoped>

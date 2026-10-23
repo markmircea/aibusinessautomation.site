@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Phone frame</title>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=figtree:400,500,600,700">
+<style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; }
+    #frame {
+        position: relative;
+        width: 1600px; height: 900px;
+        background: #0B1020;
+        display: flex; align-items: center; justify-content: center; gap: 48px;
+        overflow: hidden;
+    }
+    #frame::before {
+        content: ""; position: absolute; inset: 0;
+        background:
+            radial-gradient(60% 55% at 50% 0%, rgba(91,108,255,0.28) 0%, transparent 70%),
+            radial-gradient(45% 45% at 12% 18%, rgba(47,75,196,0.22) 0%, transparent 70%),
+            radial-gradient(45% 45% at 88% 22%, rgba(27,42,107,0.35) 0%, transparent 70%);
+    }
+    .phone {
+        position: relative; z-index: 1;
+        width: 360px; height: 760px;
+        border: 1px solid #1E2640; border-radius: 48px;
+        background: #05070D; padding: 12px;
+        box-shadow: 0 16px 40px -8px rgba(0,0,0,.55);
+    }
+    .phone.mid { transform: translateY(-24px); }
+    /* ?ratio=9:16 for screenshots or video frames that are 9:16: a shorter body so nothing is cropped */
+    .phone.r916 { height: 622px; }
+    .screen {
+        position: relative; width: 100%; height: 100%;
+        border-radius: 36px; overflow: hidden;
+    }
+    .screen img {
+        width: 100%; height: 100%; display: block;
+        border-radius: 36px;
+        object-fit: cover; object-position: top center;
+    }
+    .notch {
+        position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+        width: 110px; height: 26px; border-radius: 13px; background: #05070D; z-index: 2;
+    }
+</style>
+</head>
+<body style="margin:0">
+<div id="frame"></div>
+<script>
+    const params = new URLSearchParams(location.search);
+    const frame = document.getElementById('frame');
+    const sources = (params.get('src') || '').split(',').map(s => s.trim()).filter(Boolean).slice(0, 3);
+    let pending = sources.length;
+    const done = () => { if (--pending <= 0) document.body.dataset.ready = '1'; };
+
+    sources.forEach((src, i) => {
+        const phone = document.createElement('div');
+        phone.className = 'phone' + (sources.length === 3 && i === 1 ? ' mid' : '') + (params.get('ratio') === '9:16' ? ' r916' : '');
+        const screen = document.createElement('div');
+        screen.className = 'screen';
+        const notch = document.createElement('div');
+        notch.className = 'notch';
+        const img = document.createElement('img');
+        img.alt = '';
+        img.onload = done;
+        img.onerror = done;
+        img.src = src;
+        screen.appendChild(img);
+        screen.appendChild(notch);
+        phone.appendChild(screen);
+        frame.appendChild(phone);
+    });
+    if (!sources.length) document.body.dataset.ready = '1';
+</script>
+</body>
+</html>

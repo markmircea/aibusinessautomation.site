@@ -1,0 +1,212 @@
+<!doctype html>
+<!-- Tallyforge: pipeline dashboard mockup (illustrative data), 1360 x 744. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tallyforge — Pipeline dashboard</title>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800">
+<link rel="stylesheet" href="../_shared/base.css">
+<style>
+  :root {
+    --plane: #F5F7F4;
+    --card: #FFFFFF;
+    --line: rgba(15, 47, 37, .08);
+    --ink: #0F2F25;
+    --ink-2: #5A6B62;
+    --hairline: #E7EEE9;
+  }
+  body { width: 1360px; height: 744px; background: var(--plane); font-family: Manrope, sans-serif; color: var(--ink); }
+  .wrap { padding: 20px; height: 744px; display: flex; flex-direction: column; gap: 16px; }
+  .icon { width: 16px; height: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+
+  /* header */
+  .bar { height: 40px; display: flex; align-items: center; justify-content: space-between; }
+  .bar-left { display: flex; align-items: center; gap: 10px; }
+  .mark { width: 28px; height: 28px; border-radius: 7px; background: #0F2F25; color: #3DDC97; display: flex; align-items: center; justify-content: center; }
+  .brand { font-size: 15px; font-weight: 600; }
+  .vline { width: 1px; height: 20px; background: rgba(15, 47, 37, .16); }
+  .scope { font-size: 15px; color: var(--ink-2); }
+  .bar-right { display: flex; align-items: center; gap: 10px; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; font-size: 13px; font-weight: 500; color: var(--ink); }
+  .pill .icon { width: 14px; height: 14px; color: var(--ink-2); }
+  .pill-note { display: inline-flex; align-items: center; padding: 7px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; color: #8A5A00; background: #FFF4D6; border: 1px solid #F2D48A; }
+  .ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; font-size: 13px; font-weight: 500; color: var(--ink-2); }
+  .ghost .icon { width: 14px; height: 14px; }
+
+  /* KPI tiles */
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; height: 104px; }
+  .kpi { position: relative; padding: 16px 18px; }
+  .kpi-label { font-size: 12px; font-weight: 500; color: var(--ink-2); }
+  .kpi-value { margin-top: 2px; font-size: 28px; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .kpi-delta { margin-top: 2px; display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #006300; }
+  .kpi-delta .icon { width: 14px; height: 14px; }
+  .spark { position: absolute; right: 18px; top: 34px; width: 110px; height: 36px; }
+
+  /* charts */
+  .charts { display: flex; gap: 16px; height: 286px; }
+  .chart-card { padding: 14px 16px; display: flex; flex-direction: column; }
+  .chart-card.wide { flex: 2; }
+  .chart-card.narrow { flex: 1; }
+  .chart-head { display: flex; align-items: flex-start; justify-content: space-between; }
+  .chart-title { font-size: 15px; font-weight: 600; }
+  .chart-sub { margin-top: 3px; font-size: 12px; color: var(--ink-2); }
+  .legend { display: flex; gap: 14px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--ink-2); }
+  .swatch { width: 10px; height: 10px; border-radius: 3px; }
+  #pipeline { width: 100%; height: 206px; margin-top: 10px; }
+  #sources { width: 100%; height: 180px; margin-top: 12px; }
+  .bar-note { margin-top: 8px; font-size: 12px; color: var(--ink-2); }
+
+  /* table */
+  .table-card { height: 226px; padding: 14px 16px; }
+  .table-head { display: flex; align-items: baseline; justify-content: space-between; }
+  .table-head h2 { font-size: 15px; font-weight: 600; }
+  .table-head span { font-size: 12px; color: var(--ink-2); }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+  th { height: 24px; font-size: 12px; font-weight: 600; color: var(--ink-2); text-align: left; border-bottom: 1px solid var(--line); }
+  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  th:nth-child(1) { width: 46%; } th:nth-child(2) { width: 22%; } th:nth-child(3) { width: 14%; } th:nth-child(4) { width: 18%; }
+  td { height: 32px; border-bottom: 1px solid var(--hairline); color: var(--ink-2); }
+  td.name { color: var(--ink); font-weight: 500; }
+  tr:last-child td { border-bottom: 0; }
+  td.ch span { display: inline-flex; align-items: center; gap: 7px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="bar">
+    <div class="bar-left">
+      <span class="mark"><svg width="28" height="28" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 8v14"/><path d="M12.5 8v14"/><path d="M17 8v14"/><path d="M21.5 8v14"/><path d="M6.5 19.5 23.5 9.5"/></svg></span>
+      <span class="brand">Tallyforge</span>
+      <span class="vline"></span>
+      <span class="scope">Pipeline dashboard</span>
+    </div>
+    <div class="bar-right">
+      <span class="pill"><i data-icon="calendar"></i>Last quarter<i data-icon="chevron-down"></i></span>
+      <span class="pill-note">Illustrative data</span>
+      <button class="ghost"><i data-icon="download"></i>Export</button>
+    </div>
+  </header>
+
+  <section class="kpis">
+    <div class="card kpi">
+      <div class="kpi-label">Sales-qualified leads</div>
+      <div class="kpi-value">148</div>
+      <div class="kpi-delta"><i data-icon="trending-up"></i>+38% vs previous quarter</div>
+      <div class="spark" data-spark="8,9,10,10,11,12,12,13,14,14,16,19"></div>
+    </div>
+    <div class="card kpi">
+      <div class="kpi-label">Cost per SQL</div>
+      <div class="kpi-value">$412</div>
+      <div class="kpi-delta"><i data-icon="trending-down"></i>−19% vs previous quarter</div>
+      <div class="spark" data-spark="520,505,498,480,470,455,450,440,431,425,418,412"></div>
+    </div>
+    <div class="card kpi">
+      <div class="kpi-label">Trial-to-demo rate</div>
+      <div class="kpi-value">17.5%</div>
+      <div class="kpi-delta"><i data-icon="trending-up"></i>+6.2 pts</div>
+      <div class="spark" data-spark="11.3,11.9,12.6,13.0,13.8,14.4,15.0,15.6,16.1,16.7,17.1,17.5"></div>
+    </div>
+    <div class="card kpi">
+      <div class="kpi-label">Pipeline created</div>
+      <div class="kpi-value">$1.24M</div>
+      <div class="kpi-delta"><i data-icon="trending-up"></i>+29%</div>
+      <div class="spark" data-spark="72,80,85,88,95,98,104,110,116,121,130,141"></div>
+    </div>
+  </section>
+
+  <section class="charts">
+    <div class="card chart-card wide">
+      <div class="chart-head">
+        <div>
+          <div class="chart-title">SQLs and demos</div>
+          <div class="chart-sub">Per week</div>
+        </div>
+        <div class="legend">
+          <span><i class="swatch" style="background:#2a78d6"></i>SQLs</span>
+          <span><i class="swatch" style="background:#eb6834"></i>Demos booked</span>
+        </div>
+      </div>
+      <div id="pipeline"></div>
+    </div>
+    <div class="card chart-card narrow">
+      <div class="chart-head">
+        <div>
+          <div class="chart-title">SQLs by source</div>
+          <div class="chart-sub">Last quarter · 148 total</div>
+        </div>
+      </div>
+      <div id="sources"></div>
+      <div class="bar-note">Scored and routed in the CRM</div>
+    </div>
+  </section>
+
+  <div class="card table-card">
+    <div class="table-head">
+      <h2>Top campaigns</h2>
+      <span>Sorted by SQLs</span>
+    </div>
+    <table>
+      <colgroup>
+        <col style="width:46%"><col style="width:22%"><col style="width:14%"><col style="width:18%">
+      </colgroup>
+      <thead>
+        <tr><th>Campaign</th><th>Channel</th><th class="num">SQLs</th><th class="num">Cost per SQL</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">CFO persona, 200–1,000 employees</td>
+          <td class="ch"><span><i class="dot" style="background:#5A6B62"></i>Paid social</span></td>
+          <td class="num">46</td><td class="num">$388</td>
+        </tr>
+        <tr>
+          <td class="name">Close checklist, retargeting</td>
+          <td class="ch"><span><i class="dot" style="background:#5A6B62"></i>Paid social</span></td>
+          <td class="num">28</td><td class="num">$296</td>
+        </tr>
+        <tr>
+          <td class="name">Reconciliation software vs. spreadsheets</td>
+          <td class="ch"><span><i class="dot" style="background:#5A6B62"></i>Organic search</span></td>
+          <td class="num">24</td><td class="num">—</td>
+        </tr>
+        <tr>
+          <td class="name">Guide: the 5-day close</td>
+          <td class="ch"><span><i class="dot" style="background:#5A6B62"></i>Content</span></td>
+          <td class="num">19</td><td class="num">$214</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="../_shared/icons.js"></script>
+<script src="../_shared/charts.js"></script>
+<script>
+  lineChart(document.getElementById('pipeline'), {
+    labels: ['Wk 1','Wk 2','Wk 3','Wk 4','Wk 5','Wk 6','Wk 7','Wk 8','Wk 9','Wk 10','Wk 11','Wk 12'],
+    max: 20, ticks: [0, 5, 10, 15, 20], format: (v) => String(v),
+    series: [
+      { name: 'SQLs', color: '#2a78d6', values: [8,9,10,10,11,12,12,13,14,14,16,19] },
+      { name: 'Demos booked', color: '#eb6834', values: [5,5,6,6,7,8,7,8,9,9,10,11] },
+    ],
+  });
+  barChart(document.getElementById('sources'), {
+    max: 74, format: (v) => String(v), labelWidth: 128,
+    rows: [
+      { label: 'Paid social', value: 74, color: '#5A6B62' },
+      { label: 'Organic search', value: 39, color: '#5A6B62' },
+      { label: 'Content', value: 25, color: '#5A6B62' },
+      { label: 'Referral', value: 10, color: '#5A6B62' },
+    ],
+  });
+  document.querySelectorAll('.spark').forEach(function (el) {
+    sparkline(el, el.dataset.spark.split(',').map(Number), '#2a78d6');
+  });
+</script>
+<script src="../_shared/ready.js"></script>
+</body>
+</html>

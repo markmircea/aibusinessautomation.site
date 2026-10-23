@@ -1,0 +1,206 @@
+<!doctype html>
+<!-- Tallyforge: B2B SaaS landing page mockup (above the fold), 1360 x 736. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tallyforge — Month-end close software</title>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800">
+<link rel="stylesheet" href="../_shared/base.css">
+<style>
+  :root {
+    --forest: #0F2F25;
+    --mint: #3DDC97;
+    --green: #138A5E;
+    --page: #F5F7F4;
+    --surface: #E7EEE9;
+    --muted: #5A6B62;
+    --amber: #C98500;
+    --hairline: #EEF2EF;
+  }
+  body { width: 1360px; height: 736px; background: var(--page); font-family: Manrope, sans-serif; color: var(--forest); }
+  .icon { width: 20px; height: 20px; }
+
+  /* logo */
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--forest); color: var(--mint); display: flex; align-items: center; justify-content: center; flex: none; }
+  .logo-dark .logo-mark { background: var(--mint); color: var(--forest); }
+  .logo-word { font-size: 22px; font-weight: 800; }
+  .logo-dark .logo-word { color: #FFFFFF; }
+
+  /* header + hero share one forest band */
+  .band { background: var(--forest); }
+  .site-header { height: 76px; padding: 0 64px; border-bottom: 1px solid rgba(255, 255, 255, .08); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .nav { display: flex; gap: 32px; font-size: 15px; font-weight: 500; color: rgba(255, 255, 255, .78); }
+  .header-cta { justify-self: end; display: flex; align-items: center; gap: 20px; }
+  .sign-in { font-size: 15px; font-weight: 600; color: #FFFFFF; }
+  .btn-book { height: 44px; padding: 0 20px; border-radius: 10px; background: var(--mint); color: var(--forest); font-size: 15px; font-weight: 700; }
+
+  /* hero */
+  .hero { height: 512px; padding: 0 64px; background-image: radial-gradient(60% 80% at 80% 30%, rgba(61, 220, 151, .14), transparent 70%); display: flex; align-items: center; justify-content: center; gap: 48px; }
+  .hero-copy { width: 560px; flex: none; }
+  .eyebrow { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--mint); }
+  .hero h1 { margin-top: 16px; font-size: 52px; font-weight: 800; line-height: 1.05; letter-spacing: -0.025em; color: #FFFFFF; }
+  .hero-sub { margin-top: 18px; font-size: 18px; line-height: 1.6; color: rgba(255, 255, 255, .72); }
+  .hero-actions { margin-top: 30px; display: flex; gap: 14px; }
+  .btn-primary { height: 52px; padding: 0 26px; border-radius: 12px; background: var(--mint); color: var(--forest); font-size: 16px; font-weight: 700; }
+  .btn-secondary { height: 52px; padding: 0 26px; border-radius: 12px; background: transparent; border: 1.5px solid rgba(255, 255, 255, .35); color: #FFFFFF; font-size: 16px; font-weight: 600; }
+  .hero-checks { margin-top: 24px; display: flex; gap: 12px; font-size: 14px; color: rgba(255, 255, 255, .6); }
+  .hero-checks li { display: inline-flex; align-items: center; gap: 6px; }
+  .hero-checks .icon { width: 15px; height: 15px; color: var(--mint); }
+
+  /* product UI card */
+  .card-ui { width: 600px; flex: none; background: #FFFFFF; border-radius: 16px; padding: 20px 22px; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .55); color: var(--forest); }
+  .ui-top { display: flex; align-items: center; justify-content: space-between; }
+  .ui-title { font-size: 16px; font-weight: 700; }
+  .ui-side { display: flex; align-items: center; gap: 12px; }
+  .avatars { display: flex; }
+  .avatar { width: 26px; height: 26px; border-radius: 50%; color: #FFFFFF; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 2px #FFFFFF; margin-left: -8px; }
+  .avatar:first-child { margin-left: 0; }
+  .pill { padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+  .pill-good { color: var(--green); background: #E3F5EC; }
+  .pill-warn { color: var(--amber); background: #FBF0D9; }
+  .ui-progress { margin-top: 14px; }
+  .ui-progress .labels { display: flex; justify-content: space-between; font-size: 13px; }
+  .ui-progress .labels span:first-child { color: var(--muted); }
+  .ui-progress .labels span:last-child { font-weight: 700; }
+  .bar { margin-top: 8px; height: 8px; border-radius: 99px; background: var(--surface); }
+  .bar i { display: block; width: 82%; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--mint), var(--green)); }
+  .ui-checks { margin-top: 12px; }
+  .ui-checks .row { height: 40px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--hairline); }
+  .ui-checks .row:last-child { border-bottom: 0; }
+  .ui-checks .icon { width: 16px; height: 16px; flex: none; }
+  .ui-checks .icon-check-circle { color: var(--green); }
+  .ui-checks .row:nth-child(3) .icon-clock { color: var(--amber); }
+  .ui-checks .row:nth-child(4) .icon-clock { color: var(--muted); }
+  .ui-checks .task { font-size: 14px; font-weight: 600; }
+  .owner { min-width: 24px; height: 18px; padding: 0 6px; border-radius: 999px; background: var(--surface); color: var(--forest); font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+  .ui-checks .status { margin-left: auto; font-size: 13px; text-align: right; }
+  .ui-table-title { margin-top: 14px; font-size: 13px; font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 12px; }
+  th { height: 22px; font-size: 12px; font-weight: 500; color: var(--muted); text-align: left; }
+  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td { height: 30px; border-top: 1px solid var(--hairline); }
+  .pill-mini { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+
+  /* value strip */
+  .values { height: 148px; background: var(--page); padding: 0 64px; display: flex; }
+  .values li { flex: 1; display: flex; align-items: center; gap: 16px; }
+  .value-tile { width: 44px; height: 44px; border-radius: 12px; background: var(--surface); color: var(--green); display: flex; align-items: center; justify-content: center; flex: none; }
+  .value-tile .icon { width: 22px; height: 22px; }
+  .value-body h3 { font-size: 17px; font-weight: 800; }
+  .value-body p { margin-top: 4px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="band">
+<header class="site-header">
+  <div class="logo logo-dark">
+    <span class="logo-mark"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 8v14"/><path d="M12.5 8v14"/><path d="M17 8v14"/><path d="M21.5 8v14"/><path d="M6.5 19.5 23.5 9.5"/></svg></span>
+    <span class="logo-word">Tallyforge</span>
+  </div>
+  <nav class="nav">
+    <a href="#">Product</a>
+    <a href="#">Solutions</a>
+    <a href="#">Pricing</a>
+    <a href="#">Customers</a>
+    <a href="#">Resources</a>
+  </nav>
+  <div class="header-cta">
+    <a class="sign-in" href="#">Sign in</a>
+    <button class="btn-book">Book a demo</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">For finance teams at growing companies</div>
+    <h1>Close the books in days, not weeks.</h1>
+    <p class="hero-sub">Tallyforge automates reconciliations, accruals and month-end reporting, so your team spends the close reviewing numbers instead of chasing them.</p>
+    <div class="hero-actions">
+      <button class="btn-primary">Book a demo</button>
+      <button class="btn-secondary">Start a free trial</button>
+    </div>
+    <ul class="hero-checks">
+      <li><i data-icon="check"></i>Single sign-on</li>
+      <li><i data-icon="check"></i>Audit trail</li>
+      <li><i data-icon="check"></i>Connects to your ERP</li>
+    </ul>
+  </div>
+  <div class="card-ui">
+    <div class="ui-top">
+      <div class="ui-title">Month-end close · October</div>
+      <div class="ui-side">
+        <div class="avatars">
+          <span class="avatar" style="background:#138A5E">AM</span>
+          <span class="avatar" style="background:#2a78d6">JR</span>
+          <span class="avatar" style="background:#C98500">SK</span>
+        </div>
+        <span class="pill pill-good">On track</span>
+      </div>
+    </div>
+    <div class="ui-progress">
+      <div class="labels"><span>Close progress</span><span>82%</span></div>
+      <div class="bar"><i></i></div>
+    </div>
+    <div class="ui-checks">
+      <div class="row"><i data-icon="check-circle"></i><span class="task">Bank reconciliations</span><span class="owner">AM</span><span class="status">14 of 14</span></div>
+      <div class="row"><i data-icon="check-circle"></i><span class="task">Accruals</span><span class="owner">JR</span><span class="status">9 of 11</span></div>
+      <div class="row"><i data-icon="clock"></i><span class="task">Intercompany</span><span class="owner">SK</span><span class="status">3 of 4</span></div>
+      <div class="row"><i data-icon="clock"></i><span class="task">Variance review</span><span class="owner">AM</span><span class="status">Due Thursday</span></div>
+    </div>
+    <div class="ui-table-title">Reconciliations</div>
+    <table>
+      <colgroup>
+        <col style="width:32%"><col style="width:25%"><col style="width:25%"><col style="width:18%">
+      </colgroup>
+      <thead>
+        <tr><th>Account</th><th class="num">Statement</th><th class="num">Ledger</th><th class="num">Status</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Operating ••4821</td><td class="num">$1,248,330.12</td><td class="num">$1,248,330.12</td>
+          <td class="num"><span class="pill-mini pill-good">Matched</span></td>
+        </tr>
+        <tr>
+          <td>Payroll ••0917</td><td class="num">$312,904.55</td><td class="num">$312,904.55</td>
+          <td class="num"><span class="pill-mini pill-good">Matched</span></td>
+        </tr>
+        <tr>
+          <td>Card clearing</td><td class="num">$18,240.00</td><td class="num">$18,515.40</td>
+          <td class="num"><span class="pill-mini pill-warn">Review</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</div>
+
+<ul class="values">
+  <li>
+    <span class="value-tile"><i data-icon="check-circle"></i></span>
+    <div class="value-body">
+      <h3>Reconcile automatically</h3>
+      <p>Bank feeds matched to the ledger every morning.</p>
+    </div>
+  </li>
+  <li>
+    <span class="value-tile"><i data-icon="calendar"></i></span>
+    <div class="value-body">
+      <h3>One checklist for the close</h3>
+      <p>Owners, due dates and evidence in one place.</p>
+    </div>
+  </li>
+  <li>
+    <span class="value-tile"><i data-icon="trending-up"></i></span>
+    <div class="value-body">
+      <h3>Reports your board can read</h3>
+      <p>Variance commentary that writes its first draft.</p>
+    </div>
+  </li>
+</ul>
+
+<script src="../_shared/icons.js"></script>
+<script src="../_shared/ready.js"></script>
+</body>
+</html>

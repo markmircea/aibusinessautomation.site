@@ -1,0 +1,172 @@
+<!doctype html>
+<!-- Harborline Dental: clinic landing page mockup (above the fold), 1360 x 736. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Harborline Dental — Teeth whitening and implants</title>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=plus-jakarta-sans:400,500,600,700">
+<link rel="stylesheet" href="../_shared/base.css">
+<style>
+  :root {
+    --navy: #0F2A44;
+    --teal: #1F9E8F;
+    --teal-dark: #177E72;
+    --mint: #E8F5F2;
+    --page: #F4F8FB;
+    --coral: #F07C5B;
+    --muted: #5B6B7B;
+    --rule: rgba(15, 42, 68, .08);
+    --field: #D6E2EA;
+  }
+  body { width: 1360px; height: 736px; background: var(--page); font-family: 'Plus Jakarta Sans', sans-serif; color: var(--navy); }
+  .icon { width: 20px; height: 20px; }
+
+  /* top bar */
+  .topbar { height: 36px; padding: 0 64px; background: var(--navy); color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: space-between; }
+  .topbar-phone { display: inline-flex; align-items: center; gap: 8px; }
+  .topbar-phone .icon { width: 14px; height: 14px; }
+
+  /* header */
+  .site-header { height: 76px; padding: 0 64px; background: #FFFFFF; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-mark { width: 30px; height: 30px; border-radius: 50%; background: var(--teal); color: #FFFFFF; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  .logo-word { font-size: 22px; font-weight: 700; }
+  .logo-word span { font-weight: 400; color: var(--muted); }
+  .nav { display: flex; gap: 32px; font-size: 15px; font-weight: 500; }
+  .header-cta { justify-self: end; }
+  .btn-book { height: 44px; padding: 0 22px; border-radius: 10px; background: var(--teal); color: #FFFFFF; font-size: 15px; font-weight: 600; }
+  .btn-book:hover { background: var(--teal-dark); }
+
+  /* hero */
+  .hero { height: 480px; padding: 0 64px; display: flex; align-items: center; justify-content: center; gap: 48px; }
+  .hero-copy { width: 580px; flex: none; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; background: var(--mint); color: var(--teal); font-size: 13px; font-weight: 600; }
+  .eyebrow .icon { width: 14px; height: 14px; }
+  .hero h1 { margin-top: 18px; font-size: 46px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+  .hero-sub { margin-top: 18px; max-width: 520px; font-size: 18px; line-height: 1.55; color: var(--muted); }
+  .hero-actions { margin-top: 30px; display: flex; gap: 14px; }
+  .btn-primary { height: 52px; padding: 0 26px; border-radius: 12px; background: var(--teal); color: #FFFFFF; font-size: 16px; font-weight: 600; }
+  .btn-primary:hover { background: var(--teal-dark); }
+  .btn-secondary { height: 52px; padding: 0 26px; border-radius: 12px; background: #FFFFFF; border: 1.5px solid var(--navy); color: var(--navy); font-size: 16px; font-weight: 600; }
+  .hero-checks { margin-top: 26px; display: flex; gap: 22px; font-size: 14px; color: var(--muted); }
+  .hero-checks li { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-checks .icon { width: 16px; height: 16px; color: var(--teal); }
+  .hero-media { position: relative; width: 620px; height: 430px; flex: none; }
+  .photo { width: 520px; height: 430px; margin-left: auto; background: var(--mint); border-radius: 24px; overflow: hidden; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; color: transparent; }
+
+  /* booking card */
+  .card-booking { position: absolute; left: 0; bottom: 24px; width: 330px; background: #FFFFFF; border-radius: 18px; padding: 20px; box-shadow: 0 20px 44px -14px rgba(15, 42, 68, .35); }
+  .card-booking h2 { font-size: 16px; font-weight: 700; }
+  .field-label { margin-top: 14px; font-size: 12px; font-weight: 600; color: var(--muted); }
+  .select { margin-top: 6px; height: 40px; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--field); border-radius: 10px; font-size: 14px; }
+  .select .icon { width: 16px; height: 16px; color: var(--muted); }
+  .chips { margin-top: 6px; display: flex; gap: 8px; }
+  .chips button { flex: 1; height: 34px; border-radius: 8px; background: #FFFFFF; border: 1px solid var(--field); color: var(--navy); font-size: 13px; font-weight: 600; }
+  .chips button.on { background: var(--teal); border-color: var(--teal); color: #FFFFFF; }
+  .card-booking .btn-confirm { margin-top: 16px; width: 100%; height: 44px; border-radius: 10px; background: var(--teal); color: #FFFFFF; font-size: 15px; font-weight: 600; }
+  .card-booking .btn-confirm:hover { background: var(--teal-dark); }
+  .card-fine { margin-top: 8px; font-size: 12px; color: var(--muted); }
+
+  /* value strip */
+  .values { height: 144px; background: #FFFFFF; border-top: 1px solid var(--rule); padding: 0 64px; display: flex; }
+  .values li { flex: 1; display: flex; align-items: center; gap: 16px; }
+  .value-tile { width: 44px; height: 44px; border-radius: 12px; background: var(--mint); color: var(--teal); display: flex; align-items: center; justify-content: center; flex: none; }
+  .value-tile .icon { width: 22px; height: 22px; }
+  .value-body h3 { font-size: 17px; font-weight: 700; }
+  .value-body p { margin-top: 4px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Open Saturdays · Free parking on site</span>
+  <span class="topbar-phone"><i data-icon="phone"></i>(312) 555-0147</span>
+</div>
+
+<header class="site-header">
+  <div class="logo">
+    <span class="logo-mark">H</span>
+    <span class="logo-word">Harborline<span> Dental</span></span>
+  </div>
+  <nav class="nav">
+    <a href="#">Treatments</a>
+    <a href="#">Prices</a>
+    <a href="#">Our team</a>
+    <a href="#">Reviews</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="header-cta"><button class="btn-book">Book online</button></div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow"><i data-icon="clock"></i>Same-week appointments</span>
+    <h1>Teeth whitening and implants, with appointments this week.</h1>
+    <p class="hero-sub">Gentle, modern dentistry in the heart of Harborline. Book online in under a minute, or call and we'll find you a time.</p>
+    <div class="hero-actions">
+      <button class="btn-primary">Book an appointment</button>
+      <button class="btn-secondary">See treatment prices</button>
+    </div>
+    <ul class="hero-checks">
+      <li><i data-icon="check"></i>Finance available</li>
+      <li><i data-icon="check"></i>Free parking</li>
+      <li><i data-icon="check"></i>Open Saturdays</li>
+    </ul>
+  </div>
+  <div class="hero-media">
+    <figure class="photo">
+      <img src="../_assets/harborline-hero.jpg" alt="Bright, modern treatment room at Harborline Dental">
+    </figure>
+    <form class="card-booking">
+      <h2>Book an appointment</h2>
+      <div class="field-label">Treatment</div>
+      <div class="select">Teeth whitening<i data-icon="chevron-down"></i></div>
+      <div class="field-label">Date</div>
+      <div class="chips">
+        <button type="button">Mon 14</button>
+        <button type="button" class="on">Tue 15</button>
+        <button type="button">Wed 16</button>
+        <button type="button">Thu 17</button>
+      </div>
+      <div class="field-label">Time</div>
+      <div class="chips">
+        <button type="button">9:00</button>
+        <button type="button" class="on">10:30</button>
+        <button type="button">13:15</button>
+        <button type="button">15:45</button>
+      </div>
+      <button type="button" class="btn-confirm">Confirm booking</button>
+      <div class="card-fine">Free cancellation up to 24 hours before</div>
+    </form>
+  </div>
+</section>
+
+<ul class="values">
+  <li>
+    <span class="value-tile"><i data-icon="calendar"></i></span>
+    <div class="value-body">
+      <h3>Book online, any time</h3>
+      <p>Pick a slot that suits you in under a minute.</p>
+    </div>
+  </li>
+  <li>
+    <span class="value-tile"><i data-icon="clock"></i></span>
+    <div class="value-body">
+      <h3>Same-week appointments</h3>
+      <p>Most treatments within five working days.</p>
+    </div>
+  </li>
+  <li>
+    <span class="value-tile"><i data-icon="check-circle"></i></span>
+    <div class="value-body">
+      <h3>Clear prices</h3>
+      <p>Every treatment priced up front, with finance.</p>
+    </div>
+  </li>
+</ul>
+
+<script src="../_shared/icons.js"></script>
+<script src="../_shared/ready.js"></script>
+</body>
+</html>

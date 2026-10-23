@@ -1,0 +1,156 @@
+<!doctype html>
+<!-- Kettlebird Coffee: subscription landing page mockup (above the fold), 1360 x 736. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kettlebird Coffee — Subscriptions</title>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=fraunces:600|inter:400,500,600">
+<link rel="stylesheet" href="../_shared/base.css">
+<style>
+  :root {
+    --espresso: #2B1D16;
+    --cream: #F6EFE6;
+    --latte: #E9DCCB;
+    --orange: #C8622A;
+    --orange-dark: #A94F1F;
+    --sage: #7D8F6A;
+    --sage-dark: #55654A;
+    --muted: #6B5446;
+    --rule: rgba(43, 29, 22, .08);
+  }
+  body { width: 1360px; height: 736px; background: var(--cream); font-family: Inter, sans-serif; color: var(--espresso); }
+  .icon { width: 20px; height: 20px; }
+
+  /* announcement */
+  .announce { height: 36px; background: var(--espresso); color: var(--cream); font-size: 13px; display: flex; align-items: center; justify-content: center; }
+
+  /* header */
+  .site-header { height: 76px; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--rule); }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-mark { width: 30px; height: 30px; border-radius: 50%; background: var(--orange); color: #F6EFE6; font-family: Fraunces, serif; font-weight: 600; font-size: 17px; display: flex; align-items: center; justify-content: center; }
+  .logo-word { font-family: Fraunces, serif; font-weight: 600; font-size: 24px; }
+  .nav { display: flex; gap: 36px; font-size: 15px; font-weight: 500; }
+  .header-tools { display: flex; align-items: center; gap: 20px; }
+  .header-tools .icon { color: var(--espresso); }
+  .bag { position: relative; display: flex; }
+  .bag-count { position: absolute; top: -6px; right: -8px; min-width: 16px; height: 16px; border-radius: 999px; background: var(--orange); color: #FFFFFF; font-size: 10px; font-weight: 600; display: flex; align-items: center; justify-content: center; padding: 0 4px; }
+  .btn-cta { height: 44px; padding: 0 22px; border-radius: 999px; background: var(--orange); color: #FFFFFF; font-size: 15px; font-weight: 600; }
+
+  /* hero */
+  .hero { height: 480px; padding: 0 64px; display: flex; align-items: center; justify-content: center; gap: 56px; }
+  .hero-copy { width: 600px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; background: rgba(125, 143, 106, .16); color: var(--sage-dark); font-size: 13px; font-weight: 600; }
+  .eyebrow .icon { width: 14px; height: 14px; }
+  .hero h1 { margin-top: 20px; font-family: Fraunces, serif; font-weight: 600; font-size: 46px; line-height: 1.08; letter-spacing: -0.02em; }
+  .hero-sub { margin-top: 20px; max-width: 540px; font-size: 18px; line-height: 1.55; color: var(--muted); }
+  .hero-actions { margin-top: 32px; display: flex; gap: 14px; }
+  .btn-primary { height: 52px; padding: 0 26px; border-radius: 999px; background: var(--orange); color: #FFFFFF; font-size: 16px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; }
+  .btn-primary:hover { background: var(--orange-dark); }
+  .btn-primary .icon { width: 18px; height: 18px; }
+  .btn-secondary { height: 52px; padding: 0 26px; border-radius: 999px; background: transparent; border: 1.5px solid var(--espresso); color: var(--espresso); font-size: 16px; font-weight: 600; }
+  .hero-checks { margin-top: 28px; display: flex; gap: 24px; font-size: 14px; color: var(--muted); }
+  .hero-checks li { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-checks .icon { width: 16px; height: 16px; color: var(--sage); }
+  .hero-media { position: relative; width: 560px; height: 440px; }
+  .photo { width: 100%; height: 100%; background: var(--latte); border-radius: 28px; overflow: hidden; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; color: transparent; }
+  .card-next { position: absolute; left: -36px; bottom: 28px; width: 300px; background: #FFFFFF; border-radius: 18px; padding: 18px 20px; box-shadow: 0 18px 40px -12px rgba(43, 29, 22, .35); }
+  .card-next .kicker { font-size: 11px; font-weight: 600; letter-spacing: .12em; color: var(--sage); }
+  .card-next .roast { margin-top: 6px; font-family: Fraunces, serif; font-size: 18px; }
+  .card-next .spec { margin-top: 3px; font-size: 13px; color: var(--muted); }
+  .card-next hr { margin: 12px 0 10px; border: 0; border-top: 1px solid var(--rule); }
+  .card-next .row { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; }
+  .card-next .row .icon { width: 16px; height: 16px; color: var(--orange); }
+  .card-save { position: absolute; right: 20px; top: 20px; display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; border-radius: 999px; padding: 8px 14px; font-size: 13px; font-weight: 600; box-shadow: 0 12px 28px -14px rgba(43, 29, 22, .4); }
+  .card-save .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+
+  /* value strip */
+  .values { height: 144px; background: #FFFFFF; border-top: 1px solid var(--rule); padding: 0 64px; display: flex; }
+  .values li { flex: 1; display: flex; align-items: center; gap: 16px; }
+  .value-tile { width: 44px; height: 44px; border-radius: 12px; background: var(--latte); color: #C8622A; display: flex; align-items: center; justify-content: center; flex: none; }
+  .value-tile .icon { width: 22px; height: 22px; }
+  .value-body h3 { font-family: Fraunces, serif; font-size: 19px; font-weight: 600; }
+  .value-body p { margin-top: 4px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="announce">Free shipping on every subscription&nbsp; · &nbsp;Pause, skip or cancel any time</div>
+
+<header class="site-header">
+  <div class="logo">
+    <span class="logo-mark">K</span>
+    <span class="logo-word">Kettlebird</span>
+  </div>
+  <nav class="nav">
+    <a href="#">Shop</a>
+    <a href="#">Subscriptions</a>
+    <a href="#">Brew guides</a>
+    <a href="#">Our story</a>
+  </nav>
+  <div class="header-tools">
+    <i data-icon="search"></i>
+    <i data-icon="user"></i>
+    <span class="bag"><i data-icon="shopping-bag"></i><span class="bag-count">2</span></span>
+    <button class="btn-cta">Start a subscription</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow"><i data-icon="flame"></i>Roasted to order · Ships within 48 hours</span>
+    <h1>Specialty coffee, roasted to order and delivered on your schedule.</h1>
+    <p class="hero-sub">Choose your beans, grind and rhythm. We roast every Monday and ship by Wednesday, so each bag arrives at its peak.</p>
+    <div class="hero-actions">
+      <button class="btn-primary">Build your subscription <i data-icon="arrow-right"></i></button>
+      <button class="btn-secondary">Shop single bags</button>
+    </div>
+    <ul class="hero-checks">
+      <li><i data-icon="check"></i>Pause or skip any time</li>
+      <li><i data-icon="check"></i>Free shipping</li>
+      <li><i data-icon="check"></i>Compostable bags</li>
+    </ul>
+  </div>
+  <div class="hero-media">
+    <figure class="photo">
+      <img src="../_assets/kettlebird-hero.jpg" alt="Kettlebird Coffee bag beside a pour-over coffee on a kitchen counter">
+    </figure>
+    <div class="card-next">
+      <div class="kicker">NEXT DELIVERY</div>
+      <div class="roast">Ethiopia Guji · Washed</div>
+      <div class="spec">2 × 250 g · Whole bean · Every 2 weeks</div>
+      <hr>
+      <div class="row"><i data-icon="calendar"></i>Roasting Monday, arrives Thursday</div>
+    </div>
+    <div class="card-save"><span class="dot"></span>Save 15% on every subscription</div>
+  </div>
+</section>
+
+<ul class="values">
+  <li>
+    <span class="value-tile"><i data-icon="flame"></i></span>
+    <div class="value-body">
+      <h3>Roasted to order</h3>
+      <p>Small batches roasted every Monday.</p>
+    </div>
+  </li>
+  <li>
+    <span class="value-tile"><i data-icon="calendar"></i></span>
+    <div class="value-body">
+      <h3>Your plan, your rhythm</h3>
+      <p>Weekly to monthly. Change it in two clicks.</p>
+    </div>
+  </li>
+  <li>
+    <span class="value-tile"><i data-icon="book-open"></i></span>
+    <div class="value-body">
+      <h3>Brew guides included</h3>
+      <p>Step-by-step recipes for every brewing method.</p>
+    </div>
+  </li>
+</ul>
+
+<script src="../_shared/icons.js"></script>
+<script src="../_shared/ready.js"></script>
+</body>
+</html>

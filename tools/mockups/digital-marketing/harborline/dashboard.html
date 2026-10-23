@@ -1,0 +1,215 @@
+<!doctype html>
+<!-- Harborline Dental: bookings dashboard mockup (illustrative data), 1360 x 744. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Harborline Dental — Bookings dashboard</title>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=plus-jakarta-sans:400,500,600,700">
+<link rel="stylesheet" href="../_shared/base.css">
+<style>
+  :root {
+    --plane: #F4F8FB;
+    --card: #FFFFFF;
+    --line: rgba(15, 42, 68, .08);
+    --ink: #0F2A44;
+    --ink-2: #5B6B7B;
+    --ink-3: #7C8B9A;
+    --hairline: #E4EBF1;
+    --teal: #1F9E8F;
+  }
+  body { width: 1360px; height: 744px; background: var(--plane); font-family: 'Plus Jakarta Sans', sans-serif; color: var(--ink); }
+  .wrap { padding: 20px; height: 744px; display: flex; flex-direction: column; gap: 16px; }
+  .icon { width: 16px; height: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+
+  /* header */
+  .bar { height: 40px; display: flex; align-items: center; justify-content: space-between; }
+  .bar-left { display: flex; align-items: center; gap: 10px; }
+  .mark { width: 28px; height: 28px; border-radius: 50%; background: var(--teal); color: #FFFFFF; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+  .brand { font-size: 15px; font-weight: 600; }
+  .vline { width: 1px; height: 20px; background: rgba(15, 42, 68, .16); }
+  .scope { font-size: 15px; color: var(--ink-2); }
+  .bar-right { display: flex; align-items: center; gap: 10px; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; font-size: 13px; font-weight: 500; color: var(--ink); }
+  .pill .icon { width: 14px; height: 14px; color: var(--ink-2); }
+  .pill-note { display: inline-flex; align-items: center; padding: 7px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; color: #8A5A00; background: #FFF4D6; border: 1px solid #F2D48A; }
+  .ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; font-size: 13px; font-weight: 500; color: var(--ink-2); }
+  .ghost .icon { width: 14px; height: 14px; }
+
+  /* KPI tiles */
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; height: 104px; }
+  .kpi { position: relative; padding: 16px 18px; }
+  .kpi-label { font-size: 12px; font-weight: 500; color: var(--ink-2); }
+  .kpi-value { margin-top: 2px; font-size: 28px; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .kpi-delta { margin-top: 2px; display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #006300; }
+  .kpi-delta .icon { width: 14px; height: 14px; }
+  .spark { position: absolute; right: 18px; top: 34px; width: 110px; height: 36px; }
+
+  /* charts */
+  .charts { display: flex; gap: 16px; height: 286px; }
+  .chart-card { padding: 14px 16px; display: flex; flex-direction: column; }
+  .chart-card.wide { flex: 2; }
+  .chart-card.narrow { flex: 1; }
+  .chart-head { display: flex; align-items: flex-start; justify-content: space-between; }
+  .chart-title { font-size: 15px; font-weight: 600; }
+  .chart-sub { margin-top: 3px; font-size: 12px; color: var(--ink-3); }
+  .legend { display: flex; gap: 14px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--ink-2); }
+  .swatch { width: 10px; height: 10px; border-radius: 3px; }
+  #bookings { width: 100%; height: 206px; margin-top: 10px; }
+  #treatments { width: 100%; height: 180px; margin-top: 12px; }
+  .bar-note { margin-top: 8px; font-size: 12px; color: var(--ink-3); }
+
+  /* table */
+  .table-card { height: 226px; padding: 14px 16px; }
+  .table-head { display: flex; align-items: baseline; justify-content: space-between; }
+  .table-head h2 { font-size: 15px; font-weight: 600; }
+  .table-head span { font-size: 12px; color: var(--ink-3); }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+  th { height: 24px; font-size: 12px; font-weight: 600; color: var(--ink-3); text-align: left; border-bottom: 1px solid var(--line); }
+  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  th:nth-child(1) { width: 34%; } th:nth-child(2) { width: 18%; } th:nth-child(3), th:nth-child(4), th:nth-child(5) { width: 16%; }
+  td { height: 32px; border-bottom: 1px solid var(--hairline); color: var(--ink-2); }
+  td.name { color: var(--ink); font-weight: 500; }
+  tr:last-child td { border-bottom: 0; }
+  td.ch span { display: inline-flex; align-items: center; gap: 7px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="bar">
+    <div class="bar-left">
+      <span class="mark">H</span>
+      <span class="brand">Harborline Dental</span>
+      <span class="vline"></span>
+      <span class="scope">Bookings dashboard</span>
+    </div>
+    <div class="bar-right">
+      <span class="pill"><i data-icon="calendar"></i>Last 12 weeks<i data-icon="chevron-down"></i></span>
+      <span class="pill-note">Illustrative data</span>
+      <button class="ghost"><i data-icon="download"></i>Export</button>
+    </div>
+  </header>
+
+  <section class="kpis">
+    <div class="card kpi">
+      <div class="kpi-label">Booked appointments</div>
+      <div class="kpi-value">186</div>
+      <div class="kpi-delta"><i data-icon="trending-up"></i>+24% vs previous 12 weeks</div>
+      <div class="spark" data-spark="11,12,13,14,14,15,16,16,17,18,19,21"></div>
+    </div>
+    <div class="card kpi">
+      <div class="kpi-label">Cost per booking</div>
+      <div class="kpi-value">$38.40</div>
+      <div class="kpi-delta"><i data-icon="trending-down"></i>−14% vs previous 12 weeks</div>
+      <div class="spark" data-spark="46,45,44,43,42,41,41,40,39,39,38,38"></div>
+    </div>
+    <div class="card kpi">
+      <div class="kpi-label">Map-pack position</div>
+      <div class="kpi-value">3.2</div>
+      <div class="kpi-delta"><i data-icon="trending-up"></i>up from 7.8</div>
+      <div class="spark" data-spark="7.8,7.1,6.6,6.0,5.5,5.1,4.6,4.2,3.9,3.6,3.4,3.2"></div>
+    </div>
+    <div class="card kpi">
+      <div class="kpi-label">Calls from ads</div>
+      <div class="kpi-value">412</div>
+      <div class="kpi-delta"><i data-icon="trending-up"></i>+18%</div>
+      <div class="spark" data-spark="26,28,29,31,32,33,34,36,37,38,42,46"></div>
+    </div>
+  </section>
+
+  <section class="charts">
+    <div class="card chart-card wide">
+      <div class="chart-head">
+        <div>
+          <div class="chart-title">Bookings by source</div>
+          <div class="chart-sub">Booked appointments per week</div>
+        </div>
+        <div class="legend">
+          <span><i class="swatch" style="background:#2a78d6"></i>Paid search</span>
+          <span><i class="swatch" style="background:#eb6834"></i>Map &amp; organic</span>
+        </div>
+      </div>
+      <div id="bookings"></div>
+    </div>
+    <div class="card chart-card narrow">
+      <div class="chart-head">
+        <div>
+          <div class="chart-title">Bookings by treatment</div>
+          <div class="chart-sub">Last 12 weeks · 186 booked</div>
+        </div>
+      </div>
+      <div id="treatments"></div>
+      <div class="bar-note">All sources combined</div>
+    </div>
+  </section>
+
+  <div class="card table-card">
+    <div class="table-head">
+      <h2>Search campaigns</h2>
+      <span>Sorted by bookings</span>
+    </div>
+    <table>
+      <colgroup>
+        <col style="width:34%"><col style="width:18%"><col style="width:16%"><col style="width:16%"><col style="width:16%">
+      </colgroup>
+      <thead>
+        <tr><th>Campaign</th><th>Type</th><th class="num">Clicks</th><th class="num">Bookings</th><th class="num">Cost per booking</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">Whitening, 5-mile radius</td>
+          <td class="ch"><span><i class="dot" style="background:#2a78d6"></i>Search</span></td>
+          <td class="num">1,284</td><td class="num">41</td><td class="num">$31.45</td>
+        </tr>
+        <tr>
+          <td class="name">Implant consultation</td>
+          <td class="ch"><span><i class="dot" style="background:#2a78d6"></i>Search</span></td>
+          <td class="num">742</td><td class="num">24</td><td class="num">$52.90</td>
+        </tr>
+        <tr>
+          <td class="name">Brand terms</td>
+          <td class="ch"><span><i class="dot" style="background:#2a78d6"></i>Search</span></td>
+          <td class="num">516</td><td class="num">18</td><td class="num">$18.40</td>
+        </tr>
+        <tr>
+          <td class="name">Emergency dentist</td>
+          <td class="ch"><span><i class="dot" style="background:#2a78d6"></i>Search</span></td>
+          <td class="num">388</td><td class="num">13</td><td class="num">$61.20</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="../_shared/icons.js"></script>
+<script src="../_shared/charts.js"></script>
+<script>
+  lineChart(document.getElementById('bookings'), {
+    labels: ['Wk 1','Wk 2','Wk 3','Wk 4','Wk 5','Wk 6','Wk 7','Wk 8','Wk 9','Wk 10','Wk 11','Wk 12'],
+    max: 12, ticks: [0, 3, 6, 9, 12], format: (v) => String(v),
+    series: [
+      { name: 'Paid search', color: '#2a78d6', values: [5,6,6,7,7,8,8,8,9,10,11,11] },
+      { name: 'Map & organic', color: '#eb6834', values: [3,3,4,4,5,5,5,6,6,7,8,10] },
+    ],
+  });
+  barChart(document.getElementById('treatments'), {
+    max: 64, format: (v) => String(v), labelWidth: 132,
+    rows: [
+      { label: 'Teeth whitening', value: 64, color: '#5B6B7B' },
+      { label: 'Implant consult', value: 41, color: '#5B6B7B' },
+      { label: 'Check-up & clean', value: 38, color: '#5B6B7B' },
+      { label: 'Aligner consult', value: 27, color: '#5B6B7B' },
+      { label: 'Emergency', value: 16, color: '#5B6B7B' },
+    ],
+  });
+  document.querySelectorAll('.spark').forEach(function (el) {
+    sparkline(el, el.dataset.spark.split(',').map(Number), '#2a78d6');
+  });
+</script>
+<script src="../_shared/ready.js"></script>
+</body>
+</html>

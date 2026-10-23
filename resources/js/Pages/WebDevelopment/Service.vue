@@ -1,9 +1,10 @@
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import AppLayout from '@/Layouts/AppLayout.vue';
 import PageHero from '@/Components/PageHero.vue';
 import ContactSection from '@/Components/ContactSection.vue';
 import Icon from '@/Components/Icon.vue';
+import Lightbox from '@/Components/Lightbox.vue';
 import { getService } from '@/data/webDevelopmentServices';
 
 const props = defineProps({
@@ -11,6 +12,12 @@ const props = defineProps({
 });
 
 const service = computed(() => getService(props.slug));
+
+// One shared lightbox for the example campaigns' images.
+const lightbox = ref({ images: [], index: null });
+const openExample = (example, i = 0) => {
+  lightbox.value = { images: example.images, index: i };
+};
 </script>
 
 <template>
@@ -126,6 +133,80 @@ const service = computed(() => getService(props.slug));
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Example campaigns -->
+      <section v-if="service.examples?.length" class="py-20 bg-surface/30 border-y border-line">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <span class="inline-flex items-center gap-2 px-3 py-1 mb-5 rounded-full border border-line bg-surface/60 text-xs font-semibold uppercase tracking-[0.14em] text-warning">Illustrative examples</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-content mb-4">Example campaigns</h2>
+            <p class="max-w-3xl mx-auto text-lg text-content-muted">
+              How we would approach four typical briefs. The brands are fictional and the figures are the targets we would set, not results from client work.
+            </p>
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-2">
+            <article
+              v-for="ex in service.examples"
+              :key="ex.brand"
+              class="flex flex-col rounded-card bg-surface ring-1 ring-inset ring-line overflow-hidden shadow-e2"
+            >
+              <button
+                type="button"
+                @click="openExample(ex)"
+                :aria-label="`View ${ex.brand} example images`"
+                class="group relative block aspect-[16/9] w-full overflow-hidden bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+              >
+                <img
+                  :src="`${ex.images[0].src}-800.webp`"
+                  :srcset="`${ex.images[0].src}-800.webp 800w, ${ex.images[0].src}.webp 1600w`"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  :alt="ex.images[0].alt"
+                  loading="lazy"
+                  decoding="async"
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                >
+                <span class="absolute top-3 left-3 rounded-full bg-ink/85 backdrop-blur-sm px-2.5 py-1 text-[11px] font-semibold text-content ring-1 ring-inset ring-line">Example campaign — illustrative, not client work</span>
+                <span class="absolute bottom-3 right-3 rounded-full bg-ink/85 px-2.5 py-1 text-[11px] font-semibold text-content-muted ring-1 ring-inset ring-line">{{ ex.images.length }} images</span>
+              </button>
+
+              <div class="flex flex-1 flex-col p-6">
+                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-accent-400 mb-1">{{ ex.industry }}</p>
+                <h3 class="text-xl font-bold text-content mb-3">{{ ex.brand }}</h3>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span
+                    v-for="item in ex.services"
+                    :key="item"
+                    class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-control bg-surface-2 text-content-muted ring-1 ring-inset ring-line"
+                  >
+                    {{ item }}
+                  </span>
+                </div>
+                <dl class="space-y-4 text-sm mb-6">
+                  <div>
+                    <dt class="text-xs font-semibold uppercase tracking-[0.12em] text-content-subtle mb-1">The brief</dt>
+                    <dd class="text-content-muted">{{ ex.challenge }}</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs font-semibold uppercase tracking-[0.12em] text-content-subtle mb-1">Our approach</dt>
+                    <dd class="text-content-muted">{{ ex.approach }}</dd>
+                  </div>
+                </dl>
+
+                <div class="mt-auto pt-5 border-t border-line grid grid-cols-3 gap-4">
+                  <div v-for="target in ex.targets" :key="target.label">
+                    <p class="text-xl font-bold text-content">{{ target.value }}</p>
+                    <p class="text-xs text-content-subtle leading-snug">{{ target.label }}</p>
+                    <span class="mt-1 inline-block text-[10px] font-semibold uppercase tracking-wider text-warning">Target</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <Lightbox :images="lightbox.images" v-model:index="lightbox.index" />
         </div>
       </section>
 

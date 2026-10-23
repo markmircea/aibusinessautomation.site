@@ -22,3 +22,6 @@ yarn-error.log
 # Local logs
 laravel.log
 storage/logs/*.log
+
+# Raw portfolio captures (originals live in the source projects; only optimised WebP is committed)
+tools/portfolio/raw/

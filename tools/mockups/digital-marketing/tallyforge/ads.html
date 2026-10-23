@@ -1,0 +1,195 @@
+<!doctype html>
+<!-- Tallyforge: B2B paid social ad set mockup on a presentation board, 1600 x 900. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tallyforge — B2B paid social ad set</title>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800">
+<link rel="stylesheet" href="../_shared/base.css">
+<style>
+  body { width: 1600px; height: 900px; font-family: Manrope, sans-serif; }
+  #frame {
+    position: relative;
+    width: 1600px; height: 900px;
+    background-color: #0B1020;
+    background-image:
+      radial-gradient(60% 55% at 50% 0%, rgba(91,108,255,0.28) 0%, transparent 70%),
+      radial-gradient(45% 45% at 12% 18%, rgba(47,75,196,0.22) 0%, transparent 70%),
+      radial-gradient(45% 45% at 88% 22%, rgba(27,42,107,0.35) 0%, transparent 70%);
+  }
+  .icon { width: 16px; height: 16px; }
+
+  .board-head { position: absolute; top: 40px; left: 72px; }
+  .board-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .14em; color: #A8B0C8; }
+  .board-title { margin-top: 6px; font-size: 22px; font-weight: 600; color: #F1F3F9; }
+  .board-tag { position: absolute; top: 44px; right: 72px; padding: 6px 12px; border: 1px solid rgba(245,180,74,.45); border-radius: 999px; font-size: 12px; font-weight: 600; color: #F5B44A; }
+
+  .cards { position: absolute; top: 128px; left: 0; right: 0; display: flex; justify-content: center; gap: 40px; }
+  .ad { width: 420px; background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 60px -12px rgba(0,0,0,.6); color: #1C1E21; }
+  .ad-head { padding: 14px 16px; display: flex; align-items: center; gap: 10px; }
+  .ad-avatar { width: 40px; height: 40px; border-radius: 10px; background: #0F2F25; color: #3DDC97; display: flex; align-items: center; justify-content: center; flex: none; }
+  .ad-who { flex: 1; min-width: 0; }
+  .ad-name { font-size: 14px; font-weight: 600; }
+  .ad-sponsored { font-size: 12px; color: #65676B; }
+  .ad-more { color: #65676B; }
+  .ad-more .icon { width: 20px; height: 20px; }
+  .ad-text { padding: 0 16px 12px; font-size: 14px; line-height: 1.45; min-height: 61px; }
+  .ad-creative { width: 420px; height: 420px; }
+  .ad-foot { background: #F0F2F5; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .ad-url { font-size: 11px; color: #65676B; letter-spacing: .04em; }
+  .ad-headline { margin-top: 3px; font-size: 15px; font-weight: 600; }
+  .ad-btn { background: #E4E6EB; font-size: 14px; font-weight: 600; border-radius: 6px; padding: 8px 14px; color: #1C1E21; flex: none; }
+  .ad-eng { padding: 10px 16px; font-size: 13px; color: #65676B; border-top: 1px solid #E4E6EB; display: flex; justify-content: space-evenly; }
+  .ad-eng span { display: inline-flex; align-items: center; gap: 6px; }
+  .ad-eng .icon { width: 16px; height: 16px; }
+
+  /* creative 1: forest headline + checklist card */
+  .creative-1 { background-color: #0F2F25; background-image: radial-gradient(60% 80% at 80% 30%, rgba(61,220,151,.14), transparent 70%); padding: 36px; }
+  .creative-1 h3 { font-size: 34px; font-weight: 800; line-height: 1.1; color: #FFFFFF; }
+  .creative-1 h3 em { font-style: normal; color: #3DDC97; }
+  .mini-card { margin-top: 22px; background: #FFFFFF; border-radius: 12px; padding: 14px 16px; color: #0F2F25; }
+  .mini-card .row { display: flex; align-items: center; gap: 10px; height: 30px; font-size: 14px; font-weight: 600; }
+  .mini-card .icon { width: 16px; height: 16px; color: #138A5E; }
+
+  /* creative 2: comparison table */
+  .creative-2 { background: #F5F7F4; padding: 32px; }
+  .creative-2 h3 { font-size: 24px; font-weight: 800; color: #0F2F25; }
+  .cmp { margin-top: 14px; }
+  .cmp-row { display: grid; grid-template-columns: 1fr 1fr; align-items: center; height: 52px; border-bottom: 1px solid #DDE5DF; }
+  .cmp-head { height: 36px; font-size: 13px; font-weight: 700; }
+  .cmp-head .c-left { color: #5A6B62; }
+  .cmp-head .c-right { color: #138A5E; }
+  .c-left { font-size: 14px; color: #5A6B62; }
+  .c-right { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #0F2F25; }
+  .c-right .icon { width: 16px; height: 16px; color: #138A5E; }
+
+  /* creative 3: guide cover */
+  .creative-3 { background: #3DDC97; display: flex; align-items: center; justify-content: center; }
+  .book { width: 230px; height: 300px; background: #0F2F25; border-radius: 6px; transform: rotate(-4deg); box-shadow: 0 24px 40px -12px rgba(15,47,37,.6); padding: 26px; display: flex; flex-direction: column; }
+  .book-tag { font-size: 11px; font-weight: 800; letter-spacing: .14em; color: #3DDC97; }
+  .book-title { margin-top: 12px; font-size: 30px; font-weight: 800; line-height: 1.05; color: #FFFFFF; }
+  .book-sub { margin-top: 8px; font-size: 14px; color: rgba(255,255,255,.75); }
+  .book-logo { margin-top: auto; display: flex; align-items: center; gap: 8px; }
+  .book-logo .mark { width: 24px; height: 24px; border-radius: 6px; background: #3DDC97; color: #0F2F25; display: flex; align-items: center; justify-content: center; flex: none; }
+  .book-logo span:last-child { font-size: 15px; font-weight: 800; color: #FFFFFF; }
+</style>
+</head>
+<body>
+<div id="frame">
+  <div class="board-head">
+    <div class="board-eyebrow">TALLYFORGE</div>
+    <div class="board-title">B2B paid social ad set</div>
+  </div>
+  <div class="board-tag">Concept · illustrative</div>
+
+  <div class="cards">
+    <article class="ad">
+      <div class="ad-head">
+        <div class="ad-avatar"><svg width="40" height="40" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 8v14"/><path d="M12.5 8v14"/><path d="M17 8v14"/><path d="M21.5 8v14"/><path d="M6.5 19.5 23.5 9.5"/></svg></div>
+        <div class="ad-who">
+          <div class="ad-name">Tallyforge</div>
+          <div class="ad-sponsored">Promoted</div>
+        </div>
+        <span class="ad-more"><i data-icon="more-horizontal"></i></span>
+      </div>
+      <p class="ad-text">Your team shouldn't spend the first week of every month chasing numbers. See how Tallyforge automates reconciliations and accruals.</p>
+      <div class="ad-creative creative-1">
+        <h3>Close the books in <em>days</em>, not weeks.</h3>
+        <div class="mini-card">
+          <div class="row"><i data-icon="check-circle"></i>Bank reconciliations · 14 of 14</div>
+          <div class="row"><i data-icon="check-circle"></i>Accruals · 11 of 11</div>
+          <div class="row"><i data-icon="check-circle"></i>Variance review · Done</div>
+        </div>
+      </div>
+      <div class="ad-foot">
+        <div>
+          <div class="ad-url">TALLYFORGE.EXAMPLE</div>
+          <div class="ad-headline">Close the books in days</div>
+        </div>
+        <button class="ad-btn">Book a demo</button>
+      </div>
+      <div class="ad-eng">
+        <span><i data-icon="heart"></i>Like</span>
+        <span><i data-icon="message-circle"></i>Comment</span>
+        <span><i data-icon="rotate-ccw"></i>Repost</span>
+        <span><i data-icon="forward"></i>Send</span>
+      </div>
+    </article>
+
+    <article class="ad">
+      <div class="ad-head">
+        <div class="ad-avatar"><svg width="40" height="40" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 8v14"/><path d="M12.5 8v14"/><path d="M17 8v14"/><path d="M21.5 8v14"/><path d="M6.5 19.5 23.5 9.5"/></svg></div>
+        <div class="ad-who">
+          <div class="ad-name">Tallyforge</div>
+          <div class="ad-sponsored">Promoted</div>
+        </div>
+        <span class="ad-more"><i data-icon="more-horizontal"></i></span>
+      </div>
+      <p class="ad-text">Still reconciling in spreadsheets? Here's what changes when the close runs on one checklist.</p>
+      <div class="ad-creative creative-2">
+        <h3>Spreadsheets vs. Tallyforge</h3>
+        <div class="cmp">
+          <div class="cmp-row cmp-head"><span class="c-left">Spreadsheets</span><span class="c-right">Tallyforge</span></div>
+          <div class="cmp-row"><span class="c-left">Bank matching</span><span class="c-right"><i data-icon="check"></i>Automatic</span></div>
+          <div class="cmp-row"><span class="c-left">Close checklist</span><span class="c-right"><i data-icon="check"></i>One shared list</span></div>
+          <div class="cmp-row"><span class="c-left">Audit trail</span><span class="c-right"><i data-icon="check"></i>Every change logged</span></div>
+          <div class="cmp-row"><span class="c-left">Board reports</span><span class="c-right"><i data-icon="check"></i>Live</span></div>
+        </div>
+      </div>
+      <div class="ad-foot">
+        <div>
+          <div class="ad-url">TALLYFORGE.EXAMPLE</div>
+          <div class="ad-headline">Spreadsheets vs. Tallyforge</div>
+        </div>
+        <button class="ad-btn">Learn more</button>
+      </div>
+      <div class="ad-eng">
+        <span><i data-icon="heart"></i>Like</span>
+        <span><i data-icon="message-circle"></i>Comment</span>
+        <span><i data-icon="rotate-ccw"></i>Repost</span>
+        <span><i data-icon="forward"></i>Send</span>
+      </div>
+    </article>
+
+    <article class="ad">
+      <div class="ad-head">
+        <div class="ad-avatar"><svg width="40" height="40" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 8v14"/><path d="M12.5 8v14"/><path d="M17 8v14"/><path d="M21.5 8v14"/><path d="M6.5 19.5 23.5 9.5"/></svg></div>
+        <div class="ad-who">
+          <div class="ad-name">Tallyforge</div>
+          <div class="ad-sponsored">Promoted</div>
+        </div>
+        <span class="ad-more"><i data-icon="more-horizontal"></i></span>
+      </div>
+      <p class="ad-text">A practical playbook for finance leaders: shorten the close without adding headcount.</p>
+      <div class="ad-creative creative-3">
+        <div class="book">
+          <div class="book-tag">FREE GUIDE</div>
+          <div class="book-title">The 5-day close</div>
+          <div class="book-sub">A playbook for finance leaders</div>
+          <div class="book-logo">
+            <span class="mark"><svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 8v14"/><path d="M12.5 8v14"/><path d="M17 8v14"/><path d="M21.5 8v14"/><path d="M6.5 19.5 23.5 9.5"/></svg></span>
+            <span>Tallyforge</span>
+          </div>
+        </div>
+      </div>
+      <div class="ad-foot">
+        <div>
+          <div class="ad-url">TALLYFORGE.EXAMPLE</div>
+          <div class="ad-headline">Free guide: the 5-day close</div>
+        </div>
+        <button class="ad-btn">Download</button>
+      </div>
+      <div class="ad-eng">
+        <span><i data-icon="heart"></i>Like</span>
+        <span><i data-icon="message-circle"></i>Comment</span>
+        <span><i data-icon="rotate-ccw"></i>Repost</span>
+        <span><i data-icon="forward"></i>Send</span>
+      </div>
+    </article>
+  </div>
+</div>
+
+<script src="../_shared/icons.js"></script>
+<script src="../_shared/ready.js"></script>
+</body>
+</html>

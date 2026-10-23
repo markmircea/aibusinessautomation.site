@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Local AI benchmark chart</title>
+<!-- Benchmark figure for the local-inference case study. Data: the local-agent benchmark summary
+     (pass of 12-14 Oct 2026). Captured at 1600x900 by capture.mjs (selector #frame, waitFor body[data-ready='1']). -->
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=figtree:400,500,600,700">
+<style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; color: #F2F4FA; }
+    #frame {
+        position: relative; width: 1600px; height: 900px; overflow: hidden; background: #0B1020;
+        padding: 72px 80px 0;
+    }
+    #frame::before {
+        content: ""; position: absolute; inset: 0; pointer-events: none;
+        background:
+            radial-gradient(60% 55% at 50% 0%, rgba(91,108,255,0.28) 0%, transparent 70%),
+            radial-gradient(45% 45% at 12% 18%, rgba(47,75,196,0.22) 0%, transparent 70%),
+            radial-gradient(45% 45% at 88% 22%, rgba(27,42,107,0.35) 0%, transparent 70%);
+    }
+    #frame > * { position: relative; }
+    .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #7C89FF; }
+    h1 { margin: 14px 0 0; font-size: 42px; line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; }
+    .lede { margin: 14px 0 0; font-size: 20px; color: #A8B0C8; max-width: 1000px; }
+    .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px; }
+    .panel { background: #141A2E; border: 1px solid #1E2640; border-radius: 16px; padding: 28px 32px 22px; }
+    .panel h2 { margin: 0; font-size: 21px; font-weight: 600; }
+    .panel .unit { margin-top: 4px; font-size: 15px; color: #6B7490; }
+    .rows { margin-top: 22px; }
+    .row { display: grid; grid-template-columns: 220px 1fr; align-items: center; height: 58px; }
+    .row .name { font-size: 15px; color: #A8B0C8; line-height: 1.25; }
+    .row .name b { display: block; font-weight: 600; color: #F2F4FA; }
+    .row.pick .name b { color: #7C89FF; }
+    .track { position: relative; height: 18px; }
+    .bar { position: absolute; left: 0; top: 0; height: 18px; border-radius: 0 4px 4px 0; background: #3A4256; }
+    .row.pick .bar { background: #7C89FF; }
+    .val { position: absolute; top: -2px; font-size: 16px; font-weight: 600; color: #A8B0C8;
+           font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .row.pick .val { color: #F2F4FA; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 36px; }
+    .stat { border-top: 1px solid #1E2640; padding-top: 16px; }
+    .stat .n { font-size: 34px; font-weight: 700; }
+    .stat .l { margin-top: 4px; font-size: 15px; color: #A8B0C8; }
+    #frame > .note { position: absolute; left: 80px; bottom: 32px; font-size: 13px; color: #6B7490; }
+</style>
+</head>
+<body>
+<div id="frame">
+    <div class="eyebrow">Benchmark · one RTX 5090 (32 GB)</div>
+    <h1>A 125B mixture-of-experts model on a single GPU</h1>
+    <p class="lede">We tested four ways to serve a coding model at a 128K-token context. The 3-bit build was the fastest
+        and still passed every coding check.</p>
+
+    <div class="panels">
+        <section class="panel">
+            <h2>Generation speed</h2>
+            <div class="unit">tokens per second, 4K prompt · higher is better</div>
+            <div class="rows" id="speed"></div>
+        </section>
+        <section class="panel">
+            <h2>Reading a full 256K-token prompt</h2>
+            <div class="unit">seconds · lower is better</div>
+            <div class="rows" id="read"></div>
+        </section>
+    </div>
+
+    <div class="stats">
+        <div class="stat"><div class="n">18/18</div><div class="l">coding checks passed by the 3-bit build</div></div>
+        <div class="stat"><div class="n">3/3</div><div class="l">long-context recall checks, at every size from 32K to 256K</div></div>
+        <div class="stat"><div class="n">~130 tok/s</div><div class="l">from the 3-bit build on the coding checks, with sampling and thinking on</div></div>
+    </div>
+
+    <div class="note">Measured 12–14 October 2026 on an RTX 5090 (32 GB) with a Ryzen 9 9900X. Medians of repeated
+        runs; speed tests use greedy decoding with thinking off.</div>
+</div>
+<script>
+    // Same row order in both panels so each configuration sits on the same line.
+    const configs = [
+        { name: '125B MoE, 3-bit', quant: 'IQ3_S', pick: true, speed: 160, read: 41.4 },
+        { name: '125B MoE, 4-bit', quant: 'UD-IQ4_XS', speed: 97, read: 364.7 },
+        { name: '125B MoE, 4-bit', quant: 'UD-Q4_K_XL', speed: 40, read: 683.9 },
+        { name: '27B dense model', quant: 'via llama.cpp', speed: 74, read: 185.4 },
+    ];
+    function draw(id, key, fmt) {
+        const host = document.getElementById(id);
+        const max = Math.max(...configs.map((c) => c[key]));
+        for (const c of configs) {
+            const row = document.createElement('div');
+            row.className = 'row' + (c.pick ? ' pick' : '');
+            row.innerHTML = `<div class="name"><b>${c.name}</b>${c.quant}</div><div class="track"><div class="bar"></div><span class="val"></span></div>`;
+            host.appendChild(row);
+            const track = row.querySelector('.track');
+            // leave room for the value label after the longest bar
+            const w = Math.max(6, (track.clientWidth - 90) * c[key] / max);
+            row.querySelector('.bar').style.width = w + 'px';
+            const val = row.querySelector('.val');
+            val.textContent = fmt(c[key]);
+            val.style.left = (w + 10) + 'px';
+        }
+    }
+    draw('speed', 'speed', (v) => v + ' tok/s');
+    draw('read', 'read', (v) => Math.round(v) + ' s');
+    document.fonts.ready.then(() => { document.body.dataset.ready = '1'; });
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* Styles for the architecture-diagram renderer (see diagram.js).
+   Each case-study page is a 1600x900 frame captured by Playwright. */
+
+body {
+  margin: 0;
+  background: #0B1020;
+}
+
+#frame {
+  position: relative;
+  width: 1600px;
+  height: 900px;
+  overflow: hidden;
+  background: #0B1020;
+  font-family: Figtree, ui-sans-serif, system-ui, sans-serif;
+  color: #F2F4FA;
+}
+
+#frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 55% at 50% 0%, rgba(91,108,255,0.28) 0%, transparent 70%),
+    radial-gradient(45% 45% at 12% 18%, rgba(47,75,196,0.22) 0%, transparent 70%),
+    radial-gradient(45% 45% at 88% 22%, rgba(27,42,107,0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Header ------------------------------------------------------------------ */
+
+.dg-header {
+  padding: 56px 72px 0;
+}
+
+.dg-eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: #7C89FF;
+}
+
+.dg-title {
+  margin-top: 8px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #F2F4FA;
+}
+
+/* Columns ----------------------------------------------------------------- */
+
+.dg-columns {
+  position: absolute;
+  left: 72px;
+  right: 72px;
+  top: 170px;
+  bottom: 96px;
+  display: flex;
+  gap: 84px;
+}
+
+.dg-columns.dg-no-header {
+  top: 72px;
+}
+
+.dg-columns.dg-no-note {
+  bottom: 64px;
+}
+
+.dg-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 26px;
+  min-width: 0;
+}
+
+/* Group box around a column */
+.dg-column.dg-grouped {
+  position: relative;
+  align-self: center;   /* hug the nodes instead of filling the column's height */
+  border: 1px dashed #2A3352;
+  border-radius: 18px;
+  padding: 40px 18px 18px;
+  background: rgba(20,26,46,0.35);
+}
+
+.dg-column-label {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #6B7490;
+}
+
+/* Node card --------------------------------------------------------------- */
+
+.dg-node {
+  position: relative;
+  z-index: 2;
+  background: #141A2E;
+  border: 1px solid #1E2640;
+  border-radius: 12px;
+  padding: 17px 20px;
+  box-shadow: 0 10px 24px -12px rgba(0,0,0,.6);
+}
+
+.dg-node.accent {
+  border-color: #5B6CFF;
+  background: linear-gradient(180deg, rgba(91,108,255,0.16), rgba(91,108,255,0.06)), #141A2E;
+  box-shadow: 0 0 0 1px rgba(91,108,255,.35), 0 12px 30px -12px rgba(91,108,255,.45);
+}
+
+.dg-node-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dg-icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  color: #7C89FF;
+}
+
+.dg-node-title {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #F2F4FA;
+}
+
+.dg-node-text {
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #A8B0C8;
+}
+
+.dg-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.dg-chip {
+  font-size: 12px;
+  font-weight: 500;
+  color: #C9D1E8;
+  background: #1B2238;
+  border: 1px solid #2A3352;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+/* Connectors -------------------------------------------------------------- */
+
+.dg-edges {
+  position: absolute;
+  inset: 0;
+  width: 100%;   /* an absolutely positioned <svg> does not stretch to its insets */
+  height: 100%;
+  overflow: visible;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dg-edge-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-size: 12px;
+  font-weight: 600;
+  color: #C9D1E8;
+  background: #0B1020;
+  border: 1px solid #2A3352;
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+/* Note -------------------------------------------------------------------- */
+
+.dg-note {
+  position: absolute;
+  left: 72px;
+  bottom: 36px;
+  max-width: 1200px;
+  font-size: 14px;
+  color: #6B7490;
+}

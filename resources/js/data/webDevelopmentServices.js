@@ -1,5 +1,5 @@
-// Content for the four Web Development service pages, lifted verbatim from the
-// original four page components. Pages/WebDevelopment/Service.vue renders one
+// Content for the Web Development service pages, lifted verbatim from the
+// original page components. Pages/WebDevelopment/Service.vue renders one
 // entry; routes/web.php picks the entry by slug.
 export const webDevelopmentServices = {
   ecommerce: {
@@ -654,10 +654,235 @@ export const webDevelopmentServices = {
       }
     ]
   },
+  "digital-marketing": {
+    slug: "digital-marketing",
+    routeName: "web-development.digital-marketing",
+    icon: "Megaphone",
+    eyebrow: "Digital Marketing",
+    title: "Digital Marketing & Growth",
+    description: "Search, paid media, email and analytics, run by the same team that builds your site, so tracking, speed and landing pages are never an afterthought.",
+    focus: "Turning the traffic you already have, and the traffic you can buy, into measurable leads and sales.",
+    keyPoint: "One team owns the site and the campaigns, so every change is measured against revenue, not vanity metrics.",
+    heroPills: [
+      "SEO",
+      "Google Ads",
+      "Meta Ads",
+      "Email automation",
+      "GA4 & CRO"
+    ],
+    overview: [
+      "We handle the channels that bring people to your site and the work that turns visits into enquiries: organic search, paid search and social, email and marketing automation, and the analytics and conversion testing that decide where budget goes. The same team that builds and maintains your site runs the campaigns, so tracking, page speed and landing pages are part of the plan rather than something handed over at the end.",
+      "Every engagement starts with tracking you can trust: clean Google Analytics 4 (GA4), conversion events that match what actually makes money, and a baseline to measure against. We agree targets with you before any spend, launch campaigns against them, and adjust week to week. Each month you get a report in plain language — what we changed, what it cost, what it returned — and we move budget toward the channels that produce."
+    ],
+    features: [
+      {
+        title: "Technical & content SEO",
+        body: "We fix crawlability, speed and structured data, then build the pages that answer the questions your buyers actually search for."
+      },
+      {
+        title: "Paid search & social",
+        body: "Search, Shopping and social campaigns run against landing pages built for the query, with creative and bidding tested on a set cadence."
+      },
+      {
+        title: "Email & marketing automation",
+        body: "Welcome, post-purchase, win-back and nurture sequences wired into your store or CRM, so the list you already have earns its keep."
+      },
+      {
+        title: "Conversion-rate optimization",
+        body: "We use session recording and heatmaps to find where people hesitate, then test the copy, layout and forms that fix it."
+      },
+      {
+        title: "Analytics & attribution",
+        body: "GA4 and Tag Manager set up once, properly, so the reports agree with your accounting instead of arguing with it."
+      },
+      {
+        title: "Content & social",
+        body: "An editorial calendar tied to real search demand, published on a schedule you can hold us to."
+      }
+    ],
+    technologies: [
+      {
+        group: "Search",
+        items: [
+          "Google Search Console",
+          "Semrush",
+          "Ahrefs",
+          "Screaming Frog"
+        ]
+      },
+      {
+        group: "Paid media",
+        items: [
+          "Google Ads",
+          "Performance Max",
+          "Meta Ads",
+          "LinkedIn Ads"
+        ]
+      },
+      {
+        group: "Email & CRM",
+        items: [
+          "Klaviyo",
+          "Mailchimp",
+          "HubSpot"
+        ]
+      },
+      {
+        group: "Analytics",
+        items: [
+          "GA4",
+          "Google Tag Manager",
+          "Looker Studio"
+        ]
+      },
+      {
+        group: "Conversion optimization",
+        items: [
+          "Microsoft Clarity",
+          "Hotjar",
+          "A/B testing"
+        ]
+      },
+      {
+        group: "Content",
+        items: [
+          "WordPress",
+          "Webflow",
+          "Figma"
+        ]
+      }
+    ],
+    process: [
+      {
+        title: "Audit",
+        body: "We review your site, analytics, channels and competitors, and write down what is broken before proposing anything."
+      },
+      {
+        title: "Strategy & KPIs",
+        body: "We agree the targets that matter to the business and the budget and timeline they sit in."
+      },
+      {
+        title: "Tracking setup",
+        body: "GA4, Tag Manager, conversion events and consent are configured and tested before any spend."
+      },
+      {
+        title: "Launch",
+        body: "Campaigns go live in stages, with landing pages and creative ready on day one."
+      },
+      {
+        title: "Weekly optimization",
+        body: "We read the search terms, turn off what does not work and shift budget inside the account."
+      },
+      {
+        title: "Monthly reporting",
+        body: "A short report in plain language: what changed, what it cost and what came back."
+      },
+      {
+        title: "Scale what works",
+        body: "Proven channels get more budget, and the same playbook moves to the next market or product."
+      }
+    ],
+    benefits: [
+      {
+        title: "One accountable team",
+        body: "Site, tracking and campaigns sit with the same people, so one fix never becomes someone else's break."
+      },
+      {
+        title: "Tracking you can trust",
+        body: "Measurement is set up before spend, so the numbers you decide on are the numbers we work from."
+      },
+      {
+        title: "Landing pages built to convert",
+        body: "We write and build the pages the ads point at, then test them, instead of sending paid traffic to whatever page already exists."
+      },
+      {
+        title: "Budget follows results",
+        body: "Spend moves to the channels and campaigns that return, on a schedule rather than at the end of the quarter."
+      },
+      {
+        title: "Reporting in plain English",
+        body: "Monthly reports say what we changed and what it returned, without dashboards that need explaining."
+      },
+      {
+        title: "Organic growth that compounds",
+        body: "Paid campaigns pay for now; the SEO and content work keeps paying after a budget stops."
+      }
+    ],
+    examples: [
+      {
+        brand: "Kettlebird Coffee",
+        industry: "Direct-to-consumer coffee subscription",
+        services: ["SEO", "Klaviyo email flows", "Meta Ads"],
+        challenge: "A small roaster with loyal subscribers but flat new-customer growth, and a store that ranked for little beyond its own name.",
+        approach: "Rebuild product and brew-guide content around high-intent searches, launch welcome, post-purchase and win-back flows in Klaviyo, and test Meta creatives against a subscription-first landing page.",
+        targets: [
+          { value: "+40%", label: "organic sessions in 6 months" },
+          { value: "25%", label: "of revenue from email flows" },
+          { value: "3.0×", label: "blended return on ad spend (ROAS), paid social" }
+        ],
+        images: [
+          { src: "/img/digital-marketing/kettlebird/landing", alt: "Kettlebird Coffee subscription landing page concept", caption: "Subscription-first landing page" },
+          { src: "/img/digital-marketing/kettlebird/ads", alt: "Three Kettlebird Coffee social ad concepts", caption: "Paid social ad set" },
+          { src: "/img/digital-marketing/kettlebird/dashboard", alt: "Kettlebird Coffee campaign dashboard with illustrative data", caption: "Campaign dashboard (illustrative data)" }
+        ]
+      },
+      {
+        brand: "Harborline Dental",
+        industry: "Local dental clinic",
+        services: ["Local SEO", "Google Business Profile", "Google Ads", "Booking tracking"],
+        challenge: "Strong patient reviews but invisible in the local map results, and no way to tell which ads produced booked appointments.",
+        approach: "Fix the Google Business Profile and location pages, run tightly geo-targeted search campaigns for high-value treatments, and track online bookings and calls as conversions in GA4.",
+        targets: [
+          { value: "Top 3", label: "map-pack position for core treatments" },
+          { value: "+30%", label: "booked appointments from search" },
+          { value: "−20%", label: "cost per booking" }
+        ],
+        images: [
+          { src: "/img/digital-marketing/harborline/landing", alt: "Harborline Dental treatment landing page concept", caption: "Treatment landing page with online booking" },
+          { src: "/img/digital-marketing/harborline/ads", alt: "Harborline Dental search ad and local listing concepts", caption: "Search ads and local listing" },
+          { src: "/img/digital-marketing/harborline/dashboard", alt: "Harborline Dental bookings dashboard with illustrative data", caption: "Bookings dashboard (illustrative data)" }
+        ]
+      },
+      {
+        brand: "Tallyforge",
+        industry: "B2B SaaS, finance operations",
+        services: ["LinkedIn Ads", "Content & SEO", "HubSpot lead scoring"],
+        challenge: "Plenty of free-trial sign-ups but few sales-qualified leads, and a sales team chasing accounts that would never fit.",
+        approach: "Target finance leaders at companies in the ideal size band on LinkedIn, publish comparison and how-to content for bottom-of-funnel searches, and score leads in HubSpot so sales only sees accounts that fit.",
+        targets: [
+          { value: "+50%", label: "sales-qualified leads per quarter" },
+          { value: "−25%", label: "cost per sales-qualified lead" },
+          { value: "2×", label: "trial-to-demo conversion" }
+        ],
+        images: [
+          { src: "/img/digital-marketing/tallyforge/landing", alt: "Tallyforge demo-request landing page concept", caption: "Demo-request landing page" },
+          { src: "/img/digital-marketing/tallyforge/ads", alt: "Three Tallyforge LinkedIn ad concepts", caption: "LinkedIn ad set" },
+          { src: "/img/digital-marketing/tallyforge/dashboard", alt: "Tallyforge pipeline dashboard with illustrative data", caption: "Pipeline dashboard (illustrative data)" }
+        ]
+      },
+      {
+        brand: "Fernridge Outdoor",
+        industry: "Outdoor gear retailer",
+        services: ["Google Shopping", "Performance Max", "Product-page conversion optimization"],
+        challenge: "A large catalogue with thin product pages, and Shopping campaigns spending evenly on products with very different margins.",
+        approach: "Restructure the product feed and campaigns by margin tier, rewrite top product pages with specs, sizing and reviews, and A/B-test the product page layout.",
+        targets: [
+          { value: "+20%", label: "conversion rate on top product pages" },
+          { value: "4.0×", label: "ROAS on Shopping campaigns" },
+          { value: "+15%", label: "average order value" }
+        ],
+        images: [
+          { src: "/img/digital-marketing/fernridge/landing", alt: "Fernridge Outdoor product page concept", caption: "Redesigned product page" },
+          { src: "/img/digital-marketing/fernridge/ads", alt: "Fernridge Outdoor Shopping ad concepts", caption: "Shopping and Performance Max creatives" },
+          { src: "/img/digital-marketing/fernridge/dashboard", alt: "Fernridge Outdoor revenue dashboard with illustrative data", caption: "Revenue dashboard (illustrative data)" }
+        ]
+      }
+    ]
+  },
 };
 
 // Order shown on the /web-development overview page.
-export const serviceOrder = ['ecommerce', 'presentation', 'mobile', 'automation'];
+export const serviceOrder = ['ecommerce', 'presentation', 'mobile', 'automation', 'digital-marketing'];
 
 export function getService(slug) {
   return webDevelopmentServices[slug] ?? null;

@@ -36,6 +36,28 @@ Route::get('/portfolio', function () {
     return Inertia::render('Portfolio');
 })->name('portfolio');
 
+// Portfolio case studies. Content lives in resources/js/data/portfolio.json, which the Vue pages import too;
+// reading it here gives unknown slugs a real 404 and each case study its own server-side SEO.
+Route::get('/portfolio/{slug}', function (string $slug) {
+    $projects = json_decode(file_get_contents(resource_path('js/data/portfolio.json')), true) ?? [];
+    $project = collect($projects)->first(
+        fn ($p) => ($p['slug'] ?? null) === $slug && ($p['published'] ?? true)
+    );
+
+    if (! $project) {
+        return Inertia::render('Error', ['status' => 404])->toResponse(request())->setStatusCode(404);
+    }
+
+    return Inertia::render('Portfolio/Show', [
+        'slug' => $slug,
+        'seo' => [
+            'title' => $project['name'] . ' — Case Study | AIBrainL.ink',
+            'description' => $project['summary'] ?? '',
+            'image' => isset($project['cover']['src']) ? url($project['cover']['src'] . '.webp') : null,
+        ],
+    ]);
+})->where('slug', '[a-z0-9-]+')->name('portfolio.show');
+
 // Web Development routes
 Route::prefix('web-development')->name('web-development.')->group(function () {
     // Section landing page, reachable by clicking "Web Development" in the nav.
@@ -43,9 +65,9 @@ Route::prefix('web-development')->name('web-development.')->group(function () {
         return Inertia::render('WebDevelopment/Index');
     })->name('index');
 
-    // All four services render the same component; content comes from
+    // All five services render the same component; content comes from
     // resources/js/data/webDevelopmentServices.js keyed by slug.
-    foreach (['ecommerce', 'presentation', 'mobile', 'automation'] as $slug) {
+    foreach (['ecommerce', 'presentation', 'mobile', 'automation', 'digital-marketing'] as $slug) {
         Route::get("/{$slug}", function () use ($slug) {
             return Inertia::render('WebDevelopment/Service', ['slug' => $slug]);
         })->name($slug);

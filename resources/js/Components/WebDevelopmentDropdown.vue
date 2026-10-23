@@ -10,6 +10,7 @@ const services = [
     { name: 'Presentation Sites', route: 'web-development.presentation' },
     { name: 'Mobile Applications', route: 'web-development.mobile' },
     { name: 'Web Scraping/Automation', route: 'web-development.automation' },
+    { name: 'Digital Marketing', route: 'web-development.digital-marketing' },
 ];
 
 const open = ref(false);

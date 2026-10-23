@@ -9,9 +9,9 @@ import { webDevelopmentServices, serviceOrder } from '@/data/webDevelopmentServi
 
 const services = serviceOrder.map((slug) => webDevelopmentServices[slug]);
 
-const pills = ['E-commerce', 'Marketing sites', 'Mobile apps', 'Scraping & automation', 'Headless CMS'];
+const pills = ['E-commerce', 'Marketing sites', 'Mobile apps', 'Scraping & automation', 'Digital marketing'];
 
-// Stated once here rather than repeated on all four service pages.
+// Stated once here rather than repeated on every service page.
 const approach = [
   { icon: 'MessagesSquare', title: 'Scope before code', body: 'We agree the problem, the constraints and what "done" means before anyone opens an editor.' },
   { icon: 'LayoutTemplate', title: 'Design in the open', body: 'Wireframes and visual design reviewed with you, not delivered as a surprise at the end.' },
@@ -27,7 +27,7 @@ const approach = [
         eyebrow="Web Development"
         title="Web that earns its keep"
         highlight="designed, built and maintained"
-        description="Storefronts, marketing sites, mobile apps and automation pipelines — built end to end by the team that also ships our own products."
+        description="Storefronts, marketing sites, mobile apps, automation pipelines and the marketing that grows them, built and run by the team that also ships our own products."
         :pills="pills"
         :primary-cta="{ label: 'Get a Quote', href: '#contact' }"
         :secondary-cta="{ label: 'See our work', href: '/portfolio' }"
@@ -46,24 +46,29 @@ const approach = [
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
             <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-content mb-4">
-              Four ways we build for the web
+              Five services, one team
             </h2>
             <p class="max-w-3xl mx-auto text-lg text-content-muted">
-              Each one is a full engagement — architecture, build, launch and the support afterwards.
+              Each one is a full engagement, from the first workshop to launch and the growth work after it.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ServiceCard
+          <div class="flex flex-wrap justify-center gap-6">
+            <div
               v-for="(service, idx) in services"
               :key="service.slug"
-              :title="service.title"
-              :tagline="service.eyebrow"
-              :description="service.description"
-              :icon="service.icon"
-              :route-name="service.routeName"
-              :animation-delay="`${idx * 0.08}s`"
-            />
+              class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] flex"
+            >
+              <ServiceCard
+                class="w-full"
+                :title="service.title"
+                :tagline="service.eyebrow"
+                :description="service.description"
+                :icon="service.icon"
+                :route-name="service.routeName"
+                :animation-delay="`${idx * 0.08}s`"
+              />
+            </div>
           </div>
         </div>
       </section>

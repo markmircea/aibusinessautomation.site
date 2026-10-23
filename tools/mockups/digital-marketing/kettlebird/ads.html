@@ -1,0 +1,138 @@
+<!doctype html>
+<!-- Kettlebird Coffee: paid social ad set mockup on a presentation board, 1600 x 900. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kettlebird Coffee — Paid social ad set</title>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=fraunces:600|inter:400,500,600">
+<link rel="stylesheet" href="../_shared/base.css">
+<style>
+  body { width: 1600px; height: 900px; font-family: Inter, sans-serif; }
+  #frame {
+    position: relative;
+    width: 1600px; height: 900px;
+    background-color: #0B1020;
+    background-image:
+      radial-gradient(60% 55% at 50% 0%, rgba(91,108,255,0.28) 0%, transparent 70%),
+      radial-gradient(45% 45% at 12% 18%, rgba(47,75,196,0.22) 0%, transparent 70%),
+      radial-gradient(45% 45% at 88% 22%, rgba(27,42,107,0.35) 0%, transparent 70%);
+  }
+  .icon { width: 16px; height: 16px; }
+
+  .board-head { position: absolute; top: 40px; left: 72px; }
+  .board-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .14em; color: #A8B0C8; }
+  .board-title { margin-top: 6px; font-size: 22px; font-weight: 600; color: #F1F3F9; }
+  .board-tag { position: absolute; top: 44px; right: 72px; padding: 6px 12px; border: 1px solid rgba(245,180,74,.45); border-radius: 999px; font-size: 12px; font-weight: 600; color: #F5B44A; }
+
+  .cards { position: absolute; top: 128px; left: 0; right: 0; display: flex; justify-content: center; gap: 40px; }
+  .ad { width: 420px; background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 60px -12px rgba(0,0,0,.6); color: #1C1E21; }
+  .ad-head { padding: 14px 16px; display: flex; align-items: center; gap: 10px; }
+  .ad-avatar { width: 40px; height: 40px; border-radius: 50%; background: #C8622A; color: #F6EFE6; font-family: Fraunces, serif; font-weight: 600; font-size: 21px; display: flex; align-items: center; justify-content: center; flex: none; }
+  .ad-who { flex: 1; min-width: 0; }
+  .ad-name { font-size: 14px; font-weight: 600; }
+  .ad-sponsored { display: flex; align-items: center; gap: 4px; font-size: 12px; color: #65676B; }
+  .ad-sponsored .icon { width: 12px; height: 12px; }
+  .ad-more { color: #65676B; }
+  .ad-more .icon { width: 20px; height: 20px; }
+  .ad-text { padding: 0 16px 12px; font-size: 14px; line-height: 1.45; min-height: 61px; }
+  .ad-photo { width: 420px; height: 420px; background: #E9DCCB; }
+  .ad-photo img { width: 100%; height: 100%; object-fit: cover; color: transparent; }
+  .ad-foot { background: #F0F2F5; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .ad-url { font-size: 11px; color: #65676B; letter-spacing: .04em; }
+  .ad-headline { margin-top: 3px; font-size: 15px; font-weight: 600; }
+  .ad-btn { background: #E4E6EB; font-size: 14px; font-weight: 600; border-radius: 6px; padding: 8px 14px; color: #1C1E21; flex: none; }
+  .ad-eng { padding: 10px 16px; font-size: 13px; color: #65676B; border-top: 1px solid #E4E6EB; display: flex; justify-content: space-evenly; }
+  .ad-eng span { display: inline-flex; align-items: center; gap: 6px; }
+  .ad-eng .icon { width: 16px; height: 16px; }
+</style>
+</head>
+<body>
+<div id="frame">
+  <div class="board-head">
+    <div class="board-eyebrow">KETTLEBIRD COFFEE</div>
+    <div class="board-title">Paid social ad set</div>
+  </div>
+  <div class="board-tag">Concept · illustrative</div>
+
+  <div class="cards">
+    <article class="ad">
+      <div class="ad-head">
+        <div class="ad-avatar">K</div>
+        <div class="ad-who">
+          <div class="ad-name">Kettlebird Coffee</div>
+          <div class="ad-sponsored">Sponsored · <i data-icon="globe"></i></div>
+        </div>
+        <span class="ad-more"><i data-icon="more-horizontal"></i></span>
+      </div>
+      <p class="ad-text">Roasted on Monday, in your cup by Thursday. Build a subscription that fits the way you brew.</p>
+      <div class="ad-photo"><img src="../_assets/kettlebird-ad-1.jpg" alt="Kettlebird coffee bag with whole beans"></div>
+      <div class="ad-foot">
+        <div>
+          <div class="ad-url">KETTLEBIRD.EXAMPLE</div>
+          <div class="ad-headline">Fresh coffee, on your schedule</div>
+        </div>
+        <button class="ad-btn">Subscribe</button>
+      </div>
+      <div class="ad-eng">
+        <span><i data-icon="heart"></i>Like</span>
+        <span><i data-icon="message-circle"></i>Comment</span>
+        <span><i data-icon="forward"></i>Share</span>
+      </div>
+    </article>
+
+    <article class="ad">
+      <div class="ad-head">
+        <div class="ad-avatar">K</div>
+        <div class="ad-who">
+          <div class="ad-name">Kettlebird Coffee</div>
+          <div class="ad-sponsored">Sponsored · <i data-icon="globe"></i></div>
+        </div>
+        <span class="ad-more"><i data-icon="more-horizontal"></i></span>
+      </div>
+      <p class="ad-text">New to pour-over? Our free brew guides take you from your first pour to café-quality cups at home.</p>
+      <div class="ad-photo"><img src="../_assets/kettlebird-ad-2.jpg" alt="Pour-over coffee being brewed"></div>
+      <div class="ad-foot">
+        <div>
+          <div class="ad-url">KETTLEBIRD.EXAMPLE</div>
+          <div class="ad-headline">Brew better at home</div>
+        </div>
+        <button class="ad-btn">Learn more</button>
+      </div>
+      <div class="ad-eng">
+        <span><i data-icon="heart"></i>Like</span>
+        <span><i data-icon="message-circle"></i>Comment</span>
+        <span><i data-icon="forward"></i>Share</span>
+      </div>
+    </article>
+
+    <article class="ad">
+      <div class="ad-head">
+        <div class="ad-avatar">K</div>
+        <div class="ad-who">
+          <div class="ad-name">Kettlebird Coffee</div>
+          <div class="ad-sponsored">Sponsored · <i data-icon="globe"></i></div>
+        </div>
+        <span class="ad-more"><i data-icon="more-horizontal"></i></span>
+      </div>
+      <p class="ad-text">Pause, skip or swap beans whenever you like. Your first bag ships free.</p>
+      <div class="ad-photo"><img src="../_assets/kettlebird-ad-3.jpg" alt="Kettlebird subscription box on a doorstep"></div>
+      <div class="ad-foot">
+        <div>
+          <div class="ad-url">KETTLEBIRD.EXAMPLE</div>
+          <div class="ad-headline">Your first bag ships free</div>
+        </div>
+        <button class="ad-btn">Shop now</button>
+      </div>
+      <div class="ad-eng">
+        <span><i data-icon="heart"></i>Like</span>
+        <span><i data-icon="message-circle"></i>Comment</span>
+        <span><i data-icon="forward"></i>Share</span>
+      </div>
+    </article>
+  </div>
+</div>
+
+<script src="../_shared/icons.js"></script>
+<script src="../_shared/ready.js"></script>
+</body>
+</html>

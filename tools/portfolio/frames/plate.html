@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Plate frame</title>
+<!-- 1600x900 plate for images that must not be cropped (wide comparisons, renders): the whole image is shown on the
+     navy gradient. Params: src (image URL), optional label (small caption above the image). -->
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=figtree:400,500,600,700">
+<style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; }
+    #frame {
+        position: relative; width: 1600px; height: 900px; overflow: hidden; background: #0B1020;
+        display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+    }
+    #frame::before {
+        content: ""; position: absolute; inset: 0;
+        background:
+            radial-gradient(60% 55% at 50% 0%, rgba(91,108,255,0.28) 0%, transparent 70%),
+            radial-gradient(45% 45% at 12% 18%, rgba(47,75,196,0.22) 0%, transparent 70%),
+            radial-gradient(45% 45% at 88% 22%, rgba(27,42,107,0.35) 0%, transparent 70%);
+    }
+    #label { position: relative; color: #A8B0C8; font-size: 15px; font-weight: 600; letter-spacing: .12em;
+             text-transform: uppercase; }
+    #label:empty { display: none; }
+    #img {
+        position: relative; display: block; max-width: 1440px; max-height: 760px; width: auto; height: auto;
+        border-radius: 14px; border: 1px solid #1E2640; box-shadow: 0 16px 40px -8px rgba(0,0,0,.55);
+    }
+</style>
+</head>
+<body style="margin:0">
+<div id="frame">
+    <div id="label"></div>
+    <img id="img" alt="">
+</div>
+<script>
+    const params = new URLSearchParams(location.search);
+    document.getElementById('label').textContent = params.get('label') || '';
+    const ready = () => { document.body.dataset.ready = '1'; };
+    const img = document.getElementById('img');
+    const src = params.get('src');
+    if (src) { img.onload = ready; img.onerror = ready; img.src = src; } else { ready(); }
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Terminal frame</title>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=figtree:400,500,600,700">
+<style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; }
+    #frame {
+        position: relative;
+        width: 1600px; height: 900px;
+        background: #0B1020;
+        display: flex; align-items: center; justify-content: center;
+        overflow: hidden;
+    }
+    #frame::before {
+        content: ""; position: absolute; inset: 0;
+        background:
+            radial-gradient(60% 55% at 50% 0%, rgba(91,108,255,0.28) 0%, transparent 70%),
+            radial-gradient(45% 45% at 12% 18%, rgba(47,75,196,0.22) 0%, transparent 70%),
+            radial-gradient(45% 45% at 88% 22%, rgba(27,42,107,0.35) 0%, transparent 70%);
+    }
+    #window {
+        position: relative; z-index: 1;
+        width: 1360px; height: 780px;
+        border: 1px solid #1E2640; border-radius: 14px;
+        box-shadow: 0 16px 40px -8px rgba(0,0,0,.55);
+        background: #141A2E; overflow: hidden;
+        display: flex; flex-direction: column;
+    }
+    #bar {
+        flex: 0 0 36px;
+        background: #141A2E;
+        display: flex; align-items: center; padding: 0 16px;
+    }
+    #title { color: #A8B0C8; font-size: 14px; flex: 1 1 auto; overflow: hidden; white-space: nowrap; }
+    #controls { display: flex; align-items: center; gap: 18px; color: #6B7490; font-size: 14px; }
+    #out {
+        flex: 1 1 auto; margin: 0; overflow: hidden;
+        background: #0B1020; padding: 28px;
+        color: #C9D1E8; font-size: 16px; line-height: 1.55;
+        font-family: ui-monospace, Consolas, monospace;
+    }
+    #out .cmd { color: #7C89FF; }
+    #out .ok { color: #3FBF87; }
+    #out .dim { color: #6B7490; }
+    #out .err { color: #FF5C5C; }
+</style>
+</head>
+<body style="margin:0">
+<div id="frame">
+    <div id="window">
+        <div id="bar">
+            <div id="title"></div>
+            <div id="controls"><span>─</span><span>▢</span><span>✕</span></div>
+        </div>
+        <pre id="out"></pre>
+    </div>
+</div>
+<script>
+    const params = new URLSearchParams(location.search);
+    document.getElementById('title').textContent = params.get('title') || 'Terminal';
+    const out = document.getElementById('out');
+
+    const escapeHtml = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+    function render(text) {
+        out.innerHTML = text.split(/\r?\n/).map((line) => {
+            let cls = '';
+            if (line.startsWith('>') || line.startsWith('$')) cls = 'cmd';
+            else if (line.startsWith('✓')) cls = 'ok';
+            else if (line.startsWith('#')) cls = 'dim';
+            return cls ? `<span class="${cls}">${escapeHtml(line)}</span>` : escapeHtml(line);
+        }).join('\n');
+    }
+
+    // Chromium's fetch() refuses file:// URLs, so local logs are read with XHR (capture.mjs launches Chromium with
+    // --allow-file-access-from-files). Short text can also be passed inline with ?text=.
+    const load = (url) => new Promise((resolve, reject) => {
+        if (!url.startsWith('file:')) {
+            fetch(url).then((r) => (r.ok ? r.text() : Promise.reject(new Error(`${r.status} ${r.statusText}`))))
+                .then(resolve, reject);
+            return;
+        }
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url);
+        xhr.onload = () => (xhr.responseText ? resolve(xhr.responseText) : reject(new Error('empty or unreadable file')));
+        xhr.onerror = () => reject(new Error('cannot read ' + url));
+        xhr.send();
+    });
+
+    const src = params.get('src');
+    const inline = params.get('text');
+    if (inline !== null) {
+        render(inline);
+        document.body.dataset.ready = '1';
+    } else if (!src) {
+        document.body.dataset.ready = '1';
+    } else {
+        load(src)
+            .then(render)
+            .catch((err) => { out.innerHTML = `<span class="err">${escapeHtml(String(err.message || err))}</span>`; })
+            .finally(() => { document.body.dataset.ready = '1'; });
+    }
+</script>
+</body>
+</html>

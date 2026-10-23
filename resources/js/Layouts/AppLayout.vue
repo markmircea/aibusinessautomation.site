@@ -133,6 +133,9 @@ const currentYear = computed(() => new Date().getFullYear());
                         <ResponsiveNavLink :href="route('web-development.automation')" :active="route().current('web-development.automation')">
                             Web Scraping/Automation
                         </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('web-development.digital-marketing')" :active="route().current('web-development.digital-marketing')">
+                            Digital Marketing
+                        </ResponsiveNavLink>
                         <ResponsiveNavLink href="/#benefits">
                             How it works
                         </ResponsiveNavLink>
