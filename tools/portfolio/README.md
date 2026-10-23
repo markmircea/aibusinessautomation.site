@@ -28,3 +28,10 @@ Electron app: prints `READY`, then every file dropped in `<out-dir>/.requests/` 
 (job keys: `src`, `out_dir`, `name`, `crop` `"16:9"`, `blur` `[[x,y,w,h],...]` in source pixels, `fill` `[[x,y,w,h,"#hex"|"auto"],...]` to paint a region out, `max_width`):
 
     python tools/portfolio/optimize.py --jobs optimize/jobs.json --manifest optimize/manifest.json
+
+**og_images.py** — link-preview images (Open Graph / Twitter), 1200x630 JPEGs under 300 KB: `og.jpg` next to every published
+cover, plus the cards in `public/img/og/` rendered from `og/card.html` (`title`, `highlight`, `sub`, `pills`, `label`, `images`).
+Run it after the covers change; `check_portfolio.py` fails if one is missing. Titles, descriptions and the card images per page
+live in `resources/js/data/seo.json`, which the server renders into `app.blade.php` (scrapers don't run JavaScript).
+
+    python tools/portfolio/og_images.py

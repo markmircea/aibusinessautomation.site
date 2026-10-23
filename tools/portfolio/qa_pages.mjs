@@ -1,6 +1,8 @@
 // Browser QA for the portfolio and digital-marketing pages at desktop and phone widths.
-// Checks per page: console errors, exactly one <h1>, no horizontal scroll, every image loaded with an alt attribute.
-// Then the portfolio filter (?c=) and the case-study lightbox keyboard flow.
+// Checks per page: console errors, exactly one <h1>, no horizontal scroll, every image loaded with an alt attribute,
+// one each of <title> and the og: tags after hydration. Then link previews (the server HTML, which scrapers read
+// without running JavaScript, carries the tags and a loadable share image), the portfolio filter (?c=) and the
+// case-study lightbox keyboard flow.
 // Usage: node tools/portfolio/qa_pages.mjs [base-url]   (default http://aibusinessautomation.site.test)
 import { chromium } from 'playwright';
 import fs from 'node:fs';
@@ -42,7 +44,11 @@ for (const width of [1440, 375]) {
             overflow: document.documentElement.scrollWidth - window.innerWidth,
             broken: [...document.images].filter((i) => !i.complete || i.naturalWidth === 0).map((i) => i.getAttribute('src')),
             noAlt: [...document.images].filter((i) => !i.hasAttribute('alt')).map((i) => i.getAttribute('src')),
+            // DynamicSEO.vue must take over the server-rendered tags, not add a second set.
+            headTags: ['title', 'meta[property="og:title"]', 'meta[property="og:image"]', 'meta[name="description"]']
+                .map((sel) => `${sel}=${document.head.querySelectorAll(sel).length}`).filter((s) => !s.endsWith('=1')),
         }));
+        if (r.headTags.length) fail(`${width} ${path}: head tags not exactly once: ${r.headTags.join(', ')}`);
         if (r.h1 !== 1) fail(`${width} ${path}: ${r.h1} h1 elements`);
         if (r.overflow > 1) fail(`${width} ${path}: horizontal overflow ${r.overflow}px`);
         if (r.broken.length) fail(`${width} ${path}: images not loaded ${r.broken.join(', ')}`);
@@ -52,6 +58,26 @@ for (const width of [1440, 375]) {
     }
     await page.close();
 }
+
+// Link previews: WhatsApp, Slack, LinkedIn, Facebook and X read the HTML the server sends and run no JavaScript.
+const shareImages = new Map();
+for (const path of paths) {
+    const html = await (await fetch(base + path)).text();
+    const head = html.slice(0, html.indexOf('</head>'));
+    const meta = (attr, key) => [...head.matchAll(new RegExp(`<meta[^>]*${attr}="${key}"[^>]*content="([^"]*)"`, 'g'))].map((m) => m[1]);
+    for (const [attr, key] of [['name', 'description'], ['property', 'og:title'], ['property', 'og:description'], ['property', 'og:image'], ['name', 'twitter:card']]) {
+        const found = meta(attr, key);
+        if (found.length !== 1 || !found[0].trim()) fail(`${path}: server HTML has ${found.length} ${key} tag(s)${found.length === 1 ? ', empty' : ''}`);
+    }
+    const image = meta('property', 'og:image')[0];
+    if (image && !shareImages.has(image)) {
+        const res = await fetch(image);
+        const type = res.headers.get('content-type') || '';
+        shareImages.set(image, res.status);
+        if (res.status !== 200 || !/^image\/(jpeg|png)/.test(type)) fail(`${path}: og:image ${image} -> HTTP ${res.status} ${type}`);
+    }
+}
+console.log(`link previews: ${paths.length} pages, ${shareImages.size} distinct share images`);
 
 // Unknown and unpublished slugs must 404.
 const p404 = await browser.newPage();

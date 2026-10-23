@@ -2,8 +2,9 @@
 """Integrity check for resources/js/data/portfolio.json before publishing.
 
 Checks every case study's required fields and text limits, that each image (cover, diagram, gallery) exists as
-<src>.webp and <src>-800.webp with the declared size and alt text, the image weight budget, and that no
-confidential string appears in the JSON. Exits 1 on any error.
+<src>.webp and <src>-800.webp with the declared size and alt text, the image weight budget, the link-preview images
+(each case study's og.jpg and those in seo.json), and that no confidential string appears in the JSON.
+Exits 1 on any error.
 
     python tools/portfolio/check_portfolio.py
 """
@@ -16,7 +17,10 @@ from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "resources", "js", "data", "portfolio.json")
+SEO = os.path.join(ROOT, "resources", "js", "data", "seo.json")
 PUBLIC = os.path.join(ROOT, "public")
+OG_SIZE = (1200, 630)
+OG_MAX_KB = 300  # WhatsApp drops link previews whose image is bigger
 
 REQUIRED = ["slug", "name", "tagline", "summary", "engagement", "status", "categories", "timeline", "role",
             "platforms", "stack", "challenge", "built", "results", "nextSteps", "diagram", "cover", "gallery",
@@ -47,6 +51,19 @@ def check_image(slug, what, img, errors, sizes):
             with Image.open(path) as im:
                 if (im.width, im.height) != (img.get("width"), img.get("height")):
                     errors.append(f"{slug}: {what} declares {img.get('width')}x{img.get('height')}, file is {im.width}x{im.height}")
+
+
+def check_og(src, what, errors):
+    """A link-preview image made by og_images.py: a 1200x630 JPEG small enough for WhatsApp."""
+    path = os.path.join(PUBLIC, src.lstrip("/").replace("/", os.sep))
+    if not os.path.isfile(path):
+        errors.append(f"{what}: missing share image {os.path.relpath(path, ROOT)} (run og_images.py)")
+        return
+    with Image.open(path) as im:
+        if im.format != "JPEG" or im.size != OG_SIZE:
+            errors.append(f"{what}: share image {src} is {im.format} {im.width}x{im.height}, expected JPEG 1200x630")
+    if os.path.getsize(path) > OG_MAX_KB * 1024:
+        errors.append(f"{what}: share image {src} is {os.path.getsize(path) // 1024} KB (max {OG_MAX_KB})")
 
 
 def main():
@@ -80,6 +97,8 @@ def main():
         for what in ("cover", "diagram"):
             if p.get(what):
                 check_image(slug, what, p[what], errors, sizes)
+        if p.get("cover"):
+            check_og(p["cover"]["src"].rsplit("/", 1)[0] + "/og.jpg", slug, errors)
         for i, img in enumerate(p.get("gallery", [])):
             check_image(slug, f"gallery[{i}]", img, errors, sizes)
             if not img.get("caption", "").strip():
@@ -87,6 +106,11 @@ def main():
         for link in p.get("links", []):
             if not link.get("href", "").startswith("https://"):
                 errors.append(f"{slug}: link {link.get('href')!r} is not https")
+
+    seo = json.load(open(SEO, encoding="utf-8"))
+    for key, page in [("default", seo)] + list(seo["pages"].items()):
+        if page.get("image"):
+            check_og(page["image"]["src"], f"seo.json {key}", errors)
 
     text = open(DATA, encoding="utf-8").read().lower()
     for word in FORBIDDEN:

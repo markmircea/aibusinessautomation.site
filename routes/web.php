@@ -53,7 +53,13 @@ Route::get('/portfolio/{slug}', function (string $slug) {
         'seo' => [
             'title' => $project['name'] . ' — Case Study | AIBrainL.ink',
             'description' => $project['summary'] ?? '',
-            'image' => isset($project['cover']['src']) ? url($project['cover']['src'] . '.webp') : null,
+            // 1200x630 JPEG cropped from the cover by tools/portfolio/og_images.py (several apps show no WebP previews)
+            'image' => isset($project['cover']['src']) ? [
+                'src' => dirname($project['cover']['src']) . '/og.jpg',
+                'alt' => $project['cover']['alt'] ?? $project['name'],
+                'width' => 1200,
+                'height' => 630,
+            ] : null,
         ],
     ]);
 })->where('slug', '[a-z0-9-]+')->name('portfolio.show');
